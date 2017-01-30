@@ -1,6 +1,6 @@
-.. _unofficial_ags_guide:
+.. _unofficial_ags4_guide:
 
-Unofficial AGS Guide
+Unofficial AGS4 Guide
 ===========================================
 
 

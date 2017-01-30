@@ -1,24 +1,45 @@
-.. _unofficial_ags_data_dict:
+.. _unofficial_ags4_data_dict:
 
-Unofficial AGS Data Dict
+Unofficial AGS4 Data Dict
 ===============================
 
-- The AGS data dictionary is available in JSON format
-- This is unofficial and not guaranteed to be up to date
-- Visit upstream http://www.agsdataformat.com for correct data
+The Unofficial AGS data dictionary is the complete spec in a single minified json file.
+
+.. warning::
+
+    - This is unofficial and not guaranteed to be up to date.
+    - Visit upstream website at `AgsDataFormat.com/datatransferv4 <http://www.agsdataformat.com/datatransferv4/intro.php>`_ for latest correct data.
 
 Download
 ------------
 
-Point your browser at 
-
 - https://open-geotechnical.github.io/data/ags4.min.json
 
-The file contains the following keys:
+Structure
+-------------------
+
+The json file contains the following keys:
 
 - **groups** - the ags groups and their headings
 - **abbrs** - the abbreviations
-- **units** - units and descriptions
+- **units** - units list
 - **data_types** - the data types
-- **examples** - Example ags files
+
+
+AGS4 Examples
+=====================
+
+Example files are available packed inside json. 
+
+.. warning::
+
+    - This is unofficial and not guaranteed to be up to date.
+    - Visit upstream website at `AgsDataFormat.com/datatransferv4/example.php <http://www.agsdataformat.com/datatransferv4/example.php>`_ for official examples.
+
+Download
+------------
+
+- https://open-geotechnical.github.io/data/ags4_examples.min.json
+- The json data contains the key **ags4_examples** which is 
+- a list the properties **file_name** and the **content**
 

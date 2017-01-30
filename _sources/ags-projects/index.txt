@@ -3,8 +3,8 @@ AGS Projects
 
 - **ogt-ags-py** - AGS Tools in Python - `Docs <https://open-geotechnical.github.io/ogt-ags-py/>`_ - `Code <https://github.com/open-geotechnical/ogt-ags-py>`_
 - **ogt-ags-go**- Experimental AGS Tools in Golang - `Docs <https://godoc.org/github.com/open-geotechnical/ogt-ags-go/>`_ - `Code <https://github.com/open-geotechnical/ogt-ags-go>`_
-- :ref:`unofficial_ags_guide`
-- :ref:`unofficial_ags_data_dict`
+- :ref:`unofficial_ags4_guide`
+- :ref:`unofficial_ags4_data_dict`
 
 .. toctree::
     :maxdepth: 1

@@ -445,7 +445,7 @@ dl.glossary dd {
 <h1>ogt:  Base API<a class="headerlink" href="#ogt-base-api" title="Permalink to this headline">¶</a></h1>
 <p>The base API converts ags4 files into various formats, and provided validation (WIP) to the data dictionary</p>
 <p class="graphviz">
-<img src="../_images/graphviz-1badedd9a15be8403fec9b57df9bc4ccd9368a9f.png" alt="digraph {
+<img src="../_images/graphviz-ed1ff956134c283d0e6fe7c48eb20d40b4c1bdd4.png" alt="digraph {
    Project [shape=box]
    Document [label=&quot;Document.ags&quot;]
    Group1 [label=&quot;Group&quot;]
@@ -457,14 +457,14 @@ dl.glossary dd {
    Head21 [label=&quot;Heading&quot;, color=blue]
    Head22 [label=&quot;Heading&quot;, color=blue]
 
-   dd1 [label=&quot;Data Dict&quot;, color=green]
-   dd2 [label=&quot;Data Dict&quot;, color=green]
+   dd1 [label=&quot;Group Data Dict&quot;, color=green]
+   dd2 [label=&quot;Group Data Dict&quot;, color=green]
 
    Files [label=&quot;Files&quot;]
    f1 [label=&quot;File&quot;, color=blue]
    f2 [label=&quot;File&quot;, color=blue]
 
-   Agsdd [label=&quot;Ags Data Dict&quot;, color=green]
+   Agsdd [label=&quot;Ags4 Data Dict&quot;, color=green]
 
    Project -&gt; Files
 
@@ -489,6 +489,12 @@ dl.glossary dd {
 
    Agsdd -&gt; dd1
    Agsdd -&gt; dd2
+
+   Head11 -&gt; dd1
+   Head12 -&gt; dd1
+
+   Head21 -&gt; dd2
+   Head22 -&gt; dd2
 }" />
 </p>
 <ul>
