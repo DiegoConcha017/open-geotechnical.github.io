@@ -1,0 +1,1165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ogtgui.ags4_widgets &mdash; Open GeoTechnical AGS Tools</title>
+    
+    <link rel="stylesheet" href="../../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'git',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="Open GeoTechnical AGS Tools" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+<style>
+
+
+
+body {
+    background-color: black;
+}
+
+#XHEAD {
+    deadbackground-color: yellow !important;
+}
+.main_title{
+    margin: 10px;
+    font-size: 14pt;
+    vertical-align: top;
+    color: #999999;
+    font-family: Verdana;
+}
+
+.main_title a {
+    color: #F29F00;
+}
+.main_title a:hover {
+    text-decoration: none;
+}
+
+.main_title small{
+    margin: 10px;
+    font-size: 8pt;
+    vertical-align: top;
+    color: #999999;
+    font-weight: normal
+    font-family: Verdana;
+}
+
+.externals_nav {
+    float: right;
+    margin-right: 100px;
+}
+.externals_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+        sswidth: 50px;
+} 
+
+.externals_nav a {
+    text-decoration: none;
+    color: #999999;
+    padding: 5px;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+.externals_nav a:hover {
+    background-color: #333333;
+    color: white;
+}
+    
+        
+.module_nav {
+    float: right;
+    ssmargin-right: 150px;
+
+    deadbackground-color: red !important;
+}
+.module_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+    width: 50px;
+}
+.module_nav a {
+    text-decoration: none;
+    background-color: #222222;
+    color: #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #efefef;
+    font-family: Verdana;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.module_nav a:hover {
+    background-color: #333333;
+}
+.module_nav a.selected{
+    background-color: #999999;
+    color: black;
+}
+
+.related{
+    background-color: #222222 !important; 
+    margin-right: 10px;
+    
+}
+.related a {
+    color: #dddddd !important; 
+    text-shadow: none;
+        font-size: 10pt !important;
+}
+div.related ul {
+    padding-left: 300px;
+}
+.related ul li {
+    color: #FFFF00 !important;
+}
+
+.sphinxsidebarwrapper {
+    width: 300px;
+    background-color: #DDDDDD;
+}
+.sphinxsidebarwrapper h3  {
+    border-bottom: 1px solid white;
+}
+.sphinxsidebarwrapper h3 a {
+    font-family: Verdana;
+}
+div.bodywrapper {
+    margin-left: 300px;
+}
+.sphinxsidebar ul {
+    margin-left: 0;
+}
+.sphinxsidebar ul li{
+    sborder-top: 1px solid #dddddd !important;
+    ssbackground-color: white;
+    padding: 2px !important;
+}
+.sphinxsidebar ul li a{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #333333;
+    font-family: Verdana;
+}
+.sphinxsidebar ul ul{
+    width: 250px;
+}
+.sphinxsidebar ul ul li{
+    border-top: none !important;
+}
+.sphinxsidebar ul ul li a{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Verdana;
+}
+
+
+
+/**************************************************/
+/* Main */
+/**************************************************/
+div.body {
+    font-size: 10pt;
+}
+
+div.body h1{
+    border-radius: 10px !important;
+    padding: 5px 10px;
+    font-size: 20pt;
+    background-color: #444444 !important;
+    color: #dddddd;
+   font-family: Verdana;
+}
+
+
+
+div.body h2{
+
+    border-top: 2px solid #999999;
+    border-right: 2px solid #999999;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #bbbbbb !important;
+    font-size: 12pt;
+    font-family: monospace;
+
+    padding: 5px 10px;
+}
+div.body h3{
+    border-top: 2px solid #dddddd;
+    border-right: 2px solid #aaaaaa;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #dddddd !important;
+    font-size: 10pt;
+    font-family: monospace;
+    padding: 5px 10px;
+}
+
+div.body p {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 600px;
+}
+div.body ul, ol {
+    padding-left: 50px;
+    padding-right: 50px;
+     max-width: 600px;
+}
+div.body li p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+div.body ul, ul {
+     padding-left: 30px;
+    padding-right: 30px;
+}
+
+.admonition {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+.field-name {
+    width: 80px;
+    text-align: right;
+}
+
+pre {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 9pt;
+    padding: 4px;
+}
+
+table.docutils {
+    box-shadow: 9px 10px 34px -16px rgba(0,0,0,0.75);
+}
+table.docutils thead {
+    background-color: #dddddd;
+}
+table.docutils th {
+    padding: 5px;
+}
+table.docutils td {
+    padding: 2px;
+}
+
+table.field-list{
+    box-shadow: none;
+    background-color: #eeeeee;
+}
+
+table.field-list tr{
+    border-bottom: 1px solid #cccccc;
+}
+table.field-list th {
+    padding: 5px;
+    width: 100px;
+    border-right: 1px solid #cccccc;
+    font-size: 9pt;
+    deadbackground-color: red;
+    color: #888888;
+}
+table.field-list td {
+    padding: 5px;
+    border-left: 1px solid #cccccc;
+}
+
+dl.class p {
+    padding-left: 5px;
+}
+
+.ags-csv-rule {
+    background-color: #00CCCC;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+.ags-data-rule {
+    background-color:#FFFF00;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+
+.viewcode-link {
+    font-size: 8pt;
+}
+
+/**************************************************/
+/* API stuff */
+/**************************************************/
+/* a whole class container */
+dl.class {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #822775;
+}
+/* class Name */
+dl.class dt .descname{
+	color: #822775;
+	font-size: 13pt;
+	font-family: monospace;
+}
+
+a.reference code.py-class span.pre {
+    color: #822775 !important;
+    font-family: monospace;
+}
+
+
+/* class attribute */
+dl.attribute dt .descname {
+    color: #AD833E;
+    font-size: 11pt;
+    font-family: monospace;
+}
+
+
+/* class method  */
+dl.method dt .descname {
+    color: #1B68B8;
+	font-size: 11pt;
+	font-family: monospace;
+
+}
+
+/* a whole function container */
+dl.function {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #298815;
+}
+/* function */
+dl.function dt .descname {
+    color: #298815 !important;
+}
+
+a.reference code.py-func span.pre {
+    color: #298815 !important;
+    font-family: monospace;
+}
+
+/* glossary */
+dl.glossary dt {
+    background-color: #eeeeee;
+    font-family: monospace;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top-right-radius: 20px;
+    padding: 3px 5px;
+
+}
+dl.glossary dd {
+    border-right: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+</style>
+    
+    <div id="XHEAD">
+    <!-- github at top right -->
+<a href="https://github.com/open-geotechnical/ogt-ags-py" target="github">
+<img style="position: absolute; top: 0; right: 0; border: 0; z-index:444444;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+  
+   <ul class="externals_nav">
+    <li><a href="http://open-geotechnical.github.io/" target="github">Main Website</a></li>
+    <li><a href="https://github.com/open-geotechnical/ogt-ags-py" target="github">Project</a></li>
+    <li><a href="https://github.com/open-geotechnical/ogt-ags-py/issues" target="issues">Issues</a></li>
+  </ul>
+  
+	
+ 
+  
+  <h1 class="main_title"><a href="/ogt-ags-py"><img src="/_static/logo-small.png"> ogt-ags-py</a> - Developer Docs <small>v0.0.1</small></h1>
+  </div>
+  
+
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ogt-ags-py</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for ogtgui.ags4_widgets</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">@author: Peter Morgan &lt;pete@daffodil.uk.com&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">Qt</span> <span class="kn">import</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">pyqtSignal</span>
+
+<span class="kn">import</span> <span class="nn">app_globals</span> <span class="kn">as</span> <span class="nn">G</span>
+
+<span class="c1">#from ogt import utils</span>
+<span class="kn">from</span> <span class="nn">.img</span> <span class="kn">import</span> <span class="n">Ico</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">xwidgets</span>
+<span class="kn">from</span> <span class="nn">ags4_models</span> <span class="kn">import</span> <span class="n">CG</span><span class="p">,</span> <span class="n">CH</span><span class="p">,</span><span class="n">CA</span><span class="p">,</span> <span class="n">SHOW_NONE</span><span class="p">,</span> <span class="n">AGS_COLORS</span>
+
+
+<div class="viewcode-block" id="AGS4_DataDictBrowser"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_DataDictBrowser">[docs]</a><span class="k">class</span> <span class="nc">AGS4_DataDictBrowser</span><span class="p">(</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span> <span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="bp">None</span> <span class="p">):</span>
+        <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span> <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="p">)</span>
+
+        <span class="c1">##=============================================================</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabWidget</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QTabWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tabWidget</span><span class="p">)</span>
+
+
+
+
+        <span class="c1">##=============================================================</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsGroupsWidget</span> <span class="o">=</span> <span class="n">AGS4_GroupsBrowser</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabWidget</span><span class="o">.</span><span class="n">addTab</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agsGroupsWidget</span><span class="p">,</span> <span class="n">Ico</span><span class="o">.</span><span class="n">icon</span><span class="p">(</span><span class="n">Ico</span><span class="o">.</span><span class="n">AgsGroups</span><span class="p">),</span> <span class="s2">&quot;Groups&quot;</span><span class="p">)</span>
+
+        <span class="c1">##=============================================================</span>
+        <span class="c1">#self.agsAbbrevsWidget = AgsAbbrevsWidget.AgsAbbrevsWidget(self)</span>
+        <span class="c1">#self.tabWidget.addTab(self.agsAbbrevsWidget,dIco.icon(dIco.AgsAbbrevs),  &quot;Abbreviations / Pick lists&quot;)</span>
+
+        <span class="c1">##=============================================================</span>
+        <span class="c1">#self.agsUnitsWidget = AgsUnitsWidget.AgsUnitsWidget(self)</span>
+        <span class="c1">#self.tabWidget.addTab(self.agsUnitsWidget, dIco.icon(dIco.AgsUnits), &quot;Units&quot;)</span>
+
+
+<div class="viewcode-block" id="AGS4_DataDictBrowser.init"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_DataDictBrowser.init">[docs]</a>    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1">#self.fetch()</span>
+        <span class="c1">#G.Ags.festch()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabWidget</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+</div></div>
+<div class="viewcode-block" id="AGS4_GroupsBrowser"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupsBrowser">[docs]</a><span class="k">class</span> <span class="nc">AGS4_GroupsBrowser</span><span class="p">(</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span> <span class="p">):</span>
+
+    <span class="n">sigCodeSelected</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span> <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QSortFilterProxyModel</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setSourceModel</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">Ags</span><span class="o">.</span><span class="n">modelGroups</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterCaseSensitivity</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">CaseInsensitive</span><span class="p">)</span>
+
+        <span class="c1">##===============================================</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="p">)</span>
+
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">splitter</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QSplitter</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">splitter</span><span class="p">)</span>
+
+        <span class="c1">##############################################################################</span>
+        <span class="n">leftWidget</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+        <span class="n">leftLayout</span> <span class="o">=</span> <span class="n">xwidgets</span><span class="o">.</span><span class="n">vlayout</span><span class="p">()</span>
+        <span class="n">leftWidget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">leftLayout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">leftWidget</span><span class="p">)</span>
+
+        <span class="c1">##================================</span>
+        <span class="c1">## Classification</span>
+        <span class="n">topLayout</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
+        <span class="n">leftLayout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">topLayout</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QTreeView</span><span class="p">()</span>
+        <span class="n">topLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">setModel</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">Ags</span><span class="o">.</span><span class="n">modelClasses</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">setRootIsDecorated</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">setExpandsOnDoubleClick</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">setFixedHeight</span><span class="p">(</span><span class="mi">250</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">selectionModel</span><span class="p">()</span><span class="o">.</span><span class="n">selectionChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_class_selection</span><span class="p">)</span>
+
+
+        <span class="c1">##================================</span>
+        <span class="c1">## Filter Widget</span>
+        <span class="n">rLay</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="n">topLayout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">rLay</span><span class="p">)</span>
+
+        <span class="n">grpFilter</span> <span class="o">=</span> <span class="n">xwidgets</span><span class="o">.</span><span class="n">GroupGridBox</span><span class="p">(</span><span class="s2">&quot;Filter by&quot;</span><span class="p">)</span>
+        <span class="c1">#mmm = 20</span>
+        <span class="c1">#grpFilter.setContentsMargins(mmm,mmm,mmm,mmm)</span>
+        <span class="n">grpFilter</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">grpFilter</span><span class="o">.</span><span class="n">setFixedWidth</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+        <span class="n">rLay</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">grpFilter</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1">## Buttons</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttGrp</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QButtonGroup</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttGrp</span><span class="o">.</span><span class="n">setExclusive</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buttGrp</span><span class="p">,</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;buttonClicked(int)&quot;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_filter_col</span><span class="p">)</span>
+
+        <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttFilterCode</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QRadioButton</span><span class="p">()</span>
+        <span class="n">grpFilter</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buttFilterCode</span><span class="p">,</span> <span class="n">row</span> <span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttFilterCode</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;Code&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttGrp</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buttFilterCode</span><span class="p">,</span> <span class="n">CG</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
+
+        <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttFilterDesc</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QRadioButton</span><span class="p">()</span>
+        <span class="n">grpFilter</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buttFilterDesc</span><span class="p">,</span> <span class="n">row</span> <span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttFilterDesc</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;Description&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttGrp</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buttFilterDesc</span><span class="p">,</span> <span class="n">CG</span><span class="o">.</span><span class="n">description</span><span class="p">)</span>
+
+
+        <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttFilterAll</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QRadioButton</span><span class="p">()</span>
+        <span class="n">grpFilter</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buttFilterAll</span><span class="p">,</span> <span class="n">row</span> <span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttFilterAll</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;Both&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttFilterAll</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttGrp</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buttFilterAll</span><span class="p">,</span> <span class="n">CG</span><span class="o">.</span><span class="n">search</span><span class="p">)</span>
+
+
+
+        <span class="n">row</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttClear</span> <span class="o">=</span> <span class="n">xwidgets</span><span class="o">.</span><span class="n">ClearButton</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">on_clear_filter</span><span class="p">)</span>
+        <span class="n">grpFilter</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buttClear</span><span class="p">,</span> <span class="n">row</span> <span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">txtCode</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QLineEdit</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">txtCode</span><span class="o">.</span><span class="n">setMaximumWidth</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="n">grpFilter</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">txtCode</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">txtCode</span><span class="o">.</span><span class="n">textChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_txt_changed</span><span class="p">)</span>
+
+        <span class="n">grpFilter</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">setColumnStretch</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">grpFilter</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">setColumnStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="n">rLay</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1">##===============================================</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QTreeView</span><span class="p">()</span>
+        <span class="n">leftLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setUniformRowHeights</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setRootIsDecorated</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setAlternatingRowColors</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setSortingEnabled</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setModel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setEditTriggers</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QAbstractItemView</span><span class="o">.</span><span class="n">NoEditTriggers</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">header</span><span class="p">()</span><span class="o">.</span><span class="n">setStretchLastSection</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setColumnHidden</span><span class="p">(</span><span class="n">CG</span><span class="o">.</span><span class="n">search</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setColumnHidden</span><span class="p">(</span><span class="n">CG</span><span class="o">.</span><span class="n">x_id</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="c1">#self.tree.setColumnHidden(C.abbrev_id, True)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setColumnWidth</span><span class="p">(</span><span class="n">CG</span><span class="o">.</span><span class="n">code</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setColumnWidth</span><span class="p">(</span><span class="n">CG</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+        <span class="c1">#self.tree.setColumnWidth(CG.cls, 150)</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setContextMenuPolicy</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">CustomContextMenu</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">selectionModel</span><span class="p">()</span><span class="o">.</span><span class="n">selectionChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_tree_selected</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">sortByColumn</span><span class="p">(</span><span class="n">CG</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsGroupViewWidget</span> <span class="o">=</span> <span class="n">AGS4_GroupViewWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agsGroupViewWidget</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">splitter</span><span class="o">.</span><span class="n">setStretchFactor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">splitter</span><span class="o">.</span><span class="n">setStretchFactor</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="c1">#self.statusBar = StatusBar(self, False)</span>
+        <span class="c1">#self.mainLayout.addWidget(self.statusBar, 0)</span>
+
+
+        <span class="c1">##############################################################################</span>
+        <span class="n">rightWidget</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+        <span class="n">rightLayout</span> <span class="o">=</span> <span class="n">xwidgets</span><span class="o">.</span><span class="n">vlayout</span><span class="p">()</span>
+        <span class="n">rightWidget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">rightLayout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">rightWidget</span><span class="p">)</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsHeadingDetailWidget</span> <span class="o">=</span> <span class="n">AGS4_HeadingDetailWidget</span><span class="p">()</span>
+        <span class="n">rightLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agsHeadingDetailWidget</span><span class="p">)</span>
+
+        <span class="c1">#self.init_setup()</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">Ags</span><span class="o">.</span><span class="n">sigLoaded</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_loaded</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsGroupViewWidget</span><span class="o">.</span><span class="n">sigHeadCodeSelected</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agsHeadingDetailWidget</span><span class="o">.</span><span class="n">load_heading</span><span class="p">)</span>
+
+
+
+
+    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+
+
+    <span class="c1">#=========================================</span>
+<div class="viewcode-block" id="AGS4_GroupsBrowser.on_tree_selected"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupsBrowser.on_tree_selected">[docs]</a>    <span class="k">def</span> <span class="nf">on_tree_selected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sel</span><span class="p">,</span> <span class="n">desel</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">selectionModel</span><span class="p">()</span><span class="o">.</span><span class="n">hasSelection</span><span class="p">():</span>
+             <span class="bp">self</span><span class="o">.</span><span class="n">sigCodeSelected</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span> <span class="bp">None</span> <span class="p">)</span>
+             <span class="k">return</span>
+
+        <span class="n">selidx</span> <span class="o">=</span> <span class="n">sel</span><span class="o">.</span><span class="n">indexes</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">srcidx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">mapToSource</span><span class="p">(</span><span class="n">selidx</span><span class="p">)</span>
+
+        <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">sourceModel</span><span class="p">()</span>
+        <span class="n">tIdx</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">srcidx</span><span class="o">.</span><span class="n">row</span><span class="p">(),</span> <span class="n">CG</span><span class="o">.</span><span class="n">code</span><span class="p">,</span> <span class="n">srcidx</span><span class="o">.</span><span class="n">parent</span><span class="p">())</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">itemFromIndex</span><span class="p">(</span> <span class="n">tIdx</span> <span class="p">)</span>
+
+        <span class="n">group_code</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsGroupViewWidget</span><span class="o">.</span><span class="n">load_group</span><span class="p">(</span><span class="n">group_code</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigCodeSelected</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span> <span class="n">group_code</span> <span class="p">)</span>
+
+
+
+</div>
+<div class="viewcode-block" id="AGS4_GroupsBrowser.on_filter_col"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupsBrowser.on_filter_col">[docs]</a>    <span class="k">def</span> <span class="nf">on_filter_col</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_filter</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">txtCode</span><span class="o">.</span><span class="n">setFocus</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="AGS4_GroupsBrowser.on_txt_changed"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupsBrowser.on_txt_changed">[docs]</a>    <span class="k">def</span> <span class="nf">on_txt_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_filter</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="AGS4_GroupsBrowser.update_filter"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupsBrowser.update_filter">[docs]</a>    <span class="k">def</span> <span class="nf">update_filter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#print &quot;update_filter&quot;, self.tabWidget.currentIndex(), self</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">blockSignals</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">clearSelection</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">blockSignals</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterKeyColumn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buttGrp</span><span class="o">.</span><span class="n">checkedId</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterFixedString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">txtCode</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+
+
+</div>
+<div class="viewcode-block" id="AGS4_GroupsBrowser.on_clear_filter"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupsBrowser.on_clear_filter">[docs]</a>    <span class="k">def</span> <span class="nf">on_clear_filter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">txtCode</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">txtCode</span><span class="o">.</span><span class="n">setFocus</span><span class="p">()</span>
+
+
+</div>
+<div class="viewcode-block" id="AGS4_GroupsBrowser.on_class_selection"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupsBrowser.on_class_selection">[docs]</a>    <span class="k">def</span> <span class="nf">on_class_selection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selected</span><span class="p">,</span> <span class="n">deselected</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">selectionModel</span><span class="p">()</span><span class="o">.</span><span class="n">hasSelection</span><span class="p">():</span>
+            <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterKeyColumn</span><span class="p">(</span><span class="n">CG</span><span class="o">.</span><span class="n">cls</span><span class="p">)</span>
+
+        <span class="n">item</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">model</span><span class="p">()</span><span class="o">.</span><span class="n">itemFromIndex</span><span class="p">(</span><span class="n">selected</span><span class="o">.</span><span class="n">indexes</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;All&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterFixedString</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterFixedString</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</div>
+<div class="viewcode-block" id="AGS4_GroupsBrowser.deadon_tree_context_menu"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupsBrowser.deadon_tree_context_menu">[docs]</a>    <span class="k">def</span> <span class="nf">deadon_tree_context_menu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">selectionModel</span><span class="p">()</span><span class="o">.</span><span class="n">hasSelection</span><span class="p">():</span>
+            <span class="k">return</span><span class="c1">#</span>
+</div>
+<div class="viewcode-block" id="AGS4_GroupsBrowser.init"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupsBrowser.init">[docs]</a>    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+</div>
+<div class="viewcode-block" id="AGS4_GroupsBrowser.on_loaded"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupsBrowser.on_loaded">[docs]</a>    <span class="k">def</span> <span class="nf">on_loaded</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># expand first row, set sort orders</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">setExpanded</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">model</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">treeClass</span><span class="o">.</span><span class="n">sortByColumn</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Qt</span><span class="o">.</span><span class="n">AscendingOrder</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">sortByColumn</span><span class="p">(</span><span class="n">CG</span><span class="o">.</span><span class="n">code</span><span class="p">,</span> <span class="n">Qt</span><span class="o">.</span><span class="n">AscendingOrder</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">resizeColumnToContents</span><span class="p">(</span><span class="n">CG</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
+
+</div></div>
+<div class="viewcode-block" id="AGS4_GroupViewWidget"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupViewWidget">[docs]</a><span class="k">class</span> <span class="nc">AGS4_GroupViewWidget</span><span class="p">(</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span> <span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The GroupView contains the vertically the Group Label at top, headings and notes&quot;&quot;&quot;</span>
+
+    <span class="n">sigHeadCodeSelected</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="bp">None</span> <span class="p">):</span>
+        <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span> <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">cache</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_by</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">toolbar</span> <span class="o">=</span> <span class="n">xwidgets</span><span class="o">.</span><span class="n">hlayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">toolbar</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">icoLabel</span> <span class="o">=</span> <span class="n">xwidgets</span><span class="o">.</span><span class="n">IconLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ico</span><span class="o">=</span><span class="n">Ico</span><span class="o">.</span><span class="n">AgsGroup</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">icoLabel</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s2">&quot;background-color: white; color: #444444;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">toolbar</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">icoLabel</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblGroupCode</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblGroupCode</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s2">&quot;background-color: white; color: </span><span class="si">%s</span><span class="s2">; font-weight: bold; font-family: monospace; padding: 3px;&quot;</span> <span class="o">%</span> <span class="n">AGS_COLORS</span><span class="o">.</span><span class="n">group</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">toolbar</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lblGroupCode</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblGroupCode</span><span class="o">.</span><span class="n">setFixedWidth</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblDescription</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblDescription</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s2">&quot;background-color: white; color: #444444;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">toolbar</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lblDescription</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">addSpacing</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+        <span class="c1">#self.tabWidget = QtGui.QTabWidget()</span>
+        <span class="c1">#self.mainLayout.addWidget(self.tabWidget)</span>
+
+        <span class="c1">#self.lblHeadings = Widgets.Label(text=&quot;Headings&quot;)</span>
+        <span class="c1">#self.mainLayout.addWidget(self.lblHeadings, 0)</span>
+
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsHeadingsTable</span> <span class="o">=</span> <span class="n">AGS4_HeadingsTable</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agsHeadingsTable</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+        <span class="c1">#self.tabWidget.addTab(self.agsHeadingsTable, dIco.icon(dIco.AgsField), &quot;Headings&quot;)</span>
+        <span class="c1">#self.lblNotes = Widgets.Label(text=&quot;Notes&quot;)</span>
+        <span class="c1">#self.mainLayout.addWidget(self.lblNotes, 0)</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsGroupNotesTable</span> <span class="o">=</span> <span class="n">AGS4_GroupNotesTable</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsGroupNotesTable</span><span class="o">.</span><span class="n">setFixedHeight</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agsGroupNotesTable</span><span class="p">)</span>
+        <span class="c1">#self.tabWidget.addTab(self.agsGroupNotesTable, dIco.icon(dIco.AgsNotes), &quot;Notes&quot;)</span>
+        <span class="c1">#self.connect(self.agsGroupNotesTable, QtCore.SIGNAL(&quot;loaded&quot;), self.on_notes_loaded)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsHeadingsTable</span><span class="o">.</span><span class="n">sigHeadCodeSelected</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_head_code</span><span class="p">)</span>
+
+<div class="viewcode-block" id="AGS4_GroupViewWidget.on_head_code"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupViewWidget.on_head_code">[docs]</a>    <span class="k">def</span> <span class="nf">on_head_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head_code</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigHeadCodeSelected</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">head_code</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="AGS4_GroupViewWidget.on_notes_loaded"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupViewWidget.on_notes_loaded">[docs]</a>    <span class="k">def</span> <span class="nf">on_notes_loaded</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabWidget</span><span class="o">.</span><span class="n">setTabText</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Notes - </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">c</span> <span class="k">if</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;None&quot;</span><span class="p">)</span> <span class="p">)</span>
+</div>
+<div class="viewcode-block" id="AGS4_GroupViewWidget.clear"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupViewWidget.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblGroupCode</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblDescription</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsGroupNotesTable</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="AGS4_GroupViewWidget.load_group"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupViewWidget.load_group">[docs]</a>    <span class="k">def</span> <span class="nf">load_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_code</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">group_code</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">agsHeadingsTable</span><span class="o">.</span><span class="n">filter_headings</span><span class="p">()</span>
+            <span class="k">return</span>
+
+
+        <span class="n">g</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">Ags</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">group_code</span><span class="p">)</span>
+        <span class="c1">#print group_code, g</span>
+
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblGroupCode</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;group_code&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblDescription</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;group_description&#39;</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="bp">False</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tabWidget</span><span class="o">.</span><span class="n">setTabText</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Headings - </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;headings&#39;</span><span class="p">]))</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;notes&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;notes&#39;</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tabWidget</span><span class="o">.</span><span class="n">setTabText</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Notes - </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">s</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsHeadingsTable</span><span class="o">.</span><span class="n">filter_headings</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;group_code&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agsGroupNotesTable</span><span class="o">.</span><span class="n">load_notes</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;group_code&#39;</span><span class="p">])</span>
+
+
+</div></div>
+<div class="viewcode-block" id="AGS4_HeadingsTable"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_HeadingsTable">[docs]</a><span class="k">class</span> <span class="nc">AGS4_HeadingsTable</span><span class="p">(</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span> <span class="p">):</span>
+
+    <span class="n">sigHeadCodeSelected</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;A row has been selected or delelected</span>
+
+<span class="sd">    :return: HeadCode or `None`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span> <span class="p">):</span>
+        <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span> <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">cache</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QSortFilterProxyModel</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setSourceModel</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">Ags</span><span class="o">.</span><span class="n">modelHeadings</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterCaseSensitivity</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">CaseInsensitive</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterKeyColumn</span><span class="p">(</span><span class="n">CH</span><span class="o">.</span><span class="n">group_code</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterFixedString</span><span class="p">(</span><span class="n">SHOW_NONE</span><span class="p">)</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_code</span> <span class="o">=</span> <span class="bp">None</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="p">)</span>
+
+
+        <span class="c1">##===============================================================</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QTreeView</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setUniformRowHeights</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setRootIsDecorated</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setAlternatingRowColors</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setSortingEnabled</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setModel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="p">)</span>
+
+
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="n">CH</span><span class="o">.</span><span class="n">example</span><span class="p">,</span> <span class="n">CH</span><span class="o">.</span><span class="n">group_code</span><span class="p">,</span>  <span class="n">CH</span><span class="o">.</span><span class="n">sort</span><span class="p">]:</span>
+            <span class="k">pass</span> <span class="c1">#self.tree.setColumnHidden(c, True)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setColumnWidth</span><span class="p">(</span><span class="n">CH</span><span class="o">.</span><span class="n">head_code</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setColumnWidth</span><span class="p">(</span><span class="n">CH</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setColumnWidth</span><span class="p">(</span><span class="n">CH</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setColumnWidth</span><span class="p">(</span><span class="n">CH</span><span class="o">.</span><span class="n">data_type</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">header</span><span class="p">()</span><span class="o">.</span><span class="n">setStretchLastSection</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setSortingEnabled</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">selectionModel</span><span class="p">()</span><span class="o">.</span><span class="n">selectionChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_tree_selected</span><span class="p">)</span>
+
+        <span class="c1">#self.statusBar = StatusBar(self, True)</span>
+        <span class="c1">#self.mainLayout.addWidget(self.statusBar, 0)</span>
+        <span class="c1">#self.statusBar.hide()</span>
+
+
+
+
+<div class="viewcode-block" id="AGS4_HeadingsTable.filter_headings"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_HeadingsTable.filter_headings">[docs]</a>    <span class="k">def</span> <span class="nf">filter_headings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gc</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_code</span> <span class="o">=</span> <span class="n">SHOW_NONE</span> <span class="k">if</span> <span class="n">gc</span> <span class="o">==</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">gc</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterFixedString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">group_code</span><span class="p">)</span>
+
+    <span class="c1">#=========================================</span></div>
+<div class="viewcode-block" id="AGS4_HeadingsTable.on_tree_selected"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_HeadingsTable.on_tree_selected">[docs]</a>    <span class="k">def</span> <span class="nf">on_tree_selected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sel</span><span class="p">,</span> <span class="n">desel</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">selectionModel</span><span class="p">()</span><span class="o">.</span><span class="n">hasSelection</span><span class="p">():</span>
+             <span class="bp">self</span><span class="o">.</span><span class="n">sigHeadCodeSelected</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span> <span class="bp">None</span> <span class="p">)</span>
+             <span class="k">return</span>
+
+        <span class="n">selidx</span> <span class="o">=</span> <span class="n">sel</span><span class="o">.</span><span class="n">indexes</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">srcidx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">mapToSource</span><span class="p">(</span><span class="n">selidx</span><span class="p">)</span>
+
+        <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">sourceModel</span><span class="p">()</span>
+        <span class="n">tIdx</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">srcidx</span><span class="o">.</span><span class="n">row</span><span class="p">(),</span> <span class="n">CH</span><span class="o">.</span><span class="n">head_code</span><span class="p">,</span> <span class="n">srcidx</span><span class="o">.</span><span class="n">parent</span><span class="p">())</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">itemFromIndex</span><span class="p">(</span> <span class="n">tIdx</span> <span class="p">)</span>
+
+        <span class="n">head_code</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigHeadCodeSelected</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">head_code</span><span class="p">)</span>
+
+
+</div>
+<div class="viewcode-block" id="AGS4_HeadingsTable.on_tree_context_menu"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_HeadingsTable.on_tree_context_menu">[docs]</a>    <span class="k">def</span> <span class="nf">on_tree_context_menu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">selectionModel</span><span class="p">()</span><span class="o">.</span><span class="n">hasSelection</span><span class="p">():</span>
+            <span class="k">return</span>
+</div>
+<div class="viewcode-block" id="AGS4_HeadingsTable.deadon_butt_pop"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_HeadingsTable.deadon_butt_pop">[docs]</a>    <span class="k">def</span> <span class="nf">deadon_butt_pop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">butt</span><span class="p">):</span>
+        <span class="n">code</span> <span class="o">=</span>  <span class="nb">str</span><span class="p">(</span><span class="n">butt</span><span class="o">.</span><span class="n">property</span><span class="p">(</span><span class="s2">&quot;code&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
+
+        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapFromGlobal</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QCursor</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>
+        <span class="c1">#print p</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QCursor</span><span class="o">.</span><span class="n">pos</span><span class="p">()</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">ags</span><span class="o">.</span><span class="n">AgsAbbrevPopDialog</span><span class="o">.</span><span class="n">AgsAbbrevPopDialog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">abrev_code</span><span class="o">=</span><span class="n">code</span><span class="p">)</span>
+
+        <span class="n">d</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="o">-</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+
+</div></div>
+<div class="viewcode-block" id="CN"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.CN">[docs]</a><span class="k">class</span> <span class="nc">CN</span><span class="p">:</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">note_id</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">so</span> <span class="o">=</span> <span class="mi">2</span>
+
+</div>
+<div class="viewcode-block" id="AGS4_GroupNotesTable"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupNotesTable">[docs]</a><span class="k">class</span> <span class="nc">AGS4_GroupNotesTable</span><span class="p">(</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span> <span class="p">):</span>
+
+    <span class="n">sigLoaded</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">object</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="bp">None</span> <span class="p">):</span>
+        <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span> <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">cache</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="p">)</span>
+
+
+        <span class="c1">##==============================</span>
+        <span class="n">scrollArea</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QScrollArea</span><span class="p">()</span>
+        <span class="n">scrollArea</span><span class="o">.</span><span class="n">setWidgetResizable</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">scrollArea</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">scrollWidget</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+        <span class="c1">#self.mainLayout.addWidget(self.noticesListWidget, 100)</span>
+        <span class="n">scrollArea</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scrollWidget</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">scrollLayout</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scrollLayout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scrollLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scrollWidget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scrollLayout</span><span class="p">)</span>
+
+
+
+<div class="viewcode-block" id="AGS4_GroupNotesTable.clear"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupNotesTable.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Removes all QLabel entries&quot;&quot;&quot;</span>
+        <span class="c1">## pain.. all this shite just to nuke a list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setUpdatesEnabled</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">scrollLayout</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">vari</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scrollLayout</span><span class="o">.</span><span class="n">itemAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="n">vari</span><span class="o">.</span><span class="n">widget</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">w</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">scrollLayout</span><span class="o">.</span><span class="n">removeWidget</span><span class="p">(</span> <span class="n">w</span> <span class="p">)</span>
+                <span class="n">w</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+                <span class="n">w</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">scrollLayout</span><span class="o">.</span><span class="n">removeItem</span><span class="p">(</span> <span class="n">vari</span> <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setUpdatesEnabled</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+
+</div>
+<div class="viewcode-block" id="AGS4_GroupNotesTable.load_notes"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupNotesTable.load_notes">[docs]</a>    <span class="k">def</span> <span class="nf">load_notes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_code</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Loads group notes</span>
+
+<span class="sd">        :param group_code: The four character group code</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lookup</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">Ags</span><span class="o">.</span><span class="n">get_words</span><span class="p">()</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="n">notes</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">Ags</span><span class="o">.</span><span class="n">get_notes</span><span class="p">(</span><span class="n">group_code</span><span class="p">)</span>
+        <span class="c1">#print notes</span>
+
+        <span class="k">if</span> <span class="n">notes</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setUpdatesEnabled</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">note</span> <span class="ow">in</span> <span class="n">notes</span><span class="p">:</span>
+
+            <span class="n">w</span> <span class="o">=</span> <span class="n">widget</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QLabel</span><span class="p">()</span>
+
+            <span class="n">words</span> <span class="o">=</span> <span class="n">note</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+                <span class="c1">#print word</span>
+                <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">lookup</span><span class="p">:</span>
+                    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&lt;a href=&#39;#</span><span class="si">%s</span><span class="s2">-</span><span class="si">%s</span><span class="s2">&#39;&gt;</span><span class="si">%s</span><span class="s2">&lt;/a&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lookup</span><span class="p">[</span><span class="n">word</span><span class="p">][</span><span class="s1">&#39;type&#39;</span><span class="p">],</span> <span class="n">word</span><span class="p">,</span> <span class="n">word</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+            <span class="n">widget</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
+            <span class="n">widget</span><span class="o">.</span><span class="n">setTextFormat</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">RichText</span><span class="p">)</span>
+            <span class="n">widget</span><span class="o">.</span><span class="n">setWordWrap</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="n">widget</span><span class="o">.</span><span class="n">setMargin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">widget</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s2">&quot;background-color: #C3F6A9; padding: 2px; margin: 0; border-bottom:1px solid #dddddd;&quot;</span><span class="p">)</span>
+            <span class="n">widget</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignTop</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">scrollLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;linkHovered(const QString)&quot;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_link_hover</span><span class="p">)</span>
+
+        <span class="c1">#if len(notes) &lt; 4:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scrollLayout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setUpdatesEnabled</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigLoaded</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">notes</span><span class="p">),</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="c1">#self.emit(QtCore.SIGNAL(&quot;loaded&quot;), len(notes), self)</span>
+</div>
+<div class="viewcode-block" id="AGS4_GroupNotesTable.on_link_hover"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupNotesTable.on_link_hover">[docs]</a>    <span class="k">def</span> <span class="nf">on_link_hover</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lnk</span><span class="p">):</span>
+        <span class="c1">#print &quot;link=&quot;, lnk</span>
+        <span class="c1">#self.statusBar.showMessage(lnk)</span>
+        <span class="k">print</span> <span class="s2">&quot;TODO&quot;</span>
+</div>
+<div class="viewcode-block" id="AGS4_GroupNotesTable.on_tree_context_menu"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_GroupNotesTable.on_tree_context_menu">[docs]</a>    <span class="k">def</span> <span class="nf">on_tree_context_menu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">selectionModel</span><span class="p">()</span><span class="o">.</span><span class="n">hasSelection</span><span class="p">():</span>
+            <span class="k">return</span>
+
+
+
+</div></div>
+<div class="viewcode-block" id="AGS4_HeadingDetailWidget"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_HeadingDetailWidget">[docs]</a><span class="k">class</span> <span class="nc">AGS4_HeadingDetailWidget</span><span class="p">(</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span> <span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Shows details about a heading, including example, etc&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">parent</span> <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QSortFilterProxyModel</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setSourceModel</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">Ags</span><span class="o">.</span><span class="n">modelAbbrItems</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterCaseSensitivity</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">CaseInsensitive</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterKeyColumn</span><span class="p">(</span><span class="n">CA</span><span class="o">.</span><span class="n">head_code</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterFixedString</span><span class="p">(</span><span class="n">SHOW_NONE</span><span class="p">)</span>
+
+        <span class="c1">##===============================================</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="p">)</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">toolbar</span> <span class="o">=</span> <span class="n">xwidgets</span><span class="o">.</span><span class="n">hlayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">toolbar</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">icoLabel</span> <span class="o">=</span> <span class="n">xwidgets</span><span class="o">.</span><span class="n">IconLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ico</span><span class="o">=</span><span class="n">Ico</span><span class="o">.</span><span class="n">AgsGroup</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">icoLabel</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s2">&quot;background-color: white; color: #444444;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">toolbar</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">icoLabel</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblAbbrCode</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblAbbrCode</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s2">&quot;background-color: white; color: </span><span class="si">%s</span><span class="s2">; font-weight: bold; font-family: monospace; padding: 3px;&quot;</span> <span class="o">%</span> <span class="n">AGS_COLORS</span><span class="o">.</span><span class="n">group</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">toolbar</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lblAbbrCode</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lblAbbrCode</span><span class="o">.</span><span class="n">setFixedWidth</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">splitter</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QSplitter</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">splitter</span><span class="p">)</span>
+
+        <span class="c1">##===============================================================</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QTreeView</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mainLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setUniformRowHeights</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setRootIsDecorated</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setAlternatingRowColors</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setSortingEnabled</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setModel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="p">)</span>
+
+
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="n">CA</span><span class="o">.</span><span class="n">head_code</span><span class="p">]:</span>
+            <span class="k">pass</span> <span class="c1">#self.tree.setColumnHidden(c, True)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setColumnWidth</span><span class="p">(</span><span class="n">CA</span><span class="o">.</span><span class="n">item_code</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setColumnWidth</span><span class="p">(</span><span class="n">CA</span><span class="o">.</span><span class="n">item_description</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setColumnWidth</span><span class="p">(</span><span class="n">CA</span><span class="o">.</span><span class="n">head_code</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">header</span><span class="p">()</span><span class="o">.</span><span class="n">setStretchLastSection</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="c1"># TODO fix sort to ags</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">setSortingEnabled</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+
+
+
+<div class="viewcode-block" id="AGS4_HeadingDetailWidget.load_heading"><a class="viewcode-back" href="../../ogtgui/ags4_widgets.html#ogtgui.ags4_widgets.AGS4_HeadingDetailWidget.load_heading">[docs]</a>    <span class="k">def</span> <span class="nf">load_heading</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head_code</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">setFilterFixedString</span><span class="p">(</span><span class="n">SHOW_NONE</span> <span class="k">if</span> <span class="n">head_code</span> <span class="o">==</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">head_code</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ogt/index.html">ogt:  Base API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ogtgui/index.html">ogtgui: Desktop API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ogtserver/index.html">ogtserver:  www server API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../commands.html">Commands</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ogt-ags-py</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017  ogt@daffodil.uk.com.
+      Last updated on 2017-01-30.
+    </div>
+  </body>
+</html>

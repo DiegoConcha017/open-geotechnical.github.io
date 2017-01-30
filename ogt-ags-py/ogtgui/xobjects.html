@@ -1,0 +1,634 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ogtgui.xobjects.* &mdash; Open GeoTechnical AGS Tools</title>
+    
+    <link rel="stylesheet" href="../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'git',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Open GeoTechnical AGS Tools" href="../index.html" />
+    <link rel="up" title="ogtgui: Desktop API" href="index.html" />
+    <link rel="next" title="ogtgui.xwidgets.*" href="xwidgets.html" />
+    <link rel="prev" title="ogtgui.ogtgui_widgets.*" href="ogtgui_widgets.html" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+<style>
+
+
+
+body {
+    background-color: black;
+}
+
+#XHEAD {
+    deadbackground-color: yellow !important;
+}
+.main_title{
+    margin: 10px;
+    font-size: 14pt;
+    vertical-align: top;
+    color: #999999;
+    font-family: Verdana;
+}
+
+.main_title a {
+    color: #F29F00;
+}
+.main_title a:hover {
+    text-decoration: none;
+}
+
+.main_title small{
+    margin: 10px;
+    font-size: 8pt;
+    vertical-align: top;
+    color: #999999;
+    font-weight: normal
+    font-family: Verdana;
+}
+
+.externals_nav {
+    float: right;
+    margin-right: 100px;
+}
+.externals_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+        sswidth: 50px;
+} 
+
+.externals_nav a {
+    text-decoration: none;
+    color: #999999;
+    padding: 5px;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+.externals_nav a:hover {
+    background-color: #333333;
+    color: white;
+}
+    
+        
+.module_nav {
+    float: right;
+    ssmargin-right: 150px;
+
+    deadbackground-color: red !important;
+}
+.module_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+    width: 50px;
+}
+.module_nav a {
+    text-decoration: none;
+    background-color: #222222;
+    color: #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #efefef;
+    font-family: Verdana;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.module_nav a:hover {
+    background-color: #333333;
+}
+.module_nav a.selected{
+    background-color: #999999;
+    color: black;
+}
+
+.related{
+    background-color: #222222 !important; 
+    margin-right: 10px;
+    
+}
+.related a {
+    color: #dddddd !important; 
+    text-shadow: none;
+        font-size: 10pt !important;
+}
+div.related ul {
+    padding-left: 300px;
+}
+.related ul li {
+    color: #FFFF00 !important;
+}
+
+.sphinxsidebarwrapper {
+    width: 300px;
+    background-color: #DDDDDD;
+}
+.sphinxsidebarwrapper h3  {
+    border-bottom: 1px solid white;
+}
+.sphinxsidebarwrapper h3 a {
+    font-family: Verdana;
+}
+div.bodywrapper {
+    margin-left: 300px;
+}
+.sphinxsidebar ul {
+    margin-left: 0;
+}
+.sphinxsidebar ul li{
+    sborder-top: 1px solid #dddddd !important;
+    ssbackground-color: white;
+    padding: 2px !important;
+}
+.sphinxsidebar ul li a{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #333333;
+    font-family: Verdana;
+}
+.sphinxsidebar ul ul{
+    width: 250px;
+}
+.sphinxsidebar ul ul li{
+    border-top: none !important;
+}
+.sphinxsidebar ul ul li a{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Verdana;
+}
+
+
+
+/**************************************************/
+/* Main */
+/**************************************************/
+div.body {
+    font-size: 10pt;
+}
+
+div.body h1{
+    border-radius: 10px !important;
+    padding: 5px 10px;
+    font-size: 20pt;
+    background-color: #444444 !important;
+    color: #dddddd;
+   font-family: Verdana;
+}
+
+
+
+div.body h2{
+
+    border-top: 2px solid #999999;
+    border-right: 2px solid #999999;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #bbbbbb !important;
+    font-size: 12pt;
+    font-family: monospace;
+
+    padding: 5px 10px;
+}
+div.body h3{
+    border-top: 2px solid #dddddd;
+    border-right: 2px solid #aaaaaa;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #dddddd !important;
+    font-size: 10pt;
+    font-family: monospace;
+    padding: 5px 10px;
+}
+
+div.body p {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 600px;
+}
+div.body ul, ol {
+    padding-left: 50px;
+    padding-right: 50px;
+     max-width: 600px;
+}
+div.body li p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+div.body ul, ul {
+     padding-left: 30px;
+    padding-right: 30px;
+}
+
+.admonition {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+.field-name {
+    width: 80px;
+    text-align: right;
+}
+
+pre {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 9pt;
+    padding: 4px;
+}
+
+table.docutils {
+    box-shadow: 9px 10px 34px -16px rgba(0,0,0,0.75);
+}
+table.docutils thead {
+    background-color: #dddddd;
+}
+table.docutils th {
+    padding: 5px;
+}
+table.docutils td {
+    padding: 2px;
+}
+
+table.field-list{
+    box-shadow: none;
+    background-color: #eeeeee;
+}
+
+table.field-list tr{
+    border-bottom: 1px solid #cccccc;
+}
+table.field-list th {
+    padding: 5px;
+    width: 100px;
+    border-right: 1px solid #cccccc;
+    font-size: 9pt;
+    deadbackground-color: red;
+    color: #888888;
+}
+table.field-list td {
+    padding: 5px;
+    border-left: 1px solid #cccccc;
+}
+
+dl.class p {
+    padding-left: 5px;
+}
+
+.ags-csv-rule {
+    background-color: #00CCCC;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+.ags-data-rule {
+    background-color:#FFFF00;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+
+.viewcode-link {
+    font-size: 8pt;
+}
+
+/**************************************************/
+/* API stuff */
+/**************************************************/
+/* a whole class container */
+dl.class {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #822775;
+}
+/* class Name */
+dl.class dt .descname{
+	color: #822775;
+	font-size: 13pt;
+	font-family: monospace;
+}
+
+a.reference code.py-class span.pre {
+    color: #822775 !important;
+    font-family: monospace;
+}
+
+
+/* class attribute */
+dl.attribute dt .descname {
+    color: #AD833E;
+    font-size: 11pt;
+    font-family: monospace;
+}
+
+
+/* class method  */
+dl.method dt .descname {
+    color: #1B68B8;
+	font-size: 11pt;
+	font-family: monospace;
+
+}
+
+/* a whole function container */
+dl.function {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #298815;
+}
+/* function */
+dl.function dt .descname {
+    color: #298815 !important;
+}
+
+a.reference code.py-func span.pre {
+    color: #298815 !important;
+    font-family: monospace;
+}
+
+/* glossary */
+dl.glossary dt {
+    background-color: #eeeeee;
+    font-family: monospace;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top-right-radius: 20px;
+    padding: 3px 5px;
+
+}
+dl.glossary dd {
+    border-right: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+</style>
+    
+    <div id="XHEAD">
+    <!-- github at top right -->
+<a href="https://github.com/open-geotechnical/ogt-ags-py" target="github">
+<img style="position: absolute; top: 0; right: 0; border: 0; z-index:444444;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+  
+   <ul class="externals_nav">
+    <li><a href="http://open-geotechnical.github.io/" target="github">Main Website</a></li>
+    <li><a href="https://github.com/open-geotechnical/ogt-ags-py" target="github">Project</a></li>
+    <li><a href="https://github.com/open-geotechnical/ogt-ags-py/issues" target="issues">Issues</a></li>
+  </ul>
+  
+	
+ 
+  
+  <h1 class="main_title"><a href="/ogt-ags-py"><img src="/_static/logo-small.png"> ogt-ags-py</a> - Developer Docs <small>v0.0.1</small></h1>
+  </div>
+  
+
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="xwidgets.html" title="ogtgui.xwidgets.*"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ogtgui_widgets.html" title="ogtgui.ogtgui_widgets.*"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ogt-ags-py</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">ogtgui: Desktop API</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-ogtgui.xobjects">
+<span id="ogtgui-xobjects"></span><h1>ogtgui.xobjects.*<a class="headerlink" href="#module-ogtgui.xobjects" title="Permalink to this headline">¶</a></h1>
+<p>&#64;author: Peter Morgan &lt;<a class="reference external" href="mailto:pete&#37;&#52;&#48;daffodil&#46;uk&#46;com">pete<span>&#64;</span>daffodil<span>&#46;</span>uk<span>&#46;</span>com</a>&gt;</p>
+<dl class="class">
+<dt id="ogtgui.xobjects.XSortFilterProxyModel">
+<em class="property">class </em><code class="descclassname">ogtgui.xobjects.</code><code class="descname">XSortFilterProxyModel</code><span class="sig-paren">(</span><em>parent=None</em>, <em>active=None</em>, <em>source_model=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XSortFilterProxyModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XSortFilterProxyModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt4.QtGui.QSortFilterProxyModel</span></code></p>
+<dl class="method">
+<dt id="ogtgui.xobjects.XSortFilterProxyModel.get_dic_from_index">
+<code class="descname">get_dic_from_index</code><span class="sig-paren">(</span><em>pidx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XSortFilterProxyModel.get_dic_from_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XSortFilterProxyModel.get_dic_from_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XSortFilterProxyModel.get_dic_items_from_index">
+<code class="descname">get_dic_items_from_index</code><span class="sig-paren">(</span><em>pidx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XSortFilterProxyModel.get_dic_items_from_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XSortFilterProxyModel.get_dic_items_from_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XSortFilterProxyModel.get_items_from_index">
+<code class="descname">get_items_from_index</code><span class="sig-paren">(</span><em>pidx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XSortFilterProxyModel.get_items_from_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XSortFilterProxyModel.get_items_from_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XSortFilterProxyModel.lessThan">
+<code class="descname">lessThan</code><span class="sig-paren">(</span><em>lidx</em>, <em>ridx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XSortFilterProxyModel.lessThan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XSortFilterProxyModel.lessThan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XSortFilterProxyModel.set_active_filter">
+<code class="descname">set_active_filter</code><span class="sig-paren">(</span><em>activ</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XSortFilterProxyModel.set_active_filter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XSortFilterProxyModel.set_active_filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ogtgui.xobjects.XStandardItemModel">
+<em class="property">class </em><code class="descclassname">ogtgui.xobjects.</code><code class="descname">XStandardItemModel</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XStandardItemModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XStandardItemModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt4.QtGui.QStandardItemModel</span></code></p>
+<p>An extended model with convenience functions, intended as a base model</p>
+<dl class="method">
+<dt id="ogtgui.xobjects.XStandardItemModel.get_items_from_index">
+<code class="descname">get_items_from_index</code><span class="sig-paren">(</span><em>midx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XStandardItemModel.get_items_from_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XStandardItemModel.get_items_from_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XStandardItemModel.get_items_from_item">
+<code class="descname">get_items_from_item</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XStandardItemModel.get_items_from_item"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XStandardItemModel.get_items_from_item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XStandardItemModel.get_items_from_row">
+<code class="descname">get_items_from_row</code><span class="sig-paren">(</span><em>ridx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XStandardItemModel.get_items_from_row"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XStandardItemModel.get_items_from_row" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XStandardItemModel.make_blank_row">
+<code class="descname">make_blank_row</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XStandardItemModel.make_blank_row"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XStandardItemModel.make_blank_row" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XStandardItemModel.make_row">
+<code class="descname">make_row</code><span class="sig-paren">(</span><em>xid</em>, <em>col</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XStandardItemModel.make_row"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XStandardItemModel.make_row" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XStandardItemModel.remove_rows">
+<code class="descname">remove_rows</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XStandardItemModel.remove_rows"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XStandardItemModel.remove_rows" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XStandardItemModel.set_header">
+<code class="descname">set_header</code><span class="sig-paren">(</span><em>col</em>, <em>text</em>, <em>align=None</em>, <em>tooltip=None</em>, <em>sort=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XStandardItemModel.set_header"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XStandardItemModel.set_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a horizontal header</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>col</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) -- The column index</li>
+<li><strong>label</strong> (<em>str`</em>) -- The text label</li>
+<li><strong>align</strong> (<em>Qt.Align</em>) -- Text alignment</li>
+<li><strong>tooltip</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) -- The tooltip to show on header hover</li>
+<li><strong>sort</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) -- # TBA</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XStandardItemModel.set_row_bg">
+<code class="descname">set_row_bg</code><span class="sig-paren">(</span><em>ridx</em>, <em>color</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XStandardItemModel.set_row_bg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XStandardItemModel.set_row_bg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XStandardItemModel.set_widget">
+<code class="descname">set_widget</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XStandardItemModel.set_widget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XStandardItemModel.set_widget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ogtgui.xobjects.XStandardItemModel.strike_row">
+<code class="descname">strike_row</code><span class="sig-paren">(</span><em>ridx</em>, <em>state</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogtgui/xobjects.html#XStandardItemModel.strike_row"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogtgui.xobjects.XStandardItemModel.strike_row" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ogt/index.html">ogt:  Base API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">ogtgui: Desktop API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="main_window.html">ogtgui.main_window.*</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ogtgui_doc.html">ogtgui.ogtgui_doc.*</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ogtgui_group.html">ogtgui.ogtgui_group.*</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ogtgui_project.html">ogtgui.ogtgui_project.*</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ogtgui_widgets.html">ogtgui.ogtgui_widgets.*</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">ogtgui.xobjects.*</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xwidgets.html">ogtgui.xwidgets.*</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ags4_models.html">ogtgui.ags4_models.*</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ags4_widgets.html">ogtgui.ags4_widgets.*</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ogtserver/index.html">ogtserver:  www server API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ogtgui_widgets.html"
+                        title="previous chapter">ogtgui.ogtgui_widgets.*</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="xwidgets.html"
+                        title="next chapter">ogtgui.xwidgets.*</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/ogtgui/xobjects.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="xwidgets.html" title="ogtgui.xwidgets.*"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ogtgui_widgets.html" title="ogtgui.ogtgui_widgets.*"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ogt-ags-py</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >ogtgui: Desktop API</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017  ogt@daffodil.uk.com.
+      Last updated on 2017-01-30.
+    </div>
+  </body>
+</html>

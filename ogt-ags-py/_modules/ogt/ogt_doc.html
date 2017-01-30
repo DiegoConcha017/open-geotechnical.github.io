@@ -1,0 +1,1230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ogt.ogt_doc &mdash; Open GeoTechnical AGS Tools</title>
+    
+    <link rel="stylesheet" href="../../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'git',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="Open GeoTechnical AGS Tools" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+<style>
+
+
+
+body {
+    background-color: black;
+}
+
+#XHEAD {
+    deadbackground-color: yellow !important;
+}
+.main_title{
+    margin: 10px;
+    font-size: 14pt;
+    vertical-align: top;
+    color: #999999;
+    font-family: Verdana;
+}
+
+.main_title a {
+    color: #F29F00;
+}
+.main_title a:hover {
+    text-decoration: none;
+}
+
+.main_title small{
+    margin: 10px;
+    font-size: 8pt;
+    vertical-align: top;
+    color: #999999;
+    font-weight: normal
+    font-family: Verdana;
+}
+
+.externals_nav {
+    float: right;
+    margin-right: 100px;
+}
+.externals_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+        sswidth: 50px;
+} 
+
+.externals_nav a {
+    text-decoration: none;
+    color: #999999;
+    padding: 5px;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+.externals_nav a:hover {
+    background-color: #333333;
+    color: white;
+}
+    
+        
+.module_nav {
+    float: right;
+    ssmargin-right: 150px;
+
+    deadbackground-color: red !important;
+}
+.module_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+    width: 50px;
+}
+.module_nav a {
+    text-decoration: none;
+    background-color: #222222;
+    color: #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #efefef;
+    font-family: Verdana;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.module_nav a:hover {
+    background-color: #333333;
+}
+.module_nav a.selected{
+    background-color: #999999;
+    color: black;
+}
+
+.related{
+    background-color: #222222 !important; 
+    margin-right: 10px;
+    
+}
+.related a {
+    color: #dddddd !important; 
+    text-shadow: none;
+        font-size: 10pt !important;
+}
+div.related ul {
+    padding-left: 300px;
+}
+.related ul li {
+    color: #FFFF00 !important;
+}
+
+.sphinxsidebarwrapper {
+    width: 300px;
+    background-color: #DDDDDD;
+}
+.sphinxsidebarwrapper h3  {
+    border-bottom: 1px solid white;
+}
+.sphinxsidebarwrapper h3 a {
+    font-family: Verdana;
+}
+div.bodywrapper {
+    margin-left: 300px;
+}
+.sphinxsidebar ul {
+    margin-left: 0;
+}
+.sphinxsidebar ul li{
+    sborder-top: 1px solid #dddddd !important;
+    ssbackground-color: white;
+    padding: 2px !important;
+}
+.sphinxsidebar ul li a{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #333333;
+    font-family: Verdana;
+}
+.sphinxsidebar ul ul{
+    width: 250px;
+}
+.sphinxsidebar ul ul li{
+    border-top: none !important;
+}
+.sphinxsidebar ul ul li a{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Verdana;
+}
+
+
+
+/**************************************************/
+/* Main */
+/**************************************************/
+div.body {
+    font-size: 10pt;
+}
+
+div.body h1{
+    border-radius: 10px !important;
+    padding: 5px 10px;
+    font-size: 20pt;
+    background-color: #444444 !important;
+    color: #dddddd;
+   font-family: Verdana;
+}
+
+
+
+div.body h2{
+
+    border-top: 2px solid #999999;
+    border-right: 2px solid #999999;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #bbbbbb !important;
+    font-size: 12pt;
+    font-family: monospace;
+
+    padding: 5px 10px;
+}
+div.body h3{
+    border-top: 2px solid #dddddd;
+    border-right: 2px solid #aaaaaa;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #dddddd !important;
+    font-size: 10pt;
+    font-family: monospace;
+    padding: 5px 10px;
+}
+
+div.body p {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 600px;
+}
+div.body ul, ol {
+    padding-left: 50px;
+    padding-right: 50px;
+     max-width: 600px;
+}
+div.body li p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+div.body ul, ul {
+     padding-left: 30px;
+    padding-right: 30px;
+}
+
+.admonition {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+.field-name {
+    width: 80px;
+    text-align: right;
+}
+
+pre {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 9pt;
+    padding: 4px;
+}
+
+table.docutils {
+    box-shadow: 9px 10px 34px -16px rgba(0,0,0,0.75);
+}
+table.docutils thead {
+    background-color: #dddddd;
+}
+table.docutils th {
+    padding: 5px;
+}
+table.docutils td {
+    padding: 2px;
+}
+
+table.field-list{
+    box-shadow: none;
+    background-color: #eeeeee;
+}
+
+table.field-list tr{
+    border-bottom: 1px solid #cccccc;
+}
+table.field-list th {
+    padding: 5px;
+    width: 100px;
+    border-right: 1px solid #cccccc;
+    font-size: 9pt;
+    deadbackground-color: red;
+    color: #888888;
+}
+table.field-list td {
+    padding: 5px;
+    border-left: 1px solid #cccccc;
+}
+
+dl.class p {
+    padding-left: 5px;
+}
+
+.ags-csv-rule {
+    background-color: #00CCCC;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+.ags-data-rule {
+    background-color:#FFFF00;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+
+.viewcode-link {
+    font-size: 8pt;
+}
+
+/**************************************************/
+/* API stuff */
+/**************************************************/
+/* a whole class container */
+dl.class {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #822775;
+}
+/* class Name */
+dl.class dt .descname{
+	color: #822775;
+	font-size: 13pt;
+	font-family: monospace;
+}
+
+a.reference code.py-class span.pre {
+    color: #822775 !important;
+    font-family: monospace;
+}
+
+
+/* class attribute */
+dl.attribute dt .descname {
+    color: #AD833E;
+    font-size: 11pt;
+    font-family: monospace;
+}
+
+
+/* class method  */
+dl.method dt .descname {
+    color: #1B68B8;
+	font-size: 11pt;
+	font-family: monospace;
+
+}
+
+/* a whole function container */
+dl.function {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #298815;
+}
+/* function */
+dl.function dt .descname {
+    color: #298815 !important;
+}
+
+a.reference code.py-func span.pre {
+    color: #298815 !important;
+    font-family: monospace;
+}
+
+/* glossary */
+dl.glossary dt {
+    background-color: #eeeeee;
+    font-family: monospace;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top-right-radius: 20px;
+    padding: 3px 5px;
+
+}
+dl.glossary dd {
+    border-right: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+</style>
+    
+    <div id="XHEAD">
+    <!-- github at top right -->
+<a href="https://github.com/open-geotechnical/ogt-ags-py" target="github">
+<img style="position: absolute; top: 0; right: 0; border: 0; z-index:444444;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+  
+   <ul class="externals_nav">
+    <li><a href="http://open-geotechnical.github.io/" target="github">Main Website</a></li>
+    <li><a href="https://github.com/open-geotechnical/ogt-ags-py" target="github">Project</a></li>
+    <li><a href="https://github.com/open-geotechnical/ogt-ags-py/issues" target="issues">Issues</a></li>
+  </ul>
+  
+	
+ 
+  
+  <h1 class="main_title"><a href="/ogt-ags-py"><img src="/_static/logo-small.png"> ogt-ags-py</a> - Developer Docs <small>v0.0.1</small></h1>
+  </div>
+  
+
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ogt-ags-py</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for ogt.ogt_doc</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">StringIO</span>
+<span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">zipfile</span>
+
+<span class="kn">import</span> <span class="nn">geojson</span>
+<span class="kn">import</span> <span class="nn">bng_to_latlon</span> <span class="c1"># https://github.com/fmalina/bng_latlon</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">FORMATS</span>
+<span class="c1">#from ogt.ags4 import AGS4_DESCRIPTOR</span>
+<span class="kn">import</span> <span class="nn">ogt.ags4</span>
+<span class="kn">import</span> <span class="nn">ogt.ogt_group</span>
+
+<span class="c1">#from ogt import ags4</span>
+
+<span class="c1">#from ogt import ogt_group</span>
+
+<span class="kn">from</span> <span class="nn">ogt</span> <span class="kn">import</span> <span class="n">utils</span>
+
+
+<div class="viewcode-block" id="OGTDocument"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument">[docs]</a><span class="k">class</span> <span class="nc">OGTDocument</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents and `.ags` file&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">source_file_path</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="sd">&quot;&quot;&quot;Path to original source file, if any&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;The original source string&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">groups</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="sd">&quot;&quot;&quot;A `dict` with group code to :class:`~ogt.ogt_group.OGTGroup` instances&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="sd">&quot;&quot;&quot;A list of original source lines (line 1 = idx zero)&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">csv_rows</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="sd">&quot;&quot;&quot;A list of csv rows&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_rows</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="sd">&quot;&quot;&quot;A `list` of rows with errors&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="OGTDocument.hash"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.hash">[docs]</a>    <span class="k">def</span> <span class="nf">hash</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Calculate the `sha1` hash</span>
+
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :return: A **`str`** with the hash</span>
+
+<span class="sd">        .. seealso:: See also</span>
+
+<span class="sd">            - https://en.wikipedia.org/wiki/SHA-1</span>
+<span class="sd">            - https://docs.python.org/2/library/sha.html</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">hasher</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">()</span>
+        <span class="n">hasher</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">hasher</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="OGTDocument.groups_sort"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.groups_sort">[docs]</a>    <span class="k">def</span> <span class="nf">groups_sort</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a list of group_codes in preffered order&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ogt_group</span><span class="o">.</span><span class="n">groups_sort</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+</div>
+<div class="viewcode-block" id="OGTDocument.groups_count"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.groups_count">[docs]</a>    <span class="k">def</span> <span class="nf">groups_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return no of groups in document</span>
+
+<span class="sd">        :rtype: int</span>
+<span class="sd">        :return: No of groups</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</div>
+<div class="viewcode-block" id="OGTDocument.append_group"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.append_group">[docs]</a>    <span class="k">def</span> <span class="nf">append_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grp</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param grp: The group object to add</span>
+<span class="sd">        :type grp: ~ogt.ogt_group.OGTGroup</span>
+<span class="sd">        :return: An `Error` message is group exists, else `None`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">group_code</span> <span class="ow">in</span>  <span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Error: Group already exists in doc&quot;</span>
+        <span class="n">grp</span><span class="o">.</span><span class="n">parentDoc</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="c1">#self.groups_sort.append(grp.group_code)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="n">grp</span><span class="o">.</span><span class="n">group_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">grp</span>
+        <span class="k">return</span> <span class="bp">None</span>
+</div>
+<div class="viewcode-block" id="OGTDocument.group"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.group">[docs]</a>    <span class="k">def</span> <span class="nf">group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_code</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param group_code: Four character group code</span>
+<span class="sd">        :type group_code: str</span>
+<span class="sd">        :return: An instance of :class:`~ogt.ogt_group.OGTGroup` if exists, else `None`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">group_code</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="OGTDocument.proj"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.proj">[docs]</a>    <span class="k">def</span> <span class="nf">proj</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Shortcut to `PROJ` group object</span>
+
+<span class="sd">        :return: An instance of :class:`~ogt.ogt_group.OGTGroup` if exists, else `None`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;PROJ&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="OGTDocument.proj_dict"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.proj_dict">[docs]</a>    <span class="k">def</span> <span class="nf">proj_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Shortcut to `PROJ` group data</span>
+
+<span class="sd">        :return: A dict with data if exists, else `None`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">grpOb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;PROJ&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">grpOb</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="c1">#print grpOb.data[0]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">grpOb</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">grpOb</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">None</span>
+</div>
+<div class="viewcode-block" id="OGTDocument.units"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.units">[docs]</a>    <span class="k">def</span> <span class="nf">units</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Shortcut to `UNIT` group</span>
+
+<span class="sd">        :rtype: tuple</span>
+<span class="sd">        :return:</span>
+<span class="sd">            - An instance of :class:`~ogt.ogt_group.OGTGroup` if exists, else `None`</span>
+<span class="sd">            - `bool` = `True` if group found in document, else false</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;UNIT&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="OGTDocument.types"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.types">[docs]</a>    <span class="k">def</span> <span class="nf">types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Shortcut to `TYPE` group</span>
+
+<span class="sd">        :rtype: tuple</span>
+<span class="sd">        :return:</span>
+<span class="sd">            - An instance of :class:`~ogt.ogt_group.OGTGroup` if exists, else `None`</span>
+<span class="sd">            - `bool` = `True` if group found in document, else false</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;TYPE&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="OGTDocument.write"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.write">[docs]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="n">beside</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+              <span class="n">include_source</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">edit_mode</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">minify</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+              <span class="nb">zip</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">include_stats</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Write out the data to file in the selected format</span>
+
+<span class="sd">        :param ext: The file format, see :data:`~ogt.__init__.FORMATS`</span>
+<span class="sd">        :type ext: str</span>
+
+<span class="sd">        :type beside: bool</span>
+<span class="sd">        :param beside: Save the output file alongside the original with extention appended, eg</span>
+
+<span class="sd">             - Source = `/path/to/myproject.ags`</span>
+<span class="sd">             - Output = `/path/to/myproject.ags.json`</span>
+
+<span class="sd">        :param file_path: Relative or absolute path to write to including extention</span>
+<span class="sd">        :type file_path: str</span>
+
+<span class="sd">        :param include_source: If `True`, the original ags source is also included.</span>
+<span class="sd">        :type include_source: bool</span>
+
+<span class="sd">        :param zip: If `True`, the orgiginal and converted file are packaged in a zip</span>
+<span class="sd">        :type zip: bool</span>
+
+<span class="sd">        :param minify: If `True`, all white space is removed from output file</span>
+<span class="sd">        :type minify: bool</span>
+
+<span class="sd">        :param overwrite: If `True`, the target file is overwritten, otherwise an error is returned</span>
+<span class="sd">        :type overwrite: bool</span>
+
+<span class="sd">        :return: A tuple with</span>
+
+<span class="sd">                - A `Message` string  if no errors, else `None`</span>
+<span class="sd">                - Any `Error` that occured, otherwise `None`</span>
+
+<span class="sd">        .. Note:: **Note**</span>
+
+<span class="sd">            - Either **`beside=True`** or a **`file_path`** is required, otherwise and error occurs</span>
+<span class="sd">            - If both are provided, and error is returned</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#print &quot;----------------&quot;</span>
+        <span class="n">stats</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">()[</span><span class="s1">&#39;site_geometry&#39;</span><span class="p">]</span>
+        <span class="c1">#print &quot;..................&quot;</span>
+
+        <span class="c1">## Do some validations</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">ext</span> <span class="ow">in</span> <span class="n">FORMATS</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: Invalid format specified - `</span><span class="si">%s</span><span class="s2">` </span><span class="si">% e</span><span class="s2">xt. Use </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">FORMATS</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">beside</span> <span class="o">==</span> <span class="bp">False</span> <span class="ow">and</span> <span class="n">file_path</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: need an output, either -b or -w&quot;</span>
+
+        <span class="k">if</span> <span class="n">beside</span> <span class="o">==</span> <span class="bp">True</span> <span class="ow">and</span> <span class="n">file_path</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: conflict in options, either -b or -w, not BOTH&quot;</span>
+
+
+        <span class="c1">## make target filename&#39;s</span>
+        <span class="n">base_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source_file_path</span><span class="p">)</span>
+        <span class="n">target_file_path</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">if</span> <span class="n">beside</span><span class="p">:</span>
+            <span class="c1"># File is beside the original</span>
+            <span class="k">if</span> <span class="nb">zip</span><span class="p">:</span>
+                <span class="n">target_file_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_file_path</span> <span class="o">+</span> <span class="s2">&quot;.zip&quot;</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">target_file_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_file_path</span> <span class="o">+</span> <span class="s2">&quot;.</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ext</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># file is from argument</span>
+            <span class="n">target_file_path</span> <span class="o">=</span> <span class="n">file_path</span>
+            <span class="n">base_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">base_name</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1"># directory given only</span>
+                <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: Invalid file name `</span><span class="si">%s</span><span class="s2">`&quot;</span> <span class="o">%</span> <span class="n">target_file_path</span>
+
+            <span class="n">parts</span> <span class="o">=</span> <span class="n">base_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="c1"># no extention</span>
+                <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: Invalid file name `</span><span class="si">%s</span><span class="s2">`&quot;</span> <span class="o">%</span> <span class="n">target_file_path</span>
+
+            <span class="c1"># Check the extention is what we expect</span>
+            <span class="n">gext</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">zip</span> <span class="o">==</span> <span class="bp">False</span> <span class="ow">and</span> <span class="n">gext</span> <span class="o">!=</span> <span class="n">ext</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: Conflict in file name extention, expected &#39;</span><span class="si">%s</span><span class="s2">&#39; `</span><span class="si">%s</span><span class="s2">`&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ext</span><span class="p">,</span> <span class="n">target_file_path</span><span class="p">)</span>
+
+            <span class="k">elif</span> <span class="nb">zip</span> <span class="o">==</span> <span class="bp">True</span> <span class="ow">and</span> <span class="n">gext</span> <span class="o">!=</span> <span class="s2">&quot;zip&quot;</span><span class="p">:</span>
+                <span class="c1"># extentions mismatched eg json != yaml</span>
+                <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: Conflict in file name extention expected &#39;zip&#39; `</span><span class="si">%s</span><span class="s2">`&quot;</span> <span class="o">%</span> <span class="n">target_file_path</span>
+
+
+        <span class="c1">## warn if not overwrite</span>
+        <span class="k">if</span> <span class="n">overwrite</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">target_file_path</span><span class="p">):</span>
+                <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: Target file exists - `</span><span class="si">%s</span><span class="s2">` &quot;</span> <span class="o">%</span> <span class="n">target_file_path</span>
+
+        <span class="c1">## convert the file to target format string blob</span>
+        <span class="n">blob</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">if</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;js&quot;</span><span class="p">,</span> <span class="s2">&quot;json&quot;</span><span class="p">]:</span>
+            <span class="n">blob</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">include_source</span><span class="o">=</span><span class="n">include_source</span><span class="p">,</span> <span class="n">edit_mode</span><span class="o">=</span><span class="n">edit_mode</span><span class="p">,</span> <span class="n">minify</span><span class="o">=</span><span class="n">minify</span><span class="p">,</span> <span class="n">include_stats</span><span class="o">=</span><span class="n">include_stats</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">ext</span> <span class="o">==</span> <span class="s2">&quot;geojson&quot;</span><span class="p">:</span>
+            <span class="n">blob</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_geojson</span><span class="p">(</span><span class="n">minify</span><span class="o">=</span><span class="n">minify</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">ext</span> <span class="o">==</span> <span class="s2">&quot;yaml&quot;</span><span class="p">:</span>
+            <span class="n">blob</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_yaml</span><span class="p">(</span><span class="n">include_source</span><span class="o">=</span><span class="n">include_source</span><span class="p">,</span> <span class="n">edit_mode</span><span class="o">=</span><span class="n">edit_mode</span><span class="p">,</span> <span class="n">include_stats</span><span class="o">=</span><span class="n">include_stats</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">ext</span> <span class="o">==</span> <span class="s2">&quot;ags4&quot;</span><span class="p">:</span>
+            <span class="n">blob</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">doc_to_ags4_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: No valid output format specified - `</span><span class="si">%s</span><span class="s2">` </span><span class="si">% e</span><span class="s2">xt&quot;</span>
+
+        <span class="k">if</span> <span class="n">err</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="n">err</span>
+
+        <span class="k">if</span> <span class="nb">zip</span><span class="p">:</span>
+            <span class="c1"># create zip</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">zipee</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">target_file_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+
+                <span class="c1"># add source file</span>
+                <span class="n">zipee</span><span class="o">.</span><span class="n">writestr</span><span class="p">(</span> <span class="n">base_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">)</span>
+
+                <span class="c1"># add converted file</span>
+                <span class="n">zipee</span><span class="o">.</span><span class="n">writestr</span><span class="p">(</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">base_name</span><span class="p">,</span> <span class="n">ext</span><span class="p">),</span> <span class="n">blob</span><span class="p">)</span>
+
+                <span class="c1"># write out and done</span>
+                <span class="n">zipee</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+                <span class="n">siz</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">file_size</span><span class="p">(</span><span class="n">target_file_path</span><span class="p">,</span> <span class="n">human</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                <span class="k">return</span> <span class="s2">&quot;Wrote: </span><span class="si">%s</span><span class="s2"> `</span><span class="si">%s</span><span class="s2">`&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">siz</span><span class="p">,</span> <span class="n">target_file_path</span><span class="p">),</span> <span class="bp">None</span>
+
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">target_file_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">blob</span><span class="p">)</span>
+                    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="n">siz</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">file_size</span><span class="p">(</span><span class="n">target_file_path</span><span class="p">,</span> <span class="n">human</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                <span class="k">return</span> <span class="s2">&quot;Wrote: </span><span class="si">%s</span><span class="s2"> `</span><span class="si">%s</span><span class="s2">`&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">siz</span><span class="p">,</span> <span class="n">target_file_path</span><span class="p">),</span> <span class="bp">None</span>
+
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+
+        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: OOPS unexpected error&quot;</span>
+</div>
+<div class="viewcode-block" id="OGTDocument.to_dict"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">include_source</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">edit_mode</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">include_stats</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the document data</span>
+
+<span class="sd">        :param include_source: if `True` then the source string is included in the **source:** key.</span>
+<span class="sd">        :type include_source: bool</span>
+<span class="sd">        :param edit_mode: see :ref:`edit_mode`</span>
+<span class="sd">        :type edit_mode: bool</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        :return: A `dict` with the data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># base dict to return</span>
+        <span class="n">dic</span> <span class="o">=</span>  <span class="nb">dict</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">source_file_path</span><span class="p">,</span>
+                    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;ags4&quot;</span><span class="p">,</span>
+                    <span class="n">groups</span><span class="o">=</span><span class="p">{},</span>
+                    <span class="nb">hash</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">hash</span><span class="p">())</span>
+
+        <span class="c1"># loop groups and add struct based on edit_mode</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;groups&#39;</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">edit_mode</span><span class="o">=</span><span class="n">edit_mode</span><span class="p">)</span>
+
+        <span class="c1"># include source raw source</span>
+        <span class="k">if</span> <span class="n">include_source</span><span class="p">:</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span>
+
+        <span class="c1"># include statistics</span>
+        <span class="k">if</span> <span class="n">include_stats</span><span class="p">:</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;stats&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">dic</span>
+</div>
+<div class="viewcode-block" id="OGTDocument.to_json"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.to_json">[docs]</a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">include_source</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">edit_mode</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">minify</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">include_stats</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the document data in :ref:`json` format</span>
+
+<span class="sd">        :param include_source: if `True` then the source string is included in the **source:** key.</span>
+<span class="sd">        :type include_source: bool</span>
+<span class="sd">        :param edit_mode: see :ref:`edit_mode`</span>
+<span class="sd">        :type edit_mode: bool</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :return: A tuple with:</span>
+
+<span class="sd">                - `None` if error else a `str` with :ref:`json` encoded data</span>
+<span class="sd">                - An `error` string is error occured, else `None`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">include_source</span><span class="o">=</span><span class="n">include_source</span><span class="p">,</span>
+                                             <span class="n">include_stats</span><span class="o">=</span><span class="n">include_stats</span><span class="p">,</span>
+                                             <span class="n">edit_mode</span><span class="o">=</span><span class="n">edit_mode</span><span class="p">),</span>
+                              <span class="n">minify</span><span class="o">=</span><span class="n">minify</span><span class="p">)</span>
+
+
+</div>
+<div class="viewcode-block" id="OGTDocument.to_yaml"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.to_yaml">[docs]</a>    <span class="k">def</span> <span class="nf">to_yaml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">include_source</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">edit_mode</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">include_stats</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the document data in :ref:`yaml` format</span>
+
+<span class="sd">        :param include_source: if `True` then the source string is included in the **source:** key.</span>
+<span class="sd">        :type include_source: bool</span>
+<span class="sd">        :param edit_mode: see :ref:`edit_mode`</span>
+<span class="sd">        :type edit_mode: bool</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :return: A tuple with:</span>
+
+<span class="sd">                - `None` if error else a `str` with :ref:`yaml` encoded data</span>
+<span class="sd">                - An `error` string is error occured, else `None`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_yaml</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">include_source</span><span class="o">=</span><span class="n">include_source</span><span class="p">,</span>
+                                           <span class="n">include_stats</span><span class="o">=</span><span class="n">include_stats</span><span class="p">,</span>
+                                           <span class="n">edit_mode</span><span class="o">=</span><span class="n">edit_mode</span><span class="p">)</span> <span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="OGTDocument.to_geojson"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.to_geojson">[docs]</a>    <span class="k">def</span> <span class="nf">to_geojson</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minify</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+
+        <span class="n">loca</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;LOCA&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">loca</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;No `LOCA` Group&quot;</span>
+
+        <span class="k">def</span> <span class="nf">make_feature</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">):</span>
+            <span class="n">props</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">PointID</span><span class="o">=</span><span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LOCA_ID&quot;</span><span class="p">),</span> <span class="n">Type</span><span class="o">=</span><span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LOCA_TYPE&quot;</span><span class="p">),</span> <span class="n">GroundLevel</span><span class="o">=</span><span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LOCA_GL&quot;</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">geojson</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span><span class="n">geometry</span><span class="o">=</span><span class="n">geojson</span><span class="o">.</span><span class="n">Point</span><span class="p">((</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)),</span> <span class="n">properties</span><span class="o">=</span><span class="n">props</span><span class="p">)</span>
+
+
+        <span class="n">features</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1">## WSG84</span>
+        <span class="k">if</span> <span class="s2">&quot;LOCA_LAT&quot;</span> <span class="ow">in</span> <span class="n">loca</span><span class="o">.</span><span class="n">headings</span> <span class="ow">and</span> <span class="s2">&quot;LOCA_LON&quot;</span> <span class="ow">in</span> <span class="n">loca</span><span class="o">.</span><span class="n">headings</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">rec</span> <span class="ow">in</span> <span class="n">loca</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+                <span class="n">lat_s</span> <span class="o">=</span> <span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LOCA_LAT&quot;</span><span class="p">)</span>
+                <span class="n">lon_s</span> <span class="o">=</span> <span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LOCA_LON&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">lat_s</span> <span class="ow">and</span> <span class="n">lon_s</span><span class="p">:</span>
+                    <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">make_feature</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span> <span class="n">lat_s</span><span class="p">,</span> <span class="n">lon_s</span><span class="p">))</span>
+
+        <span class="c1">## BNG British National grid</span>
+        <span class="k">elif</span> <span class="s2">&quot;LOCA_NATE&quot;</span> <span class="ow">in</span> <span class="n">loca</span><span class="o">.</span><span class="n">headings</span> <span class="ow">and</span> <span class="s2">&quot;LOCA_NATN&quot;</span> <span class="ow">in</span> <span class="n">loca</span><span class="o">.</span><span class="n">headings</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">rec</span> <span class="ow">in</span> <span class="n">loca</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+                <span class="n">east</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_int</span><span class="p">(</span><span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LOCA_NATE&quot;</span><span class="p">))</span>
+                <span class="n">north</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_int</span><span class="p">(</span><span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LOCA_NATN&quot;</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">east</span> <span class="ow">and</span> <span class="n">north</span><span class="p">:</span>
+                    <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span> <span class="o">=</span> <span class="n">bng_to_latlon</span><span class="o">.</span><span class="n">OSGB36toWGS84</span><span class="p">(</span><span class="n">east</span><span class="p">,</span> <span class="n">north</span><span class="p">)</span>
+                    <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">make_feature</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">))</span>
+                <span class="k">print</span> <span class="n">rec</span>
+        <span class="k">print</span> <span class="s2">&quot;ere&quot;</span><span class="p">,</span> <span class="n">features</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="n">geojson</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+            <span class="k">print</span> <span class="n">f</span>
+            <span class="k">print</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">minify</span><span class="o">=</span><span class="n">minify</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">minify</span><span class="o">=</span><span class="n">minify</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
+</div>
+<div class="viewcode-block" id="OGTDocument.write_excel"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.write_excel">[docs]</a>    <span class="k">def</span> <span class="nf">write_excel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Experimental writing to xlsx&quot;&quot;&quot;</span>
+        <span class="n">wbook</span> <span class="o">=</span> <span class="n">openpyxl</span><span class="o">.</span><span class="n">Workbook</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">ki</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groups_sort</span><span class="p">):</span>
+            <span class="n">grpobj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">groups_sort</span><span class="p">[</span><span class="n">ki</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">idx</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1">## By default an empty workbook has a first sheet</span>
+                <span class="n">sheet</span> <span class="o">=</span> <span class="n">wbook</span><span class="o">.</span><span class="n">active</span>
+                <span class="n">sheet</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">ki</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">sheet</span> <span class="o">=</span> <span class="n">wbook</span><span class="o">.</span><span class="n">create_sheet</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">ki</span><span class="p">)</span>
+        <span class="c1"># DAMN this is where groups order goes mad</span>
+
+        <span class="n">wbook</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span> <span class="o">+</span> <span class="s2">&quot;.xlsx&quot;</span><span class="p">)</span>
+
+
+</div>
+<div class="viewcode-block" id="OGTDocument.stats"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.stats">[docs]</a>    <span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1">## Number of locations</span>
+        <span class="n">locaGrp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;LOCA&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">locaGrp</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;locations&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">recs</span> <span class="o">=</span>  <span class="n">locaGrp</span><span class="o">.</span><span class="n">data_column</span><span class="p">(</span><span class="s2">&quot;LOCA_ID&quot;</span><span class="p">)</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;locations&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">count</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">recs</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">recs</span><span class="p">)</span>
+
+        <span class="c1">## Data rows</span>
+        <span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">gc</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+            <span class="n">grp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="n">gc</span><span class="p">)</span>
+            <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">GROUP</span><span class="o">=</span><span class="n">gc</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">data</span><span class="p">)))</span>
+        <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span>
+
+        <span class="c1">## Sample Types</span>
+        <span class="n">grp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;SAMP&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">grp</span><span class="p">:</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;sample_types&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">recs</span> <span class="o">=</span>  <span class="n">grp</span><span class="o">.</span><span class="n">data_column</span><span class="p">(</span><span class="s2">&quot;SAMP_TYPE&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">recs</span><span class="p">):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">st</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+                    <span class="n">d</span><span class="p">[</span><span class="n">st</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">d</span><span class="p">[</span><span class="n">st</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;sample_types&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span>
+
+
+        <span class="c1">## Site Geom</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1"># TODO X.Y.Z</span>
+        <span class="n">d</span><span class="p">[</span><span class="s1">&#39;LOCA_LOCX&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;todo&quot;</span>
+        <span class="n">d</span><span class="p">[</span><span class="s1">&#39;LOCA_LOCY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;todo&quot;</span>
+        <span class="n">d</span><span class="p">[</span><span class="s1">&#39;LOCA_LOCZ&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;todo&quot;</span>
+
+        <span class="c1"># National Grid</span>
+        <span class="k">def</span> <span class="nf">calc_ng_stats</span><span class="p">(</span><span class="n">recs</span><span class="p">):</span>
+            <span class="c1"># TODO - need to check type casting ?</span>
+            <span class="k">if</span> <span class="n">recs</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">None</span>
+            <span class="n">ds</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span>
+            <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span>
+            <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;row_count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span>
+            <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;rows_with_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;rows_without_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">rec</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">rec</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;rows_without_data&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;rows_with_data&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="n">ds</span>
+
+
+        <span class="n">recs</span> <span class="o">=</span> <span class="n">locaGrp</span><span class="o">.</span><span class="n">data_column</span><span class="p">(</span><span class="s2">&quot;LOCA_NATE&quot;</span><span class="p">)</span>
+        <span class="n">d</span><span class="p">[</span><span class="s1">&#39;LOCA_NATE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">calc_ng_stats</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span>
+
+        <span class="n">recs</span> <span class="o">=</span> <span class="n">locaGrp</span><span class="o">.</span><span class="n">data_column</span><span class="p">(</span><span class="s2">&quot;LOCA_NATN&quot;</span><span class="p">)</span>
+        <span class="n">d</span><span class="p">[</span><span class="s1">&#39;LOCA_NATN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">calc_ng_stats</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span>
+
+        <span class="n">recs</span> <span class="o">=</span> <span class="n">locaGrp</span><span class="o">.</span><span class="n">data_column</span><span class="p">(</span><span class="s2">&quot;LOCA_GL&quot;</span><span class="p">)</span>
+        <span class="n">d</span><span class="p">[</span><span class="s1">&#39;LOCA_GL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">calc_ng_stats</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span>
+
+        <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;site_geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span>
+
+        <span class="c1"># GEOL</span>
+        <span class="n">grp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;GEOL&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">grp</span><span class="p">:</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;geol&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">recs</span> <span class="o">=</span> <span class="n">grp</span><span class="o">.</span><span class="n">data_column</span><span class="p">(</span><span class="s2">&quot;LOCA_ID&quot;</span><span class="p">)</span>
+            <span class="n">locs</span> <span class="o">=</span> <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+            <span class="n">ll</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">locs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">ll</span><span class="p">:</span>
+                        <span class="n">ll</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;geol&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">no_entries</span><span class="o">=</span><span class="n">ll</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ll</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="bp">None</span><span class="p">)</span>
+
+        <span class="c1"># SAMP</span>
+        <span class="n">grp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;SAMP&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">grp</span><span class="p">:</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;samp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">recs</span> <span class="o">=</span> <span class="n">grp</span><span class="o">.</span><span class="n">data_column</span><span class="p">(</span><span class="s2">&quot;LOCA_ID&quot;</span><span class="p">)</span>
+            <span class="n">locs</span> <span class="o">=</span> <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;locations&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+            <span class="n">ll</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">locs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">ll</span><span class="p">:</span>
+                        <span class="n">ll</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;samp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">no_entries</span><span class="o">=</span><span class="n">ll</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ll</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="bp">None</span><span class="p">)</span>
+
+
+        <span class="c1">## Unused Groups</span>
+        <span class="n">all_g</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+        <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;unused_groups&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ags_groups</span> <span class="o">=</span> <span class="n">all_g</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;unused_groups&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span> <span class="nb">set</span><span class="p">(</span><span class="n">ags_groups</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
+
+
+
+        <span class="k">return</span> <span class="n">dic</span>
+</div></div>
+<div class="viewcode-block" id="create_doc_from_json_file"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.create_doc_from_json_file">[docs]</a><span class="k">def</span> <span class="nf">create_doc_from_json_file</span><span class="p">(</span> <span class="n">json_file_path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates a document from a :ref:`json` formatted file</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        doc, err = ogt_doc.create_doc_from_json_file(&quot;/path/to/my.json&quot;)</span>
+<span class="sd">        if err:</span>
+<span class="sd">            print err</span>
+
+<span class="sd">    :param json_file_path: absolute or relative path to file</span>
+<span class="sd">    :type json_file_path: str</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return: A `tuple` containing</span>
+
+<span class="sd">        - An :class:`~ogt.ogt_doc.OGTDocument` object on success, else `None`</span>
+<span class="sd">        - An `Error` message if error, otherwise `None`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">read_json_file</span><span class="p">(</span><span class="n">json_file_path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="n">err</span>
+
+    <span class="n">groups</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;groups&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">groups</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Error: no `groups` key in json file&quot;</span>
+
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ogt_doc</span><span class="o">.</span><span class="n">OGTDocument</span><span class="p">()</span>
+    <span class="n">doc</span><span class="o">.</span><span class="n">source_file_path</span> <span class="o">=</span> <span class="n">json_file_path</span>
+
+    <span class="k">for</span> <span class="n">group_code</span> <span class="ow">in</span> <span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+
+        <span class="n">group</span> <span class="o">=</span> <span class="n">groups</span><span class="p">[</span><span class="n">group_code</span><span class="p">]</span>
+
+        <span class="n">grp</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ogt_group</span><span class="o">.</span><span class="n">OGTGroup</span><span class="p">(</span><span class="n">group_code</span><span class="p">)</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">append_group</span><span class="p">(</span><span class="n">grp</span><span class="p">)</span>
+
+        <span class="c1">## add units + also headings</span>
+        <span class="k">for</span> <span class="n">head_code</span>  <span class="ow">in</span> <span class="n">group</span><span class="p">[</span><span class="s1">&#39;UNIT&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">valu</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">group</span><span class="p">[</span><span class="s1">&#39;UNIT&#39;</span><span class="p">][</span><span class="n">head_code</span><span class="p">])</span>
+            <span class="n">grp</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">valu</span>
+            <span class="n">grp</span><span class="o">.</span><span class="n">headings</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">valu</span>
+
+        <span class="c1">## add TYPE</span>
+        <span class="k">for</span> <span class="n">head_code</span>  <span class="ow">in</span> <span class="n">group</span><span class="p">[</span><span class="s1">&#39;TYPE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">valu</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">group</span><span class="p">[</span><span class="s1">&#39;TYPE&#39;</span><span class="p">][</span><span class="n">head_code</span><span class="p">])</span>
+            <span class="n">grp</span><span class="o">.</span><span class="n">types</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">valu</span>
+
+        <span class="c1">## add data</span>
+        <span class="k">for</span> <span class="n">rec</span>  <span class="ow">in</span> <span class="n">group</span><span class="p">[</span><span class="s1">&#39;DATA&#39;</span><span class="p">]:</span>
+            <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">head_code</span>  <span class="ow">in</span> <span class="n">rec</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+
+                <span class="n">dic</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">rec</span><span class="p">[</span><span class="n">head_code</span><span class="p">])</span>
+
+            <span class="n">grp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+
+
+    <span class="k">return</span> <span class="n">doc</span><span class="p">,</span> <span class="bp">None</span>
+
+</div>
+<div class="viewcode-block" id="create_doc_from_ags4_file"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.create_doc_from_ags4_file">[docs]</a><span class="k">def</span> <span class="nf">create_doc_from_ags4_file</span><span class="p">(</span> <span class="n">ags4_file_path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates a document from an :term:`ags4` formatted file</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        doc, err = ags4.create_doc_from_ags4_file(&quot;/path/to/my.ags&quot;)</span>
+<span class="sd">        if err:</span>
+<span class="sd">            print err</span>
+
+<span class="sd">    :param ags4_file_path: absolute or relative path to file</span>
+<span class="sd">    :type ags4_file_path: str</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return: A `tuple` containing</span>
+
+<span class="sd">        - An :class:`~ogt.ogt_doc.OGTDocument` object on success, else `None`</span>
+<span class="sd">        - An `Error` message if error, otherwise `None`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># TODO ensure asccii ??</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">ags4_file_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">doc</span> <span class="o">=</span> <span class="n">OGTDocument</span><span class="p">()</span>
+            <span class="n">error</span> <span class="o">=</span>  <span class="n">load_doc_from_ags4_string</span><span class="p">(</span> <span class="n">doc</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="p">)</span>
+            <span class="n">doc</span><span class="o">.</span><span class="n">source_file_path</span> <span class="o">=</span> <span class="n">ags4_file_path</span>
+            <span class="k">return</span> <span class="n">doc</span><span class="p">,</span> <span class="bp">None</span>
+
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span>  <span class="n">e</span>
+
+    <span class="c1"># should never happen</span>
+    <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;WTF in `create_doc_from_ags4_file`&quot;</span>
+
+
+</div>
+<div class="viewcode-block" id="load_doc_from_ags4_string"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.load_doc_from_ags4_string">[docs]</a><span class="k">def</span> <span class="nf">load_doc_from_ags4_string</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">ags4_str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Load a document  from an :term:`ags4` formatted string</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        doc = OGTDocument()</span>
+<span class="sd">        err =  load_doc_from_ags4_string( doc, str_of_ags )</span>
+
+<span class="sd">    :param doc: Document instance to load</span>
+<span class="sd">    :type doc: ~ogt.ogt_doc.OGTDocument</span>
+<span class="sd">    :param ags4_str: string to load</span>
+<span class="sd">    :type ags4_str: str</span>
+<span class="sd">    :rtype: str</span>
+<span class="sd">    :return: An `Error` message if string not loaded, else `None`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">doc</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">ags4_str</span>
+
+    <span class="c1"># first:</span>
+    <span class="c1">#  - split ags_string into lines</span>
+    <span class="c1">#  - and parse each line into csv</span>
+    <span class="c1">#  - and add to the doc</span>
+    <span class="k">for</span> <span class="n">lidx</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ags4_str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)):</span>
+
+        <span class="c1"># removing and trailing whitespace eg \r</span>
+        <span class="c1"># were on nix land, so assemble with CRLF when dumping to ags</span>
+        <span class="n">stripped</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">stripped</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="c1"># blank line</span>
+            <span class="n">doc</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
+            <span class="n">doc</span><span class="o">.</span><span class="n">csv_rows</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># decode the csv line</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span> <span class="n">StringIO</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="n">stripped</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">row</span> <span class="o">=</span>  <span class="n">reader</span><span class="o">.</span><span class="n">next</span><span class="p">()</span> <span class="c1"># first row of reader</span>
+
+        <span class="n">doc</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">csv_rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+    <span class="c1"># second</span>
+    <span class="c1"># walk the decoded rows, and recognise the groups</span>
+    <span class="c1"># me mark the start_index, and end index of group</span>
+    <span class="n">curr_grp</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">for</span> <span class="n">lidx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">csv_rows</span><span class="p">):</span>
+
+        <span class="n">line_no</span> <span class="o">=</span> <span class="n">lidx</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">lenny</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        <span class="c1">#print row</span>
+        <span class="k">if</span> <span class="n">lenny</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># blank row so reset groups</span>
+            <span class="k">if</span> <span class="n">curr_grp</span><span class="p">:</span>
+                <span class="n">curr_grp</span><span class="o">.</span><span class="n">csv_end_index</span> <span class="o">=</span> <span class="n">lidx</span>
+                <span class="c1">#print &quot;idx=&quot;, curr_grp.csv_start_index, curr_grp.csv_end_index</span>
+                <span class="c1">#print curr_grp.csv_rows()</span>
+            <span class="n">curr_grp</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">lenny</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="c1"># min of two items, so add to errors</span>
+            <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">lidx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">typ</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># first item is row type</span>
+            <span class="c1">#xrow = row[1:] # row without data descriptor</span>
+
+            <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">group</span><span class="p">:</span>
+
+                <span class="c1">## we got a new group</span>
+                <span class="n">curr_grp</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ogt_group</span><span class="o">.</span><span class="n">OGTGroup</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="c1">#curr_grp.csv_rows.append(row)</span>
+                <span class="n">curr_grp</span><span class="o">.</span><span class="n">csv_start_index</span> <span class="o">=</span> <span class="n">lidx</span>
+                <span class="n">doc</span><span class="o">.</span><span class="n">append_group</span><span class="p">(</span><span class="n">curr_grp</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">curr_grp</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
+                <span class="c1">#else:</span>
+                <span class="c1">#   curr_grp.csv_rows.append(row)</span>
+    <span class="c1"># thirdly</span>
+    <span class="c1"># - we parse each group&#39;s csv rows into the parts</span>
+    <span class="k">for</span> <span class="n">group_code</span><span class="p">,</span> <span class="n">grp</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="c1">#print group_code, &quot;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</span>
+        <span class="c1">#print grp.csv_rows()</span>
+
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">csv_rows</span><span class="p">()):</span>
+            <span class="n">typ</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">xrow</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="c1"># row without data descriptor</span>
+
+            <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">group</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+            <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">heading</span><span class="p">:</span>
+                <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">=</span> <span class="n">xrow</span>
+                <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
+                    <span class="n">grp</span><span class="o">.</span><span class="n">headings</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+            <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">unit</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
+                        <span class="n">grp</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+            <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
+                        <span class="n">grp</span><span class="o">.</span><span class="n">types</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+            <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+
+                <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+                    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
+                        <span class="n">dic</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+                    <span class="n">grp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">dic</span> <span class="p">)</span>
+
+    <span class="k">print</span> <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span>
+
+    <span class="k">return</span>  <span class="bp">None</span>
+</pre></div></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ogt/index.html">ogt:  Base API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ogtgui/index.html">ogtgui: Desktop API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ogtserver/index.html">ogtserver:  www server API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../commands.html">Commands</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ogt-ags-py</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017  ogt@daffodil.uk.com.
+      Last updated on 2017-01-30.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ogt.ags4 &mdash; Open GeoTechnical AGS Tools</title>
+    
+    <link rel="stylesheet" href="../../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     'git',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="Open GeoTechnical AGS Tools" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+<style>
+
+
+
+body {
+    background-color: black;
+}
+
+#XHEAD {
+    deadbackground-color: yellow !important;
+}
+.main_title{
+    margin: 10px;
+    font-size: 14pt;
+    vertical-align: top;
+    color: #999999;
+    font-family: Verdana;
+}
+
+.main_title a {
+    color: #F29F00;
+}
+.main_title a:hover {
+    text-decoration: none;
+}
+
+.main_title small{
+    margin: 10px;
+    font-size: 8pt;
+    vertical-align: top;
+    color: #999999;
+    font-weight: normal
+    font-family: Verdana;
+}
+
+.externals_nav {
+    float: right;
+    margin-right: 100px;
+}
+.externals_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+        sswidth: 50px;
+} 
+
+.externals_nav a {
+    text-decoration: none;
+    color: #999999;
+    padding: 5px;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+.externals_nav a:hover {
+    background-color: #333333;
+    color: white;
+}
+    
+        
+.module_nav {
+    float: right;
+    ssmargin-right: 150px;
+
+    deadbackground-color: red !important;
+}
+.module_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+    width: 50px;
+}
+.module_nav a {
+    text-decoration: none;
+    background-color: #222222;
+    color: #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #efefef;
+    font-family: Verdana;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.module_nav a:hover {
+    background-color: #333333;
+}
+.module_nav a.selected{
+    background-color: #999999;
+    color: black;
+}
+
+.related{
+    background-color: #222222 !important; 
+    margin-right: 10px;
+    
+}
+.related a {
+    color: #dddddd !important; 
+    text-shadow: none;
+        font-size: 10pt !important;
+}
+div.related ul {
+    padding-left: 300px;
+}
+.related ul li {
+    color: #FFFF00 !important;
+}
+
+.sphinxsidebarwrapper {
+    width: 300px;
+    background-color: #DDDDDD;
+}
+.sphinxsidebarwrapper h3  {
+    border-bottom: 1px solid white;
+}
+.sphinxsidebarwrapper h3 a {
+    font-family: Verdana;
+}
+div.bodywrapper {
+    margin-left: 300px;
+}
+.sphinxsidebar ul {
+    margin-left: 0;
+}
+.sphinxsidebar ul li{
+    sborder-top: 1px solid #dddddd !important;
+    ssbackground-color: white;
+    padding: 2px !important;
+}
+.sphinxsidebar ul li a{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #333333;
+    font-family: Verdana;
+}
+.sphinxsidebar ul ul{
+    width: 250px;
+}
+.sphinxsidebar ul ul li{
+    border-top: none !important;
+}
+.sphinxsidebar ul ul li a{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Verdana;
+}
+
+
+
+/**************************************************/
+/* Main */
+/**************************************************/
+div.body {
+    font-size: 10pt;
+}
+
+div.body h1{
+    border-radius: 10px !important;
+    padding: 5px 10px;
+    font-size: 20pt;
+    background-color: #444444 !important;
+    color: #dddddd;
+   font-family: Verdana;
+}
+
+
+
+div.body h2{
+
+    border-top: 2px solid #999999;
+    border-right: 2px solid #999999;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #bbbbbb !important;
+    font-size: 12pt;
+    font-family: monospace;
+
+    padding: 5px 10px;
+}
+div.body h3{
+    border-top: 2px solid #dddddd;
+    border-right: 2px solid #aaaaaa;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #dddddd !important;
+    font-size: 10pt;
+    font-family: monospace;
+    padding: 5px 10px;
+}
+
+div.body p {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 600px;
+}
+div.body ul, ol {
+    padding-left: 50px;
+    padding-right: 50px;
+     max-width: 600px;
+}
+div.body li p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+div.body ul, ul {
+     padding-left: 30px;
+    padding-right: 30px;
+}
+
+.admonition {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+.field-name {
+    width: 80px;
+    text-align: right;
+}
+
+pre {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 9pt;
+    padding: 4px;
+}
+
+table.docutils {
+    box-shadow: 9px 10px 34px -16px rgba(0,0,0,0.75);
+}
+table.docutils thead {
+    background-color: #dddddd;
+}
+table.docutils th {
+    padding: 5px;
+}
+table.docutils td {
+    padding: 2px;
+}
+
+table.field-list{
+    box-shadow: none;
+    background-color: #eeeeee;
+}
+
+table.field-list tr{
+    border-bottom: 1px solid #cccccc;
+}
+table.field-list th {
+    padding: 5px;
+    width: 100px;
+    border-right: 1px solid #cccccc;
+    font-size: 9pt;
+    deadbackground-color: red;
+    color: #888888;
+}
+table.field-list td {
+    padding: 5px;
+    border-left: 1px solid #cccccc;
+}
+
+dl.class p {
+    padding-left: 5px;
+}
+
+.ags-csv-rule {
+    background-color: #00CCCC;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+.ags-data-rule {
+    background-color:#FFFF00;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+
+.viewcode-link {
+    font-size: 8pt;
+}
+
+/**************************************************/
+/* API stuff */
+/**************************************************/
+/* a whole class container */
+dl.class {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #822775;
+}
+/* class Name */
+dl.class dt .descname{
+	color: #822775;
+	font-size: 13pt;
+	font-family: monospace;
+}
+
+a.reference code.py-class span.pre {
+    color: #822775 !important;
+    font-family: monospace;
+}
+
+
+/* class attribute */
+dl.attribute dt .descname {
+    color: #AD833E;
+    font-size: 11pt;
+    font-family: monospace;
+}
+
+
+/* class method  */
+dl.method dt .descname {
+    color: #1B68B8;
+	font-size: 11pt;
+	font-family: monospace;
+
+}
+
+/* a whole function container */
+dl.function {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #298815;
+}
+/* function */
+dl.function dt .descname {
+    color: #298815 !important;
+}
+
+a.reference code.py-func span.pre {
+    color: #298815 !important;
+    font-family: monospace;
+}
+
+/* glossary */
+dl.glossary dt {
+    background-color: #eeeeee;
+    font-family: monospace;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top-right-radius: 20px;
+    padding: 3px 5px;
+
+}
+dl.glossary dd {
+    border-right: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+</style>
+    
+    <div id="XHEAD">
+    <!-- github at top right -->
+<a href="https://github.com/open-geotechnical/ogt-ags-py" target="github">
+<img style="position: absolute; top: 0; right: 0; border: 0; z-index:444444;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+  
+   <ul class="externals_nav">
+    <li><a href="http://open-geotechnical.github.io/" target="github">Main Website</a></li>
+    <li><a href="https://github.com/open-geotechnical/ogt-ags-py" target="github">Project</a></li>
+    <li><a href="https://github.com/open-geotechnical/ogt-ags-py/issues" target="issues">Issues</a></li>
+  </ul>
+  
+	
+ 
+  
+  <h1 class="main_title"><a href="/ogt-ags-py"><img src="/_static/logo-small.png"> ogt-ags-py</a> - Developer Docs <small>v0.0.1</small></h1>
+  </div>
+  
+
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ogt-ags-py</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for ogt.ags4</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
+
+
+<span class="kn">import</span> <span class="nn">ogt.ogt_doc</span>
+<span class="c1">#from ogt import ogt_group</span>
+<span class="kn">from</span> <span class="nn">ogt</span> <span class="kn">import</span> <span class="n">utils</span><span class="p">,</span> <span class="n">EXAMPLES_DIR</span>
+
+<span class="n">AGS4_DD</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="sd">&quot;&quot;&quot;This dict contains all the ags4 data, loaded in utils.initialise()&quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">AGS4_DESCRIPTOR</span><span class="p">:</span>
+<div class="viewcode-block" id="AGS4_DESCRIPTOR"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4_DESCRIPTOR">[docs]</a>    <span class="sd">&quot;&quot;&quot;Constants defining the data descriptors (See :ref:`ags4_rule_3`)&quot;&quot;&quot;</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="s2">&quot;GROUP&quot;</span>
+    <span class="n">heading</span> <span class="o">=</span> <span class="s2">&quot;HEADING&quot;</span>
+    <span class="n">unit</span> <span class="o">=</span> <span class="s2">&quot;UNIT&quot;</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;TYPE&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;DATA&quot;</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">group_header</span><span class="p">():</span>
+<div class="viewcode-block" id="AGS4_DESCRIPTOR.group_header"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4_DESCRIPTOR.group_header">[docs]</a>        <span class="sd">&quot;&quot;&quot;List of header defined in :ref:`ags4_rule_2a`</span>
+
+<span class="sd">        :return: A list of descriptions in order</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">group</span><span class="p">,</span>
+            <span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">heading</span><span class="p">,</span>
+            <span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span>
+            <span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">type</span>
+        <span class="p">]</span>
+
+    <span class="nd">@staticmethod</span></div>
+    <span class="k">def</span> <span class="nf">list</span><span class="p">():</span>
+<div class="viewcode-block" id="AGS4_DESCRIPTOR.list"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4_DESCRIPTOR.list">[docs]</a>         <span class="k">return</span> <span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">group_header</span><span class="p">()</span> <span class="o">+</span> <span class="p">[</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">data</span><span class="p">]</span>
+
+
+
+
+<span class="k">def</span> <span class="nf">doc_to_ags4_csv</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span></div></div>
+<div class="viewcode-block" id="doc_to_ags4_csv"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.doc_to_ags4_csv">[docs]</a>    <span class="sd">&quot;&quot;&quot;Serialize a document to :term:`ags4` format :ref:`csv`</span>
+
+<span class="sd">    :param doc: The document to convert</span>
+<span class="sd">    :type doc: ogt.ogt_doc.OGTDocument</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+
+<span class="sd">        -</span>
+<span class="sd">        -</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#out = StringIO.StringIO()</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">()</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">out</span><span class="p">,</span>
+                        <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">,</span>
+                        <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">QUOTE_ALL</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">group_code</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">groups_sort</span><span class="p">():</span>
+
+        <span class="n">grp</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="n">group_code</span><span class="p">)</span>
+
+        <span class="c1"># write &quot;GROUP&quot;</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">group</span><span class="p">,</span> <span class="n">group_code</span><span class="p">])</span>
+
+        <span class="c1"># write headings</span>
+        <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">heading</span><span class="p">]</span>
+        <span class="n">lst</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_sort</span><span class="p">())</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+
+        <span class="c1"># write units</span>
+        <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">unit</span><span class="p">]</span>
+        <span class="n">lst</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">units_list</span><span class="p">())</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+
+        <span class="c1"># write types</span>
+        <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">type</span><span class="p">]</span>
+        <span class="n">lst</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">types_list</span><span class="p">())</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+
+
+        <span class="c1"># write data</span>
+        <span class="k">for</span> <span class="n">dic</span> <span class="ow">in</span> <span class="n">grp</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">data</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">ki</span> <span class="ow">in</span> <span class="n">grp</span><span class="o">.</span><span class="n">headings_sort</span><span class="p">():</span>
+                <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">dic</span><span class="p">[</span><span class="n">ki</span><span class="p">]</span> <span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([])</span>
+
+
+    <span class="k">return</span> <span class="n">out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">(),</span> <span class="bp">None</span>
+
+<span class="k">def</span> <span class="nf">all</span><span class="p">():</span></div>
+<div class="viewcode-block" id="all"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.all">[docs]</a>    <span class="sd">&quot;&quot;&quot;Return everything in the ags4 data dict</span>
+
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+
+<span class="sd">        - A `dict` with the data if succesful, else `None`</span>
+<span class="sd">        - An Error message `str` if error, otherwise `None`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">AGS4_DD</span>
+
+
+<span class="k">def</span> <span class="nf">groups</span><span class="p">():</span></div>
+<div class="viewcode-block" id="groups"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.groups">[docs]</a>    <span class="sd">&quot;&quot;&quot;Return all :term:`GROUP` s in the ags4 data dict</span>
+
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+
+<span class="sd">        - A `dict` with the data id succesful, else `None`</span>
+<span class="sd">        - An Error message `str` if error, otherwise `None`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">AGS4_DD</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;groups&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">abbrs</span><span class="p">():</span></div>
+<div class="viewcode-block" id="abbrs"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.abbrs">[docs]</a>    <span class="sd">&quot;&quot;&quot;Return all :term:`abbreviations` in the ags4 data dict</span>
+
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+
+<span class="sd">        - A `dict` with the data id succesful, else `None`</span>
+<span class="sd">        - An Error message `str` if error, otherwise `None`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">AGS4_DD</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;groups&quot;</span><span class="p">)</span>
+
+
+
+
+<span class="k">class</span> <span class="nc">AGS4GroupDataDict</span><span class="p">:</span></div>
+<div class="viewcode-block" id="AGS4GroupDataDict"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4GroupDataDict">[docs]</a>
+    <span class="sd">&quot;&quot;&quot;Data dictionary of an ags :term:`GROUP`, reads the :ref:`json` definiton file&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_code</span><span class="p">,</span> <span class="n">auto_load</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param group_code: The four character group code</span>
+<span class="sd">        :type group_code: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_code</span> <span class="o">=</span> <span class="n">group_code</span>
+        <span class="c1">#self.group_description = None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dd_loaded</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">if</span> <span class="n">auto_load</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">load_def</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">load_def</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AGS4GroupDataDict.load_def"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4GroupDataDict.load_def">[docs]</a>        <span class="sd">&quot;&quot;&quot;Loads the definition file&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">file_path</span> <span class="o">=</span> <span class="n">group_file_name</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">group_code</span> <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">read_json_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dd_loaded</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+
+
+    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="AGS4GroupDataDict.to_dict"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4GroupDataDict.to_dict">[docs]</a>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        :return: A dictionary of the definition</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span>
+
+    <span class="k">def</span> <span class="nf">group</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="AGS4GroupDataDict.group"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4GroupDataDict.group">[docs]</a>        <span class="sd">&quot;&quot;&quot;Return the group details; description, status, suggested type etc</span>
+
+<span class="sd">        :rtype: dict</span>
+<span class="sd">        :return: A dictionary of the group details</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;headings&quot;</span><span class="p">,</span> <span class="s2">&quot;notes&quot;</span><span class="p">]}</span>
+
+
+    <span class="k">def</span> <span class="nf">headings_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="AGS4GroupDataDict.headings_list"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4GroupDataDict.headings_list">[docs]</a>        <span class="sd">&quot;&quot;&quot;Return headings list</span>
+
+<span class="sd">        :return: A `list` of `dict` items</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;headings&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">headings_sort</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="AGS4GroupDataDict.headings_sort"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4GroupDataDict.headings_sort">[docs]</a>        <span class="sd">&quot;&quot;&quot;A list of headings in correct sort order</span>
+
+<span class="sd">        :rtype: a `list` of strings</span>
+<span class="sd">        :return: A list of head_codes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">headings_list</span><span class="p">()</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="n">newlist</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">headings_list</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="s1">&#39;sort_order&#39;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">rec</span><span class="p">[</span><span class="s1">&#39;head_code&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">rec</span> <span class="ow">in</span> <span class="n">newlist</span><span class="p">]</span>
+
+
+    <span class="k">def</span> <span class="nf">heading</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head_code</span><span class="p">):</span></div>
+<div class="viewcode-block" id="AGS4GroupDataDict.heading"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4GroupDataDict.heading">[docs]</a>        <span class="sd">&quot;&quot;&quot;Return data on a heading (see :term:`HEADER`)</span>
+
+<span class="sd">        :type head_code: str</span>
+<span class="sd">        :param head_code: The</span>
+<span class="sd">        :return: a `tuple` with:</span>
+
+<span class="sd">                - A **`dict`** with the heading details if found, else **`None`**</span>
+<span class="sd">                - **`True`** if heading found, else **`False`**</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">headings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">headings_list</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">headings</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">False</span>
+
+        <span class="k">for</span> <span class="n">head</span> <span class="ow">in</span> <span class="n">headings</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">head</span><span class="p">[</span><span class="s1">&#39;head_code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">head_code</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">head</span><span class="p">,</span> <span class="bp">True</span>
+
+        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">False</span>
+
+    <span class="k">def</span> <span class="nf">notes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="AGS4GroupDataDict.notes"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4GroupDataDict.notes">[docs]</a>        <span class="sd">&quot;&quot;&quot;Returns notes for this group</span>
+
+<span class="sd">        :rtype: list of strings</span>
+<span class="sd">        :return: Notes list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">)</span>
+
+
+
+<span class="k">class</span> <span class="nc">Problem</span><span class="p">:</span></div></div>
+<div class="viewcode-block" id="Problem"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.Problem">[docs]</a>    <span class="sd">&quot;&quot;&quot;A container for ags validation problems and issues&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">field</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">rule</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">group_code</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">head_code</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">message</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">row</span> <span class="o">=</span> <span class="n">row</span>
+        <span class="sd">&quot;&quot;&quot;The row index in the csv file, ie line_no - 1&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">column</span> <span class="o">=</span> <span class="n">column</span>
+        <span class="sd">&quot;&quot;&quot;The column in the source line&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="n">field</span>
+        <span class="sd">&quot;&quot;&quot;The csv field index&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rule</span> <span class="o">=</span> <span class="n">rule</span>
+        <span class="sd">&quot;&quot;&quot;The ags rule (:ref:`ags4_rules`)&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_code</span> <span class="o">=</span> <span class="n">group_code</span>
+        <span class="sd">&quot;&quot;&quot;The :term:`GROUP` &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_code</span> <span class="o">=</span> <span class="n">head_code</span>
+        <span class="sd">&quot;&quot;&quot;The :term:`HEADING` &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
+        <span class="sd">&quot;&quot;&quot;A quick message&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="sd">&quot;&quot;&quot;The data message&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;Problem rule=</span><span class="si">%s</span><span class="s2"> row=</span><span class="si">%s</span><span class="s2"> col=</span><span class="si">%s</span><span class="s2"> m=</span><span class="si">%s</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rule</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">row</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">column</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">run_tests</span><span class="p">(</span><span class="n">rules</span><span class="p">):</span></div>
+<div class="viewcode-block" id="run_tests"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.run_tests">[docs]</a>    <span class="sd">&quot;&quot;&quot;Run tests on files in ags4_tests/</span>
+
+<span class="sd">    :param rules: A list of test to run eg [7 8 9]. Empty = all</span>
+<span class="sd">    :type rule: list of int&#39;s</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+
+<span class="sd">        - A list of ags errors</span>
+<span class="sd">        - A list of system errors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">## get files</span>
+    <span class="n">tests_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">EXAMPLES_DIR</span><span class="p">,</span> <span class="s2">&quot;ags4_tests&quot;</span><span class="p">)</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">tests_dir</span><span class="p">)</span>
+
+    <span class="n">files</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">list_examples</span><span class="p">(</span><span class="s2">&quot;ags4_tests&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="n">err</span>
+
+    <span class="n">summary</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ags_file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="c1">#print &quot;-----------------------&quot;</span>
+        <span class="k">print</span> <span class="s2">&quot;file=&quot;</span><span class="p">,</span> <span class="n">ags_file</span>
+        <span class="c1"># print &quot;-----------------------&quot;</span>
+
+        <span class="n">report</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">validate_ags4_file</span><span class="p">(</span><span class="n">ags_file</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">report</span><span class="p">,</span> <span class="n">err</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        if err:</span>
+<span class="sd">            dic[&#39;errors&#39;] = err</span>
+<span class="sd">        else:</span>
+<span class="sd">            dic[&#39;report&#39;] = report</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">summary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
+
+    <span class="n">s</span> <span class="o">=</span> <span class="n">summary_to_string</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">,</span> <span class="bp">None</span>
+
+<span class="k">def</span> <span class="nf">summary_to_string</span><span class="p">(</span><span class="n">summary</span><span class="p">):</span></div>
+<div class="viewcode-block" id="summary_to_string"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.summary_to_string">[docs]</a>    <span class="c1">#line = &quot;=&quot;.repeat(30)</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="c1"># &quot;=&quot;.repeat(30)</span>
+
+    <span class="k">for</span> <span class="n">sum_dic</span> <span class="ow">in</span> <span class="n">summary</span><span class="p">:</span>
+        <span class="n">ret</span> <span class="o">+=</span> <span class="n">report_to_string</span><span class="p">(</span><span class="n">sum_dic</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ret</span>
+
+<span class="k">def</span> <span class="nf">validate_ags4_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="p">[]):</span></div>
+<div class="viewcode-block" id="validate_ags4_file"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.validate_ags4_file">[docs]</a>
+    <span class="c1">#print &quot;rules=&quot;, rules</span>
+
+    <span class="n">doc</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ogt_doc</span><span class="o">.</span><span class="n">create_doc_from_ags4_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    <span class="n">contents</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="n">err</span>
+
+    <span class="n">all_problems</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">report</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="n">rule_functions</span> <span class="o">=</span>  <span class="p">[</span>
+            <span class="n">rule_1</span><span class="p">,</span> <span class="n">rule_2</span><span class="p">,</span> <span class="n">rule_3</span><span class="p">,</span> <span class="n">rule_4</span><span class="p">,</span> <span class="n">rule_5</span><span class="p">,</span>
+            <span class="n">rule_6</span><span class="p">,</span> <span class="n">rule_7</span><span class="p">,</span> <span class="n">rule_8</span><span class="p">,</span> <span class="n">rule_9</span><span class="p">,</span> <span class="n">rule_10</span><span class="p">,</span>
+
+
+        <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">call_func</span><span class="p">(</span><span class="n">report</span><span class="p">,</span> <span class="n">func_to_call</span><span class="p">):</span>
+        <span class="n">func_name</span> <span class="o">=</span> <span class="n">func_to_call</span><span class="o">.</span><span class="n">__name__</span>
+        <span class="n">report</span><span class="p">[</span><span class="n">func_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">report</span><span class="p">[</span><span class="n">func_name</span><span class="p">][</span><span class="s1">&#39;problems&#39;</span><span class="p">],</span> <span class="n">report</span><span class="p">[</span><span class="n">func_name</span><span class="p">][</span><span class="s1">&#39;problems&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">func_to_call</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rules</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">rule_functions</span>
+        <span class="k">for</span> <span class="n">ru</span> <span class="ow">in</span> <span class="n">rules</span><span class="p">:</span>
+            <span class="k">print</span> <span class="n">ru</span>
+            <span class="n">call_func</span><span class="p">(</span> <span class="n">report</span><span class="p">,</span> <span class="n">rule_functions</span><span class="p">[</span><span class="n">ru</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1">## iterate the pointer to  functions</span>
+        <span class="k">for</span> <span class="n">rule_func</span> <span class="ow">in</span> <span class="n">rule_functions</span><span class="p">:</span>
+
+            <span class="n">func_name</span> <span class="o">=</span> <span class="n">rule_func</span><span class="o">.</span><span class="n">__name__</span>
+            <span class="n">report</span><span class="p">[</span><span class="n">func_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">report</span><span class="p">[</span><span class="n">func_name</span><span class="p">][</span><span class="s1">&#39;problems&#39;</span><span class="p">],</span> <span class="n">report</span><span class="p">[</span><span class="n">func_name</span><span class="p">][</span><span class="s1">&#39;errors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rule_func</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+            <span class="n">all_problems</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">report</span><span class="p">[</span><span class="n">func_name</span><span class="p">][</span><span class="s1">&#39;problems&#39;</span><span class="p">])</span>
+
+    <span class="k">print</span> <span class="s2">&quot;ALLL=&quot;</span><span class="p">,</span> <span class="n">all_problems</span>
+
+    <span class="n">th</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;rule&quot;</span><span class="p">,</span> <span class="s2">&quot;row&quot;</span><span class="p">,</span> <span class="s2">&quot;col&quot;</span><span class="p">,</span> <span class="s2">&quot;field&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;message&quot;</span><span class="p">]</span>
+    <span class="n">trs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">all_problems</span><span class="p">:</span>
+        <span class="c1">#print &quot;p=&quot;, p</span>
+        <span class="n">tr</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">tr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">rule</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">rule</span> <span class="k">else</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="n">tr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">row</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">row</span> <span class="o">!=</span> <span class="bp">None</span> <span class="k">else</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="n">tr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">column</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">column</span> <span class="o">!=</span> <span class="bp">None</span> <span class="k">else</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="n">tr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">field</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">field</span> <span class="o">!=</span> <span class="bp">None</span> <span class="k">else</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="n">tr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">data</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">data</span> <span class="o">!=</span> <span class="bp">None</span> <span class="k">else</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="n">tr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">message</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">message</span> <span class="o">!=</span> <span class="bp">None</span> <span class="k">else</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="n">trs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">trs</span>
+    <span class="nb">all</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="n">file_path</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="n">report</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">all</span><span class="p">,</span> <span class="n">err</span>
+
+<span class="k">def</span> <span class="nf">report_to_string</span><span class="p">(</span><span class="n">report</span><span class="p">):</span></div>
+<div class="viewcode-block" id="report_to_string"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.report_to_string">[docs]</a>    <span class="k">print</span> <span class="n">report</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">50</span>
+    <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">report</span><span class="p">[</span><span class="s1">&#39;file_path&#39;</span><span class="p">]</span>
+    <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">50</span>
+    <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="c1">#print report</span>
+
+    <span class="k">for</span> <span class="n">rule</span><span class="p">,</span> <span class="n">dic</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;rules&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="s1">&#39;errors&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="s1">&#39;problems&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1">#ret += &quot; PASS\n&quot;</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">:&quot;</span> <span class="o">%</span> <span class="n">rule</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot; FAIL</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="s1">&#39;errors&#39;</span><span class="p">]):</span>
+                <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">System Errors:</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;errors&#39;</span><span class="p">]:</span>
+                    <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\t\t</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">item</span>
+
+
+            <span class="n">lp</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="s1">&#39;problems&#39;</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">lp</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">Problem: </span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lp</span><span class="p">,</span> <span class="s2">&quot;item&quot;</span> <span class="k">if</span> <span class="n">lp</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;items&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">prob</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;problems&#39;</span><span class="p">]:</span>
+                    <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\t\t</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">prob</span>
+
+    <span class="k">return</span> <span class="n">ret</span>
+
+<span class="k">def</span> <span class="nf">rule_1</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span></div>
+<div class="viewcode-block" id="rule_1"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.rule_1">[docs]</a>    <span class="sd">&quot;&quot;&quot; Validate :ref:`www:ags4_rule_1`</span>
+
+<span class="sd">    :param raw_str:</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+<span class="sd">        - A list of ags_errors</span>
+<span class="sd">        - A list of sys_errors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">warnings</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1">## try and force to ascii in a one liner</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;ascii&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">warnings</span><span class="p">,</span> <span class="n">errors</span>
+
+    <span class="k">except</span> <span class="ne">UnicodeDecodeError</span><span class="p">:</span>
+
+        <span class="c1">#  raw_str has problem somewhere.</span>
+        <span class="c1"># so split to lines, = line</span>
+        <span class="c1"># and then check every char in line = column</span>
+        <span class="c1"># if char fail, we add to errrors</span>
+        <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Unicode decode error&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">lidx</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)):</span>
+
+            <span class="c1">#safeS = &quot;&quot;</span>
+            <span class="k">for</span> <span class="n">cidx</span><span class="p">,</span> <span class="n">charlie</span> <span class="ow">in</span>  <span class="nb">enumerate</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+                <span class="c1"># TODO . check visible.. maybe some &lt; 30 chard are a hacker</span>
+                <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">charlie</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">128</span><span class="p">:</span>
+                    <span class="k">pass</span>
+                <span class="k">else</span><span class="p">:</span>
+
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">line</span><span class="o">=</span><span class="n">lidx</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="n">cidx</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">illegal</span><span class="o">=</span><span class="p">[]))</span>
+    <span class="k">return</span> <span class="n">warnings</span><span class="p">,</span> <span class="n">errors</span>
+
+<span class="k">def</span> <span class="nf">rule_2</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span></div>
+<div class="viewcode-block" id="rule_2"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.rule_2">[docs]</a>    <span class="sd">&quot;&quot;&quot; Validate :ref:`www:ags4_rule_2`</span>
+
+<span class="sd">    :param doc:</span>
+<span class="sd">    :type doc: :class:`~ogt.ogt_doc.OGTDocument`</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+<span class="sd">        - a list of ags_errors</span>
+<span class="sd">        - a list of sys errors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">problems</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1">#report = []</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">RULE</span> <span class="o">=</span> <span class="mi">2</span>
+
+    <span class="c1">## check more than one group</span>
+    <span class="k">if</span> <span class="n">doc</span><span class="o">.</span><span class="n">groups_count</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="c1">#report.append(&quot;Need more than one group&quot;, rule=R)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">Problem</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;Need more than one group&quot;</span><span class="p">)</span>
+        <span class="n">problems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">p</span> <span class="p">)</span>
+
+    <span class="c1">## Each data GROUP shall comprise a number of GROUP HEADER</span>
+    <span class="c1"># TODO</span>
+
+
+    <span class="c1">## rows must have one or more ref DATA rows</span>
+    <span class="k">for</span> <span class="n">group_code</span><span class="p">,</span> <span class="n">grp</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">Problem</span><span class="p">(</span><span class="n">group_code</span><span class="o">=</span><span class="n">group_code</span><span class="p">,</span> <span class="n">rule</span><span class="o">=</span><span class="n">RULE</span><span class="p">)</span>
+            <span class="n">problems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+            <span class="c1">#report.append(&quot;group `%s` has no DATA rows&quot; % group_code)</span>
+
+    <span class="c1">## Rule 2b - CRLF end each line</span>
+    <span class="c1"># so we in unix.. so split source with \n and check there&#39;s a \r at end</span>
+    <span class="c1"># can only be done with raw files</span>
+    <span class="c1"># TODO</span>
+    <span class="n">l_rep</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span> <span class="n">doc</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="p">):</span>
+            <span class="k">print</span> <span class="n">line</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                  <span class="k">print</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">ord</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">line</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;</span><span class="se">\r</span><span class="s2">&quot;</span><span class="p">:</span>
+                <span class="n">l_rep</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">l_rep</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1">#report.append(&quot;The following lines do not end with CRLF [%s]&quot; % &quot;, &quot;.join(l_rep))</span>
+
+            <span class="n">p</span> <span class="o">=</span> <span class="n">Problem</span><span class="p">(</span><span class="n">rule</span><span class="o">=</span><span class="n">RULE</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Lines do not end with CRLF&quot;</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">l_rep</span>
+            <span class="n">problems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+    <span class="c1">## Rule 2c GROUP HEADER</span>
+    <span class="c1"># loop each group, and check the headers</span>
+    <span class="n">l_rep</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">group_code</span><span class="p">,</span> <span class="n">grp</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">dd</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span> <span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">group_header</span><span class="p">()):</span>
+
+            <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">csv_rows</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">dd</span><span class="p">:</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">Problem</span><span class="p">(</span><span class="n">group_code</span><span class="o">=</span><span class="n">group_code</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="n">idx</span><span class="p">,</span> <span class="n">rule</span><span class="o">=</span><span class="n">RULE</span><span class="p">)</span>
+
+                <span class="n">p</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;GROUP_HEADER error. &quot;</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">message</span> <span class="o">+=</span> <span class="s2">&quot;Incorrect order line &quot;</span>
+                <span class="n">problems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+                <span class="c1">#m += &quot; is `%s` and should be `%s` &quot; % (grp.csv_rows[idx][0], dd)</span>
+                <span class="c1">#l_rep.append(m)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">l_rep</span><span class="p">):</span>
+        <span class="k">pass</span> <span class="c1">#report.append(l_rep)</span>
+
+
+
+    <span class="k">return</span> <span class="n">problems</span><span class="p">,</span> <span class="n">errors</span>
+
+
+<span class="k">def</span> <span class="nf">rule_3</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span></div>
+<div class="viewcode-block" id="rule_3"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.rule_3">[docs]</a>    <span class="sd">&quot;&quot;&quot;Validate  :ref:`www:ags4_rule_3`</span>
+
+<span class="sd">    :param doc:</span>
+<span class="sd">    :type doc: :class:`~ogt.ogt_doc.OGTDocument`</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+<span class="sd">        - a list of ags_errors</span>
+<span class="sd">        - a list of sys errors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">problems</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1">#report = []</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">descriptors</span> <span class="o">=</span> <span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
+    <span class="c1">## .. TODO</span>
+    <span class="k">for</span> <span class="n">lidx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">csv_rows</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">descriptors</span><span class="p">:</span>
+                <span class="c1">#report.append(&quot;Invalid descriptor `%s` line %s has &quot; % (row[0], lidx+1))</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">Problem</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">lidx</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Invalid descriptor&quot;</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">problems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">problems</span><span class="p">,</span> <span class="n">errors</span>
+
+
+<span class="k">def</span> <span class="nf">rule_4</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span></div>
+<div class="viewcode-block" id="rule_4"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.rule_4">[docs]</a>    <span class="sd">&quot;&quot;&quot;Validate  :ref:`www:ags4_rule_4`</span>
+
+<span class="sd">    :param doc:</span>
+<span class="sd">    :type doc: :class:`~ogt.ogt_doc.OGTDocument`</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+<span class="sd">        - a list of ags_errors</span>
+<span class="sd">        - a list of sys errors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">problems</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1">#report = []</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+    <span class="c1">## The GROUP row contains only one DATA item, the GROUP name, in addition to the Data</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">csv_rows</span><span class="p">):</span>
+        <span class="n">lenny</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">lenny</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">group</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">lenny</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">g</span> <span class="o">=</span> <span class="s2">&quot;?&quot;</span> <span class="k">if</span> <span class="n">lenny</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">p</span> <span class="o">=</span> <span class="n">Problem</span><span class="p">(</span><span class="n">group_code</span><span class="o">=</span><span class="n">g</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="n">idx</span><span class="p">)</span>
+                    <span class="n">p</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Group descriptor has </span><span class="si">%s</span><span class="s2"> items, should be one&quot;</span> <span class="o">%</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span>
+                    <span class="n">problems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+                    <span class="c1">#report.append(&quot;Group descriptor `%s` at line %s  has %s items, should be one&quot; % (g, idx + 1, lenny - 1))</span>
+
+
+    <span class="c1"># All other rows in the GROUP have a number of DATA items defined by the HEADING row.</span>
+    <span class="n">header_len</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">csv_rows</span><span class="p">):</span>
+        <span class="n">lenny</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">lenny</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># got a blank line</span>
+            <span class="n">header_len</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">lenny</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">heading</span><span class="p">:</span>
+                <span class="n">header_len</span> <span class="o">=</span> <span class="n">lenny</span>
+            <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">header_len</span> <span class="o">!=</span> <span class="n">lenny</span><span class="p">:</span>
+                    <span class="n">p</span> <span class="o">=</span> <span class="n">Problem</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">idx</span><span class="p">)</span>
+                    <span class="n">p</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;DATA field&#39;s dont match headers&quot;</span>
+                    <span class="n">problems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+                    <span class="c1">#report.append(&quot;DATA field&#39;s dont match headers at line %s&quot; % (idx + 1))</span>
+
+
+    <span class="k">return</span> <span class="n">problems</span><span class="p">,</span> <span class="n">errors</span>
+
+<span class="k">def</span> <span class="nf">rule_5</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span></div>
+<div class="viewcode-block" id="rule_5"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.rule_5">[docs]</a>    <span class="sd">&quot;&quot;&quot;Validate  :ref:`www:ags4_rule_5`</span>
+
+<span class="sd">    .. todo:: Rule 5 validation</span>
+
+<span class="sd">    :param doc:</span>
+<span class="sd">    :type doc: :class:`~ogt.ogt_doc.OGTDocument`</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+<span class="sd">        - a list of ags_errors</span>
+<span class="sd">        - a list of sys errors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">problems</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;TODO - csv double quotes&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">problems</span><span class="p">,</span> <span class="n">errors</span>
+
+<span class="k">def</span> <span class="nf">rule_6</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span></div>
+<div class="viewcode-block" id="rule_6"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.rule_6">[docs]</a>    <span class="sd">&quot;&quot;&quot;Validate  :ref:`www:ags4_rule_6`</span>
+
+<span class="sd">    .. todo:: Rule 6 validation</span>
+
+<span class="sd">    :param doc:</span>
+<span class="sd">    :type doc: :class:`~ogt.ogt_doc.OGTDocument`</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+<span class="sd">        - a list of ags_errors</span>
+<span class="sd">        - a list of sys errors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">problems</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;TODO - comma separated&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">problems</span><span class="p">,</span> <span class="n">errors</span>
+
+<span class="k">def</span> <span class="nf">rule_7</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span></div>
+<div class="viewcode-block" id="rule_7"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.rule_7">[docs]</a>    <span class="sd">&quot;&quot;&quot;Validate  :ref:`ags4_rule_7`</span>
+
+<span class="sd">    .. todo:: Rule 7 Field ordering</span>
+
+<span class="sd">    :param doc:</span>
+<span class="sd">    :type doc: :class:`~ogt.ogt_doc.OGTDocument`</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+<span class="sd">        - a list of ags_errors</span>
+<span class="sd">        - a list of sys errors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">problems</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1">## HEADING s shall be in the order described in the AGS4 Data Dictionary</span>
+    <span class="k">for</span> <span class="n">group_code</span><span class="p">,</span> <span class="n">grp</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+        <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">data_dict</span><span class="p">()</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;--------&quot;</span>
+            <span class="k">print</span> <span class="n">group_code</span>
+            <span class="k">print</span> <span class="s2">&quot;+++++++++&quot;</span>
+            <span class="c1">#ags_sort = grp.data_dict().headings_sort()</span>
+
+            <span class="c1">#print grp.headings_sort</span>
+            <span class="c1">#sss</span>
+
+
+    <span class="k">return</span> <span class="n">problems</span><span class="p">,</span> <span class="n">errors</span>
+
+<span class="k">def</span> <span class="nf">rule_8</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span></div>
+<div class="viewcode-block" id="rule_8"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.rule_8">[docs]</a>    <span class="sd">&quot;&quot;&quot;Validate  :ref:`ags4_rule_8`</span>
+
+<span class="sd">    .. todo:: Rule 8 Units</span>
+
+<span class="sd">    :param doc:</span>
+<span class="sd">    :type doc: :class:`~ogt.ogt_doc.OGTDocument`</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+<span class="sd">        - a list of ags_errors</span>
+<span class="sd">        - a list of sys errors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">problems</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">return</span> <span class="n">problems</span><span class="p">,</span> <span class="n">errors</span>
+
+<span class="k">def</span> <span class="nf">rule_9</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span></div>
+<div class="viewcode-block" id="rule_9"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.rule_9">[docs]</a>    <span class="sd">&quot;&quot;&quot;Validate  :ref:`ags4_rule_9`</span>
+
+<span class="sd">    .. todo:: Rule 9 Data Dictionary</span>
+
+<span class="sd">    :param doc:</span>
+<span class="sd">    :type doc: :class:`~ogt.ogt_doc.OGTDocument`</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+<span class="sd">        - a list of ags_errors</span>
+<span class="sd">        - a list of sys errors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">problems</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">return</span> <span class="n">problems</span><span class="p">,</span> <span class="n">errors</span>
+
+<span class="k">def</span> <span class="nf">rule_10</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span></div>
+<div class="viewcode-block" id="rule_10"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.rule_10">[docs]</a>    <span class="sd">&quot;&quot;&quot;Validate  :ref:`ags4_rule_10`</span>
+
+<span class="sd">    .. todo:: Rule 10 validation</span>
+
+<span class="sd">    :param doc:</span>
+<span class="sd">    :type doc: :class:`~ogt.ogt_doc.OGTDocument`</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :return:</span>
+<span class="sd">        - a list of ags_errors</span>
+<span class="sd">        - a list of sys errors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">problems</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">return</span> <span class="n">problems</span><span class="p">,</span> <span class="n">errors</span>
+</pre></div></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ogt/index.html">ogt:  Base API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ogtgui/index.html">ogtgui: Desktop API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ogtserver/index.html">ogtserver:  www server API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../commands.html">Commands</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ogt-ags-py</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017  ogt@daffodil.uk.com.
+      Last updated on 2017-01-30.
+    </div>
+  </body>
+</html>

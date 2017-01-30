@@ -1,0 +1,734 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Commands &mdash; Open GeoTechnical AGS Tools</title>
+    
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'git',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Open GeoTechnical AGS Tools" href="index.html" />
+    <link rel="prev" title="ogtserver.main.*" href="ogtserver/main.html" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+<style>
+
+
+
+body {
+    background-color: black;
+}
+
+#XHEAD {
+    deadbackground-color: yellow !important;
+}
+.main_title{
+    margin: 10px;
+    font-size: 14pt;
+    vertical-align: top;
+    color: #999999;
+    font-family: Verdana;
+}
+
+.main_title a {
+    color: #F29F00;
+}
+.main_title a:hover {
+    text-decoration: none;
+}
+
+.main_title small{
+    margin: 10px;
+    font-size: 8pt;
+    vertical-align: top;
+    color: #999999;
+    font-weight: normal
+    font-family: Verdana;
+}
+
+.externals_nav {
+    float: right;
+    margin-right: 100px;
+}
+.externals_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+        sswidth: 50px;
+} 
+
+.externals_nav a {
+    text-decoration: none;
+    color: #999999;
+    padding: 5px;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+.externals_nav a:hover {
+    background-color: #333333;
+    color: white;
+}
+    
+        
+.module_nav {
+    float: right;
+    ssmargin-right: 150px;
+
+    deadbackground-color: red !important;
+}
+.module_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+    width: 50px;
+}
+.module_nav a {
+    text-decoration: none;
+    background-color: #222222;
+    color: #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #efefef;
+    font-family: Verdana;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.module_nav a:hover {
+    background-color: #333333;
+}
+.module_nav a.selected{
+    background-color: #999999;
+    color: black;
+}
+
+.related{
+    background-color: #222222 !important; 
+    margin-right: 10px;
+    
+}
+.related a {
+    color: #dddddd !important; 
+    text-shadow: none;
+        font-size: 10pt !important;
+}
+div.related ul {
+    padding-left: 300px;
+}
+.related ul li {
+    color: #FFFF00 !important;
+}
+
+.sphinxsidebarwrapper {
+    width: 300px;
+    background-color: #DDDDDD;
+}
+.sphinxsidebarwrapper h3  {
+    border-bottom: 1px solid white;
+}
+.sphinxsidebarwrapper h3 a {
+    font-family: Verdana;
+}
+div.bodywrapper {
+    margin-left: 300px;
+}
+.sphinxsidebar ul {
+    margin-left: 0;
+}
+.sphinxsidebar ul li{
+    sborder-top: 1px solid #dddddd !important;
+    ssbackground-color: white;
+    padding: 2px !important;
+}
+.sphinxsidebar ul li a{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #333333;
+    font-family: Verdana;
+}
+.sphinxsidebar ul ul{
+    width: 250px;
+}
+.sphinxsidebar ul ul li{
+    border-top: none !important;
+}
+.sphinxsidebar ul ul li a{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Verdana;
+}
+
+
+
+/**************************************************/
+/* Main */
+/**************************************************/
+div.body {
+    font-size: 10pt;
+}
+
+div.body h1{
+    border-radius: 10px !important;
+    padding: 5px 10px;
+    font-size: 20pt;
+    background-color: #444444 !important;
+    color: #dddddd;
+   font-family: Verdana;
+}
+
+
+
+div.body h2{
+
+    border-top: 2px solid #999999;
+    border-right: 2px solid #999999;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #bbbbbb !important;
+    font-size: 12pt;
+    font-family: monospace;
+
+    padding: 5px 10px;
+}
+div.body h3{
+    border-top: 2px solid #dddddd;
+    border-right: 2px solid #aaaaaa;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #dddddd !important;
+    font-size: 10pt;
+    font-family: monospace;
+    padding: 5px 10px;
+}
+
+div.body p {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 600px;
+}
+div.body ul, ol {
+    padding-left: 50px;
+    padding-right: 50px;
+     max-width: 600px;
+}
+div.body li p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+div.body ul, ul {
+     padding-left: 30px;
+    padding-right: 30px;
+}
+
+.admonition {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+.field-name {
+    width: 80px;
+    text-align: right;
+}
+
+pre {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 9pt;
+    padding: 4px;
+}
+
+table.docutils {
+    box-shadow: 9px 10px 34px -16px rgba(0,0,0,0.75);
+}
+table.docutils thead {
+    background-color: #dddddd;
+}
+table.docutils th {
+    padding: 5px;
+}
+table.docutils td {
+    padding: 2px;
+}
+
+table.field-list{
+    box-shadow: none;
+    background-color: #eeeeee;
+}
+
+table.field-list tr{
+    border-bottom: 1px solid #cccccc;
+}
+table.field-list th {
+    padding: 5px;
+    width: 100px;
+    border-right: 1px solid #cccccc;
+    font-size: 9pt;
+    deadbackground-color: red;
+    color: #888888;
+}
+table.field-list td {
+    padding: 5px;
+    border-left: 1px solid #cccccc;
+}
+
+dl.class p {
+    padding-left: 5px;
+}
+
+.ags-csv-rule {
+    background-color: #00CCCC;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+.ags-data-rule {
+    background-color:#FFFF00;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+
+.viewcode-link {
+    font-size: 8pt;
+}
+
+/**************************************************/
+/* API stuff */
+/**************************************************/
+/* a whole class container */
+dl.class {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #822775;
+}
+/* class Name */
+dl.class dt .descname{
+	color: #822775;
+	font-size: 13pt;
+	font-family: monospace;
+}
+
+a.reference code.py-class span.pre {
+    color: #822775 !important;
+    font-family: monospace;
+}
+
+
+/* class attribute */
+dl.attribute dt .descname {
+    color: #AD833E;
+    font-size: 11pt;
+    font-family: monospace;
+}
+
+
+/* class method  */
+dl.method dt .descname {
+    color: #1B68B8;
+	font-size: 11pt;
+	font-family: monospace;
+
+}
+
+/* a whole function container */
+dl.function {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #298815;
+}
+/* function */
+dl.function dt .descname {
+    color: #298815 !important;
+}
+
+a.reference code.py-func span.pre {
+    color: #298815 !important;
+    font-family: monospace;
+}
+
+/* glossary */
+dl.glossary dt {
+    background-color: #eeeeee;
+    font-family: monospace;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top-right-radius: 20px;
+    padding: 3px 5px;
+
+}
+dl.glossary dd {
+    border-right: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+</style>
+    
+    <div id="XHEAD">
+    <!-- github at top right -->
+<a href="https://github.com/open-geotechnical/ogt-ags-py" target="github">
+<img style="position: absolute; top: 0; right: 0; border: 0; z-index:444444;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+  
+   <ul class="externals_nav">
+    <li><a href="http://open-geotechnical.github.io/" target="github">Main Website</a></li>
+    <li><a href="https://github.com/open-geotechnical/ogt-ags-py" target="github">Project</a></li>
+    <li><a href="https://github.com/open-geotechnical/ogt-ags-py/issues" target="issues">Issues</a></li>
+  </ul>
+  
+	
+ 
+  
+  <h1 class="main_title"><a href="/ogt-ags-py"><img src="/_static/logo-small.png"> ogt-ags-py</a> - Developer Docs <small>v0.0.1</small></h1>
+  </div>
+  
+
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ogtserver/main.html" title="ogtserver.main.*"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ogt-ags-py</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="commands">
+<h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ogt-cli-py">
+<span id="id1"></span><h2>ogt-cli.py<a class="headerlink" href="#ogt-cli-py" title="Permalink to this headline">¶</a></h2>
+<p>Toolkit for geotechnical</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">usage: ogt-cli.py [-h] {convert,validate,serve,update} ...</span>
+</pre></div>
+</div>
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-h">
+<span id="cmdoption-ogt-cli.py--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<div class="section" id="ogt-cli-py-convert">
+<h3>ogt-cli.py convert<a class="headerlink" href="#ogt-cli-py-convert" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">usage: ogt-cli.py convert [-h] [-b] [-e] [-f {json,js,geojson,yaml,xlsx,ags4}]</span>
+<span class="go">                          [-m] [-o] [--stats] [-w WRITE_FILE] [-z] [--debug]</span>
+<span class="go">                          source_file</span>
+</pre></div>
+</div>
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-convert-arg-source_file">
+<code class="descname">source_file</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-convert-arg-source_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>File to convert</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-convert-h">
+<span id="cmdoption-ogt-cli.py-convert--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-convert-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-convert-b">
+<span id="cmdoption-ogt-cli.py-convert--beside"></span><code class="descname">-b</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--beside</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-convert-b" title="Permalink to this definition">¶</a></dt>
+<dd><p>save beside original file and appends <cite>.ext</cite></p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-convert-e">
+<span id="cmdoption-ogt-cli.py-convert--editor"></span><code class="descname">-e</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--editor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-convert-e" title="Permalink to this definition">¶</a></dt>
+<dd><p>outputs denser data, eg descriptions, picklists, etc)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-convert-f">
+<span id="cmdoption-ogt-cli.py-convert--format"></span><code class="descname">-f</code><code class="descclassname"> {json,js,geojson,yaml,xlsx,ags4}</code><code class="descclassname">, </code><code class="descname">--format</code><code class="descclassname"> {json,js,geojson,yaml,xlsx,ags4}</code><a class="headerlink" href="#cmdoption-ogt-cli.py-convert-f" title="Permalink to this definition">¶</a></dt>
+<dd><p>output format and ext</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-convert-m">
+<span id="cmdoption-ogt-cli.py-convert--minify"></span><code class="descname">-m</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--minify</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-convert-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>minify the output by removing whitespace</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-convert-o">
+<span id="cmdoption-ogt-cli.py-convert--overwrite"></span><code class="descname">-o</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--overwrite</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-convert-o" title="Permalink to this definition">¶</a></dt>
+<dd><p>overwrite output file if it exists</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-convert--stats">
+<code class="descname">--stats</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-convert--stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>include stats in output (only json/yaml)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-convert-w">
+<span id="cmdoption-ogt-cli.py-convert--write_file"></span><code class="descname">-w</code><code class="descclassname"> &lt;write_file&gt;</code><code class="descclassname">, </code><code class="descname">--write_file</code><code class="descclassname"> &lt;write_file&gt;</code><a class="headerlink" href="#cmdoption-ogt-cli.py-convert-w" title="Permalink to this definition">¶</a></dt>
+<dd><p>output file to write</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-convert-z">
+<span id="cmdoption-ogt-cli.py-convert--zip"></span><code class="descname">-z</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--zip</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-convert-z" title="Permalink to this definition">¶</a></dt>
+<dd><p>output as a zip file containing original and converted file</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-convert--debug">
+<code class="descname">--debug</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-convert--debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>debug</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ogt-cli-py-serve">
+<h3>ogt-cli.py serve<a class="headerlink" href="#ogt-cli-py-serve" title="Permalink to this headline">¶</a></h3>
+<p>Run the www server</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">usage: ogt-cli.py serve [-h] [-a ADDRESS] [-p PORT] [-d]</span>
+</pre></div>
+</div>
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-serve-h">
+<span id="cmdoption-ogt-cli.py-serve--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-serve-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-serve-a">
+<code class="descname">-a</code><code class="descclassname"> &lt;address&gt;</code><a class="headerlink" href="#cmdoption-ogt-cli.py-serve-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>eg localhost, 0.0.0.0,  123.12.23.45</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-serve-p">
+<code class="descname">-p</code><code class="descclassname"> &lt;port&gt;</code><a class="headerlink" href="#cmdoption-ogt-cli.py-serve-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port No, default: 1377</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-serve-d">
+<code class="descname">-d</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-serve-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dev mode shows debug and restart on files changed</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ogt-cli-py-update">
+<h3>ogt-cli.py update<a class="headerlink" href="#ogt-cli-py-update" title="Permalink to this headline">¶</a></h3>
+<p>Setup and update</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">usage: ogt-cli.py update [-h]</span>
+</pre></div>
+</div>
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-update-h">
+<span id="cmdoption-ogt-cli.py-update--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-update-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ogt-cli-py-validate">
+<h3>ogt-cli.py validate<a class="headerlink" href="#ogt-cli-py-validate" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">usage: ogt-cli.py validate [-h] [-p] [-r RULES [RULES ...]] [-t] [--debug]</span>
+<span class="go">                           source_file</span>
+</pre></div>
+</div>
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-validate-arg-source_file">
+<code class="descname">source_file</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-validate-arg-source_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>File to convert</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-validate-h">
+<span id="cmdoption-ogt-cli.py-validate--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-validate-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-validate-p">
+<code class="descname">-p</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-validate-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>Human print output</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-validate-r">
+<span id="cmdoption-ogt-cli.py-validate--rules"></span><code class="descname">-r</code><code class="descclassname"> &lt;rules&gt;</code><code class="descclassname">, </code><code class="descname">--rules</code><code class="descclassname"> &lt;rules&gt;</code><a class="headerlink" href="#cmdoption-ogt-cli.py-validate-r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rules to check</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-validate-t">
+<span id="cmdoption-ogt-cli.py-validate--tests"></span><code class="descname">-t</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--tests</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-validate-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run Tests</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-cli.py-validate--debug">
+<code class="descname">--debug</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-cli.py-validate--debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>debug</p>
+</dd></dl>
+
+</div>
+</div>
+<p><strong>Examples</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># convert an ags file to json, creates /path/to/my.ags.json</span>
+ogt-cli.py -b -f json /path/to/my.ags
+
+<span class="c1"># convert an ags file to zip file, creates /path/to/my.ags.json</span>
+ogt-cli.py -b -f json -z  /path/to/my.ags
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.write" title="ogt.ogt_doc.OGTDocument.write"><code class="xref py py-func docutils literal"><span class="pre">ogt.ogt_doc.OGTDocument.write()</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="ogt-desktop-py">
+<span id="id2"></span><h2>ogt-desktop.py<a class="headerlink" href="#ogt-desktop-py" title="Permalink to this headline">¶</a></h2>
+<p>Launch desktop application</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">usage: ogt-desktop.py [-h] [--dev] [ags_file]</span>
+</pre></div>
+</div>
+<dl class="option">
+<dt id="cmdoption-ogt-desktop.py-arg-ags_file">
+<code class="descname">ags_file</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-desktop.py-arg-ags_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>AGS formatted file to load at startup</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-desktop.py-h">
+<span id="cmdoption-ogt-desktop.py--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-desktop.py-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ogt-desktop.py--dev">
+<code class="descname">--dev</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ogt-desktop.py--dev" title="Permalink to this definition">¶</a></dt>
+<dd><p>Developer mode</p>
+</dd></dl>
+
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><code class="xref py py-mod docutils literal"><span class="pre">ogtgui</span></code></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ogt/index.html">ogt:  Base API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ogtgui/index.html">ogtgui: Desktop API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ogtserver/index.html">ogtserver:  www server API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ogt-cli-py">ogt-cli.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ogt-cli-py-convert">ogt-cli.py convert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogt-cli-py-serve">ogt-cli.py serve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogt-cli-py-update">ogt-cli.py update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ogt-cli-py-validate">ogt-cli.py validate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ogt-desktop-py">ogt-desktop.py</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ogtserver/main.html"
+                        title="previous chapter">ogtserver.main.*</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/commands.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ogtserver/main.html" title="ogtserver.main.*"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ogt-ags-py</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017  ogt@daffodil.uk.com.
+      Last updated on 2017-01-30.
+    </div>
+  </body>
+</html>
