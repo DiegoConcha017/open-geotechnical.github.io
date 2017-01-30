@@ -3,7 +3,7 @@
 Unofficial AGS4 Data Dict
 ===============================
 
-The Unofficial AGS data dictionary is the complete spec in a single minified json file.
+The Unofficial AGS4 data dictionary is the complete spec in a single minified json file.
 
 .. warning::
 

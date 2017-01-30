@@ -1,0 +1,53 @@
+AGS4 Quickstart
+====================
+
+.. note::
+    
+    This is a quick guide intended to bring new developers whove never used ags up to speed.
+    
+Whats is AGS4 ?
+----------------------------
+
+AGS4 is a test file format used for the exchange of geotechnical engineering. Its design and roots are Spereasheets,
+and the way to share "some" spreadsheet data, without sharing spreadsheet itself.
+
+What does it look like ?
+------------------------------
+
+Its "essentially" a set of concated :ref:`csv` files, with each `group` representing a spreadsheet tab and its columns/rows. 
+
+The simple example below shows two groups, although on a real file there would be many more
+
+- the `Project Info` (PROJ) group, with one row of data
+- the `Location / Test Points` (LOCA) group with three rows
+
+.. code::
+
+    "GROUP","PROJ"
+    "HEADING","PROJ_ID","PROJ_ID","PROJ_ID","PROJ_CLNT"
+    "UNIT","","","",""
+    "TYPE","ID","X","X","X"
+    "DATA","Prj-AG","Acme Gasworks","Greenwich, London","Acme Enterprises"
+
+    "GROUP","LOCA"
+    "HEADING","LOCA_ID","LOCA_TYPE","LOCA_NATE","LOCA_NATN","LOCA_GL","LOCA_FDEP"
+    "UNIT","","","m","m","m","m"
+    "TYPE","ID","PA","0DP","0DP","2DP","1DP"
+    "DATA","TP1","RO","539277","179635","-20.35","3.5"
+    "DATA","TP2","RO","539245","179456","-23.35","2.1"
+    "DATA","TP3","RO","539299","179474","-20.22","2.9"
+
+.. graphviz::
+
+    digraph {
+        node [shape=record]
+        a [label="{PROJ_ID|PROJ_ID|PROJ_ID|PROJ_CLNT}|{Prj-AG|Acme Gasworks|Greenwich|Acme Enterprises}"]
+
+    }
+    
+What does it all mean ?
+-------------------------------
+
+As we go down the list
+
+
