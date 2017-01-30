@@ -451,12 +451,7 @@ dl.glossary dd {
 <span class="c1">#from ogt.ags4 import AGS4_DESCRIPTOR</span>
 <span class="kn">import</span> <span class="nn">ogt.ags4</span>
 <span class="kn">import</span> <span class="nn">ogt.ogt_group</span>
-
-<span class="c1">#from ogt import ags4</span>
-
-<span class="c1">#from ogt import ogt_group</span>
-
-<span class="kn">from</span> <span class="nn">ogt</span> <span class="kn">import</span> <span class="n">utils</span>
+<span class="kn">import</span> <span class="nn">ogt.utils</span>
 
 
 <div class="viewcode-block" id="OGTDocument"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument">[docs]</a><span class="k">class</span> <span class="nc">OGTDocument</span><span class="p">:</span>
@@ -702,7 +697,7 @@ dl.glossary dd {
                 <span class="c1"># write out and done</span>
                 <span class="n">zipee</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-                <span class="n">siz</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">file_size</span><span class="p">(</span><span class="n">target_file_path</span><span class="p">,</span> <span class="n">human</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                <span class="n">siz</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">file_size</span><span class="p">(</span><span class="n">target_file_path</span><span class="p">,</span> <span class="n">human</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
                 <span class="k">return</span> <span class="s2">&quot;Wrote: </span><span class="si">%s</span><span class="s2"> `</span><span class="si">%s</span><span class="s2">`&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">siz</span><span class="p">,</span> <span class="n">target_file_path</span><span class="p">),</span> <span class="bp">None</span>
 
             <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
@@ -715,7 +710,7 @@ dl.glossary dd {
                 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">target_file_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
                     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">blob</span><span class="p">)</span>
                     <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-                <span class="n">siz</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">file_size</span><span class="p">(</span><span class="n">target_file_path</span><span class="p">,</span> <span class="n">human</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                <span class="n">siz</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">file_size</span><span class="p">(</span><span class="n">target_file_path</span><span class="p">,</span> <span class="n">human</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
                 <span class="k">return</span> <span class="s2">&quot;Wrote: </span><span class="si">%s</span><span class="s2"> `</span><span class="si">%s</span><span class="s2">`&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">siz</span><span class="p">,</span> <span class="n">target_file_path</span><span class="p">),</span> <span class="bp">None</span>
 
             <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
@@ -767,7 +762,7 @@ dl.glossary dd {
 <span class="sd">                - An `error` string is error occured, else `None`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">return</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">include_source</span><span class="o">=</span><span class="n">include_source</span><span class="p">,</span>
+        <span class="k">return</span> <span class="n">ogt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">include_source</span><span class="o">=</span><span class="n">include_source</span><span class="p">,</span>
                                              <span class="n">include_stats</span><span class="o">=</span><span class="n">include_stats</span><span class="p">,</span>
                                              <span class="n">edit_mode</span><span class="o">=</span><span class="n">edit_mode</span><span class="p">),</span>
                               <span class="n">minify</span><span class="o">=</span><span class="n">minify</span><span class="p">)</span>
@@ -787,7 +782,7 @@ dl.glossary dd {
 <span class="sd">                - `None` if error else a `str` with :ref:`yaml` encoded data</span>
 <span class="sd">                - An `error` string is error occured, else `None`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_yaml</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">include_source</span><span class="o">=</span><span class="n">include_source</span><span class="p">,</span>
+        <span class="k">return</span> <span class="n">ogt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">to_yaml</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">include_source</span><span class="o">=</span><span class="n">include_source</span><span class="p">,</span>
                                            <span class="n">include_stats</span><span class="o">=</span><span class="n">include_stats</span><span class="p">,</span>
                                            <span class="n">edit_mode</span><span class="o">=</span><span class="n">edit_mode</span><span class="p">)</span> <span class="p">)</span>
 
@@ -816,8 +811,8 @@ dl.glossary dd {
         <span class="c1">## BNG British National grid</span>
         <span class="k">elif</span> <span class="s2">&quot;LOCA_NATE&quot;</span> <span class="ow">in</span> <span class="n">loca</span><span class="o">.</span><span class="n">headings</span> <span class="ow">and</span> <span class="s2">&quot;LOCA_NATN&quot;</span> <span class="ow">in</span> <span class="n">loca</span><span class="o">.</span><span class="n">headings</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">rec</span> <span class="ow">in</span> <span class="n">loca</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-                <span class="n">east</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_int</span><span class="p">(</span><span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LOCA_NATE&quot;</span><span class="p">))</span>
-                <span class="n">north</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_int</span><span class="p">(</span><span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LOCA_NATN&quot;</span><span class="p">))</span>
+                <span class="n">east</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">to_int</span><span class="p">(</span><span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LOCA_NATE&quot;</span><span class="p">))</span>
+                <span class="n">north</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">to_int</span><span class="p">(</span><span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LOCA_NATN&quot;</span><span class="p">))</span>
                 <span class="k">if</span> <span class="n">east</span> <span class="ow">and</span> <span class="n">north</span><span class="p">:</span>
                     <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span> <span class="o">=</span> <span class="n">bng_to_latlon</span><span class="o">.</span><span class="n">OSGB36toWGS84</span><span class="p">(</span><span class="n">east</span><span class="p">,</span> <span class="n">north</span><span class="p">)</span>
                     <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">make_feature</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">))</span>
@@ -826,8 +821,8 @@ dl.glossary dd {
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">f</span> <span class="o">=</span> <span class="n">geojson</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
             <span class="k">print</span> <span class="n">f</span>
-            <span class="k">print</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">minify</span><span class="o">=</span><span class="n">minify</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">minify</span><span class="o">=</span><span class="n">minify</span><span class="p">)</span>
+            <span class="k">print</span> <span class="n">ogt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">minify</span><span class="o">=</span><span class="n">minify</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">ogt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">minify</span><span class="o">=</span><span class="n">minify</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
 </div>
 <div class="viewcode-block" id="OGTDocument.write_excel"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.write_excel">[docs]</a>    <span class="k">def</span> <span class="nf">write_excel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -948,15 +943,10 @@ dl.glossary dd {
 
 
         <span class="c1">## Unused Groups</span>
-        <span class="n">all_g</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+        <span class="n">all_g</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
         <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;unused_groups&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="k">pass</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">ags_groups</span> <span class="o">=</span> <span class="n">all_g</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-            <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;unused_groups&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span> <span class="nb">set</span><span class="p">(</span><span class="n">ags_groups</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
-
-
+        <span class="n">ags_groups</span> <span class="o">=</span> <span class="n">all_g</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+        <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;unused_groups&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span> <span class="nb">set</span><span class="p">(</span><span class="n">ags_groups</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
 
         <span class="k">return</span> <span class="n">dic</span>
 </div></div>
@@ -977,7 +967,7 @@ dl.glossary dd {
 <span class="sd">        - An :class:`~ogt.ogt_doc.OGTDocument` object on success, else `None`</span>
 <span class="sd">        - An `Error` message if error, otherwise `None`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">read_json_file</span><span class="p">(</span><span class="n">json_file_path</span><span class="p">)</span>
+    <span class="n">data</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">read_json_file</span><span class="p">(</span><span class="n">json_file_path</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">err</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="n">err</span>
 

@@ -554,6 +554,8 @@ dl.glossary dd {
 <span class="sd">    :rtype: dict</span>
 <span class="sd">    :return:  the data if successful, else `None`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">AGS4_DD</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
     <span class="k">return</span> <span class="n">AGS4_DD</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;groups&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">group_code</span><span class="p">)</span>
 
 
@@ -706,11 +708,9 @@ dl.glossary dd {
 <span class="sd">        - A list of ags errors</span>
 <span class="sd">        - A list of system errors</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1">## get files</span>
-    <span class="n">tests_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">EXAMPLES_DIR</span><span class="p">,</span> <span class="s2">&quot;ags4_tests&quot;</span><span class="p">)</span>
-    <span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">tests_dir</span><span class="p">)</span>
 
-    <span class="n">files</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">list_examples</span><span class="p">(</span><span class="s2">&quot;ags4_tests&quot;</span><span class="p">)</span>
+
+    <span class="n">files</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">list_examples</span><span class="p">(</span><span class="s2">&quot;ags4_tests&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">err</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="n">err</span>
 
@@ -747,7 +747,7 @@ dl.glossary dd {
     <span class="c1">#print &quot;rules=&quot;, rules</span>
 
     <span class="n">doc</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ogt_doc</span><span class="o">.</span><span class="n">create_doc_from_ags4_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-    <span class="n">contents</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    <span class="n">contents</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">err</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="n">err</span>
 
