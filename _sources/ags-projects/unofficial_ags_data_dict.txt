@@ -13,3 +13,12 @@ Download
 Point your browser at 
 
 - https://open-geotechnical.github.io/data/ags4.min.json
+
+The file contains the following keys:
+
+- **groups** - the ags groups and their headings
+- **abbrs** - the abbreviations
+- **units** - units and descriptions
+- **data_types** - the data types
+- **examples** - Example ags files
+
