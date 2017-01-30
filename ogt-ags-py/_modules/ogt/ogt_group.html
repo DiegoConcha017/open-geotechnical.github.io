@@ -441,7 +441,22 @@ dl.glossary dd {
 <span class="kn">import</span> <span class="nn">ogt.ags4</span>
 
 <div class="viewcode-block" id="groups_sort"><a class="viewcode-back" href="../../ogt/ogt_group.html#ogt.ogt_group.groups_sort">[docs]</a><span class="k">def</span> <span class="nf">groups_sort</span><span class="p">(</span><span class="n">unsorted_groups</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns a preffered order for the groups&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Returns a prefered order for the groups.</span>
+
+<span class="sd">    .. note::</span>
+
+<span class="sd">        This is a bit hacky as the ags spec does not define</span>
+<span class="sd">        any groups order, however PROJ does sensibly tend to come first etc.</span>
+
+
+<span class="sd">        So this return a list with</span>
+
+<span class="sd">        - at start PROJ, TRAN, LOCA, HDPH, GEOL, SAMP</span>
+<span class="sd">        - at end ABBR. DICT, FILE, TYPE, UNIT</span>
+<span class="sd">        - and everything else in the middle sorted alphabetically</span>
+
+<span class="sd">    :return: An `list` of group codes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">start</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PROJ&quot;</span><span class="p">,</span> <span class="s2">&quot;TRAN&quot;</span><span class="p">,</span> <span class="s2">&quot;LOCA&quot;</span><span class="p">,</span> <span class="s2">&quot;HDPH&quot;</span><span class="p">,</span> <span class="s2">&quot;GEOL&quot;</span><span class="p">,</span> <span class="s2">&quot;SAMP&quot;</span><span class="p">]</span>
     <span class="n">end</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ABBR&quot;</span><span class="p">,</span> <span class="s2">&quot;DICT&quot;</span><span class="p">,</span> <span class="s2">&quot;FILE&quot;</span><span class="p">,</span> <span class="s2">&quot;TYPE&quot;</span><span class="p">,</span> <span class="s2">&quot;UNIT&quot;</span><span class="p">]</span>
@@ -474,7 +489,7 @@ dl.glossary dd {
 <span class="sd">        :param group_code: The four character group code to initialize with</span>
 <span class="sd">        :type group_code: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">parentDoc</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">docParent</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="sd">&quot;&quot;&quot;Pointer to parent :class:`~ogt.ogt_doc.OGTDocument` instance&quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">group_code</span> <span class="o">=</span> <span class="n">group_code</span>
@@ -631,6 +646,7 @@ dl.glossary dd {
 <li class="toctree-l1"><a class="reference internal" href="../../ogtgui/index.html">ogtgui: Desktop API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ogtserver/index.html">ogtserver:  HTTP Server API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">TODO list</a></li>
 </ul>
 
 <div id="searchbox" style="display: none" role="search">

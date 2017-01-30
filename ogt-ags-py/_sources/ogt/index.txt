@@ -86,4 +86,5 @@ Index
     ogt_group.rst
     utils.rst
     ags4.rst
+    notes.rst
 

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>ogt.ogt_group.* &mdash; Open GeoTechnical AGS Tools</title>
+    <title>Dev Notes &mdash; Open GeoTechnical AGS Tools</title>
     
     <link rel="stylesheet" href="../_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -26,8 +26,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="top" title="Open GeoTechnical AGS Tools" href="../index.html" />
     <link rel="up" title="ogt: Base API" href="index.html" />
-    <link rel="next" title="ogt.utils.*" href="utils.html" />
-    <link rel="prev" title="ogt.ogt_doc.*" href="ogt_doc.html" />
+    <link rel="next" title="ogtgui: Desktop API" href="../ogtgui/index.html" />
+    <link rel="prev" title="ogt.ags4.*" href="ags4.html" />
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
 <!--[if lte IE 6]>
@@ -428,10 +428,10 @@ dl.glossary dd {
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="utils.html" title="ogt.utils.*"
+          <a href="../ogtgui/index.html" title="ogtgui: Desktop API"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="ogt_doc.html" title="ogt.ogt_doc.*"
+          <a href="ags4.html" title="ogt.ags4.*"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">ogt-ags-py</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">ogt:  Base API</a> &raquo;</li> 
@@ -443,160 +443,107 @@ dl.glossary dd {
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-ogt.ogt_group">
-<span id="ogt-ogt-group"></span><h1>ogt.ogt_group.*<a class="headerlink" href="#module-ogt.ogt_group" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="ogt.ogt_group.OGTGroup">
-<em class="property">class </em><code class="descclassname">ogt.ogt_group.</code><code class="descname">OGTGroup</code><span class="sig-paren">(</span><em>group_code</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_group.html#OGTGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_group.OGTGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents a Document's <a class="reference external" href="http://open-geotechnical.github.io/unofficial-ags-guide/glossary.html#term-group" title="(in Open GeoTechnical v0)"><span class="xref std std-term">GROUP</span></a> and headings</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>group_code</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) -- The four character group code to initialize with</td>
-</tr>
-</tbody>
-</table>
-<dl class="attribute">
-<dt id="ogt.ogt_group.OGTGroup.csv_end_index">
-<code class="descname">csv_end_index</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_group.OGTGroup.csv_end_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>The line no this groups start at</p>
-</dd></dl>
+  <div class="section" id="dev-notes">
+<h1>Dev Notes<a class="headerlink" href="#dev-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="edit-mode">
+<span id="id1"></span><h2>edit_mode<a class="headerlink" href="#edit-mode" title="Permalink to this headline">¶</a></h2>
+<p>With json and yaml, data can be serialised in two &quot;structrues&quot; set by <strong>edit_mode</strong> (eg see  <a class="reference internal" href="ogt_group.html#ogt.ogt_group.OGTGroup.to_dict" title="ogt.ogt_group.OGTGroup.to_dict"><code class="xref py py-meth docutils literal"><span class="pre">to_dict()</span></code></a>)</p>
+<p><strong>edit_mode=False</strong></p>
+<ul>
+<li><p class="first">Groups are serialised as a minimal <cite>key/value</cite> pair</p>
+</li>
+<li><p class="first">This is suitable for just the raw data as repreented in the ags file</p>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span></span><span class="s2">&quot;PROJ&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;DATA&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;PROJ_ID&quot;</span><span class="o">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PROJ_NAME&quot;</span><span class="o">:</span> <span class="s2">&quot;Example Project&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;TYPE&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;PROJ_ID&quot;</span><span class="o">:</span> <span class="s2">&quot;ID&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;PROJ_NAME&quot;</span><span class="o">:</span> <span class="s2">&quot;X&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;UNIT&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;PROJ_ID&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;PROJ_NAME&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+    <span class="p">}</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>edit_mode=True</strong></p>
+<ul>
+<li><p class="first">Extra data is added from the data dict such as descriptions, units, types, etc</p>
+</li>
+<li><p class="first">This is suitable for editors or presentations</p>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span></span><span class="s2">&quot;PROJ&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;group_code&quot;</span><span class="o">:</span> <span class="s2">&quot;PROJ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;data_dict&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;child&quot;</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;class&quot;</span><span class="o">:</span> <span class="s2">&quot;Project / Data Transmission Details&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;group_code&quot;</span><span class="o">:</span> <span class="s2">&quot;PROJ&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;group_description&quot;</span><span class="o">:</span> <span class="s2">&quot;Project Information&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;group_status&quot;</span><span class="o">:</span> <span class="s2">&quot;Required in all files (Rule 13)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;parent&quot;</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;notes&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;PROJ is required in all AGS4 files (Rule 13).&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PROJ_ENG should contain the details of the consultant/designer for the project.&quot;</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
 
-<dl class="method">
-<dt id="ogt.ogt_group.OGTGroup.csv_rows">
-<code class="descname">csv_rows</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_group.html#OGTGroup.csv_rows"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_group.OGTGroup.csv_rows" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the csv rows used in this group</p>
-</dd></dl>
+    <span class="s2">&quot;headings_sort&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;PROJ_ID&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;PROJ_NAME&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;headings&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;head_code&quot;</span><span class="o">:</span> <span class="s2">&quot;PROJ_ID&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;ID&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;unit&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;data_dict&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;head_code&quot;</span><span class="o">:</span> <span class="s2">&quot;PROJ_ID&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;head_description&quot;</span><span class="o">:</span> <span class="s2">&quot;Project identifier&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;head_status&quot;</span><span class="o">:</span> <span class="s2">&quot;*R&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s2">&quot;data_type&quot;</span><span class="o">:</span> <span class="s2">&quot;ID&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;unit&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;example&quot;</span><span class="o">:</span> <span class="s2">&quot;121415&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;head_code&quot;</span><span class="o">:</span> <span class="s2">&quot;PROJ_NAME&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;unit&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+            <span class="s2">&quot;data_dict&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;head_code&quot;</span><span class="o">:</span> <span class="s2">&quot;PROJ_NAME&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;head_description&quot;</span><span class="o">:</span> <span class="s2">&quot;Project title&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;head_status&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;sort_order&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;data_type&quot;</span><span class="o">:</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;unit&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;example&quot;</span><span class="o">:</span> <span class="s2">&quot;ACME Gas Works Redevelopment&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
 
-<dl class="attribute">
-<dt id="ogt.ogt_group.OGTGroup.csv_start_index">
-<code class="descname">csv_start_index</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_group.OGTGroup.csv_start_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>The line no this groups start at</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ogt.ogt_group.OGTGroup.data">
-<code class="descname">data</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_group.OGTGroup.data" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>list</cite> of <cite>dict`s with `head_code:value</cite></p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ogt.ogt_group.OGTGroup.data_column">
-<code class="descname">data_column</code><span class="sig-paren">(</span><em>head_code</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_group.html#OGTGroup.data_column"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_group.OGTGroup.data_column" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="ogt.ogt_group.OGTGroup.data_dict">
-<code class="descname">data_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_group.html#OGTGroup.data_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_group.OGTGroup.data_dict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the data dictionary for this group, if it exists</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An instance of  <code class="xref py py-class docutils literal"><span class="pre">AGS4GroupDataDict</span></code> if
-it exists, else <cite>None</cite></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ogt.ogt_group.OGTGroup.docParent">
-<code class="descname">docParent</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_group.OGTGroup.docParent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pointer to parent <a class="reference internal" href="ogt_doc.html#ogt.ogt_doc.OGTDocument" title="ogt.ogt_doc.OGTDocument"><code class="xref py py-class docutils literal"><span class="pre">OGTDocument</span></code></a> instance</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ogt.ogt_group.OGTGroup.group_code">
-<code class="descname">group_code</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_group.OGTGroup.group_code" title="Permalink to this definition">¶</a></dt>
-<dd><p>The four character group code</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ogt.ogt_group.OGTGroup.headings">
-<code class="descname">headings</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_group.OGTGroup.headings" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>dict</cite> of headings</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ogt.ogt_group.OGTGroup.headings_sort">
-<code class="descname">headings_sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_group.html#OGTGroup.headings_sort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_group.OGTGroup.headings_sort" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ogt.ogt_group.OGTGroup.headings_source_sort">
-<code class="descname">headings_source_sort</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_group.OGTGroup.headings_source_sort" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of head_code with the sort order in original file</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ogt.ogt_group.OGTGroup.to_dict">
-<code class="descname">to_dict</code><span class="sig-paren">(</span><em>edit_mode=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_group.html#OGTGroup.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_group.OGTGroup.to_dict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a dictionary  of the group data in two formats</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>edit_mode</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- see <a class="reference internal" href="notes.html#edit-mode"><span>edit_mode</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)">dict</a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A dictionary with the data</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ogt.ogt_group.OGTGroup.types">
-<code class="descname">types</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_group.OGTGroup.types" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>dict</cite> of <cite>head_code:type</cite></p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ogt.ogt_group.OGTGroup.types_list">
-<code class="descname">types_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_group.html#OGTGroup.types_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_group.OGTGroup.types_list" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ogt.ogt_group.OGTGroup.units">
-<code class="descname">units</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_group.OGTGroup.units" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>dict</cite> of <cite>head_code:unit</cite></p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ogt.ogt_group.OGTGroup.units_list">
-<code class="descname">units_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_group.html#OGTGroup.units_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_group.OGTGroup.units_list" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="function">
-<dt id="ogt.ogt_group.groups_sort">
-<code class="descclassname">ogt.ogt_group.</code><code class="descname">groups_sort</code><span class="sig-paren">(</span><em>unsorted_groups</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_group.html#groups_sort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_group.groups_sort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a prefered order for the groups.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>This is a bit hacky as the ags spec does not define
-any groups order, however PROJ does sensibly tend to come first etc.</p>
-<p>So this return a list with</p>
-<ul class="last simple">
-<li>at start PROJ, TRAN, LOCA, HDPH, GEOL, SAMP</li>
-<li>at end ABBR. DICT, FILE, TYPE, UNIT</li>
-<li>and everything else in the middle sorted alphabetically</li>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;PROJ_ID&quot;</span><span class="o">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PROJ_NAME&quot;</span><span class="o">:</span> <span class="s2">&quot;Example Project&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
 </ul>
 </div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An <cite>list</cite> of group codes</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </div>
 
 
@@ -611,10 +558,13 @@ any groups order, however PROJ does sensibly tend to come first etc.</p>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#index">Index</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ogt_init.html">ogt.*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ogt_doc.html">ogt.ogt_doc.*</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">ogt.ogt_group.*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ogt_group.html">ogt.ogt_group.*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utils.html">ogt.utils.*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ags4.html">ogt.ags4.*</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notes.html">Dev Notes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Dev Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#edit-mode">edit_mode</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -626,15 +576,15 @@ any groups order, however PROJ does sensibly tend to come first etc.</p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="ogt_doc.html"
-                        title="previous chapter">ogt.ogt_doc.*</a></p>
+  <p class="topless"><a href="ags4.html"
+                        title="previous chapter">ogt.ags4.*</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="utils.html"
-                        title="next chapter">ogt.utils.*</a></p>
+  <p class="topless"><a href="../ogtgui/index.html"
+                        title="next chapter">ogtgui: Desktop API</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/ogt/ogt_group.txt"
+      <li><a href="../_sources/ogt/notes.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -665,10 +615,10 @@ any groups order, however PROJ does sensibly tend to come first etc.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="utils.html" title="ogt.utils.*"
+          <a href="../ogtgui/index.html" title="ogtgui: Desktop API"
              >next</a> |</li>
         <li class="right" >
-          <a href="ogt_doc.html" title="ogt.ogt_doc.*"
+          <a href="ags4.html" title="ogt.ags4.*"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">ogt-ags-py</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >ogt:  Base API</a> &raquo;</li> 

@@ -443,36 +443,35 @@ dl.glossary dd {
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="ogt-ogt-doc">
-<h1>ogt.ogt_doc.*<a class="headerlink" href="#ogt-ogt-doc" title="Permalink to this headline">¶</a></h1>
-<p>An <a class="reference internal" href="#ogt.ogt_doc.OGTDocument" title="ogt.ogt_doc.OGTDocument"><code class="xref py py-class docutils literal"><span class="pre">OGTDocument</span></code></a> contains the groups (<a class="reference internal" href="ogt_group.html#ogt.ogt_group.OGTGroup" title="ogt.ogt_group.OGTGroup"><code class="xref py py-class docutils literal"><span class="pre">OGTGroup</span></code></a>) in a document.</p>
-<p><strong>Examples</strong></p>
+  <div class="section" id="module-ogt.ogt_doc">
+<span id="ogt-ogt-doc"></span><h1>ogt.ogt_doc.*<a class="headerlink" href="#module-ogt.ogt_doc" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ogt.ogt_doc.OGTDocument">
+<em class="property">class </em><code class="descclassname">ogt.ogt_doc.</code><code class="descname">OGTDocument</code><a class="reference internal" href="../_modules/ogt/ogt_doc.html#OGTDocument"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_doc.OGTDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class <a class="reference internal" href="#ogt.ogt_doc.OGTDocument" title="ogt.ogt_doc.OGTDocument"><code class="xref py py-class docutils literal"><span class="pre">OGTDocument</span></code></a> represents an ags file and
+contains the groups (<a class="reference internal" href="ogt_group.html#ogt.ogt_group.OGTGroup" title="ogt.ogt_group.OGTGroup"><code class="xref py py-class docutils literal"><span class="pre">OGTGroup</span></code></a>).</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ogt</span> <span class="kn">import</span> <span class="n">ogt_doc</span>
 
-<span class="c1"># Create a doc from an ags4 file</span>
-<span class="n">doc</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">ogt_doc</span><span class="o">.</span><span class="n">create_doc_from_ags4_file</span><span class="p">(</span><span class="s2">&quot;/path/to/my.ags&quot;</span><span class="p">)</span>
+<span class="n">doc</span> <span class="o">=</span> <span class="n">ogt_doc</span><span class="o">.</span><span class="n">OGTDocument</span><span class="p">()</span>
+<span class="n">err</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">load_ags4_file</span><span class="p">(</span><span class="s2">&quot;/path/to/my.ags&quot;</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">err</span><span class="p">:</span>
     <span class="k">print</span> <span class="n">err</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="c1"># print the groups index</span>
     <span class="k">print</span> <span class="n">doc</span><span class="o">.</span><span class="n">groups_index</span><span class="p">()</span>
 
-    <span class="c1"># outputs the SAMP group in json</span>
-    <span class="k">print</span> <span class="n">doc</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;SAMP&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
-
+    <span class="c1"># Headings in the SAMP group</span>
+    <span class="k">print</span> <span class="n">doc</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;SAMP&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">headings</span><span class="p">()</span>
 
     <span class="c1"># Return a list of units used in the document</span>
     <span class="k">print</span> <span class="n">doc</span><span class="o">.</span><span class="n">units</span><span class="p">()</span>
 </pre></div>
 </div>
-<span class="target" id="module-ogt.ogt_doc"></span><dl class="class">
-<dt id="ogt.ogt_doc.OGTDocument">
-<em class="property">class </em><code class="descclassname">ogt.ogt_doc.</code><code class="descname">OGTDocument</code><a class="reference internal" href="../_modules/ogt/ogt_doc.html#OGTDocument"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_doc.OGTDocument" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents and <cite>.ags</cite> file</p>
 <dl class="method">
 <dt id="ogt.ogt_doc.OGTDocument.append_group">
 <code class="descname">append_group</code><span class="sig-paren">(</span><em>grp</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_doc.html#OGTDocument.append_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_doc.OGTDocument.append_group" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Appends an :class;`~ogt.ogt_group.OGTGroup` instance to this document</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -487,7 +486,7 @@ dl.glossary dd {
 <dl class="attribute">
 <dt id="ogt.ogt_doc.OGTDocument.csv_rows">
 <code class="descname">csv_rows</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_doc.OGTDocument.csv_rows" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of csv rows</p>
+<dd><p>A <cite>list</cite> of a list of csv rows</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -514,20 +513,20 @@ dl.glossary dd {
 <dl class="attribute">
 <dt id="ogt.ogt_doc.OGTDocument.groups">
 <code class="descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_doc.OGTDocument.groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>dict</cite> with group code to <a class="reference internal" href="ogt_group.html#ogt.ogt_group.OGTGroup" title="ogt.ogt_group.OGTGroup"><code class="xref py py-class docutils literal"><span class="pre">OGTGroup</span></code></a> instances</p>
+<dd><p>A <cite>dict</cite> of group code to <a class="reference internal" href="ogt_group.html#ogt.ogt_group.OGTGroup" title="ogt.ogt_group.OGTGroup"><code class="xref py py-class docutils literal"><span class="pre">OGTGroup</span></code></a> instances</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="ogt.ogt_doc.OGTDocument.groups_count">
 <code class="descname">groups_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_doc.html#OGTDocument.groups_count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_doc.OGTDocument.groups_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return no of groups in document</p>
+<dd><p>Returns no of groups in document</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)">int</a></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">No of groups</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Groups count</td>
 </tr>
 </tbody>
 </table>
@@ -536,7 +535,7 @@ dl.glossary dd {
 <dl class="method">
 <dt id="ogt.ogt_doc.OGTDocument.groups_sort">
 <code class="descname">groups_sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_doc.html#OGTDocument.groups_sort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_doc.OGTDocument.groups_sort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a list of group_codes in preffered order</p>
+<dd><p>Return a list of group_codes in preferred order (see <a class="reference internal" href="ogt_group.html#ogt.ogt_group.groups_sort" title="ogt.ogt_group.groups_sort"><code class="xref py py-func docutils literal"><span class="pre">groups_sort()</span></code></a>)</p>
 </dd></dl>
 
 <dl class="method">
@@ -566,7 +565,47 @@ dl.glossary dd {
 <dl class="attribute">
 <dt id="ogt.ogt_doc.OGTDocument.lines">
 <code class="descname">lines</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_doc.OGTDocument.lines" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of original source lines (line 1 = idx zero)</p>
+<dd><p>A <cite>list</cite> of strings with original source lines</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ogt.ogt_doc.OGTDocument.load_ags4_file">
+<code class="descname">load_ags4_file</code><span class="sig-paren">(</span><em>ags4_file_path</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_doc.html#OGTDocument.load_ags4_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_doc.OGTDocument.load_ags4_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads document from an <a class="reference external" href="http://open-geotechnical.github.io/unofficial-ags-guide/glossary.html#term-ags4" title="(in Open GeoTechnical v0)"><span class="xref std std-term">ags4</span></a> formatted file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ags4_file_path</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) -- absolute or relative path to file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)">str</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A String if an error else None</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Ensure we can read ascii</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="ogt.ogt_doc.OGTDocument.load_ags4_string">
+<code class="descname">load_ags4_string</code><span class="sig-paren">(</span><em>ags4_str</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_doc.html#OGTDocument.load_ags4_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_doc.OGTDocument.load_ags4_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load  document from an <a class="reference external" href="http://open-geotechnical.github.io/unofficial-ags-guide/glossary.html#term-ags4" title="(in Open GeoTechnical v0)"><span class="xref std std-term">ags4</span></a> formatted string</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ags4_str</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) -- string to load</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)">str</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An <cite>Error</cite> message if string not loaded, else <cite>None</cite></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -600,13 +639,13 @@ dl.glossary dd {
 <dl class="attribute">
 <dt id="ogt.ogt_doc.OGTDocument.source">
 <code class="descname">source</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_doc.OGTDocument.source" title="Permalink to this definition">¶</a></dt>
-<dd><p>The original source string</p>
+<dd><p>The original source files contents as string</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="ogt.ogt_doc.OGTDocument.source_file_path">
 <code class="descname">source_file_path</code><em class="property"> = None</em><a class="headerlink" href="#ogt.ogt_doc.OGTDocument.source_file_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Path to original source file, if any</p>
+<dd><p>Full path to original source file, if any</p>
 </dd></dl>
 
 <dl class="method">
@@ -624,7 +663,7 @@ dl.glossary dd {
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>include_source</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- if <cite>True</cite> then the source string is included in the <strong>source:</strong> key.</li>
-<li><strong>edit_mode</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- see <span class="xref std std-ref">edit_mode</span></li>
+<li><strong>edit_mode</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- see <a class="reference internal" href="notes.html#edit-mode"><span>edit_mode</span></a></li>
 </ul>
 </td>
 </tr>
@@ -653,7 +692,7 @@ dl.glossary dd {
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>include_source</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- if <cite>True</cite> then the source string is included in the <strong>source:</strong> key.</li>
-<li><strong>edit_mode</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- see <span class="xref std std-ref">edit_mode</span></li>
+<li><strong>edit_mode</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- see <a class="reference internal" href="notes.html#edit-mode"><span>edit_mode</span></a></li>
 </ul>
 </td>
 </tr>
@@ -682,7 +721,7 @@ dl.glossary dd {
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>include_source</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- if <cite>True</cite> then the source string is included in the <strong>source:</strong> key.</li>
-<li><strong>edit_mode</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- see <span class="xref std std-ref">edit_mode</span></li>
+<li><strong>edit_mode</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- see <a class="reference internal" href="notes.html#edit-mode"><span>edit_mode</span></a></li>
 </ul>
 </td>
 </tr>
@@ -759,7 +798,7 @@ dl.glossary dd {
 </li>
 <li><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) -- Relative or absolute path to write to including extention</li>
 <li><strong>include_source</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- If <cite>True</cite>, the original ags source is also included.</li>
-<li><strong>zip</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- If <cite>True</cite>, the orgiginal and converted file are packaged in a zip</li>
+<li><strong>zip</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- If <cite>True</cite>, the original and converted file are packaged in a zip</li>
 <li><strong>minify</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- If <cite>True</cite>, all white space is removed from output file</li>
 <li><strong>overwrite</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) -- If <cite>True</cite>, the target file is overwritten, otherwise an error is returned</li>
 </ul>
@@ -795,29 +834,15 @@ dl.glossary dd {
 
 <dl class="function">
 <dt id="ogt.ogt_doc.create_doc_from_ags4_file">
-<code class="descclassname">ogt.ogt_doc.</code><code class="descname">create_doc_from_ags4_file</code><span class="sig-paren">(</span><em>ags4_file_path</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_doc.html#create_doc_from_ags4_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_doc.create_doc_from_ags4_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a document from an <a class="reference external" href="http://open-geotechnical.github.io/unofficial-ags-guide/glossary.html#term-ags4" title="(in Open GeoTechnical v0)"><span class="xref std std-term">ags4</span></a> formatted file</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">doc</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">ags4</span><span class="o">.</span><span class="n">create_doc_from_ags4_file</span><span class="p">(</span><span class="s2">&quot;/path/to/my.ags&quot;</span><span class="p">)</span>
+<code class="descclassname">ogt.ogt_doc.</code><code class="descname">create_doc_from_ags4_file</code><span class="sig-paren">(</span><em>ags_file_path</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_doc.html#create_doc_from_ags4_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_doc.create_doc_from_ags4_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience function to create and load an OGTDocument from an ags file</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">doc</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">ogt_doc</span><span class="o">.</span><span class="n">create_doc_from_ags4_file</span><span class="p">(</span><span class="s2">&quot;/path/to/my.ags&quot;</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">err</span><span class="p">:</span>
     <span class="k">print</span> <span class="n">err</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">doc</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;PROJ&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ags4_file_path</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) -- absolute or relative path to file</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/functions.html#tuple" title="(in Python v2.7)">tuple</a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A <cite>tuple</cite> containing<ul class="simple">
-<li>An <a class="reference internal" href="#ogt.ogt_doc.OGTDocument" title="ogt.ogt_doc.OGTDocument"><code class="xref py py-class docutils literal"><span class="pre">OGTDocument</span></code></a> object on success, else <cite>None</cite></li>
-<li>An <cite>Error</cite> message if error, otherwise <cite>None</cite></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 </dd></dl>
 
 <dl class="function">
@@ -847,34 +872,6 @@ dl.glossary dd {
 </table>
 </dd></dl>
 
-<dl class="function">
-<dt id="ogt.ogt_doc.load_doc_from_ags4_string">
-<code class="descclassname">ogt.ogt_doc.</code><code class="descname">load_doc_from_ags4_string</code><span class="sig-paren">(</span><em>doc</em>, <em>ags4_str</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ogt_doc.html#load_doc_from_ags4_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ogt_doc.load_doc_from_ags4_string" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load a document  from an <a class="reference external" href="http://open-geotechnical.github.io/unofficial-ags-guide/glossary.html#term-ags4" title="(in Open GeoTechnical v0)"><span class="xref std std-term">ags4</span></a> formatted string</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">doc</span> <span class="o">=</span> <span class="n">OGTDocument</span><span class="p">()</span>
-<span class="n">err</span> <span class="o">=</span>  <span class="n">load_doc_from_ags4_string</span><span class="p">(</span> <span class="n">doc</span><span class="p">,</span> <span class="n">str_of_ags</span> <span class="p">)</span>
-</pre></div>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>doc</strong> (<a class="reference internal" href="#ogt.ogt_doc.OGTDocument" title="ogt.ogt_doc.OGTDocument"><em>OGTDocument</em></a>) -- Document instance to load</li>
-<li><strong>ags4_str</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) -- string to load</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)">str</a></p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">An <cite>Error</cite> message if string not loaded, else <cite>None</cite></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </div>
 
 
@@ -892,6 +889,7 @@ dl.glossary dd {
 <li class="toctree-l3"><a class="reference internal" href="ogt_group.html">ogt.ogt_group.*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utils.html">ogt.utils.*</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ags4.html">ogt.ags4.*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notes.html">Dev Notes</a></li>
 </ul>
 </li>
 </ul>
@@ -899,6 +897,7 @@ dl.glossary dd {
 <li class="toctree-l1"><a class="reference internal" href="../ogtgui/index.html">ogtgui: Desktop API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ogtserver/index.html">ogtserver:  HTTP Server API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO list</a></li>
 </ul>
 
   <h4>Previous topic</h4>

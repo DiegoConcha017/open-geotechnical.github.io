@@ -444,35 +444,57 @@ dl.glossary dd {
 <span class="kn">import</span> <span class="nn">hashlib</span>
 <span class="kn">import</span> <span class="nn">zipfile</span>
 
-<span class="kn">import</span> <span class="nn">geojson</span>
-<span class="kn">import</span> <span class="nn">bng_to_latlon</span> <span class="c1"># https://github.com/fmalina/bng_latlon</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">HAVE_GEOJSON</span>
+<span class="k">if</span> <span class="n">HAVE_GEOJSON</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">geojson</span>
+    <span class="kn">import</span> <span class="nn">bng_to_latlon</span> <span class="c1"># https://github.com/fmalina/bng_latlon</span>
 
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">FORMATS</span>
-<span class="c1">#from ogt.ags4 import AGS4_DESCRIPTOR</span>
 <span class="kn">import</span> <span class="nn">ogt.ags4</span>
 <span class="kn">import</span> <span class="nn">ogt.ogt_group</span>
 <span class="kn">import</span> <span class="nn">ogt.utils</span>
 
 
 <div class="viewcode-block" id="OGTDocument"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument">[docs]</a><span class="k">class</span> <span class="nc">OGTDocument</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents and `.ags` file&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Class :class:`~ogt.ogt_doc.OGTDocument` represents an ags file and</span>
+<span class="sd">    contains the groups (:class:`~ogt.ogt_group.OGTGroup`).</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        from ogt import ogt_doc</span>
+
+<span class="sd">        doc = ogt_doc.OGTDocument()</span>
+<span class="sd">        err = doc.load_ags4_file(&quot;/path/to/my.ags&quot;)</span>
+<span class="sd">        if err:</span>
+<span class="sd">            print err</span>
+<span class="sd">        else:</span>
+<span class="sd">            # print the groups index</span>
+<span class="sd">            print doc.groups_index()</span>
+
+<span class="sd">            # Headings in the SAMP group</span>
+<span class="sd">            print doc.group(&quot;SAMP&quot;).headings()</span>
+
+<span class="sd">            # Return a list of units used in the document</span>
+<span class="sd">            print doc.units()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">source_file_path</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="sd">&quot;&quot;&quot;Path to original source file, if any&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Full path to original source file, if any&quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-        <span class="sd">&quot;&quot;&quot;The original source string&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;The original source files contents as string&quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">groups</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="sd">&quot;&quot;&quot;A `dict` with group code to :class:`~ogt.ogt_group.OGTGroup` instances&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;A `dict` of group code to :class:`~ogt.ogt_group.OGTGroup` instances&quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="sd">&quot;&quot;&quot;A list of original source lines (line 1 = idx zero)&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;A `list` of strings with original source lines&quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">csv_rows</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="sd">&quot;&quot;&quot;A list of csv rows&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;A `list` of a list of csv rows&quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">error_rows</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="sd">&quot;&quot;&quot;A `list` of rows with errors&quot;&quot;&quot;</span>
@@ -493,27 +515,28 @@ dl.glossary dd {
         <span class="k">return</span> <span class="n">hasher</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
 </div>
 <div class="viewcode-block" id="OGTDocument.groups_sort"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.groups_sort">[docs]</a>    <span class="k">def</span> <span class="nf">groups_sort</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return a list of group_codes in preffered order&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Return a list of group_codes in preferred order (see :func:`~ogt.ogt_group.groups_sort`)&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ogt_group</span><span class="o">.</span><span class="n">groups_sort</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
 </div>
 <div class="viewcode-block" id="OGTDocument.groups_count"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.groups_count">[docs]</a>    <span class="k">def</span> <span class="nf">groups_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return no of groups in document</span>
+        <span class="sd">&quot;&quot;&quot;Returns no of groups in document</span>
 
 <span class="sd">        :rtype: int</span>
-<span class="sd">        :return: No of groups</span>
+<span class="sd">        :return: Groups count</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 </div>
 <div class="viewcode-block" id="OGTDocument.append_group"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.append_group">[docs]</a>    <span class="k">def</span> <span class="nf">append_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grp</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Appends an :class;`~ogt.ogt_group.OGTGroup` instance to this document</span>
+
 <span class="sd">        :param grp: The group object to add</span>
 <span class="sd">        :type grp: ~ogt.ogt_group.OGTGroup</span>
 <span class="sd">        :return: An `Error` message is group exists, else `None`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">group_code</span> <span class="ow">in</span>  <span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="p">:</span>
             <span class="k">return</span> <span class="s2">&quot;Error: Group already exists in doc&quot;</span>
-        <span class="n">grp</span><span class="o">.</span><span class="n">parentDoc</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="n">grp</span><span class="o">.</span><span class="n">docParent</span> <span class="o">=</span> <span class="bp">self</span>
         <span class="c1">#self.groups_sort.append(grp.group_code)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="n">grp</span><span class="o">.</span><span class="n">group_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">grp</span>
         <span class="k">return</span> <span class="bp">None</span>
@@ -588,7 +611,7 @@ dl.glossary dd {
 <span class="sd">        :param include_source: If `True`, the original ags source is also included.</span>
 <span class="sd">        :type include_source: bool</span>
 
-<span class="sd">        :param zip: If `True`, the orgiginal and converted file are packaged in a zip</span>
+<span class="sd">        :param zip: If `True`, the original and converted file are packaged in a zip</span>
 <span class="sd">        :type zip: bool</span>
 
 <span class="sd">        :param minify: If `True`, all white space is removed from output file</span>
@@ -949,7 +972,173 @@ dl.glossary dd {
         <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;unused_groups&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span> <span class="nb">set</span><span class="p">(</span><span class="n">ags_groups</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
 
         <span class="k">return</span> <span class="n">dic</span>
+
+
+</div>
+<div class="viewcode-block" id="OGTDocument.load_ags4_file"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.load_ags4_file">[docs]</a>    <span class="k">def</span> <span class="nf">load_ags4_file</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">ags4_file_path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Loads document from an :term:`ags4` formatted file</span>
+
+<span class="sd">        :param ags4_file_path: absolute or relative path to file</span>
+<span class="sd">        :type ags4_file_path: str</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :return: A String if an error else None</span>
+
+<span class="sd">        .. todo:: Ensure we can read ascii</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># TODO ensure asccii ??</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">source_file_path</span> <span class="o">=</span> <span class="n">ags4_file_path</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">ags4_file_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">err</span> <span class="o">=</span>  <span class="bp">self</span><span class="o">.</span><span class="n">load_ags4_string</span><span class="p">(</span>  <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="p">)</span>
+                <span class="k">if</span> <span class="n">err</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">err</span>
+                <span class="k">return</span> <span class="bp">None</span>
+
+        <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span><span class="p">,</span>  <span class="n">e</span>
+
+        <span class="c1"># should never happen</span>
+        <span class="k">return</span>  <span class="s2">&quot;WTF in `load_ags4_file`&quot;</span>
+
+
+</div>
+<div class="viewcode-block" id="OGTDocument.load_ags4_string"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.load_ags4_string">[docs]</a>    <span class="k">def</span> <span class="nf">load_ags4_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ags4_str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Load  document from an :term:`ags4` formatted string</span>
+
+<span class="sd">        :param ags4_str: string to load</span>
+<span class="sd">        :type ags4_str: str</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :return: An `Error` message if string not loaded, else `None`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">ags4_str</span>
+
+        <span class="c1"># first:</span>
+        <span class="c1">#  - split ags_string into lines</span>
+        <span class="c1">#  - and parse each line into csv</span>
+        <span class="c1">#  - and add to the doc</span>
+        <span class="k">for</span> <span class="n">lidx</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ags4_str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)):</span>
+
+            <span class="c1"># removing and trailing whitespace eg \r</span>
+            <span class="c1"># were on nix land, so assemble with CRLF when dumping to ags</span>
+            <span class="n">stripped</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">stripped</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="c1"># blank line</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">csv_rows</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># decode the csv line</span>
+            <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span> <span class="n">StringIO</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="n">stripped</span><span class="p">)</span> <span class="p">)</span>
+            <span class="n">row</span> <span class="o">=</span>  <span class="n">reader</span><span class="o">.</span><span class="n">next</span><span class="p">()</span> <span class="c1"># first row of reader</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">csv_rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+        <span class="c1"># second</span>
+        <span class="c1"># walk the decoded rows, and recognise the groups</span>
+        <span class="c1"># me mark the start_index, and end index of group</span>
+        <span class="n">curr_grp</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">for</span> <span class="n">lidx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">csv_rows</span><span class="p">):</span>
+
+            <span class="n">line_no</span> <span class="o">=</span> <span class="n">lidx</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">lenny</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+            <span class="c1">#print row</span>
+            <span class="k">if</span> <span class="n">lenny</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1"># blank row so reset groups</span>
+                <span class="k">if</span> <span class="n">curr_grp</span><span class="p">:</span>
+                    <span class="n">curr_grp</span><span class="o">.</span><span class="n">csv_end_index</span> <span class="o">=</span> <span class="n">lidx</span>
+                    <span class="c1">#print &quot;idx=&quot;, curr_grp.csv_start_index, curr_grp.csv_end_index</span>
+                    <span class="c1">#print curr_grp.csv_rows()</span>
+                <span class="n">curr_grp</span> <span class="o">=</span> <span class="bp">None</span>
+                <span class="k">continue</span>
+
+            <span class="k">if</span> <span class="n">lenny</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="c1"># min of two items, so add to errors</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">lidx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">typ</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># first item is row type</span>
+                <span class="c1">#xrow = row[1:] # row without data descriptor</span>
+
+                <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">group</span><span class="p">:</span>
+
+                    <span class="c1">## we got a new group</span>
+                    <span class="n">curr_grp</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ogt_group</span><span class="o">.</span><span class="n">OGTGroup</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                    <span class="c1">#curr_grp.csv_rows.append(row)</span>
+                    <span class="n">curr_grp</span><span class="o">.</span><span class="n">csv_start_index</span> <span class="o">=</span> <span class="n">lidx</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">append_group</span><span class="p">(</span><span class="n">curr_grp</span><span class="p">)</span>
+
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">curr_grp</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
+                    <span class="c1">#else:</span>
+                    <span class="c1">#   curr_grp.csv_rows.append(row)</span>
+        <span class="c1"># thirdly</span>
+        <span class="c1"># - we parse each group&#39;s csv rows into the parts</span>
+        <span class="k">for</span> <span class="n">group_code</span><span class="p">,</span> <span class="n">grp</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="c1">#print group_code, &quot;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</span>
+            <span class="c1">#print grp.csv_rows()</span>
+
+            <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">csv_rows</span><span class="p">()):</span>
+                <span class="n">typ</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">xrow</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="c1"># row without data descriptor</span>
+
+                <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">group</span><span class="p">:</span>
+                    <span class="k">pass</span>
+
+                <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">heading</span><span class="p">:</span>
+                    <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">=</span> <span class="n">xrow</span>
+                    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
+                        <span class="n">grp</span><span class="o">.</span><span class="n">headings</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+                <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">unit</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
+                            <span class="n">grp</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+                <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
+                            <span class="n">grp</span><span class="o">.</span><span class="n">types</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+                <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+
+                    <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+                        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
+                            <span class="n">dic</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+                        <span class="n">grp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">dic</span> <span class="p">)</span>
+
+        <span class="k">print</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_rows</span>
+
+        <span class="k">return</span>  <span class="bp">None</span>
+
 </div></div>
+<div class="viewcode-block" id="create_doc_from_ags4_file"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.create_doc_from_ags4_file">[docs]</a><span class="k">def</span> <span class="nf">create_doc_from_ags4_file</span><span class="p">(</span><span class="n">ags_file_path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convenience function to create and load an OGTDocument from an ags file</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        doc, err = ogt_doc.create_doc_from_ags4_file(&quot;/path/to/my.ags&quot;)</span>
+<span class="sd">        if err:</span>
+<span class="sd">            print err</span>
+<span class="sd">        else:</span>
+<span class="sd">            print doc.group(&quot;PROJ&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">OGTDocument</span><span class="p">()</span>
+    <span class="n">err</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">load_ags4_file</span><span class="p">(</span><span class="n">ags_file_path</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">doc</span><span class="p">,</span> <span class="n">err</span>
+
+
+</div>
 <div class="viewcode-block" id="create_doc_from_json_file"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.create_doc_from_json_file">[docs]</a><span class="k">def</span> <span class="nf">create_doc_from_json_file</span><span class="p">(</span> <span class="n">json_file_path</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Creates a document from a :ref:`json` formatted file</span>
 
@@ -1007,166 +1196,6 @@ dl.glossary dd {
 
 
     <span class="k">return</span> <span class="n">doc</span><span class="p">,</span> <span class="bp">None</span>
-
-</div>
-<div class="viewcode-block" id="create_doc_from_ags4_file"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.create_doc_from_ags4_file">[docs]</a><span class="k">def</span> <span class="nf">create_doc_from_ags4_file</span><span class="p">(</span> <span class="n">ags4_file_path</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Creates a document from an :term:`ags4` formatted file</span>
-
-<span class="sd">    .. code-block:: python</span>
-
-<span class="sd">        doc, err = ags4.create_doc_from_ags4_file(&quot;/path/to/my.ags&quot;)</span>
-<span class="sd">        if err:</span>
-<span class="sd">            print err</span>
-
-<span class="sd">    :param ags4_file_path: absolute or relative path to file</span>
-<span class="sd">    :type ags4_file_path: str</span>
-<span class="sd">    :rtype: tuple</span>
-<span class="sd">    :return: A `tuple` containing</span>
-
-<span class="sd">        - An :class:`~ogt.ogt_doc.OGTDocument` object on success, else `None`</span>
-<span class="sd">        - An `Error` message if error, otherwise `None`</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># TODO ensure asccii ??</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">ags4_file_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-            <span class="n">doc</span> <span class="o">=</span> <span class="n">OGTDocument</span><span class="p">()</span>
-            <span class="n">error</span> <span class="o">=</span>  <span class="n">load_doc_from_ags4_string</span><span class="p">(</span> <span class="n">doc</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="p">)</span>
-            <span class="n">doc</span><span class="o">.</span><span class="n">source_file_path</span> <span class="o">=</span> <span class="n">ags4_file_path</span>
-            <span class="k">return</span> <span class="n">doc</span><span class="p">,</span> <span class="bp">None</span>
-
-    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span>  <span class="n">e</span>
-
-    <span class="c1"># should never happen</span>
-    <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;WTF in `create_doc_from_ags4_file`&quot;</span>
-
-
-</div>
-<div class="viewcode-block" id="load_doc_from_ags4_string"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.load_doc_from_ags4_string">[docs]</a><span class="k">def</span> <span class="nf">load_doc_from_ags4_string</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">ags4_str</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Load a document  from an :term:`ags4` formatted string</span>
-
-<span class="sd">    .. code-block:: python</span>
-
-<span class="sd">        doc = OGTDocument()</span>
-<span class="sd">        err =  load_doc_from_ags4_string( doc, str_of_ags )</span>
-
-<span class="sd">    :param doc: Document instance to load</span>
-<span class="sd">    :type doc: ~ogt.ogt_doc.OGTDocument</span>
-<span class="sd">    :param ags4_str: string to load</span>
-<span class="sd">    :type ags4_str: str</span>
-<span class="sd">    :rtype: str</span>
-<span class="sd">    :return: An `Error` message if string not loaded, else `None`</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">doc</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">ags4_str</span>
-
-    <span class="c1"># first:</span>
-    <span class="c1">#  - split ags_string into lines</span>
-    <span class="c1">#  - and parse each line into csv</span>
-    <span class="c1">#  - and add to the doc</span>
-    <span class="k">for</span> <span class="n">lidx</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ags4_str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)):</span>
-
-        <span class="c1"># removing and trailing whitespace eg \r</span>
-        <span class="c1"># were on nix land, so assemble with CRLF when dumping to ags</span>
-        <span class="n">stripped</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-
-        <span class="k">if</span> <span class="n">stripped</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
-            <span class="c1"># blank line</span>
-            <span class="n">doc</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
-            <span class="n">doc</span><span class="o">.</span><span class="n">csv_rows</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
-            <span class="k">continue</span>
-
-        <span class="c1"># decode the csv line</span>
-        <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span> <span class="n">StringIO</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="n">stripped</span><span class="p">)</span> <span class="p">)</span>
-        <span class="n">row</span> <span class="o">=</span>  <span class="n">reader</span><span class="o">.</span><span class="n">next</span><span class="p">()</span> <span class="c1"># first row of reader</span>
-
-        <span class="n">doc</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-        <span class="n">doc</span><span class="o">.</span><span class="n">csv_rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-
-    <span class="c1"># second</span>
-    <span class="c1"># walk the decoded rows, and recognise the groups</span>
-    <span class="c1"># me mark the start_index, and end index of group</span>
-    <span class="n">curr_grp</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="k">for</span> <span class="n">lidx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">csv_rows</span><span class="p">):</span>
-
-        <span class="n">line_no</span> <span class="o">=</span> <span class="n">lidx</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="n">lenny</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-        <span class="c1">#print row</span>
-        <span class="k">if</span> <span class="n">lenny</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c1"># blank row so reset groups</span>
-            <span class="k">if</span> <span class="n">curr_grp</span><span class="p">:</span>
-                <span class="n">curr_grp</span><span class="o">.</span><span class="n">csv_end_index</span> <span class="o">=</span> <span class="n">lidx</span>
-                <span class="c1">#print &quot;idx=&quot;, curr_grp.csv_start_index, curr_grp.csv_end_index</span>
-                <span class="c1">#print curr_grp.csv_rows()</span>
-            <span class="n">curr_grp</span> <span class="o">=</span> <span class="bp">None</span>
-            <span class="k">continue</span>
-
-        <span class="k">if</span> <span class="n">lenny</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-            <span class="c1"># min of two items, so add to errors</span>
-            <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">lidx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
-
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">typ</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># first item is row type</span>
-            <span class="c1">#xrow = row[1:] # row without data descriptor</span>
-
-            <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">group</span><span class="p">:</span>
-
-                <span class="c1">## we got a new group</span>
-                <span class="n">curr_grp</span> <span class="o">=</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ogt_group</span><span class="o">.</span><span class="n">OGTGroup</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-                <span class="c1">#curr_grp.csv_rows.append(row)</span>
-                <span class="n">curr_grp</span><span class="o">.</span><span class="n">csv_start_index</span> <span class="o">=</span> <span class="n">lidx</span>
-                <span class="n">doc</span><span class="o">.</span><span class="n">append_group</span><span class="p">(</span><span class="n">curr_grp</span><span class="p">)</span>
-
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">curr_grp</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
-                    <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
-                <span class="c1">#else:</span>
-                <span class="c1">#   curr_grp.csv_rows.append(row)</span>
-    <span class="c1"># thirdly</span>
-    <span class="c1"># - we parse each group&#39;s csv rows into the parts</span>
-    <span class="k">for</span> <span class="n">group_code</span><span class="p">,</span> <span class="n">grp</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="c1">#print group_code, &quot;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</span>
-        <span class="c1">#print grp.csv_rows()</span>
-
-        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">csv_rows</span><span class="p">()):</span>
-            <span class="n">typ</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-            <span class="n">xrow</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="c1"># row without data descriptor</span>
-
-            <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">group</span><span class="p">:</span>
-                <span class="k">pass</span>
-
-            <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">heading</span><span class="p">:</span>
-                <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">=</span> <span class="n">xrow</span>
-                <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
-                    <span class="n">grp</span><span class="o">.</span><span class="n">headings</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
-
-            <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">unit</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
-                    <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
-                        <span class="n">grp</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
-
-            <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
-                    <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
-                        <span class="n">grp</span><span class="o">.</span><span class="n">types</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
-
-            <span class="k">elif</span> <span class="n">typ</span> <span class="o">==</span> <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DESCRIPTOR</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-
-                <span class="k">if</span> <span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
-                    <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span><span class="p">[</span><span class="n">line_no</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
-                    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">head_code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grp</span><span class="o">.</span><span class="n">headings_source_sort</span><span class="p">):</span>
-                        <span class="n">dic</span><span class="p">[</span><span class="n">head_code</span><span class="p">]</span> <span class="o">=</span> <span class="n">xrow</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
-                    <span class="n">grp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">dic</span> <span class="p">)</span>
-
-    <span class="k">print</span> <span class="n">doc</span><span class="o">.</span><span class="n">error_rows</span>
-
-    <span class="k">return</span>  <span class="bp">None</span>
 </pre></div></div>
 
           </div>
@@ -1180,6 +1209,7 @@ dl.glossary dd {
 <li class="toctree-l1"><a class="reference internal" href="../../ogtgui/index.html">ogtgui: Desktop API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ogtserver/index.html">ogtserver:  HTTP Server API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">TODO list</a></li>
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
