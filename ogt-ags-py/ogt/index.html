@@ -26,7 +26,7 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="top" title="Open GeoTechnical AGS Tools" href="../index.html" />
     <link rel="next" title="ogt.*" href="ogt_init.html" />
-    <link rel="prev" title="Open GeoTechnical" href="../index.html" />
+    <link rel="prev" title="AGS Toolkit in Python" href="../index.html" />
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
 <!--[if lte IE 6]>
@@ -430,7 +430,7 @@ dl.glossary dd {
           <a href="ogt_init.html" title="ogt.*"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../index.html" title="Open GeoTechnical"
+          <a href="../index.html" title="AGS Toolkit in Python"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">ogt-ags-py</a> &raquo;</li> 
       </ul>
@@ -446,18 +446,9 @@ dl.glossary dd {
 <p>The base API deals with:</p>
 <ul>
 <li><dl class="first docutils">
-<dt>File input and output, serialisation to different <a class="reference internal" href="ogt_init.html#ogt.__init__.FORMATS" title="ogt.__init__.FORMATS"><code class="xref py py-attr docutils literal"><span class="pre">FORMATS</span></code></a></dt>
-<dd><ul class="first last simple">
-<li>see <a class="reference internal" href="utils.html#module-ogt.utils" title="ogt.utils"><code class="xref py py-mod docutils literal"><span class="pre">ogt.utils</span></code></a></li>
-<li>the <a class="reference external" href="http://open-geotechnical.github.io/references.html#json" title="(in Open GeoTechnical v0)"><span>JSON</span></a> functions, eg <a class="reference internal" href="utils.html#ogt.utils.to_json" title="ogt.utils.to_json"><code class="xref py py-func docutils literal"><span class="pre">to_json()</span></code></a>, <a class="reference internal" href="utils.html#ogt.utils.read_json_file" title="ogt.utils.read_json_file"><code class="xref py py-func docutils literal"><span class="pre">read_json_file()</span></code></a></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
 <dt><strong>Project</strong></dt>
 <dd><ul class="first last simple">
-<li>todo</li>
+<li>An AGS zip file and its images, media etc (coming soon)</li>
 </ul>
 </dd>
 </dl>
@@ -465,6 +456,7 @@ dl.glossary dd {
 <li><dl class="first docutils">
 <dt><strong>Document</strong></dt>
 <dd><ul class="first last simple">
+<li>represents an ags file</li>
 <li>the module <a class="reference internal" href="ogt_doc.html#module-ogt.ogt_doc" title="ogt.ogt_doc"><code class="xref py py-mod docutils literal"><span class="pre">ogt.ogt_doc</span></code></a></li>
 <li>the class <a class="reference internal" href="ogt_doc.html#ogt.ogt_doc.OGTDocument" title="ogt.ogt_doc.OGTDocument"><code class="xref py py-class docutils literal"><span class="pre">OGTDocument</span></code></a></li>
 </ul>
@@ -474,6 +466,7 @@ dl.glossary dd {
 <li><dl class="first docutils">
 <dt><strong>Groups</strong></dt>
 <dd><ul class="first last simple">
+<li>represents and ags group and headings</li>
 <li>the module <a class="reference internal" href="ogt_group.html#module-ogt.ogt_group" title="ogt.ogt_group"><code class="xref py py-mod docutils literal"><span class="pre">ogt.ogt_group</span></code></a></li>
 <li>the class <a class="reference internal" href="ogt_group.html#ogt.ogt_group.OGTGroup" title="ogt.ogt_group.OGTGroup"><code class="xref py py-class docutils literal"><span class="pre">OGTGroup</span></code></a></li>
 </ul>
@@ -483,9 +476,21 @@ dl.glossary dd {
 <li><dl class="first docutils">
 <dt><strong>AGS</strong></dt>
 <dd><ul class="first last simple">
-<li>the module <code class="xref py py-mod docutils literal"><span class="pre">ogt.ags.ags4</span></code></li>
-<li>the class <code class="xref py py-class docutils literal"><span class="pre">AGS4GroupDataDict</span></code></li>
+<li>the ags data dict</li>
+<li>validation (coming soon)</li>
+<li>the module <a class="reference internal" href="ags4.html#module-ogt.ags4" title="ogt.ags4"><code class="xref py py-mod docutils literal"><span class="pre">ogt.ags4</span></code></a></li>
+<li>the class <a class="reference internal" href="ags4.html#ogt.ags4.AGS4GroupDataDict" title="ogt.ags4.AGS4GroupDataDict"><code class="xref py py-class docutils literal"><span class="pre">AGS4GroupDataDict</span></code></a></li>
 <li>the function <a class="reference internal" href="ogt_doc.html#ogt.ogt_doc.create_doc_from_ags4_file" title="ogt.ogt_doc.create_doc_from_ags4_file"><code class="xref py py-func docutils literal"><span class="pre">create_doc_from_ags4_file()</span></code></a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>utils</strong></dt>
+<dd><ul class="first last simple">
+<li>File input and output, serialisation to different <a class="reference internal" href="ogt_init.html#ogt.__init__.FORMATS" title="ogt.__init__.FORMATS"><code class="xref py py-attr docutils literal"><span class="pre">FORMATS</span></code></a></li>
+<li>see <a class="reference internal" href="utils.html#module-ogt.utils" title="ogt.utils"><code class="xref py py-mod docutils literal"><span class="pre">ogt.utils</span></code></a></li>
+<li>the <a class="reference external" href="http://open-geotechnical.github.io/references.html#json" title="(in Open GeoTechnical v0)"><span>JSON</span></a> functions, eg <a class="reference internal" href="utils.html#ogt.utils.to_json" title="ogt.utils.to_json"><code class="xref py py-func docutils literal"><span class="pre">to_json()</span></code></a>, <a class="reference internal" href="utils.html#ogt.utils.read_json_file" title="ogt.utils.read_json_file"><code class="xref py py-func docutils literal"><span class="pre">read_json_file()</span></code></a></li>
 </ul>
 </dd>
 </dl>
@@ -526,7 +531,7 @@ dl.glossary dd {
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="../index.html"
-                        title="previous chapter">Open GeoTechnical</a></p>
+                        title="previous chapter">AGS Toolkit in Python</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="ogt_init.html"
                         title="next chapter">ogt.*</a></p>
@@ -567,7 +572,7 @@ dl.glossary dd {
           <a href="ogt_init.html" title="ogt.*"
              >next</a> |</li>
         <li class="right" >
-          <a href="../index.html" title="Open GeoTechnical"
+          <a href="../index.html" title="AGS Toolkit in Python"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">ogt-ags-py</a> &raquo;</li> 
       </ul>

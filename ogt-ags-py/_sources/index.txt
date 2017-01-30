@@ -1,12 +1,9 @@
-
-
-
-Open GeoTechnical
+AGS Toolkit in Python
 ===========================================
 
-The **ogt** project is some R&D for converting AGS data using Python.
+This project is some R&D for converting AGS data using Python. Circa Jan 2017 is in active development.
 
-- See :ref:`ogt-cli.py` for the command line examples
+- See :ref:`ogt-cli.py` for command line examples
 
 .. code-block:: python
 
@@ -28,10 +25,8 @@ The **ogt** project is some R&D for converting AGS data using Python.
         # write doc as yaml
         print doc.write("/path/to.my.yaml", format="yaml)
 
-
         # Return a list of units used in the document
         print doc.units()
-
 
 
 

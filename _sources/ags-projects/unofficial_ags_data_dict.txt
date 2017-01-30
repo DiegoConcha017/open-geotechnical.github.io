@@ -1,3 +1,15 @@
+.. _unofficial_ags_data_dict:
+
 Unofficial AGS Data Dict
 ===============================
 
+- The AGS data dictionary is available in JSON format
+- This is unofficial and not guaranteed to be up to date
+- Visit upstream http://www.agsdataformat.com for correct data
+
+Download
+------------
+
+Point your browser at 
+
+- https://open-geotechnical.github.io/data/ags4.min.json
