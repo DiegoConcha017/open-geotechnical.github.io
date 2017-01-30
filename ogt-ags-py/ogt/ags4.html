@@ -447,7 +447,7 @@ dl.glossary dd {
 <span id="ogt-ags4"></span><h1>ogt.ags4.*<a class="headerlink" href="#module-ogt.ags4" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="ogt.ags4.AGS4GroupDataDict">
-<em class="property">class </em><code class="descclassname">ogt.ags4.</code><code class="descname">AGS4GroupDataDict</code><span class="sig-paren">(</span><em>group_code</em>, <em>auto_load=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ags4.html#AGS4GroupDataDict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ags4.AGS4GroupDataDict" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ogt.ags4.</code><code class="descname">AGS4GroupDataDict</code><span class="sig-paren">(</span><em>group_code</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ags4.html#AGS4GroupDataDict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ags4.AGS4GroupDataDict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Data dictionary of an ags <a class="reference external" href="http://open-geotechnical.github.io/unofficial-ags-guide/glossary.html#term-group" title="(in Open GeoTechnical v0)"><span class="xref std std-term">GROUP</span></a>, reads the <a class="reference external" href="http://open-geotechnical.github.io/references.html#json" title="(in Open GeoTechnical v0)"><span>JSON</span></a> definiton file</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -680,13 +680,9 @@ dl.glossary dd {
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/functions.html#tuple" title="(in Python v2.7)">tuple</a></td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)">dict</a></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
-<li>A <cite>dict</cite> with the data id succesful, else <cite>None</cite></li>
-<li>An Error message <cite>str</cite> if error, otherwise <cite>None</cite></li>
-</ul>
-</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the data if succesful, else <cite>None</cite></td>
 </tr>
 </tbody>
 </table>
@@ -700,13 +696,9 @@ dl.glossary dd {
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/functions.html#tuple" title="(in Python v2.7)">tuple</a></td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)">dict</a></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
-<li>A <cite>dict</cite> with the data if succesful, else <cite>None</cite></li>
-<li>An Error message <cite>str</cite> if error, otherwise <cite>None</cite></li>
-</ul>
-</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the data if succesful, else <cite>None</cite></td>
 </tr>
 </tbody>
 </table>
@@ -735,6 +727,24 @@ dl.glossary dd {
 </dd></dl>
 
 <dl class="function">
+<dt id="ogt.ags4.group">
+<code class="descclassname">ogt.ags4.</code><code class="descname">group</code><span class="sig-paren">(</span><em>group_code</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ags4.html#group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ags4.group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all <a class="reference external" href="http://open-geotechnical.github.io/unofficial-ags-guide/glossary.html#term-group" title="(in Open GeoTechnical v0)"><span class="xref std std-term">GROUP</span></a> s in the ags4 data dict</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>group_code</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) -- The four character group code to initialize with</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)">dict</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the data if successful, else <cite>None</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="ogt.ags4.groups">
 <code class="descclassname">ogt.ags4.</code><code class="descname">groups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/ags4.html#groups"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.ags4.groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return all <a class="reference external" href="http://open-geotechnical.github.io/unofficial-ags-guide/glossary.html#term-group" title="(in Open GeoTechnical v0)"><span class="xref std std-term">GROUP</span></a> s in the ags4 data dict</p>
@@ -742,13 +752,9 @@ dl.glossary dd {
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/functions.html#tuple" title="(in Python v2.7)">tuple</a></td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)">dict</a></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
-<li>A <cite>dict</cite> with the data id succesful, else <cite>None</cite></li>
-<li>An Error message <cite>str</cite> if error, otherwise <cite>None</cite></li>
-</ul>
-</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the data if succesful, else <cite>None</cite></td>
 </tr>
 </tbody>
 </table>
@@ -1054,7 +1060,7 @@ dl.glossary dd {
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ogtgui/index.html">ogtgui: Desktop API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ogtserver/index.html">ogtserver:  www server API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ogtserver/index.html">ogtserver:  HTTP Server API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
 </ul>
 

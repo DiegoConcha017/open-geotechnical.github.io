@@ -446,9 +446,17 @@ dl.glossary dd {
   <div class="section" id="module-ogt.utils">
 <span id="ogt-utils"></span><h1>ogt.utils.*<a class="headerlink" href="#module-ogt.utils" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="ogt.utils.ags4_file">
-<code class="descclassname">ogt.utils.</code><code class="descname">ags4_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/utils.html#ags4_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.utils.ags4_file" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="ogt.utils.ags4dd_file">
+<code class="descclassname">ogt.utils.</code><code class="descname">ags4dd_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/utils.html#ags4dd_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.utils.ags4dd_file" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str with path to the <cite>ags4.min.json</cite> data dict file</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="ogt.utils.clean_str">
@@ -548,7 +556,7 @@ dl.glossary dd {
 <dl class="function">
 <dt id="ogt.utils.initialise">
 <code class="descclassname">ogt.utils.</code><code class="descname">initialise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/utils.html#initialise"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.utils.initialise" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check env is sane with ags-data-dict</p>
+<dd><p>Check env is sane and loads the ags data dict file</p>
 </dd></dl>
 
 <dl class="function">
@@ -559,7 +567,8 @@ dl.glossary dd {
 <dl class="function">
 <dt id="ogt.utils.ogt_dir">
 <code class="descclassname">ogt.utils.</code><code class="descname">ogt_dir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/utils.html#ogt_dir"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.utils.ogt_dir" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Path to open-getechnical cache directory</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="ogt.utils.read_file">
@@ -655,12 +664,22 @@ will always be the same, ie sorted keys, and indentation</li>
 <dl class="function">
 <dt id="ogt.utils.update">
 <code class="descclassname">ogt.utils.</code><code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/utils.html#update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.utils.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Downloads data dict file from online</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An error if one occured,  else None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="ogt.utils.user_dir">
 <code class="descclassname">ogt.utils.</code><code class="descname">user_dir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ogt/utils.html#user_dir"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ogt.utils.user_dir" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Path to users home dir</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="ogt.utils.write_file">
@@ -729,7 +748,7 @@ will always be the same, ie sorted keys, and indentation</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ogtgui/index.html">ogtgui: Desktop API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ogtserver/index.html">ogtserver:  www server API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ogtserver/index.html">ogtserver:  HTTP Server API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
 </ul>
 

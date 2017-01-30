@@ -442,8 +442,8 @@ dl.glossary dd {
 
 
 <span class="kn">import</span> <span class="nn">ogt.ogt_doc</span>
-<span class="c1">#from ogt import ogt_group</span>
-<span class="kn">from</span> <span class="nn">ogt</span> <span class="kn">import</span> <span class="n">utils</span><span class="p">,</span> <span class="n">EXAMPLES_DIR</span>
+<span class="kn">import</span> <span class="nn">ogt.utils</span>
+<span class="c1">#from ogt import utils, EXAMPLES_DIR</span>
 
 <span class="n">AGS4_DD</span> <span class="o">=</span> <span class="bp">None</span>
 <span class="sd">&quot;&quot;&quot;This dict contains all the ags4 data, loaded in utils.initialise()&quot;&quot;&quot;</span>
@@ -532,11 +532,8 @@ dl.glossary dd {
 <span class="k">def</span> <span class="nf">all</span><span class="p">():</span></div>
 <div class="viewcode-block" id="all"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.all">[docs]</a>    <span class="sd">&quot;&quot;&quot;Return everything in the ags4 data dict</span>
 
-<span class="sd">    :rtype: tuple</span>
-<span class="sd">    :return:</span>
-
-<span class="sd">        - A `dict` with the data if succesful, else `None`</span>
-<span class="sd">        - An Error message `str` if error, otherwise `None`</span>
+<span class="sd">    :rtype: dict</span>
+<span class="sd">    :return:  the data if succesful, else `None`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">AGS4_DD</span>
 
@@ -544,24 +541,29 @@ dl.glossary dd {
 <span class="k">def</span> <span class="nf">groups</span><span class="p">():</span></div>
 <div class="viewcode-block" id="groups"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.groups">[docs]</a>    <span class="sd">&quot;&quot;&quot;Return all :term:`GROUP` s in the ags4 data dict</span>
 
-<span class="sd">    :rtype: tuple</span>
-<span class="sd">    :return:</span>
-
-<span class="sd">        - A `dict` with the data id succesful, else `None`</span>
-<span class="sd">        - An Error message `str` if error, otherwise `None`</span>
+<span class="sd">    :rtype: dict</span>
+<span class="sd">    :return:  the data if succesful, else `None`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">AGS4_DD</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;groups&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">group</span><span class="p">(</span><span class="n">group_code</span><span class="p">):</span></div>
+<div class="viewcode-block" id="group"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.group">[docs]</a>    <span class="sd">&quot;&quot;&quot;Return all :term:`GROUP` s in the ags4 data dict</span>
+
+<span class="sd">    :param group_code: The four character group code to initialize with</span>
+<span class="sd">    :type group_code: str</span>
+<span class="sd">    :rtype: dict</span>
+<span class="sd">    :return:  the data if successful, else `None`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">AGS4_DD</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;groups&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">group_code</span><span class="p">)</span>
+
 
 <span class="k">def</span> <span class="nf">abbrs</span><span class="p">():</span></div>
 <div class="viewcode-block" id="abbrs"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.abbrs">[docs]</a>    <span class="sd">&quot;&quot;&quot;Return all :term:`abbreviations` in the ags4 data dict</span>
 
-<span class="sd">    :rtype: tuple</span>
-<span class="sd">    :return:</span>
-
-<span class="sd">        - A `dict` with the data id succesful, else `None`</span>
-<span class="sd">        - An Error message `str` if error, otherwise `None`</span>
+<span class="sd">    :rtype: dict</span>
+<span class="sd">    :return:  the data if succesful, else `None`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">AGS4_DD</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;groups&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">AGS4_DD</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;abbrs&quot;</span><span class="p">)</span>
 
 
 
@@ -569,29 +571,20 @@ dl.glossary dd {
 <span class="k">class</span> <span class="nc">AGS4GroupDataDict</span><span class="p">:</span></div>
 <div class="viewcode-block" id="AGS4GroupDataDict"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4GroupDataDict">[docs]</a>
     <span class="sd">&quot;&quot;&quot;Data dictionary of an ags :term:`GROUP`, reads the :ref:`json` definiton file&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_code</span><span class="p">,</span> <span class="n">auto_load</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_code</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param group_code: The four character group code</span>
 <span class="sd">        :type group_code: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">group_code</span> <span class="o">=</span> <span class="n">group_code</span>
-        <span class="c1">#self.group_description = None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dd_loaded</span> <span class="o">=</span> <span class="bp">False</span>
-        <span class="k">if</span> <span class="n">auto_load</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">load_def</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load_def</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">load_def</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <div class="viewcode-block" id="AGS4GroupDataDict.load_def"><a class="viewcode-back" href="../../ogt/ags4.html#ogt.ags4.AGS4GroupDataDict.load_def">[docs]</a>        <span class="sd">&quot;&quot;&quot;Loads the definition file&quot;&quot;&quot;</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">file_path</span> <span class="o">=</span> <span class="n">group_file_name</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">group_code</span> <span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">read_json_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">dd_loaded</span> <span class="o">=</span> <span class="bp">True</span>
-            <span class="k">return</span> <span class="bp">None</span>
-        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">raw_dict</span> <span class="o">=</span> <span class="n">group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">group_code</span><span class="p">)</span>
 
 
 
@@ -1160,7 +1153,7 @@ dl.glossary dd {
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ogt/index.html">ogt:  Base API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ogtgui/index.html">ogtgui: Desktop API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ogtserver/index.html">ogtserver:  www server API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ogtserver/index.html">ogtserver:  HTTP Server API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../commands.html">Commands</a></li>
 </ul>
 

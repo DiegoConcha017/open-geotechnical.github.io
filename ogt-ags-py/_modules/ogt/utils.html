@@ -662,33 +662,42 @@ dl.glossary dd {
     <span class="k">return</span> <span class="s2">&quot;OOPS in write_file()&quot;</span>
 </div>
 <div class="viewcode-block" id="user_dir"><a class="viewcode-back" href="../../ogt/utils.html#ogt.utils.user_dir">[docs]</a><span class="k">def</span> <span class="nf">user_dir</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Path to users home dir&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~&quot;</span><span class="p">)</span>
 </div>
 <div class="viewcode-block" id="ogt_dir"><a class="viewcode-back" href="../../ogt/utils.html#ogt.utils.ogt_dir">[docs]</a><span class="k">def</span> <span class="nf">ogt_dir</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Path to open-getechnical cache directory&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_dir</span><span class="p">(),</span> <span class="s2">&quot;open-geotechnical&quot;</span><span class="p">)</span>
 </div>
 <div class="viewcode-block" id="initialise"><a class="viewcode-back" href="../../ogt/utils.html#ogt.utils.initialise">[docs]</a><span class="k">def</span> <span class="nf">initialise</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Check env is sane with ags-data-dict&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Check env is sane and loads the ags data dict file&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ogt_dir</span><span class="p">()):</span>
         <span class="k">return</span> <span class="bp">False</span><span class="p">,</span> <span class="s2">&quot;No data dict&quot;</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ags4_file</span><span class="p">()):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ags4dd_file</span><span class="p">()):</span>
         <span class="k">return</span> <span class="bp">False</span><span class="p">,</span> <span class="s2">&quot;Missing ags4 data dict&quot;</span>
 
-    <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DD</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">read_json_file</span><span class="p">(</span><span class="n">ags4_file</span><span class="p">())</span>
+    <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DD</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">read_json_file</span><span class="p">(</span><span class="n">ags4dd_file</span><span class="p">())</span>
     <span class="k">if</span> <span class="n">err</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">False</span><span class="p">,</span> <span class="n">err</span>
     <span class="n">ogt</span><span class="o">.</span><span class="n">ags4</span><span class="o">.</span><span class="n">AGS4_DD</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
     <span class="k">return</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">None</span>
 </div>
-<div class="viewcode-block" id="ags4_file"><a class="viewcode-back" href="../../ogt/utils.html#ogt.utils.ags4_file">[docs]</a><span class="k">def</span> <span class="nf">ags4_file</span><span class="p">():</span>
+<div class="viewcode-block" id="ags4dd_file"><a class="viewcode-back" href="../../ogt/utils.html#ogt.utils.ags4dd_file">[docs]</a><span class="k">def</span> <span class="nf">ags4dd_file</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :return: str with path to the `ags4.min.json` data dict file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ogt_dir</span><span class="p">(),</span> <span class="s2">&quot;ags4.min.json&quot;</span><span class="p">)</span>
 
 </div>
 <div class="viewcode-block" id="update"><a class="viewcode-back" href="../../ogt/utils.html#ogt.utils.update">[docs]</a><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Downloads data dict file from online</span>
+
+<span class="sd">    :return: An error if one occured,  else None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ogt_dir</span><span class="p">()):</span>
         <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">ogt_dir</span><span class="p">())</span>
 
-    <span class="n">u</span> <span class="o">=</span> <span class="s2">&quot;http://agsplay.daffodil.uk.com/ags4.min.json&quot;</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="s2">&quot;https://open-geotechnical.github.io/data/ags4.min.json&quot;</span>
     <span class="k">print</span> <span class="s2">&quot;Requesting: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">u</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
@@ -702,7 +711,7 @@ dl.glossary dd {
         <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">e</span>
-    <span class="n">write_file</span><span class="p">(</span><span class="n">ags4_file</span><span class="p">(),</span> <span class="n">txt</span><span class="p">)</span>
+    <span class="n">write_file</span><span class="p">(</span><span class="n">ags4dd_file</span><span class="p">(),</span> <span class="n">txt</span><span class="p">)</span>
     <span class="k">return</span> <span class="bp">None</span></div>
 </pre></div>
 
@@ -715,7 +724,7 @@ dl.glossary dd {
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ogt/index.html">ogt:  Base API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ogtgui/index.html">ogtgui: Desktop API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ogtserver/index.html">ogtserver:  www server API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ogtserver/index.html">ogtserver:  HTTP Server API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../commands.html">Commands</a></li>
 </ul>
 
