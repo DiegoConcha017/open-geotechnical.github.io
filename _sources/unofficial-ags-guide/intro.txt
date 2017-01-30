@@ -37,17 +37,23 @@ The simple example below shows two groups, although on a real file there would b
     "DATA","TP2","RO","539245","179456","-23.35","2.1"
     "DATA","TP3","RO","539299","179474","-20.22","2.9"
 
-.. graphviz::
 
-    digraph {
-        node [shape=record]
-        a [label="{PROJ_ID|PROJ_ID|PROJ_ID|PROJ_CLNT}|{Prj-AG|Acme Gasworks|Greenwich|Acme Enterprises}"]
-
-    }
-    
 What does it all mean ?
 -------------------------------
 
-As we go down the list
+As we go down the left columns:
+
+    - **GROUP** - indicates a new group
+    - **HEADING** - the column headings for this group
+    - **UNIT** - the units for the columns, is there is one eg 'm' or 
+    - **TYPE** - the column type, eg `X` for text or `2DP` for two decimal places
+    - **DATA** - one or more data rows conforming to the **TYPE**
+    
+What do the codes comes from ?
+------------------------------------
+
+On addition to the file format itself, a larg part of ags is the data dict
+
+
 
 
