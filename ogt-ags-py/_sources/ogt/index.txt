@@ -76,7 +76,14 @@ The base API converts ags4 files into various formats, and provided validation (
     - see :mod:`ogt.utils`
     - the :ref:`json` functions, eg :func:`~ogt.utils.to_json`, :func:`~ogt.utils.read_json_file`
 
-**Index**
+Index
+-------------
+.. toctree::
+    :maxdepth: 3
 
-
+    ogt_init.rst
+    ogt_doc.rst
+    ogt_group.rst
+    utils.rst
+    ags4.rst
 
