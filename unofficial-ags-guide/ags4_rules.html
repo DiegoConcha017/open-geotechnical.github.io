@@ -1,0 +1,994 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AGS4 - Rules &mdash; Open GeoTechnical</title>
+    
+    <link rel="stylesheet" href="../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Open GeoTechnical" href="../index.html" />
+    <link rel="up" title="Unofficial AGS Guide" href="index.html" />
+    <link rel="next" title="AGS4 - Notes on the Rules" href="ags4_rules_notes.html" />
+    <link rel="prev" title="Unofficial AGS Guide" href="index.html" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+<style>
+
+
+
+body {
+    background-color: black;
+}
+
+#XHEAD {
+    deadbackground-color: yellow !important;
+}
+.main_title{
+    margin: 10px;
+    font-size: 14pt;
+    vertical-align: top;
+    color: #999999;
+    font-family: Verdana;
+    background-image: "/_static/logo.png"
+}
+
+.main_title a {
+    color: #F29F00;
+}
+.main_title a:hover {
+    text-decoration: none;
+}
+.main_title small{
+    margin: 10px;
+    font-size: 8pt;
+    vertical-align: top;
+    color: #999999;
+    font-weight: normal;
+    font-family: Verdana;
+}
+
+.externals_nav {
+    float: right;
+    margin-right: 20px;
+}
+.externals_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+        sswidth: 50px;
+} 
+
+.externals_nav a {
+    text-decoration: none;
+    color: #999999;
+    padding: 5px;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+.externals_nav a:hover {
+    background-color: #333333;
+    color: white;
+}
+    
+        
+.module_nav {
+    float: right;
+    ssmargin-right: 150px;
+
+    deadbackground-color: red !important;
+}
+.module_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+    width: 50px;
+}
+.module_nav a {
+    text-decoration: none;
+    background-color: #222222;
+    color: #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #efefef;
+    font-family: Verdana;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.module_nav a:hover {
+    background-color: #333333;
+}
+.module_nav a.selected{
+    background-color: #999999;
+    color: black;
+}
+
+.related{
+    background-color: #222222 !important; 
+    margin-right: 10px;
+    
+}
+.related a {
+    color: #dddddd !important; 
+    text-shadow: none;
+        font-size: 10pt !important;
+}
+div.related ul {
+    padding-left: 300px;
+}
+.related ul li {
+    color: #FFFF00 !important;
+}
+
+.sphinxsidebarwrapper {
+    width: 300px;
+    background-color: #DDDDDD;
+}
+.sphinxsidebarwrapper h3  {
+    border-bottom: 1px solid white;
+}
+.sphinxsidebarwrapper h3 a {
+    font-family: Verdana;
+}
+div.bodywrapper {
+    margin-left: 300px;
+}
+.sphinxsidebar ul {
+    margin-left: 0;
+}
+.sphinxsidebar ul li{
+    sborder-top: 1px solid #dddddd !important;
+    ssbackground-color: white;
+    padding: 2px !important;
+}
+.sphinxsidebar ul li a{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #333333;
+    font-family: Verdana;
+}
+.sphinxsidebar ul ul{
+    width: 250px;
+}
+.sphinxsidebar ul ul li{
+    border-top: none !important;
+}
+.sphinxsidebar ul ul li a{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Verdana;
+}
+
+
+
+/**************************************************/
+/* Main */
+/**************************************************/
+div.body {
+    font-size: 10pt;
+}
+
+div.body h1{
+    border-radius: 10px !important;
+    padding: 5px 10px;
+    font-size: 20pt;
+    background-color: #444444 !important;
+    color: #dddddd;
+   font-family: Verdana;
+}
+
+
+
+div.body h2{
+
+    border-top: 2px solid #999999;
+    border-right: 2px solid #999999;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #bbbbbb !important;
+    font-size: 12pt;
+    font-family: monospace;
+
+    padding: 5px 10px;
+}
+div.body h3{
+    border-top: 2px solid #dddddd;
+    border-right: 2px solid #aaaaaa;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #dddddd !important;
+    font-size: 10pt;
+    font-family: monospace;
+    padding: 5px 10px;
+}
+
+div.body p {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 600px;
+}
+div.body ul, ol {
+    padding-left: 50px;
+    padding-right: 50px;
+     max-width: 600px;
+}
+div.body li p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+div.body ul, ul {
+     padding-left: 30px;
+    padding-right: 30px;
+}
+
+.admonition {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+.field-name {
+    width: 80px;
+    text-align: right;
+}
+
+pre {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 9pt;
+    padding: 4px;
+}
+
+table.docutils {
+    box-shadow: 9px 10px 34px -16px rgba(0,0,0,0.75);
+}
+table.docutils thead {
+    background-color: #dddddd;
+}
+table.docutils th {
+    padding: 5px;
+}
+table.docutils td {
+    padding: 2px;
+}
+
+table.field-list{
+    box-shadow: none;
+    background-color: #eeeeee;
+}
+
+table.field-list tr{
+    border-bottom: 1px solid #cccccc;
+}
+table.field-list th {
+    padding: 5px;
+    width: 100px;
+    border-right: 1px solid #cccccc;
+    font-size: 9pt;
+    deadbackground-color: red;
+    color: #888888;
+}
+table.field-list td {
+    padding: 5px;
+    border-left: 1px solid #cccccc;
+}
+
+dl.class p {
+    padding-left: 5px;
+}
+
+.ags-csv-rule {
+    background-color: #00CCCC;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+.ags-data-rule {
+    background-color:#FFFF00;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+
+.viewcode-link {
+    font-size: 8pt;
+}
+
+/**************************************************/
+/* API stuff */
+/**************************************************/
+/* a whole class container */
+dl.class {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #822775;
+}
+/* class Name */
+dl.class dt .descname{
+	color: #822775;
+	font-size: 13pt;
+	font-family: monospace;
+}
+
+a.reference code.py-class span.pre {
+    color: #822775 !important;
+    font-family: monospace;
+}
+
+
+/* class attribute */
+dl.attribute dt .descname {
+    color: #AD833E;
+    font-size: 11pt;
+    font-family: monospace;
+}
+
+
+/* class method  */
+dl.method dt .descname {
+    color: #1B68B8;
+	font-size: 11pt;
+	font-family: monospace;
+
+}
+
+/* a whole function container */
+dl.function {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #298815;
+}
+/* function */
+dl.function dt .descname {
+    color: #298815 !important;
+}
+
+a.reference code.py-func span.pre {
+    color: #298815 !important;
+    font-family: monospace;
+}
+
+/* glossary */
+dl.glossary dt {
+    background-color: #eeeeee;
+    font-family: monospace;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top-right-radius: 20px;
+    padding: 3px 5px;
+
+}
+dl.glossary dd {
+    border-right: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+</style>
+    
+    <div id="XHEAD">
+
+  
+  <h1 class="main_title"><a href="/"><img src="/_static/logo-small.png"> Open GeoTechnical</a> </h1>
+  </div>
+  
+
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ags4_rules_notes.html" title="AGS4 - Notes on the Rules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Unofficial AGS Guide"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ogt</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../ags-projects/index.html" >AGS Projects</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Unofficial AGS Guide</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ags4-rules">
+<span id="id1"></span><h1>AGS4 - Rules<a class="headerlink" href="#ags4-rules" title="Permalink to this headline">¶</a></h1>
+<p>The following rules shall be used when creating an AGS4 data file (eg <code class="file docutils literal"><span class="pre">my_stuff.ags</span></code>).</p>
+<ul class="simple">
+<li><span class="ags-csv-rule">CSV Rule</span> - means <a class="reference internal" href="../references.html#csv"><span>CSV</span></a> file format rule</li>
+<li><span class="ags-data-rule">Data Rule</span> - means and aata rule</li>
+</ul>
+<div class="section" id="rule-1-character-set">
+<span id="ags4-rule-1"></span><h2>Rule 1 - Character Set<a class="headerlink" href="#rule-1-character-set" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-csv-rule">CSV Rule</span></p>
+<ul class="simple">
+<li>The data file shall be entirely composed of <a class="reference internal" href="../references.html#ascii"><span>ASCII</span></a> characters.</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">It is quite easy to violate this rule, eg Excel can insert a Windows character, or a cut paste from pdf.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="ags4_rules_notes.html#ags4-rule-note-1"><span>Note i - ASCII &#8216;CSV&#8217; Files</span></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="rule-2-group-s-required">
+<span id="ags4-rule-2"></span><h2>Rule 2 - GROUP&#8217;s required<a class="headerlink" href="#rule-2-group-s-required" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-csv-rule">CSV Rule</span></p>
+<ul class="simple">
+<li>Each data file shall contain one or more data <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a>&#8216;s.</li>
+<li>Each data GROUP shall comprise a number of <a class="reference internal" href="glossary.html#term-group-header"><span class="xref std std-term">GROUP HEADER</span></a></li>
+<li>rows must have one or more ref DATA rows</li>
+</ul>
+<div class="section" id="rule-2a-crlf-new-line">
+<span id="ags4-rule-2a"></span><h3>Rule 2a - CRLF New Line<a class="headerlink" href="#rule-2a-crlf-new-line" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Each row is located on a separate line, delimited by a <strong>new line</strong></p>
+</li>
+<li><p class="first">A <strong>new line</strong> consists of the two characters:</p>
+<blockquote>
+<div><ul class="simple">
+<li>a <strong>carriage return</strong> (CR) (<a class="reference internal" href="../references.html#ascii"><span>ASCII</span></a> character 13)</li>
+<li>followed by a <strong>line feed</strong> (LF) (<a class="reference internal" href="../references.html#ascii"><span>ASCII</span></a> character 10)</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Note</p>
+<p class="last">For Windows; CRLF is the default, and all text files are saved as CRLF by default.</p>
+</div>
+</div>
+<div class="section" id="rule-2b-group-header">
+<span id="ags4-rule-2b"></span><h3>Rule 2b - GROUP HEADER<a class="headerlink" href="#rule-2b-group-header" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">The <a class="reference internal" href="glossary.html#term-group-header"><span class="xref std std-term">GROUP HEADER</span></a> rows fully define the data presented within the <a class="reference internal" href="glossary.html#term-data"><span class="xref std std-term">DATA</span></a> rows
+for that group (<a class="reference internal" href="#ags4-rule-8"><span>Rule 8 - Units</span></a>).</p>
+</li>
+<li><dl class="first docutils">
+<dt>As a minimum, the GROUP HEADER rows comprise</dt>
+<dd><ul class="first last simple">
+<li><a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a>, <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a>, <a class="reference internal" href="glossary.html#term-unit"><span class="xref std std-term">UNIT</span></a> and <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> rows, <strong>presented in that order</strong>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="rule-3-data-descriptors">
+<span id="ags4-rule-3"></span><h2>Rule 3 - Data Descriptors<a class="headerlink" href="#rule-3-data-descriptors" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-csv-rule">CSV Rule</span></p>
+<ul>
+<li><p class="first">Each row in the data file must start with a <strong>DATA DESCRIPTOR</strong> that defines the contents of that row.</p>
+</li>
+<li><p class="first">The following Data Descriptors are used as described below:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Each <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> row shall be preceded by the <cite>&#8220;GROUP&#8221;</cite> data descriptor</li>
+<li>Each <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> row shall be preceded by the <cite>&#8220;HEADING&#8221;</cite> data descriptor</li>
+<li>Each <a class="reference internal" href="glossary.html#term-unit"><span class="xref std std-term">UNIT</span></a> row shall be preceded by the <cite>&#8220;UNIT&#8221;</cite> data descriptor</li>
+<li>Each <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> row shall be preceded by the <cite>&#8220;TYPE&#8221;</cite> data descriptor</li>
+<li>Each <a class="reference internal" href="glossary.html#term-data"><span class="xref std std-term">DATA</span></a> row shall be preceded by the <cite>&#8220;DATA&#8221;</cite> data descriptor</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="s2">&quot;GROUP&quot;</span><span class="p">,</span><span class="s2">&quot;HORN&quot;</span>
+<span class="s2">&quot;HEADING&quot;</span><span class="p">,</span><span class="s2">&quot;LOCA_ID&quot;</span><span class="p">,</span><span class="s2">&quot;HORN_TOP&quot;</span><span class="p">,</span><span class="s2">&quot;HORN_BASE&quot;</span><span class="p">,</span><span class="s2">&quot;HORN_ORNT&quot;</span><span class="p">,</span><span class="s2">&quot;HORN_INCL&quot;</span><span class="p">,</span><span class="s2">&quot;HORN_REM&quot;</span><span class="p">,</span><span class="s2">&quot;FILE_FSET&quot;</span>
+<span class="s2">&quot;UNIT&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;m&quot;</span><span class="p">,</span><span class="s2">&quot;m&quot;</span><span class="p">,</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;TYPE&quot;</span><span class="p">,</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span><span class="s2">&quot;2DP&quot;</span><span class="p">,</span><span class="s2">&quot;2DP&quot;</span><span class="p">,</span><span class="s2">&quot;0DP&quot;</span><span class="p">,</span><span class="s2">&quot;0DP&quot;</span><span class="p">,</span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="s2">&quot;X&quot;</span>
+<span class="s2">&quot;DATA&quot;</span><span class="p">,</span><span class="s2">&quot;BH502&quot;</span><span class="p">,</span><span class="s2">&quot;0.00&quot;</span><span class="p">,</span><span class="s2">&quot;1.20&quot;</span><span class="p">,</span><span class="s2">&quot;210&quot;</span><span class="p">,</span><span class="s2">&quot;65&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span><span class="p">,</span><span class="s2">&quot;BH502&quot;</span><span class="p">,</span><span class="s2">&quot;0.00&quot;</span><span class="p">,</span><span class="s2">&quot;15.45&quot;</span><span class="p">,</span><span class="s2">&quot;210&quot;</span><span class="p">,</span><span class="s2">&quot;65&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rule-4-field-s">
+<span id="ags4-rule-4"></span><h2>Rule 4 - FIELD&#8217;s<a class="headerlink" href="#rule-4-field-s" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-csv-rule">CSV Rule</span></p>
+<ul class="simple">
+<li>Within each GROUP, the DATA items are contained in data FIELDs. Each data
+FIELD contains a single data VARIABLE in each row. Each DATA
+row of a data file will contain one or more data FIELDs.</li>
+<li>The GROUP row contains only one DATA item, the GROUP name, in
+addition to the Data Descriptor (<a class="reference internal" href="#ags4-rule-3"><span>Rule 3 - Data Descriptors</span></a>).</li>
+<li>All other rows in the GROUP have a number of DATA items defined by the HEADING row.</li>
+</ul>
+</div>
+<div class="section" id="rule-5-double-quotes">
+<span id="ags4-rule-5"></span><h2>Rule 5 - Double Quotes<a class="headerlink" href="#rule-5-double-quotes" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-csv-rule">CSV Rule</span></p>
+<ul class="simple">
+<li><a class="reference internal" href="glossary.html#term-data-descriptors"><span class="xref std std-term">DATA DESCRIPTORS</span></a>,  <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> names, data field <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s, data field <a class="reference internal" href="glossary.html#term-unit"><span class="xref std std-term">UNIT</span></a> s,
+data field <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> s, and data <a class="reference internal" href="glossary.html#term-variable"><span class="xref std std-term">VARIABLE</span></a> s shall be enclosed in double quotes (<cite>&#8221;...&#8221;</cite>).</li>
+<li>Any quotes within a data item must be defined with a second quote, example below.</li>
+</ul>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="s2">&quot;he said &quot;&quot;hello&quot;&quot; to me&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A double quote is <a class="reference internal" href="../references.html#ascii"><span>ASCII</span></a> char 34</p>
+</div>
+</div>
+<div class="section" id="rule-6-comma-separated">
+<span id="ags4-rule-6"></span><h2>Rule 6 - Comma Separated<a class="headerlink" href="#rule-6-comma-separated" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-csv-rule">CSV Rule</span></p>
+<ul class="simple">
+<li>The <a class="reference internal" href="glossary.html#term-data-descriptors"><span class="xref std std-term">DATA DESCRIPTORS</span></a>, <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> names, data field <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s,
+data field <a class="reference internal" href="glossary.html#term-unit"><span class="xref std std-term">UNIT</span></a> s,
+data field <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> s,  and data <a class="reference internal" href="glossary.html#term-variable"><span class="xref std std-term">VARIABLE</span></a> s in each line
+of the data file shall be separated by a comma (<strong>,</strong>).</li>
+<li>No carriage returns (<a class="reference internal" href="../references.html#ascii"><span>ASCII</span></a> character 13) or line feeds (<a class="reference internal" href="../references.html#ascii"><span>ASCII</span></a> character 10) are
+allowed in or between data <a class="reference internal" href="glossary.html#term-variable"><span class="xref std std-term">VARIABLE</span></a> s within a <a class="reference internal" href="glossary.html#term-data"><span class="xref std std-term">DATA</span></a> row.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A comma (,) is <a class="reference internal" href="../references.html#ascii"><span>ASCII</span></a> char 44</p>
+</div>
+</div>
+<div class="section" id="rule-7-field-ordering">
+<span id="ags4-rule-7"></span><h2>Rule 7 - Field Ordering<a class="headerlink" href="#rule-7-field-ordering" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-csv-rule">CSV Rule</span></p>
+<ul class="simple">
+<li>The order of data <a class="reference internal" href="glossary.html#term-field"><span class="xref std std-term">FIELD</span></a> s in each line within a <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> is
+defined at the start of each <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> in the <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> row.</li>
+<li><a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s shall be in the order described in
+the <a class="reference internal" href="ags4_data_dict.html#ags4-data-dict"><span>AGS4 Data Dictionary</span></a> (see Section 9).</li>
+</ul>
+</div>
+<div class="section" id="rule-8-units">
+<span id="ags4-rule-8"></span><h2>Rule 8 - Units<a class="headerlink" href="#rule-8-units" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<ul class="simple">
+<li>Data <a class="reference internal" href="glossary.html#term-variable"><span class="xref std std-term">VARIABLE</span></a> s shall be presented in the units of measurement and
+type that are described by the appropriate data field <a class="reference internal" href="glossary.html#term-unit"><span class="xref std std-term">UNIT</span></a> and
+data field <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> defined at the start of the <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> within the GROUP <a class="reference internal" href="glossary.html#term-header"><span class="xref std std-term">HEADER</span></a> rows.</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="s2">&quot;GROUP&quot;</span>,<span class="s2">&quot;HORN&quot;</span>
+<span class="s2">&quot;HEADING&quot;</span>,<span class="s2">&quot;LOCA_ID&quot;</span>,<span class="s2">&quot;HORN_TOP&quot;</span>,<span class="s2">&quot;HORN_BASE&quot;</span>,<span class="s2">&quot;HORN_ORNT&quot;</span>,<span class="s2">&quot;HORN_INCL&quot;</span>,<span class="s2">&quot;HORN_REM&quot;</span>,<span class="s2">&quot;FILE_FSET&quot;</span>
+<span class="s2">&quot;UNIT&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;m&quot;</span>,<span class="s2">&quot;m&quot;</span>,<span class="s2">&quot;deg&quot;</span>,<span class="s2">&quot;deg&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;TYPE&quot;</span>,<span class="s2">&quot;ID&quot;</span>,<span class="s2">&quot;2DP&quot;</span>,<span class="s2">&quot;2DP&quot;</span>,<span class="s2">&quot;0DP&quot;</span>,<span class="s2">&quot;0DP&quot;</span>,<span class="s2">&quot;X&quot;</span>,<span class="s2">&quot;X&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rule-9-data-dictionary">
+<span id="ags4-rule-9"></span><h2>Rule 9 - Data Dictionary<a class="headerlink" href="#rule-9-data-dictionary" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<ul class="simple">
+<li>Data <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> and <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> names shall be taken from the <a class="reference internal" href="ags4_data_dict.html#ags4-data-dict"><span>AGS4 Data Dictionary</span></a>.</li>
+<li>In cases where there is no suitable entry, a user-defined <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> and/or <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> may be
+used in accordance with <a class="reference internal" href="#ags4-rule-18a"><span>Rule 18a</span></a>.</li>
+<li>Any user-defined <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s shall be included at the end of the <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> row
+after the standard <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s in the order defined in the <a class="reference internal" href="glossary.html#term-dict"><span class="xref std std-term">DICT</span></a> group (see <a class="reference internal" href="#ags4-rule-18a"><span>Rule 18a</span></a>).</li>
+</ul>
+</div>
+<div class="section" id="rule-10-validation">
+<span id="ags4-rule-10"></span><h2>Rule 10 - Validation<a class="headerlink" href="#rule-10-validation" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<ul>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s are defined as <strong>KEY</strong>, <strong>REQUIRED</strong> or <strong>OTHER</strong>.</dt>
+<dd><ul class="first last simple">
+<li><strong>KEY</strong> fields are necessary to uniquely define the data.</li>
+<li><strong>REQUIRED</strong> fields are necessary to allow interpretation of the data file.</li>
+<li><strong>OTHER</strong> fields are included depending on the scope of the data file and availability of data to be included.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="rule-10a-key">
+<span id="ags4-rule-10a"></span><h3>Rule 10a - KEY<a class="headerlink" href="#rule-10a-key" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>In every <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a>, certain <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s are defined as <strong>KEY</strong>.</li>
+<li>There shall not be more than one row of data in each <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> with the
+same combination of KEY field entries.</li>
+<li>KEY fields must appear in each <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a>, but may contain null data (see <a class="reference internal" href="#ags4-rule-12"><span>Rule 12 - Blank/Null Data</span></a>).</li>
+</ul>
+</div>
+<div class="section" id="rule-10b-required">
+<span id="ags4-rule-10b"></span><h3>Rule 10b - REQUIRED<a class="headerlink" href="#rule-10b-required" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Some <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s are marked as <strong>REQUIRED</strong>.</li>
+<li><strong>REQUIRED</strong> fields must appear in the data <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> s where they
+are indicated in the <a class="reference internal" href="ags4_data_dict.html#ags4-data-dict"><span>AGS4 Data Dictionary</span></a>.</li>
+<li>These fields require data entry and cannot be null (i.e. left blank or empty).</li>
+</ul>
+</div>
+<div class="section" id="rule-10c-parent-group">
+<span id="ags4-rule-10c"></span><h3>Rule 10c - PARENT GROUP<a class="headerlink" href="#rule-10c-parent-group" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Links are made between data rows in <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> s by the <a class="reference internal" href="glossary.html#term-key"><span class="xref std std-term">KEY</span></a> fields.</li>
+<li>Every entry made in the <a class="reference internal" href="glossary.html#term-key"><span class="xref std std-term">KEY</span></a> fields in any <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> must have an equivalent entry in its <a class="reference internal" href="glossary.html#term-parent-group"><span class="xref std std-term">PARENT GROUP</span></a>.</li>
+<li>The <a class="reference internal" href="glossary.html#term-parent-group"><span class="xref std std-term">PARENT GROUP</span></a> must be included within the data file.</li>
+<li><a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> parentage is defined in Section 7.3.</li>
+</ul>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="ags4_rules_notes.html#ags4-rule-note-2"><span>Note ii - HEADINGs, KEY and REQUIRED Fields</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="rule-11-record-links">
+<span id="ags4-rule-11"></span><h2>Rule 11 - Record Links<a class="headerlink" href="#rule-11-record-links" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<ul class="simple">
+<li><a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s defined as a data <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> of <a class="reference internal" href="glossary.html#term-record-link"><span class="xref std std-term">Record Link</span></a> (RL) can be used to link data
+rows to entries in <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> s outside of the defined
+hierarchy (Rule 10c) or DICT group for user defined <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> s.</li>
+<li>A heading of data <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> &#8216;<a class="reference internal" href="glossary.html#term-record-link"><span class="xref std std-term">Record Link</span></a>&#8216; shall comprise:</li>
+<li>The <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> name followed by the KEY FIELDs defining the cross-referenced data row, in the order presented in the AGS4 Data Dictionary (Section 8).</li>
+</ul>
+<div class="section" id="rule-11a-tran-dlim">
+<span id="ags4-rule-11a"></span><h3>Rule 11a - TRAN_DLIM<a class="headerlink" href="#rule-11a-tran-dlim" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Each GROUP/KEY FIELD shall be separated by a delimiter character.</li>
+<li>This single delimiter character shall be defined in TRAN_DLIM.</li>
+<li>The default is the <code class="docutils literal"><span class="pre">pipe</span> <span class="pre">|</span></code> (<a class="reference internal" href="../references.html#ascii"><span>ASCII</span></a> character 124).</li>
+</ul>
+</div>
+<div class="section" id="rule-11b-tran-rcon">
+<span id="ags4-rule-11b"></span><h3>Rule 11b - TRAN_RCON<a class="headerlink" href="#rule-11b-tran-rcon" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>A heading of data <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> &#8216;Record Link&#8217; can refer to more
+than one combination of <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> and <a class="reference internal" href="glossary.html#term-key-field"><span class="xref std std-term">KEY FIELD</span></a> s.</li>
+<li>The combination shall be separated by a defined concatenation character.</li>
+<li>This single concatenation character shall be defined in TRAN_RCON.</li>
+<li>The default being the <code class="docutils literal"><span class="pre">plus</span> <span class="pre">sign</span> <span class="pre">+</span></code> (<a class="reference internal" href="../references.html#ascii"><span>ASCII</span></a> character 43).</li>
+</ul>
+</div>
+<div class="section" id="rule-11c-multi-link">
+<span id="ags4-rule-11c"></span><h3>Rule 11c - Multi Link<a class="headerlink" href="#rule-11c-multi-link" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Any heading of data <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> <a class="reference internal" href="glossary.html#term-record-link"><span class="xref std std-term">Record Link</span></a> included in a data file shall
+cross-reference to
+the <a class="reference internal" href="glossary.html#term-key-field"><span class="xref std std-term">KEY FIELD</span></a> s of data rows in the <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> referred to by the heading contents.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="rule-12-blank-null-data">
+<span id="ags4-rule-12"></span><h2>Rule 12 - Blank/Null Data<a class="headerlink" href="#rule-12-blank-null-data" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-csv-rule">CSV Rule</span></p>
+<ul class="simple">
+<li>Data does not have to be included against each <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> unless <a class="reference internal" href="glossary.html#term-required"><span class="xref std std-term">REQUIRED</span></a>.</li>
+<li>The data <a class="reference internal" href="glossary.html#term-field"><span class="xref std std-term">FIELD</span></a> can be null</li>
+<li>a null entry is defined as &#8220;&#8221; (two quotes together, no space etc).</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="s2">&quot;GROUP&quot;</span>,<span class="s2">&quot;HORN&quot;</span>
+<span class="s2">&quot;HEADING&quot;</span>,<span class="s2">&quot;LOCA_ID&quot;</span>,<span class="s2">&quot;HORN_TOP&quot;</span>,<span class="s2">&quot;HORN_BASE&quot;</span>,<span class="s2">&quot;HORN_ORNT&quot;</span>,<span class="s2">&quot;HORN_INCL&quot;</span>,<span class="s2">&quot;HORN_REM&quot;</span>,<span class="s2">&quot;FILE_FSET&quot;</span>
+<span class="s2">&quot;UNIT&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;m&quot;</span>,<span class="s2">&quot;m&quot;</span>,<span class="s2">&quot;deg&quot;</span>,<span class="s2">&quot;deg&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;TYPE&quot;</span>,<span class="s2">&quot;ID&quot;</span>,<span class="s2">&quot;2DP&quot;</span>,<span class="s2">&quot;2DP&quot;</span>,<span class="s2">&quot;0DP&quot;</span>,<span class="s2">&quot;0DP&quot;</span>,<span class="s2">&quot;X&quot;</span>,<span class="s2">&quot;X&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rule-13-mandatory-project-details">
+<span id="ags4-rule-13"></span><h2>Rule 13 - Mandatory Project Details<a class="headerlink" href="#rule-13-mandatory-project-details" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<ul class="simple">
+<li>Each data file shall contain the <a class="reference internal" href="glossary.html#term-proj"><span class="xref std std-term">PROJ</span></a> <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> which shall contain only one data row:</li>
+<li>As a minimum, shall contain data under the headings defined as REQUIRED (<a class="reference internal" href="#ags4-rule-10b"><span>Rule 10b - REQUIRED</span></a>).</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="s2">&quot;GROUP&quot;</span>,<span class="s2">&quot;PROJ&quot;</span>
+<span class="s2">&quot;HEADING&quot;</span>,<span class="s2">&quot;PROJ_ID&quot;</span>,<span class="s2">&quot;PROJ_NAME&quot;</span>,<span class="s2">&quot;PROJ_LOC&quot;</span>,<span class="s2">&quot;PROJ_CLNT&quot;</span>,<span class="s2">&quot;PROJ_CONT&quot;</span>,<span class="s2">&quot;PROJ_ENG&quot;</span>,<span class="s2">&quot;PROJ_MEMO&quot;</span>,<span class="s2">&quot;FILE_FSET&quot;</span>
+<span class="s2">&quot;UNIT&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;TYPE&quot;</span>,<span class="s2">&quot;ID&quot;</span>,<span class="s2">&quot;X&quot;</span>,<span class="s2">&quot;X&quot;</span>,<span class="s2">&quot;X&quot;</span>,<span class="s2">&quot;X&quot;</span>,<span class="s2">&quot;X&quot;</span>,<span class="s2">&quot;X&quot;</span>,<span class="s2">&quot;X&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;7845&quot;</span>,<span class="s2">&quot;Trumpington Sewerage&quot;</span>,<span class="s2">&quot;Trumpington&quot;</span>,<span class="s2">&quot;Trumpington District Council&quot;</span>,<span class="s2">&quot;GeoI Ltd&quot;</span>,<span class="s2">&quot;Geo-Knowlege&quot;</span>,<span class="s2">&quot;Example AGS file - assocaited files are not included&quot;</span>,<span class="s2">&quot;FS001&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rule-14-tran-group">
+<span id="ags4-rule-14"></span><h2>Rule 14 - TRAN GROUP<a class="headerlink" href="#rule-14-tran-group" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<ul>
+<li><dl class="first docutils">
+<dt>Each data file shall contain the <a class="reference internal" href="glossary.html#term-tran-group"><span class="xref std std-term">TRAN GROUP</span></a> which shall contain</dt>
+<dd><ul class="first last simple">
+<li>only one data row</li>
+<li>and as a minimum, shall contain data under the headings defined as <a class="reference internal" href="glossary.html#term-required"><span class="xref std std-term">REQUIRED</span></a> (<a class="reference internal" href="#ags4-rule-10b"><span>Rule 10b - REQUIRED</span></a>).</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="rule-15-unit-group">
+<span id="ags4-rule-15"></span><h2>Rule 15 - UNIT GROUP<a class="headerlink" href="#rule-15-unit-group" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<ul class="simple">
+<li>Each data file shall contain the <a class="reference internal" href="glossary.html#term-unit"><span class="xref std std-term">UNIT</span></a> <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> to <strong>list all units</strong> used within the data file.</li>
+<li>Every unit of measurement entered in the <a class="reference internal" href="glossary.html#term-unit"><span class="xref std std-term">UNIT</span></a> row of a <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a>  or data entered in
+a FIELD where the field TYPE is defined <strong>&#8220;PU&#8221;</strong> (for example ERES_RUNI, GCHM_UNIT or MOND_UNIT FIELDs) shall
+be listed and defined in the UNIT GROUP.</li>
+</ul>
+<p><strong>Example snippet</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="s2">&quot;GROUP&quot;</span>,<span class="s2">&quot;UNIT&quot;</span>
+<span class="s2">&quot;HEADING&quot;</span>,<span class="s2">&quot;UNIT_UNIT&quot;</span>,<span class="s2">&quot;UNIT_DESC&quot;</span>,<span class="s2">&quot;FILE_FSET&quot;</span>
+<span class="s2">&quot;UNIT&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;TYPE&quot;</span>,<span class="s2">&quot;X&quot;</span>,<span class="s2">&quot;X&quot;</span>,<span class="s2">&quot;X&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;m&quot;</span>,<span class="s2">&quot;metre&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;mm&quot;</span>,<span class="s2">&quot;millimetre&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;yyyy-mm-dd&quot;</span>,<span class="s2">&quot;year month day&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;yyyy-mm-ddThh:mm&quot;</span>,<span class="s2">&quot;year month day hours minutes&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;hh:mm:ss&quot;</span>,<span class="s2">&quot;hours minutes seconds&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;%&quot;</span>,<span class="s2">&quot;percentage&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;g/l&quot;</span>,<span class="s2">&quot;grams per litre&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;mg/l&quot;</span>,<span class="s2">&quot;milligrams per litre&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;%vol&quot;</span>,<span class="s2">&quot;percentage volume&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;deg&quot;</span>,<span class="s2">&quot;degrees&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;bar&quot;</span>,<span class="s2">&quot;bar&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;-&quot;</span>,<span class="s2">&quot;No Units&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;degC&quot;</span>,<span class="s2">&quot;degree Celsius&quot;</span>,<span class="s2">&quot;&quot;</span>
+<span class="s2">&quot;DATA&quot;</span>,<span class="s2">&quot;l/min&quot;</span>,<span class="s2">&quot;litres per minute&quot;</span>,<span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rule-16-abbreviations">
+<span id="ags4-rule-16"></span><h2>Rule 16 - Abbreviations<a class="headerlink" href="#rule-16-abbreviations" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<ul class="simple">
+<li>Each data file shall contain the <a class="reference internal" href="glossary.html#term-abbr"><span class="xref std std-term">ABBR</span></a> <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> when abbreviations have been included in the data file.</li>
+<li>The abbreviations listed in the <a class="reference internal" href="glossary.html#term-abbr"><span class="xref std std-term">ABBR</span></a> <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> shall include definitions for all
+abbreviations entered in a <a class="reference internal" href="glossary.html#term-field"><span class="xref std std-term">FIELD</span></a> where the data <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> is defined as <strong>&#8220;PA&#8221;</strong> or
+any abbreviation needing definition used within any other heading data type.</li>
+</ul>
+<div class="section" id="rule-16a">
+<span id="ags4-rule-16a"></span><h3>Rule 16a<a class="headerlink" href="#rule-16a" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Where multiple abbreviations are required to fully codify a <a class="reference internal" href="glossary.html#term-field"><span class="xref std std-term">FIELD</span></a></li>
+<li>The abbreviations shall be separated by a defined concatenation character.</li>
+<li>This single concatenation character shall be defined in <cite>TRAN_RCON</cite>. The default being &#8220;+&#8221; (<a class="reference internal" href="../references.html#ascii"><span>ASCII</span></a> character 43)</li>
+<li>Each abbreviation used in such combinations shall be listed separately in the <a class="reference internal" href="glossary.html#term-abbr"><span class="xref std std-term">ABBR</span></a> <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a>.</li>
+<li>e.g. <strong>&#8220;CP+RC&#8221;</strong> must have entries for both <strong>&#8220;CP&#8221;</strong> and <strong>&#8220;RC&#8221;</strong> in ABBR GROUP, together with their full definition.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="rule-17-type">
+<span id="ags4-rule-17"></span><h2>Rule 17 - TYPE<a class="headerlink" href="#rule-17-type" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<blockquote>
+<div><ul class="simple">
+<li>Each data file shall contain the <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> to define the field <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> s used within the data file.</li>
+<li>Every data type entered in the <a class="reference internal" href="glossary.html#term-type"><span class="xref std std-term">TYPE</span></a> row of a GROUP shall be listed and defined in the TYPE GROUP.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="rule-18-dictionary">
+<span id="ags4-rule-18"></span><h2>Rule 18 - Dictionary<a class="headerlink" href="#rule-18-dictionary" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<ul class="simple">
+<li>Each data file shall contain the <a class="reference internal" href="glossary.html#term-dict"><span class="xref std std-term">DICT</span></a> <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> where non-standard
+GROUP and HEADING names have been included in the data file.</li>
+</ul>
+<div class="section" id="rule-18a">
+<span id="ags4-rule-18a"></span><h3>Rule 18a<a class="headerlink" href="#rule-18a" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The order in which the user-defined <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s are listed in the DICT GROUP shall define
+the order in which these HEADINGS are appended to an existing GROUP or appear in a user-defined GROUP.</li>
+<li>This order also defines the sequence in which such HEADINGS are used in a
+heading of data TYPE <a class="reference internal" href="glossary.html#term-record-link"><span class="xref std std-term">Record Link</span></a> (<a class="reference internal" href="#ags4-rule-11"><span>Rule 11 - Record Links</span></a>).</li>
+</ul>
+</div>
+</div>
+<div class="section" id="rule-19-group-headings">
+<span id="ags4-rule-19"></span><h2>Rule 19 - Group headings<a class="headerlink" href="#rule-19-group-headings" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>A <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> name shall:</dt>
+<dd><ul class="first last simple">
+<li>not be more than <strong>four</strong> characters long</li>
+<li>and shall consist of uppercase letters and numbers only.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Good</span>
+<span class="s2">&quot;GROUP&quot;</span>,<span class="s2">&quot;TBAA&quot;</span>
+<span class="s2">&quot;GROUP&quot;</span>,<span class="s2">&quot;TB01&quot;</span>
+
+<span class="c1"># Bad</span>
+<span class="s2">&quot;GROUP&quot;</span>,<span class="s2">&quot;BAD&quot;</span>
+<span class="s2">&quot;GROUP&quot;</span>,<span class="s2">&quot;abc&quot;</span>
+<span class="s2">&quot;GROUP&quot;</span>,<span class="s2">&quot;TB_1&quot;</span>
+<span class="s2">&quot;GROUP&quot;</span>,<span class="s2">&quot;TX 3&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="rule-19a-heading-length">
+<span id="ags4-rule-19a"></span><h3>Rule 19a - Heading length<a class="headerlink" href="#rule-19a-heading-length" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><dl class="first docutils">
+<dt>A <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> name shall:</dt>
+<dd><ul class="first last simple">
+<li>not be more than <strong>nine</strong> characters long</li>
+<li>and shall consist of uppercase letters, numbers or the underscore character only.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="rule-19b-heading-prefix">
+<span id="ags4-rule-19b"></span><h3>Rule 19b - Heading Prefix<a class="headerlink" href="#rule-19b-heading-prefix" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><dl class="first docutils">
+<dt><a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> names shall start with the <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> name followed by an underscore character.</dt>
+<dd><ul class="first last simple">
+<li>e.g. <code class="code docutils literal"><span class="pre">&quot;NGRP_HED1&quot;</span></code></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Where a <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> refers to an existing <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> within another <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a>,
+the <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> name added to the group shall bear the same name.
+- e.g. <code class="code docutils literal"><span class="pre">&quot;SAMP_REF&quot;</span></code> in the <code class="code docutils literal"><span class="pre">&quot;SAMP&quot;</span></code> GROUP
+- or <code class="code docutils literal"><span class="pre">&quot;CMPG_TESN&quot;</span></code> in the <code class="code docutils literal"><span class="pre">&quot;CMPT&quot;</span></code> GROUP.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="rule-20-additional-files">
+<span id="ags4-rule-20"></span><h2>Rule 20 - Additional files<a class="headerlink" href="#rule-20-additional-files" title="Permalink to this headline">¶</a></h2>
+<p><span class="ags-data-rule">Data Rule</span></p>
+<ul class="simple">
+<li>Additional computer files (e.g. digital images) can be included within a data submission.</li>
+<li>Each such file shall be defined in a FILE GROUP.</li>
+<li>The additional files shall be transferred in a sub-folder named FILE.</li>
+<li>This FILE sub-folder shall contain additional sub-folders each named by the FILE_FSET reference.</li>
+<li>Each FILE_FSET named folder will contain the files listed in the FILE GROUP.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">AGS4 - Rules</a><ul>
+<li><a class="reference internal" href="#rule-1-character-set">Rule 1 - Character Set</a></li>
+<li><a class="reference internal" href="#rule-2-group-s-required">Rule 2 - GROUP&#8217;s required</a><ul>
+<li><a class="reference internal" href="#rule-2a-crlf-new-line">Rule 2a - CRLF New Line</a></li>
+<li><a class="reference internal" href="#rule-2b-group-header">Rule 2b - GROUP HEADER</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rule-3-data-descriptors">Rule 3 - Data Descriptors</a></li>
+<li><a class="reference internal" href="#rule-4-field-s">Rule 4 - FIELD&#8217;s</a></li>
+<li><a class="reference internal" href="#rule-5-double-quotes">Rule 5 - Double Quotes</a></li>
+<li><a class="reference internal" href="#rule-6-comma-separated">Rule 6 - Comma Separated</a></li>
+<li><a class="reference internal" href="#rule-7-field-ordering">Rule 7 - Field Ordering</a></li>
+<li><a class="reference internal" href="#rule-8-units">Rule 8 - Units</a></li>
+<li><a class="reference internal" href="#rule-9-data-dictionary">Rule 9 - Data Dictionary</a></li>
+<li><a class="reference internal" href="#rule-10-validation">Rule 10 - Validation</a><ul>
+<li><a class="reference internal" href="#rule-10a-key">Rule 10a - KEY</a></li>
+<li><a class="reference internal" href="#rule-10b-required">Rule 10b - REQUIRED</a></li>
+<li><a class="reference internal" href="#rule-10c-parent-group">Rule 10c - PARENT GROUP</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rule-11-record-links">Rule 11 - Record Links</a><ul>
+<li><a class="reference internal" href="#rule-11a-tran-dlim">Rule 11a - TRAN_DLIM</a></li>
+<li><a class="reference internal" href="#rule-11b-tran-rcon">Rule 11b - TRAN_RCON</a></li>
+<li><a class="reference internal" href="#rule-11c-multi-link">Rule 11c - Multi Link</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rule-12-blank-null-data">Rule 12 - Blank/Null Data</a></li>
+<li><a class="reference internal" href="#rule-13-mandatory-project-details">Rule 13 - Mandatory Project Details</a></li>
+<li><a class="reference internal" href="#rule-14-tran-group">Rule 14 - TRAN GROUP</a></li>
+<li><a class="reference internal" href="#rule-15-unit-group">Rule 15 - UNIT GROUP</a></li>
+<li><a class="reference internal" href="#rule-16-abbreviations">Rule 16 - Abbreviations</a><ul>
+<li><a class="reference internal" href="#rule-16a">Rule 16a</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rule-17-type">Rule 17 - TYPE</a></li>
+<li><a class="reference internal" href="#rule-18-dictionary">Rule 18 - Dictionary</a><ul>
+<li><a class="reference internal" href="#rule-18a">Rule 18a</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rule-19-group-headings">Rule 19 - Group headings</a><ul>
+<li><a class="reference internal" href="#rule-19a-heading-length">Rule 19a - Heading length</a></li>
+<li><a class="reference internal" href="#rule-19b-heading-prefix">Rule 19b - Heading Prefix</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rule-20-additional-files">Rule 20 - Additional files</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Unofficial AGS Guide</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ags4_rules_notes.html"
+                        title="next chapter">AGS4 - Notes on the Rules</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ags4_rules_notes.html" title="AGS4 - Notes on the Rules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Unofficial AGS Guide"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ogt</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../ags-projects/index.html" >AGS Projects</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Unofficial AGS Guide</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    </div>
+  </body>
+</html>

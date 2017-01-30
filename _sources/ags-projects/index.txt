@@ -1,0 +1,59 @@
+AGS Projects
+========================
+
+- **ogt-ags-py** - AGS Tools in Python - `Docs <https://open-geotechnical.github.io/ogt-ags-py>`_ - `Code <https://github.com/open-geotechnical/ogt-ags-py>`_
+- **ogt-ags-go**- Experimental AGS Tools in Golang - `Docs <https://godoc.org/github.com/open-geotechnical/ogt-ags-go>`_ - `Code <https://github.com/open-geotechnical/ogt-ags-go>`_
+- :ref:`unofficial_ags_guide`
+- unofficial_ags_data_dict    
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    ../unofficial-ags-guide/index
+    unofficial_ags_data_dict 
+
+
+    
+Aim
+----------------
+The aim of Open Geotechnical Data is to free up data used in the ground investigation and geotechnical 
+asset management industry, allowing the data to be used more widely, effectively and efficiently. The 
+increasing use and expectation of web and mobile platforms to display, edit and capture data has 
+raised the requirement for modern file formats to enable easy access to applications through apis 
+that are often exposed in Pyhon, Javascript etc.
+
+Background 
+----------------
+Data and information is passed through the supply chain in a variety of formats 
+including: Spreadsheets, electronic documents, AGS, CAD drawings, and GIS. The mixture 
+of file formats makes handling and sharing the data difficult, often resulting in re-keying 
+information. Whilst the AGS data format has made significant advances in setting out 
+the requirements and improved use of transfer of site investigation data, it invariably 
+results in the need for specialist software to make effective use of the data. This software 
+is mostly written for the Windows OS. There are no publicly available, open source libraries to 
+help transform the data, so each organisation either has to procure proprietry software, or spend 
+time and money re-inventing the wheel. This makes the industry inefficient and is a barrier to 
+ensuring maximum use of the data.
+
+Limitations
+----------------
+This project does not intend to compete with, or replace the AGS data format, it aims 
+to deliver a Swiss army knife of data transformation tools, which support the users of the AGS data format. 
+
+The project focuses on the use of data at the points where it is either captured or used, not whilst 
+it is being transferred between organisations. It should be noted that anyone producing or using AGS data format files 
+should comply with the requirements of the Association of Geotechnical and Geoenvironmental Specialists.
+
+Technology
+----------------
+Some of the tools that this project aims to deliver are:
+
+Conversion tools: AGS to JSON, AGS to YAML, JSON to GeoJSON, AGS data fomat validation, AGS to CSV/Spreadsheet and AGS to SQL     
+
+Some of the technologies that are hoped to be supported are:
+RDBMS, NoSQL datastores, rest, AJAX, HTML5, GIS, Linux, Android, iOS, 
+
+The languages supported include:
+
+Python, JAVA, GoLang, Javascript, VB.NET, C# and other high-level languages that have JSON serialisation and deserialisation libraries.

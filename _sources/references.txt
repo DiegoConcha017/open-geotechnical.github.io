@@ -1,0 +1,134 @@
+==================
+References
+==================
+
+.. _ASCII:
+
+ASCII
+==================
+
+The American Standard Code for Information Interchange (ASCII) is
+a character-encoding scheme originally based on the English alphabet
+that encodes 128 specified characters - the numbers 0-9, the letters a-z and
+A-Z, some basic punctuation symbols, some control codes that
+originated with Teletype machines, and a
+blank space - into the 7-bit binary integers.
+
+.. note:: See also
+
+    - See :ref:`ags4_rule_1`
+
+
+**Notable characters**
+
+    +----------+------------------+---------+--------------------------+
+    | No       | Name             | Preview | Links                    |
+    +==========+==================+=========+==========================+
+    | 10       | line feed        |         | :ref:`ags4_rule_2a`      |
+    +----------+------------------+---------+--------------------------+
+    | 13       | carriage return  |         | :ref:`ags4_rule_2a`      |
+    +----------+------------------+---------+--------------------------+
+    | 34       | double quote     | "       | :ref:`ags4_rule_5`       |
+    +----------+------------------+---------+--------------------------+
+    | 43       | plus sign        | \+      | :ref:`ags4_rule_11b`     |
+    +----------+------------------+---------+--------------------------+
+    | 44       | comma            | ,       | :ref:`ags4_rule_6`       |
+    +----------+------------------+---------+--------------------------+
+    | 124      | pipe             | \|      | :ref:`ags4_rule_11a`     |
+    +----------+------------------+---------+--------------------------+
+
+
+.. seealso:: Reference Links
+
+    - http://en.wikipedia.org/wiki/ASCII
+    - http://www.asciitable.com/
+    - http://www.ascii.cl/htmlcodes.htm
+
+.. _CSV:
+
+CSV
+==================
+
+See https://en.wikipedia.org/wiki/Comma-separated_values
+
+.. seealso:: See also
+
+    - :ref:`ags4_rule_6`
+    - :ref:`ags4_rule_note_1`
+
+
+
+
+
+.. _excel:
+    
+Excel
+==================
+    
+TODO    
+
+
+
+.. _json:
+
+JSON
+==================
+**JavaScript Object Notation** (JSON) is a lightweight data-interchange format.  It is easy for humans to read
+and write. It is easy for machines to parse and
+generate. It is based on a subset of the JavaScript Programming Language,
+
+.. hint::
+
+    - It is highly recommended to use the functions in the :mod:`ogt.utils`  module to
+      serialise json for consistency. See:
+
+      - :func:`~ogt.utils.to_json`
+      - :func:`~ogt.utils.write_json_file`
+      - :func:`~ogt.utils.read_json_file`
+
+.. seealso:: Reference Links
+
+    - http://www.json.org/
+    - https://en.wikipedia.org/wiki/JSON
+    - http://www.w3schools.com/js/js_json_intro.asp
+    - http://jsonlint.com/
+
+.. _python:
+
+Python
+==================
+TODO
+
+
+.. _golang:
+
+Golang
+==================
+The **Go** Programming language by google - https://golang.org/
+
+
+.. _yaml:
+
+YAML
+==================
+
+- YAML: YAML Ain't Markup Language
+- Is a human friendly data serialization standard for all programming languages
+
+.. note:: Note:
+
+    - The python `yaml` extention is required
+    - Install with :code:`pip install yaml`
+    - API reference at http://pyyaml.org/wiki/PyYAMLDocumentation
+
+.. seealso:: Reference Links
+
+    - http://yaml.org/
+    - https://en.wikipedia.org/wiki/YAML
+
+TODO list
+==================
+
+.. todolist::
+
+
