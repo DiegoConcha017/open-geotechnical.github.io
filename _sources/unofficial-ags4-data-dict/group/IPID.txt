@@ -1,0 +1,96 @@
+.. _ags4_IPID:
+
+IPID
+===========================================================================
+
+On Site Volatile Headspace Testing by Photo Ionisation Detector
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - IPID_DPTH
+      - m
+      - 2DP
+      - 1
+      - Depth of headspace test sample 
+    * - IPID_TESN
+      - 
+      - X
+      - 3
+      - Test reference
+    * - IPID_DATE
+      - yyyy-mm-dd
+      - DT
+      - 20/02/2003
+      - Test date
+    * - IPID_TEMP
+      - degC
+      - 1DP
+      - 15.1
+      - Ambient temperature at time of test
+    * - IPID_RES
+      - ppmv
+      - 2DP
+      - 10
+      - Result of PID analysis
+    * - IPID_REM
+      - 
+      - X
+      - 
+      - Remarks on test
+    * - IPID_ENV
+      - 
+      - X
+      - Cloudy with light rain
+      - Details of weather and environmental conditions during test
+    * - IPID_METH
+      - 
+      - X
+      - Carried out on temporary samples using photo ionisation detector fitted with 10.6 eV lamp
+      - Details of PID used and method description
+    * - IPID_CONT
+      - 
+      - X
+      - ACME On-site Testing Ltd
+      - Name of testing organisation
+    * - IPID_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - GEOL_STAT
+      - 
+      - X
+      - 1
+      - Stratum reference shown on trial pit or traverse sketch
+    * - FILE_FSET
+      - 
+      - X
+      - FS45
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 3
+-------------------------
+- IPID is used to record the results of on site volatile testing by means of headspace analysis using photo ionisation detectors.
+- IPID_CRED added to permit details of any test accreditation if appropriate to be included in data.
+- Clause 7.9.8 of the updated SISG Specification advises ambient weather and temperature to be recorded at time of test. IPID_ENV and IPID_TEMP added to include this information.
+

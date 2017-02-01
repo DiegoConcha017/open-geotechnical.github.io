@@ -1,0 +1,165 @@
+.. _ags4_RUCS:
+
+RUCS
+===========================================================================
+
+Rock Uniaxial Compressive Strength and Deformability Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Brown sandstone
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - RUCS_SDIA
+      - mm
+      - 1DP
+      - 86.7
+      - Specimen diameter
+    * - RUCS_LEN
+      - mm
+      - 1DP
+      - 235.3
+      - Specimen length
+    * - RUCS_MC
+      - %
+      - 1DP
+      - 3.7
+      - Water content of specimen tested
+    * - RUCS_COND
+      - 
+      - X
+      - Natural, saturated, dried at 105 degC
+      - Condition of specimen as tested
+    * - RUCS_DURN
+      - mm:ss
+      - T
+      - 6:54
+      - Test duration
+    * - RUCS_STRA
+      - MPa/s
+      - 1DP
+      - 0.5
+      - Stress rate
+    * - RUCS_UCS
+      - MPa
+      - 3SF
+      - 16.8
+      - Uniaxial compressive strength
+    * - RUCS_MODE
+      - 
+      - X
+      - Shear
+      - Mode of failure
+    * - RUCS_E
+      - GPa
+      - 3SF
+      - 221
+      - Young's modulus
+    * - RUCS_MU
+      - 
+      - 2DP
+      - 0.32
+      - Poisson's ratio
+    * - RUCS_ESTR
+      - 
+      - X
+      - 0-50%UCS, 20MPa
+      - Stress level at which modulus has been measured
+    * - RUCS_ETYP
+      - 
+      - `:ref:`ags4_RUCS_ETYP`
+      - Secant or Tangent
+      - Method of determination of Young's modulus
+    * - RUCS_MACH
+      - 
+      - X
+      - Denison 7225
+      - Type of testing machine
+    * - RUCS_REM
+      - 
+      - X
+      - Specimen tested outside required 2.5-3.0 diameter to length ratio
+      - Remarks
+    * - RUCS_METH
+      - 
+      - X
+      - ISRM : Suggested method for determination of Uniaxial Compressive Strength
+      - Test method
+    * - RUCS_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - RUCS_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS10
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- Note that units and accuracy for UCS are not prescribed in ISRM and the conventional MPa to 3SF is adopted here. ISRM defines GPa to 3SF for Young?s modulus and as such this is also adopted. ISRM suggests 3 significant figures for Poisson?s ratio but conventionally this is reported to 2 decimal places and this has been adopted.
+- ISRM specifies stress rate MPa/s but most tests are performed at a rate of loading kN/s or kN/min, and sometimes under strain controlled conditions for deformability. The results should always be converted and reported as MPa/s where necessary.
+

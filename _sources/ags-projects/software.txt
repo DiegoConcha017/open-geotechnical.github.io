@@ -1,0 +1,16 @@
+Software
+=====================
+
+ogt-ags-py - Python Toolkit
+-----------------------------------
+
+- Python 2.7 converter and validator
+- Docs at `open-geotechnical.github.io/ogt-ags-py/ <https://open-geotechnical.github.io/ogt-ags-py/>`_ 
+- Code at `github.com/open-geotechnical/ogt-ags-py <https://github.com/open-geotechnical/ogt-ags-py>`_
+
+ogt-ags-go - Golang Toolkit
+-----------------------------------
+
+- Golang converter and validator
+- Docs at `godoc.org/github.com/open-geotechnical/ogt-ags-go/ <https://godoc.org/github.com/open-geotechnical/ogt-ags-go/>`_ 
+- Code at `github.com/open-geotechnical/ogt-ags-go <https://github.com/open-geotechnical/ogt-ags-go>`_

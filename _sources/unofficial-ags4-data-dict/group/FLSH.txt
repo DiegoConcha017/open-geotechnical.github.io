@@ -1,0 +1,68 @@
+.. _ags4_FLSH:
+
+FLSH
+===========================================================================
+
+Drilling Flush Details
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - FLSH_TOP
+      - m
+      - 2DP
+      - 10
+      - Depth to top of flush zone
+    * - FLSH_BASE
+      - m
+      - 2DP
+      - 20
+      - Depth to bottom of flush zone
+    * - FLSH_TYPE
+      - 
+      - `:ref:`ags4_FLSH_TYPE`
+      - Water
+      - Type of flush
+    * - FLSH_RETN
+      - %
+      - 0DP
+      - 50
+      - Flush return minimum (as percentage)
+    * - FLSH_RETX
+      - %
+      - 0DP
+      - 70
+      - Flush return maximum (as percentage)
+    * - FLSH_COL
+      - 
+      - X
+      - White
+      - Colour of flush return
+    * - FLSH_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS5
+      - Associated file reference (eg drilling journal, mud logging or test records)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - None
+-------------------------
+

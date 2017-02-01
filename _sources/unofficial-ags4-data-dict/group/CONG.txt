@@ -1,0 +1,164 @@
+.. _ags4_CONG:
+
+CONG
+===========================================================================
+
+Consolidation Tests - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Sample from base of U100 sample, axis vertical
+      - Details of specimen preparation including time between preparation and testing
+    * - CONG_TYPE
+      - 
+      - `:ref:`ags4_CONG_TYPE`
+      - Oedometer / Hydraulic Cell / Expandability
+      - Type of consolidation test
+    * - CONG_COND
+      - 
+      - `:ref:`ags4_CONG_COND`
+      - Undisturbed / Remoulded
+      - Sample condition
+    * - CONG_SDIA
+      - mm
+      - 2DP
+      - 75.15
+      - Test specimen diameter
+    * - CONG_HIGT
+      - mm
+      - 2DP
+      - 19.25
+      - Test specimen height 
+    * - CONG_MCI
+      - %
+      - MC
+      - 21
+      - Initial moisture content
+    * - CONG_MCF
+      - %
+      - MC
+      - 18
+      - Final moisture content
+    * - CONG_BDEN
+      - Mg/m3
+      - 2DP
+      - 2.12
+      - Initial bulk density
+    * - CONG_DDEN
+      - Mg/m3
+      - 2DP
+      - 1.75
+      - Initial dry density
+    * - CONG_PDEN
+      - Mg/m3
+      - XN
+      - #2.65
+      - Particle density with prefix # if value assumed
+    * - CONG_SATR
+      - %
+      - 0DP
+      - 98
+      - Initial degree of saturation
+    * - CONG_SPRS
+      - kPa
+      - 2SF
+      - 100
+      - Swelling pressure
+    * - CONG_SATH
+      - %
+      - 1DP
+      - 1.1
+      - Height change of specimen on saturation, or flooding as percentage of original height (BS1377 Settlement on saturation test)
+    * - CONG_IVR
+      - 
+      - 3DP
+      - 0.8
+      - Initial voids ratio
+    * - CONG_REM
+      - 
+      - X
+      - Swell test prior to standard Oedometer
+      - Remarks including commentary on effect of specimen disturbance on test result
+    * - CONG_METH
+      - 
+      - X
+      - K H Head
+      - Test method
+    * - CONG_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - CONG_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS9
+      - Associated file reference (eg equipment calibrations)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- CONG_IVR should be used to report the initial voids ratio at the start of testing.
+

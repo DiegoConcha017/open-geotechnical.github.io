@@ -1,0 +1,125 @@
+.. _ags4_CBRG:
+
+CBRG
+===========================================================================
+
+California Bearing Ratio Tests - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Stored at constant moisture content for 7 days, then soaked for 7 days, maintained at 20?? throughout
+      - Details of specimen preparation including time between preparation and testing
+    * - CBRG_COND
+      - 
+      - `:ref:`ags4_CBRG_COND`
+      - Undisturbed 
+      - Sample condition
+    * - CBRG_NMC
+      - %
+      - MC
+      - 20
+      - Natural moisture content of specimen prior to test
+    * - CBRG_200
+      - %
+      - 0DP
+      - 10
+      - Weight percent retained on 20mm sieve
+    * - CBRG_STAB
+      - %
+      - 2SF
+      - 23
+      - Amount of stabiliser added
+    * - CBRG_STYP
+      - 
+      - X
+      - Cement
+      - Type of stabiliser added
+    * - CBRG_REM
+      - 
+      - X
+      - Specimen lifted during penetration
+      - Remarks including commentary on effect of specimen disturbance on test result
+    * - CBRG_METH
+      - 
+      - X
+      - BS1377: Part 4: 1990  4.5kg compactive effort
+      - Test method including remoulding
+    * - CBRG_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - CBRG_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS16
+      - Associated file reference (eg equipment calibrations)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- Initial moisture content required for each stage of testing, heading added to CBRT group and removed from CBRG.
+- New headings added to permit details of test method, laboratory and test accreditation to be included in data.
+

@@ -1,0 +1,204 @@
+.. _ags4_SAMP:
+
+SAMP
+===========================================================================
+
+Sample Information
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique identifier
+    * - SAMP_BASE
+      - m
+      - 2DP
+      - 25
+      - Depth to base of sample
+    * - SAMP_DTIM
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 1991-03-26T09:28
+      - Date and time sample taken
+    * - SAMP_UBLO
+      - 
+      - 0DP
+      - 35
+      - Number of blows required to drive sampler
+    * - SAMP_CONT
+      - 
+      - X
+      - Metal UT100 tube
+      - Sample container
+    * - SAMP_PREP
+      - 
+      - X
+      - Preservative added
+      - Details of sample preparation at time of sampling
+    * - SAMP_SDIA
+      - mm
+      - 0DP
+      - 100
+      - Sample diameter
+    * - SAMP_WDEP
+      - m
+      - 2DP
+      - 4.5
+      - Depth to water below ground surface at time of sampling
+    * - SAMP_RECV
+      - %
+      - 0DP
+      - 60
+      - Sample recovery as a percentage of driven sample
+    * - SAMP_TECH
+      - 
+      - X
+      - Purged
+      - Sampling technique/method
+    * - SAMP_MATX
+      - 
+      - X
+      - Surface water
+      - Sample matrix
+    * - SAMP_TYPC
+      - 
+      - X
+      - Normal
+      - Sample QA type (Normal, blank or spike)
+    * - SAMP_WHO
+      - 
+      - X
+      - MS
+      - Samplers initials or name
+    * - SAMP_WHY
+      - 
+      - X
+      - Routine monitoring sample
+      - Reason for sampling
+    * - SAMP_REM
+      - 
+      - X
+      - 
+      - Sample remarks
+    * - SAMP_DESC
+      - 
+      - X
+      - Grey silty CLAY
+      - Sample/specimen description
+    * - SAMP_DESD
+      - yyyy-mm-dd
+      - DT
+      - 03/11/2008
+      - Date sample described
+    * - SAMP_LOG
+      - 
+      - X
+      - AN Other
+      - Person responsible for sample/specimen description
+    * - SAMP_COND
+      - 
+      - X
+      - Sample softened, or fractured by drilling
+      - Condition and representativeness of sample
+    * - SAMP_CLSS
+      - 
+      - X
+      - 5
+      - Sample classification as required by EN ISO 14688-1
+    * - SAMP_BAR
+      - Bar
+      - 1DP
+      - 99.1
+      - Barometric pressure at time of sampling
+    * - SAMP_TEMP
+      - degC
+      - 0DP
+      - 8
+      - Sample temperature at time of sampling
+    * - SAMP_PRES
+      - Bar
+      - 1DP
+      - 0.2
+      - Gas pressure (above barometric)
+    * - SAMP_FLOW
+      - l/min
+      - 1DP
+      - 0.2
+      - Gas flow rate
+    * - SAMP_ETIM
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 1991-05-01T10:03
+      - Date and time sampling completed
+    * - SAMP_DURN
+      - hh:mm:ss
+      - T
+      - 30:15:00
+      - Sampling duration
+    * - SAMP_CAPT
+      - 
+      - X
+      - BH1,1.00m,B+BH2,1.00m,B
+      - Caption used to describe sample
+    * - SAMP_LINK
+      - 
+      - RL
+      - MONG|BH1|Pipe1
+      - Sample record link
+    * - GEOL_STAT
+      - 
+      - X
+      - 1
+      - Stratum reference shown on trial pit or traverse sketch
+    * - FILE_FSET
+      - 
+      - X
+      - FS67
+      - Associated file reference (eg sampling field sheets, sample description records)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 11
+-------------------------
+- The SAMP group is used to record all samples; eg those taken during field sampling or monitoring or sub-samples created in the laboratory.
+- SAMP_ID has been added to the sample key set. Unique sample identifiers can be used to enhance the process of reintegration of testing results from subcontract laboratories and/or used to contain barcode or pre-made label references.  The addition of the SAMP_ID heading into the SAMP group provides greater flexibility for accommodating different process methodologies. A full explanation of example uses of SAMP_ID are given in on the AGS website.
+- SAMP_ID does not have to be used and can be NULL (Rule 12).  The remaining descriptive key/label headings can be used on their own.
+- SAMP_LINK has been added to permit the source of samples to be fully detailed. The SAMP_LINK field is a Record Link (RL) format as defined in Rule 11 and accompanying Note v.
+- In selecting abbreviations for use in SAMP_TYPE, allowance should be made for use of additional codification or suffixes to standard abbreviations to reflect the sample types and collection methods applying to measurement / payment purposes.
+- SAMP_PREP allow details of the sample preparation to be included. This would typically be used to detail the precautions taken with samples for further chemical or environmental testing.
+- SAMP_LOG and SAMP_DESD allow inclusion of the name of the person describing the sample and date this was carried out as required in ISO 14688-1, Section 6 and EN ISO 14689-1, Section 5.
+- SAMP_COND has been included to provide for any comments on condition, representativeness and reliability of the sample which are requirements of EN ISO 14688-1 (Section 6) and BS 5930 respectively.  This heading together with the sample recovery SAMP_RECV provide useful data to those specifying laboratory scheduling. Data included if not 100%.
+- The requirement of EN ISO 14688-1 (Section 6) and EN ISO 14689-1 (Section 5) to record the details of origin, collection and handling of samples are included in the associated groups.
+- SAMP_ETIM and SAMP_DURN allow for data that describes the duration of sampling event if that is required. This can be important in environmental sampling applications.
+- SAMP_CAPT provides for description of sample composition in the case of an amalgamated sample.
+

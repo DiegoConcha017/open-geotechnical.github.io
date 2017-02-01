@@ -1,0 +1,121 @@
+.. _ags4_LBST:
+
+LBST
+===========================================================================
+
+Testing Schedule Details
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U 
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - LBSG_REF
+      - 
+      - X
+      - 2
+      - Testing schedule reference
+    * - LBST_TEST
+      - 
+      - X
+      - Suite A
+      - Test Name
+    * - CHOC_REF
+      - 
+      - X
+      - A1241/1
+      - Chain of custody reference
+    * - LBST_TTYP
+      - 
+      - X
+      - California Bearing Ratio (BS 1377:1990:Pt 4, Section 7)
+      - Full test method or standard
+    * - LBST_METH
+      - 
+      - X
+      - Point, 34 kPa surcharge.
+      - Method and test parameters
+    * - LBST_PREP
+      - 
+      - X
+      - BS1377 part 9
+      - Preparation requirements
+    * - LBST_DEPN
+      - 
+      - X
+      - Advise if sample insufficient for testing
+      - Dependent test options
+    * - LBST_STAT
+      - 
+      - `:ref:`ags4_LBST_STAT`
+      - In progress 
+      - Status of laboratory test
+    * - LBST_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - LBST_DUE
+      - yyyy-mm-dd
+      - DT
+      - 05/10/2009
+      - Test results due date
+    * - LBST_DETL
+      - 
+      - X
+      - 
+      - Details of testing carried out or reasons for no testing possible
+    * - LBST_DONE
+      - yyyy-mm-dd
+      - DT
+      - 01/10/2009
+      - Date test completed
+    * - FILE_FSET
+      - 
+      - X
+      - FS99
+      - Associated file reference
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 8
+-------------------------
+- The LBST group is used to describe instructions and requirements to be passed to the laboratory regarding testing on samples.
+- Each data row represents a test on a sample. Therefore sample details will be repeated for each test scheduled on that sample.
+- LBSG_REF provides the link between the test and the test schedule details.
+- LBST_TEST is the specific code or name of the particular test required on the sample. Whilst these will be drawn from standards, the test names are typically unique to laboratories or maybe linked to a particular contract specification. At the outset of scheduling testing the list of test names that are particular to a project or contract should ascertained and used as a pick-list in any information system generating LBST data. It is envisaged that laboratories or contract specifications can provide coded lists for test details that would be suitable for LBST_TEST data.
+- The headings of LBST_TTYP, LBST_METH, LBST_PREP, LBST_DEPN allow for descriptions of the test name/method or standard, specific method details or test parameters, test specimen preparation and dependent options or comments. For any test some or all of these data items may be required to fully define the test. An example of the type of information that could be included under these headings could be:
+- The group also includes headings that can be used by the testing laboratory to report testing progress or highlight problems with carrying out the instructed testing; LBST_STAT, LBST_DETL and LBST_DONE. If data is provided under these headings to the organisation that schedules the tests, they can use the information to track progress and monitor completion
+- LBST_STAT is used to describe the status of testing. Typically this would include standard phrases rather than detailed descriptions such as ?Scheduled?, ?Restricted?, ?In progress?, ?Completed?.
+- Details of testing restrictions, for example insufficient or unsuitable sample, should be included under LBST_DETL. The transfer of LBST could provide a suitable method for laboratories to advise on testing restrictions, for example, returning a file containing all LBST records with an LBST_STAT of ?Restricted?.
+

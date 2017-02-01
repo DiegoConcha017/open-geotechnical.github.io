@@ -1,0 +1,205 @@
+.. _ags4_PTST:
+
+PTST
+===========================================================================
+
+Laboratory Permeability Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U 
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - PTST_TESN
+      - 
+      - X
+      - 2
+      - Test reference
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - PTST_COND
+      - 
+      - `:ref:`ags4_PTST_COND`
+      - Undisturbed 
+      - Sample condition
+    * - PTST_SZUN
+      - mm
+      - 0DP
+      - 5
+      - Size cut off of material too coarse for testing
+    * - PTST_UNS
+      - %
+      - 0DP
+      - 36
+      - Proportion of material removed above PTST
+    * - PTST_DIAM
+      - mm
+      - 2DP
+      - 102.52
+      - Specimen diameter
+    * - PTST_LEN
+      - mm
+      - 2DP
+      - 200.22
+      - Specimen length
+    * - PTST_MC
+      - %
+      - MC
+      - 20
+      - Initial moisture content of test specimen
+    * - PTST_BDEN
+      - Mg/m3
+      - 2DP
+      - 2.24
+      - Initial bulk density of test specimen
+    * - PTST_DDEN
+      - Mg/m3
+      - 2DP
+      - 1.87
+      - Initial dry density 
+    * - PTST_IDIA
+      - mm
+      - 2DP
+      - 3.75
+      - Diameter of drain for radial permeability in hydraulic cell
+    * - PTST_DMET
+      - 
+      - X
+      - Bored using mandrel and filled with saturated sand
+      - Method of forming central drain
+    * - PTST_VOID
+      - 
+      - 3DP
+      - 0.375
+      - Initial voids ratio 
+    * - PTST_K
+      - m/s
+      - 1SCI
+      - 4.10E-06
+      - Coefficient of permeability
+    * - PTST_TSTR
+      - kPa
+      - 0DP
+      - 112
+      - Mean effective stress at which permeability measured (when measured in triaxial or hydraulic cell).
+    * - PTST_HYGR
+      - 
+      - 0DP
+      - 1
+      - Hydraulic gradient at which permeability measured (for constant head test).
+    * - PTST_ISAT
+      - %
+      - 2SF
+      - 72
+      - Initial degree of saturation
+    * - PTST_SAT
+      - 
+      - X
+      - Back pressure, Bf = 0.96
+      - Details of saturation, where appropriate
+    * - PTST_CONS
+      - 
+      - X
+      - Drainage to top with pwp at base
+      - Details of consolidation, where appropriate
+    * - PTST_PDEN
+      - Mg/m3
+      - XN
+      - #2.65
+      - Particle density with prefix # if value assumed
+    * - PTST_TYPE
+      - 
+      - `:ref:`ags4_PTST_TYPE`
+      - Falling head
+      - Type of permeability measurement
+    * - PTST_CELL
+      - 
+      - `:ref:`ags4_PTST_CELL`
+      - Triaxial cell 
+      - Type of permeameter
+    * - PTST_REM
+      - 
+      - X
+      - 
+      - Remarks on test
+    * - PTST_METH
+      - 
+      - X
+      - BS1377 Part 5 or part 6, KH Head vol 2 or vol 3, EA  Accelerated test
+      - Test method
+    * - PTST_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - PTST_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS28
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- The suggested units for PTST_PDEN have been amended to Mg/m3.
+- New headings added to permit details of test method, laboratory and test accreditation to be included in data.
+

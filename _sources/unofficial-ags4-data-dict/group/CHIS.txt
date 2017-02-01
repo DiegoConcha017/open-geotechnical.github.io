@@ -1,0 +1,64 @@
+.. _ags4_CHIS:
+
+CHIS
+===========================================================================
+
+Chiselling Details
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - CHIS_FROM
+      - m
+      - 2DP
+      - 5.2
+      - Depth at start of chiselling
+    * - CHIS_TO
+      - m
+      - 2DP
+      - 5.35
+      - Depth at end of chiselling
+    * - CHIS_TIME
+      - hh:mm
+      - T
+      - 0:30
+      - Time taken
+    * - CHIS_STAR
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 2004-04-01T09:00
+      - Start time
+    * - CHIS_TOOL
+      - 
+      - X
+      - Shell
+      - Chiselling tool used
+    * - CHIS_REM
+      - 
+      - X
+      - Chiselling sandstone boulder
+      - Notes on chiselling
+    * - FILE_FSET
+      - 
+      - X
+      - FS20
+      - Associated file reference (eg drilling journals)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- CHIS is to be used to transfer details of chiselling carried out when using a cable percussion rig to advance a borehole.
+

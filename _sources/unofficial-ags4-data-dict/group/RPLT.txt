@@ -1,0 +1,119 @@
+.. _ags4_RPLT:
+
+RPLT
+===========================================================================
+
+Point Load Testing
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U 
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Brown sandstone
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - RPLT_PLS
+      - MPa
+      - 1DP
+      - 2.3
+      - Uncorrected point load (Is)
+    * - RPLT_PLSI
+      - MPa
+      - 1DP
+      - 2.5
+      - Size corrected point load index (Is 50)
+    * - RPLT_PLTF
+      - 
+      - `:ref:`ags4_RPLT_PLTF`
+      - A+L 
+      - Point load test type
+    * - RPLT_MC
+      - %
+      - 1DP
+      - 2.1
+      - Water content of point load test specimen
+    * - RPLT_REM
+      - 
+      - X
+      - Saturated specimen
+      - Remarks
+    * - RPLT_METH
+      - 
+      - X
+      - ISRM : 2007 : Suggested method for determining point load strength. Int J Rock Mech Min Sci & Geomech Abstr, Vol 22, No 2, pp 51-60
+      - Test method
+    * - RPLT_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - RPLT_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS10
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- A list has been defined for RPLT_PLTF to include the test abbreviations derived from the ISRM Suggested Method (ISRM, 2007). Typically a test will include combined abbreviations to represent the sample type/orientation and the direction of the test with respect to bedding. For example a piece of core tested across the diameter and along the bedding direction will be coded as A. Reference: ISRM : 2007 : The Complete ISRM Suggested Methods for  Rock Characterisation , Testing and Monitoring : 1974-2006.
+

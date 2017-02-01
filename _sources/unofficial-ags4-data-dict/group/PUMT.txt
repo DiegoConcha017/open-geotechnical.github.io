@@ -1,0 +1,60 @@
+.. _ags4_PUMT:
+
+PUMT
+===========================================================================
+
+Pumping Tests - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - PUMG_TEST
+      - 
+      - X
+      - 1991-03-16#1
+      - Test reference
+    * - PUMT_DTIM
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 1991-03-16T13:25
+      - Date and time of reading
+    * - PUMT_DPTH
+      - m
+      - 2DP
+      - 12.5
+      - Depth to water below ground
+    * - PUMT_QUAT
+      - l/s
+      - 1DP
+      - 0.8
+      - Pumping rate from hole
+    * - PUMT_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS29
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- The general information about the pumping test should be recorded in the PUMG group.
+- Records for observation holes and piezometers during the tests can be recorded in MONG and MOND.
+

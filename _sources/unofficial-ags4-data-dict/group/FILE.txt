@@ -1,0 +1,64 @@
+.. _ags4_FILE:
+
+FILE
+===========================================================================
+
+Associated Files
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - FILE_FSET
+      - 
+      - X
+      - FS128
+      - File set reference
+    * - FILE_NAME
+      - 
+      - X
+      - BH1_Core_West.JPG
+      - File name
+    * - FILE_DESC
+      - 
+      - X
+      - BH1 Core  photo box 8
+      - Description of content
+    * - FILE_TYPE
+      - 
+      - `:ref:`ags4_FILE_TYPE`
+      - JPG
+      - File type
+    * - FILE_PROG
+      - 
+      - X
+      - Irfanview v4.10
+      - Parent program and version number
+    * - FILE_DOCT
+      - 
+      - `:ref:`ags4_FILE_DOCT`
+      - PH 
+      - Document type
+    * - FILE_DATE
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 2009-04-01T10:45
+      - File date
+    * - FILE_REM
+      - 
+      - X
+      - 
+      - Comments on file
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- Rule 20 defines how associated files are to be included in AGS submissions.
+

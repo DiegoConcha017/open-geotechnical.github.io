@@ -978,7 +978,7 @@ dl.glossary dd {
 <div class="viewcode-block" id="OGTDocument.load_ags4_file"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.load_ags4_file">[docs]</a>    <span class="k">def</span> <span class="nf">load_ags4_file</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">ags4_file_path</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Loads document from an :term:`ags4` formatted file</span>
 
-<span class="sd">        :param ags4_file_path: absolute or relative path to file</span>
+<span class="sd">        :param ags4_file_path: absolute or relative path to file, will be at source_file_path</span>
 <span class="sd">        :type ags4_file_path: str</span>
 <span class="sd">        :rtype: str</span>
 <span class="sd">        :return: A String if an error else None</span>
@@ -1005,19 +1005,28 @@ dl.glossary dd {
 <div class="viewcode-block" id="OGTDocument.load_ags4_string"><a class="viewcode-back" href="../../ogt/ogt_doc.html#ogt.ogt_doc.OGTDocument.load_ags4_string">[docs]</a>    <span class="k">def</span> <span class="nf">load_ags4_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ags4_str</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Load  document from an :term:`ags4` formatted string</span>
 
+<span class="sd">        Hackers guide</span>
+<span class="sd">        This is a tthree step parsing process.</span>
+<span class="sd">        -</span>
+
+
 <span class="sd">        :param ags4_str: string to load</span>
 <span class="sd">        :type ags4_str: str</span>
 <span class="sd">        :rtype: str</span>
 <span class="sd">        :return: An `Error` message if string not loaded, else `None`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
+
+
+
+        <span class="c1">## Copy source as a string into mem here</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">ags4_str</span>
 
         <span class="c1"># first:</span>
         <span class="c1">#  - split ags_string into lines</span>
         <span class="c1">#  - and parse each line into csv</span>
         <span class="c1">#  - and add to the doc</span>
-        <span class="k">for</span> <span class="n">lidx</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ags4_str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">lidx</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)):</span>
 
             <span class="c1"># removing and trailing whitespace eg \r</span>
             <span class="c1"># were on nix land, so assemble with CRLF when dumping to ags</span>
@@ -1244,7 +1253,7 @@ dl.glossary dd {
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2017  ogt@daffodil.uk.com.
-      Last updated on 2017-01-30.
+      Last updated on 2017-01-31.
     </div>
   </body>
 </html>

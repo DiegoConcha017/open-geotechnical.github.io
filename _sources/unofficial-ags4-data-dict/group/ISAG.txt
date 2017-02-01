@@ -1,0 +1,118 @@
+.. _ags4_ISAG:
+
+ISAG
+===========================================================================
+
+Soakaway Tests - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - ISAG_TESN
+      - 
+      - X
+      - 1
+      - Test reference
+    * - ISAG_DATE
+      - yyyy-mm-dd
+      - DT
+      - 28/02/2010
+      - Test date
+    * - ISAG_DURN
+      - hh:mm
+      - T
+      - 0:35
+      - Test duration
+    * - ISAG_PWID
+      - m
+      - 2DP
+      - 2
+      - Soakaway pit width
+    * - ISAG_PLEN
+      - m
+      - 2DP
+      - 1
+      - Soakaway pit length
+    * - ISAG_PDIA
+      - m
+      - 2DP
+      - 1.5
+      - Soakaway pit diameter
+    * - ISAG_DPTS
+      - m
+      - 2DP
+      - 1.55
+      - Soakaway pit depth at start of test
+    * - ISAG_DPTE
+      - m
+      - 2DP
+      - 1.55
+      - Soakaway pit depth at end of test
+    * - ISAG_CONS
+      - 
+      - X
+      - Vertical sides trimmed square with granular fill and observation tube
+      - Description of soakaway construction
+    * - ISAG_SI
+      - 
+      - 2SCI
+      - 6.80E-06
+      - Soil infiltration rate
+    * - ISAG_PORO
+      - %
+      - 0DP
+      - 10
+      - Fill porosity
+    * - ISAG_REM
+      - 
+      - X
+      - Unable to calculate infiltration rate. No fall in water level during test period.
+      - Remarks
+    * - ISAG_ENV
+      - 
+      - X
+      - Raining
+      - Details of weather and environmental conditions during test
+    * - ISAG_METH
+      - 
+      - X
+      - BRE Digest 365
+      - Test method
+    * - ISAG_CONT
+      - 
+      - X
+      - ACME On-site Testing Ltd
+      - Name of testing organisation
+    * - ISAG_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS11
+      - Associated file reference (eg equipment calibrations)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - None
+-------------------------
+

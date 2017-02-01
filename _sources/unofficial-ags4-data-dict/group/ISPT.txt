@@ -1,0 +1,185 @@
+.. _ags4_ISPT:
+
+ISPT
+===========================================================================
+
+Standard Penetration Test Results
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - ISPT_TOP
+      - m
+      - 2DP
+      - 13.5
+      - Depth to top of test
+    * - ISPT_SEAT
+      - 
+      - 0DP
+      - 14
+      - Number of blows for seating drive
+    * - ISPT_MAIN
+      - 
+      - 0DP
+      - 35
+      - Number of blows for main test drive
+    * - ISPT_NPEN
+      - mm
+      - 0DP
+      - 450
+      - Total penetration for seating drive and test drive
+    * - ISPT_NVAL
+      - 
+      - 0DP
+      - 35
+      - SPT 'N' value
+    * - ISPT_REP
+      - 
+      - X
+      - 6,8/8,9,9,9 N=35
+      - SPT reported result
+    * - ISPT_CAS
+      - m
+      - 2DP
+      - 12
+      - Casing depth at time of test
+    * - ISPT_WAT
+      - m
+      - XN
+      - 2.50 or Dry
+      - Depth to water at time of test
+    * - ISPT_TYPE
+      - 
+      - `:ref:`ags4_ISPT_TYPE`
+      - S 
+      - Type of SPT test
+    * - ISPT_HAM
+      - 
+      - X
+      - AB1234
+      - Hammer serial number from manufacturer
+    * - ISPT_ERAT
+      - %
+      - 0DP
+      - 60
+      - Energy ratio of the hammer
+    * - ISPT_SWP
+      - mm
+      - 0DP
+      - 25
+      - Self-weight penetration
+    * - ISPT_INC1
+      - 
+      - 0DP
+      - 6
+      - Number of blows for 1st Increment (Seating)
+    * - ISPT_INC2
+      - 
+      - 0DP
+      - 8
+      - Number of blows for 2nd Increment (Seating)
+    * - ISPT_INC3
+      - 
+      - 0DP
+      - 8
+      - Number of blows for 1st Increment (Test)
+    * - ISPT_INC4
+      - 
+      - 0DP
+      - 9
+      - Number of blows for 2nd Increment (Test)
+    * - ISPT_INC5
+      - 
+      - 0DP
+      - 9
+      - Number of blows for 3rd Increment (Test)
+    * - ISPT_INC6
+      - 
+      - 0DP
+      - 9
+      - Number of blows for 4th Increment (Test)
+    * - ISPT_PEN1
+      - mm
+      - 0DP
+      - 75
+      - Penetration for 1st Increment (Seating Drive)
+    * - ISPT_PEN2
+      - mm
+      - 0DP
+      - 75
+      - Penetration for 2nd Increment (Seating Drive)
+    * - ISPT_PEN3
+      - mm
+      - 0DP
+      - 75
+      - Penetration for 1st Increment (Test)
+    * - ISPT_PEN4
+      - mm
+      - 0DP
+      - 75
+      - Penetration for 2nd Increment (Test)
+    * - ISPT_PEN5
+      - mm
+      - 0DP
+      - 75
+      - Penetration for 3rd Increment (Test)
+    * - ISPT_PEN6
+      - mm
+      - 0DP
+      - 75
+      - Penetration for 4th Increment (Test)
+    * - ISPT_ROCK
+      - 
+      - YN
+      - N
+      - SPT carried out in soft rock
+    * - ISPT_REM
+      - 
+      - X
+      - Borehole topped up with water prior to test
+      - Remarks
+    * - ISPT_ENV
+      - 
+      - X
+      - Raining
+      - Details of weather and environmental conditions during test
+    * - ISPT_METH
+      - 
+      - X
+      - BS EN ISO 22476-3 : 2005
+      - Test method
+    * - ISPT_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS11
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- If the test was extended to 100 blows (as described in ISO 22476-3), then data variable under ISPT_ROCK should be 'Y'. To avoid ambiguity, in cases where the test was not extended the ISPT_ROCK data should be 'N' (see Section 8.2).
+- Where appropriate or requested, SPT equipment calibration certificates could be referred to in the FILE_FSET field.
+

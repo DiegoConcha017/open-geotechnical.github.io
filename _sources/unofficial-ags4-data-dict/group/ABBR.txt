@@ -1,0 +1,58 @@
+.. _ags4_ABBR:
+
+ABBR
+===========================================================================
+
+Abbreviation Definitions
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - ABBR_HDNG
+      - 
+      - X
+      - LOCA_TYPE
+      - Field heading in group
+    * - ABBR_CODE
+      - 
+      - X
+      - TP
+      - Abbreviation used
+    * - ABBR_DESC
+      - 
+      - X
+      - Trial Pit
+      - Description of abbreviation
+    * - ABBR_LIST
+      - 
+      - X
+      - AGS4
+      - Source of abbreviation
+    * - ABBR_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS1
+      - Associated file reference (eg contract data specification)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 5
+-------------------------
+- ABBR is required in all AGS4 data files and describes all abbreviations used in headings defined by the PA data type (Rule 16).
+- The ABBR and CODE groups in AGS3 have been consolidated into a single listing.
+- The AGS Format website (www.ags.org.uk) lists the standard abbreviations.
+- Additional abbreviations, used in any heading in the file, must be defined in this group.
+- ABBR_LIST details the list from which the ABBR_CODE originates. For standard AGS headings this value would be ?AGS4? to refer to the AGS website.
+

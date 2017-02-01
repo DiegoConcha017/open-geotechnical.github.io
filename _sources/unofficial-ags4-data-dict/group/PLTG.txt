@@ -1,0 +1,146 @@
+.. _ags4_PLTG:
+
+PLTG
+===========================================================================
+
+Plate Loading Tests - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - PLTG_DPTH
+      - m
+      - 2DP
+      - 1.23
+      - Test depth
+    * - PLTG_TESN
+      - 
+      - X
+      - 1
+      - Test reference
+    * - PLTG_CYC
+      - 
+      - X
+      - 1
+      - Load cycle
+    * - PLTG_PDIA
+      - mm
+      - 0DP
+      - 600
+      - Plate diameter
+    * - PLTG_SEAT
+      - kN
+      - 1DP
+      - 10
+      - Seating load including apparatus mass
+    * - PLTG_FA0
+      - 
+      - 2DP
+      - 0
+      - Factor a0
+    * - PLTG_FA1
+      - 
+      - 2DP
+      - 12.65
+      - Factor a1
+    * - PLTG_FA2
+      - 
+      - 2DP
+      - -7.58
+      - Factor a2
+    * - PLTG_SMOD
+      - MPa
+      - 1DP
+      - 15.8
+      - Strain modulus
+    * - PLTG_EV2
+      - MPa
+      - 1DP
+      - 83
+      - Elastic modulus for second loading cycle
+    * - PLTG_MOSR
+      - MPa/m
+      - 1DP
+      - 60.8
+      - Modulus of subgrade reaction
+    * - PLTG_EMOD
+      - MPa
+      - 1DP
+      - 21.7
+      - Elastic modulus
+    * - PLTG_DATE
+      - yyyy-mm-dd
+      - DT
+      - 23/07/2008
+      - Test date
+    * - PLTG_STAB
+      - %
+      - 2SF
+      - 23
+      - Amount of stabiliser added
+    * - PLTG_STYP
+      - 
+      - X
+      - Cement
+      - Type of stabiliser added
+    * - PLTG_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - PLTG_ENV
+      - 
+      - X
+      - Dry and warm
+      - Details of weather and environmental conditions during test
+    * - PLTG_METH
+      - 
+      - X
+      - DIN18134 Strain Modulus
+      - Test method
+    * - PLTG_CONT
+      - 
+      - X
+      - ACME On-site Testing Ltd
+      - Name of testing organisation
+    * - PLTG_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - GEOL_STAT
+      - 
+      - X
+      - 1
+      - Stratum reference shown on trial pit or traverse sketch
+    * - FILE_FSET
+      - 
+      - X
+      - FS11
+      - Associated file reference (eg equipment calibrations)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 3
+-------------------------
+- PLTG is to be used to transfer plate load tests. One data row in this group represents a test and loading cycle.
+- The Factors a0, a1 and a2 are determined in testing carried out to the DIN standard and would not be appropriate for testing to other standards.
+- PLTG_EV2 is normally only completed when PLTG_CYC = 2.
+

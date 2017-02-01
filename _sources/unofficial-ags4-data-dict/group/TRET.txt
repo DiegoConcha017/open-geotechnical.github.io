@@ -1,0 +1,160 @@
+.. _ags4_TRET:
+
+TRET
+===========================================================================
+
+Triaxial Tests - Effective Stress - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - TRET_TESN
+      - 
+      - X
+      - 1
+      - Triaxial test/stage number
+    * - TRET_SDIA
+      - mm
+      - 2DP
+      - 38.25
+      - Specimen diameter
+    * - TRET_LEN
+      - mm
+      - 2DP
+      - 76.5
+      - Specimen length
+    * - TRET_IMC
+      - %
+      - MC
+      - 15
+      - Specimen initial moisture content
+    * - TRET_FMC
+      - %
+      - MC
+      - 15
+      - Specimen final moisture content
+    * - TRET_BDEN
+      - Mg/m3
+      - 2DP
+      - 2.12
+      - Initial bulk density
+    * - TRET_DDEN
+      - Mg/m3
+      - 2DP
+      - 1.84
+      - Initial dry density
+    * - TRET_SAT
+      - 
+      - X
+      - Back pressure, cell pressure, none
+      - Method of saturation
+    * - TRET_CONS
+      - 
+      - X
+      - Drainage to both ends with radial boundary
+      - Details of consolidation stage
+    * - TRET_CONP
+      - kPa
+      - 0DP
+      - 100
+      - Effective stress at end of consolidation/ start of shear stage
+    * - TRET_CELL
+      - kPa
+      - 0DP
+      - 400
+      - Total cell pressure during shearing stage
+    * - TRET_PWPI
+      - kPa
+      - 0DP
+      - 50
+      - Porewater pressure at start of shear stage
+    * - TRET_STRR
+      - %/hr
+      - 1DP
+      - 1.5
+      - Rate of axial strain during shear
+    * - TRET_STRN
+      - %
+      - 1DP
+      - 9
+      - Axial strain at failure
+    * - TRET_DEVF
+      - kPa
+      - 0DP
+      - 360
+      - Deviator stress at failure
+    * - TRET_PWPF
+      - kPa
+      - 0DP
+      - 60
+      - Porewater pressure at failure
+    * - TRET_STV
+      - %
+      - 2DP
+      - 2.56
+      - Volumetric strain at failure (drained only)
+    * - TRET_MODE
+      - 
+      - X
+      - Brittle
+      - Mode of failure
+    * - TRET_REM
+      - 
+      - X
+      - 
+      - Comments
+    * - FILE_FSET
+      - 
+      - X
+      - FS7
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- The information in this group is only used in conjunction with the detailed laboratory reports.
+- TRET_STV - consolidation (flow of water out of specimen) to be reported as positive and dilatancy or swelling (flow of water into specimen) to be reported as negative.
+

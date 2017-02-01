@@ -1,0 +1,75 @@
+.. _ags4_FRAC:
+
+FRAC
+===========================================================================
+
+Fracture Spacing
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - FRAC_FROM
+      - m
+      - 2DP
+      - 31.2
+      - Depth to top in hole, or distance to start on traverse, of the zone
+    * - FRAC_TO
+      - m
+      - 2DP
+      - 33.65
+      - Depth to base in hole, or distance to end on traverse, of the zone
+    * - FRAC_SET
+      - 
+      - X
+      - J3
+      - Discontinuity set reference
+    * - FRAC_IMAX
+      - mm
+      - 0DP
+      - 350
+      - Maximum fracture spacing over zone
+    * - FRAC_IAVE
+      - mm
+      - 0DP
+      - 220
+      - Average fracture (modal) spacing over zone
+    * - FRAC_IMIN
+      - mm
+      - XN
+      - NI
+      - Minimum fracture spacing over zone
+    * - FRAC_FI
+      - 
+      - 0DP
+      - 15
+      - Fracture Index / frequency over zone (fractures per metre)
+    * - FRAC_REM
+      - 
+      - X
+      - 2
+      - Comments on fracture set
+    * - FILE_FSET
+      - 
+      - X
+      - FS4
+      - Associated file reference (eg logging field sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- FRAC is used to include fracture set details derived from rock core. Fracture information collected from scanline surveys of rock exposures or similar should be recorded in the DISC group.
+- It is not typical to define fracture set spacing?s as both min/avg/max fracture spacing and Fracture Index. The requirement for one or other should be specified.
+

@@ -1,0 +1,221 @@
+.. _ags4_LOCA:
+
+LOCA
+===========================================================================
+
+Location Details
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - LOCA_TYPE
+      - 
+      - `:ref:`ags4_LOCA_TYPE`
+      - CP+RC
+      - Type of activity
+    * - LOCA_STAT
+      - 
+      - `:ref:`ags4_LOCA_STAT`
+      - PRELIM
+      - Status of information relating to this position
+    * - LOCA_NATE
+      - m
+      - 2DP
+      - 523145
+      - National Grid Easting of location or start of traverse
+    * - LOCA_NATN
+      - m
+      - 2DP
+      - 178456.12
+      - National Grid Northing of location or start of traverse
+    * - LOCA_GREF
+      - 
+      - `:ref:`ags4_LOCA_GREF`
+      - OSGB 
+      - National grid referencing system used
+    * - LOCA_GL
+      - m
+      - 2DP
+      - 16.23
+      - Ground level relative to datum of location or start of traverse
+    * - LOCA_REM
+      - 
+      - X
+      - 
+      - General remarks
+    * - LOCA_FDEP
+      - m
+      - 2DP
+      - 32.6
+      - Final depth
+    * - LOCA_STAR
+      - yyyy-mm-dd
+      - DT
+      - 18/03/1991
+      - Date of start of activity
+    * - LOCA_PURP
+      - 
+      - X
+      - Groundwater observation well
+      - Purpose of activity at this location
+    * - LOCA_TERM
+      - 
+      - X
+      - Abandoned on engineer's instruction
+      - Reason for activity termination
+    * - LOCA_ENDD
+      - yyyy-mm-dd
+      - DT
+      - 22/03/1991
+      - End date of activity
+    * - LOCA_LETT
+      - 
+      - X
+      - TQ231784
+      - OSGB letter grid reference
+    * - LOCA_LOCX
+      - m
+      - 2DP
+      - 565.23
+      - Local grid x co-ordinate or start of traverse
+    * - LOCA_LOCY
+      - m
+      - 2DP
+      - 421.12
+      - Local grid y co-ordinate or start of traverse
+    * - LOCA_LOCZ
+      - m
+      - 2DP
+      - 106.63
+      - Level or start of traverse to local datum
+    * - LOCA_LREF
+      - 
+      - X
+      - London grid 1
+      - Local grid referencing system used
+    * - LOCA_DATM
+      - 
+      - X
+      - Anytown datum
+      - Local datum referencing system used
+    * - LOCA_ETRV
+      - m
+      - 2DP
+      - 523195.12
+      - National Grid Easting of end of traverse
+    * - LOCA_NTRV
+      - m
+      - 2DP
+      - 178486.12
+      - National Grid Northing of end of traverse
+    * - LOCA_LTRV
+      - m
+      - 2DP
+      - 9.67
+      - Ground level relative to datum of end of traverse
+    * - LOCA_XTRL
+      - m
+      - 2DP
+      - 523195.12
+      - Local grid easting of end of traverse
+    * - LOCA_YTRL
+      - m
+      - 2DP
+      - 178486.12
+      - Local grid northing of end of traverse
+    * - LOCA_ZTRL
+      - m
+      - 2DP
+      - 9.67
+      - Local elevation of end of traverse
+    * - LOCA_LAT
+      - 
+      - DMS
+      - 28:52.
+      - Latitude of location or start of traverse
+    * - LOCA_LON
+      - 
+      - DMS
+      - 10:34.
+      - Longitude of location or start of traverse
+    * - LOCA_ELAT
+      - 
+      - DMS
+      - 28:53.
+      - Latitude of end of traverse
+    * - LOCA_ELON
+      - 
+      - DMS
+      - 10:34.
+      - Longitude of end of traverse
+    * - LOCA_LLZ
+      - 
+      - X
+      - WSG84
+      - Projection Format
+    * - LOCA_LOCM
+      - 
+      - X
+      - dGPS
+      - Method of location
+    * - LOCA_LOCA
+      - 
+      - X
+      - Sub-station 1
+      - Site location sub division (within project) code or description 
+    * - LOCA_CLST
+      - 
+      - X
+      - Phase 2a
+      - Investigation phase grouping code or description
+    * - LOCA_ALID
+      - 
+      - X
+      - Tunnel Alignment P
+      - Alignment Identifier
+    * - LOCA_OFFS
+      - 
+      - 2DP
+      - 10.35
+      - Offset
+    * - LOCA_CNGE
+      - 
+      - X
+      - 500+123.23
+      - Chainage
+    * - LOCA_TRAN
+      - 
+      - X
+      - Coordinate transforms document ref 100-23-A, dated 16 April 2010
+      - Reference to or details of algorithm used to calculate local grid reference, local ground levels or chainage
+    * - FILE_FSET
+      - 
+      - X
+      - FS2
+      - Associated file reference (eg boring or pitting instructions, location photographs)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 8
+-------------------------
+- LOCA is used to transfer the spatial location of all positions where data has been recorded. This includes the location of exploratory holes, sampling points or other locations where an observation / test has been made, or a sample / measurement taken.
+- The LOCA_TYPE code is used to categorise the type of activity that has occurred at the location.
+- The details of exploratory hole construction are contained in the HDPH group. If LOCA_TYPE codes are used that represent the type of exploratory hole construction then they must be correlated with the code or combinations of codes in HDPH_TYPE. Alternatively the code 'EH' could be used to represent an Exploratory Hole the details of which are contained in HDPH.
+- If the AGS data file includes information on construction items, then LOCA would also include references to these locations.
+- LOCA_ID must be unique for the project and should be unique for the site to allow for consolidation of data. Consideration of this needs to be made at the outset of the project. Typically the consulting engineer or designer allows for this in specifying hole or location identifiers.
+- LOCA_FDEP will generally be null for location points other than exploratory holes, pits, piles or other below ground constructed elements.
+- Two headings, LOCA_LOCA and LOCA_CLST, provide a heading for tags of hole groupings. These groupings would typically be specified by the Investigation Supervisor/Designer rather than the GI Contractor. LOCA_LOCA is to be used to define the grouping of a hole by site location, whereas LOCA_CLST is typically used to indicate investigation phase. If codes are used to define these location or phase data, then the codes must be defined in the ABBR group.
+- LOCA_OFFS, LOCA_CNGE and LOCA_ALID allow location data to be presented by chainage and offset to an alignment as typically used for location on road and rail projects. The data included in these headings will probably be expressed in project related units. For example, offset can be defined as positive or negative (eg  or -12). Chainage on UK railway projects may well be expressed in miles and chains (eg 10 mi 1 ch)
+

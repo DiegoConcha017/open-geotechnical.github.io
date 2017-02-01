@@ -1,0 +1,60 @@
+.. _ags4_TREM:
+
+TREM
+===========================================================================
+
+Location Specific Time Related Remarks
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - TREM_DTIM
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 2001-05-16T12:00
+      - Date and time of remark or start of event
+    * - TREM_COMP
+      - 
+      - X
+      - Slab G12
+      - Component or sub-activity
+    * - TREM_REM
+      - 
+      - X
+      - Completion of concrete pour
+      - Time related remark
+    * - TREM_DURN
+      - hh:mm:ss
+      - T
+      - 1:25:00
+      - Duration of event or activity
+    * - TREM_ETIM
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 2001-05-16T12:30
+      - Date and time of end of event
+    * - FILE_FSET
+      - 
+      - X
+      - FS28
+      - Associated file reference (eg site journal records)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- TREM_COMP allows comments to be related to specific activities or components of work occurring at the location given by LOCA_ID. This heading can be used to tag similar construction activities occurring at multiple locations or identify specific construction elements.
+- TREM_DURN allows the length of time associated with a particular event to be included if this is appropriate.
+

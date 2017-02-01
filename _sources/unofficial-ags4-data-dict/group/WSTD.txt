@@ -1,0 +1,54 @@
+.. _ags4_WSTD:
+
+WSTD
+===========================================================================
+
+Water Strike - Details
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - WSTG_DPTH
+      - m
+      - 2DP
+      - 17.2
+      - Depth to water strike
+    * - WSTD_NMIN
+      - min
+      - 0DP
+      - 20
+      - Minutes after strike
+    * - WSTD_POST
+      - m
+      - 2DP
+      - 10.23
+      - Depth to water after WSTD_NMIN minutes
+    * - WSTD_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS28
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- See notes provided with WSTG.
+

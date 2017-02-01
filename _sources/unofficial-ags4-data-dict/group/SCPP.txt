@@ -1,0 +1,93 @@
+.. _ags4_SCPP:
+
+SCPP
+===========================================================================
+
+Static Cone Penetration Tests - Derived Parameters
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SCPG_TESN
+      - 
+      - X
+      - 3
+      - Test reference or push number
+    * - SCPP_TOP
+      - m
+      - 2DP
+      - 5.2
+      - Depth to top of layer
+    * - SCPP_BASE
+      - m
+      - 2DP
+      - 5.3
+      - Depth to base of layer
+    * - SCPP_REF
+      - 
+      - X
+      - ACME CPT Testing Ltd
+      - Interpretation reference
+    * - SCPP_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - SCPP_CSBT
+      - 
+      - X
+      - 3 - Clays
+      - Interpreted Soil Type
+    * - SCPP_CSU
+      - kPa
+      - 1DP
+      - 
+      - Undrained Shear Strength (Su); fine soils only
+    * - SCPP_CRD
+      - %
+      - 1DP
+      - 90.1
+      - Relative density (Dr); coarse soils only
+    * - SCPP_CPHI
+      - deg
+      - 1DP
+      - 42.7
+      - Internal Friction Angle; coarse soils only
+    * - SCPP_CIC
+      - 
+      - 1DP
+      - 1.5
+      - Soil Behaviour Type Index (Ic)
+    * - SCPP_CSPT
+      - 
+      - 0DP
+      - 32
+      - Equivalent SPT N60 value
+    * - FILE_FSET
+      - 
+      - X
+      - FS18
+      - Associated file reference
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 5
+-------------------------
+- The SCPP group is to be used to transfer derived soil parameters determined from CPT test data. The requirement for this information as part of ground investigation reporting must be full specified at the outset of the investigation. The specification may need to detail the interpretative method(s) to be used.
+- The interpretation is given a reference in SCPP_REF that defines who and possibly how the interpretation has been carried out.
+- Details of the standards and methods used to carry out calculations need to be included in SCPG_REM. SCPG_REM may in turn refer to the STND group where full information on standards and references may be provided.
+- Where soil type interpretation leading to borehole style stratum descriptions is carried out the information should be entered in GEOL.
+- The coefficient of consolidation is calculated from dissipation testing data which is included in SCDG and SCDT.
+

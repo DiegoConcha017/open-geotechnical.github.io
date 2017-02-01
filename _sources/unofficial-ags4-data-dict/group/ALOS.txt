@@ -1,0 +1,124 @@
+.. _ags4_ALOS:
+
+ALOS
+===========================================================================
+
+Los Angeles Abrasion Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey angular limestone
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - ALOS_LOSA
+      - 
+      - 0DP
+      - 15
+      - Los Angeles coefficient
+    * - ALOS_LOPW
+      - %
+      - 0DP
+      - 10
+      - Los Angeles percentage wear
+    * - ALOS_LOWR
+      - 
+      - 0DP
+      - 8
+      - Los Angeles wear ratio
+    * - ALOS_FRAC
+      - 
+      - X
+      - 10-14mm with between 60% and 70% passing a 12.5mm test sieve.
+      - Size fraction from which test portion was obtained
+    * - ALOS_CHAR
+      - 
+      - X
+      - 11 steel balls 45-49mm, total load 4800g
+      - Ball load or charge grading
+    * - ALOS_REM
+      - 
+      - X
+      -  
+      - Remarks
+    * - ALOS_METH
+      - 
+      - X
+      - BS EN 1097-2: 1998
+      - Test method
+    * - ALOS_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - ALOS_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS10
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- Headings are included for both BS1377 and ISRM test specifications.
+

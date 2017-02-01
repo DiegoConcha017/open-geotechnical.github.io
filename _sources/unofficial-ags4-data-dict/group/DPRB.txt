@@ -1,0 +1,73 @@
+.. _ags4_DPRB:
+
+DPRB
+===========================================================================
+
+Dynamic Probe Tests - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - DPRG_TESN
+      - 
+      - X
+      - 1
+      - Test reference
+    * - DPRB_DPTH
+      - m
+      - 2DP
+      - 2.5
+      - Depth to start of dynamic probe increment
+    * - DPRB_BLOW
+      - 
+      - 0DP
+      - 7
+      - Dynamic probe blows for increment DPRB_INC
+    * - DPRB_CBLW
+      - 
+      - 0DP
+      - 35
+      - Cumulative blows for test
+    * - DPRB_TORQ
+      - Nm
+      - 0DP
+      - 75
+      - Maximum torque required to rotate rods
+    * - DPRB_DEL
+      - hh:mm
+      - T
+      - 0:00
+      - Delay before increment started
+    * - DPRB_INC
+      - mm
+      - 0DP
+      - 100
+      - Dynamic probe increment 
+    * - DPRB_REM
+      - 
+      - X
+      - 
+      - Notes on events during increment
+    * - FILE_FSET
+      - 
+      - X
+      - FS25
+      - Associated file reference
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - None
+-------------------------
+

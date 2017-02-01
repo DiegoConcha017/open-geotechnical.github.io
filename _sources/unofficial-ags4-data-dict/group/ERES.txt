@@ -1,0 +1,282 @@
+.. _ags4_ERES:
+
+ERES
+===========================================================================
+
+Environmental Contaminant Testing
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location Identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - ES
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - CL/477627
+      - Laboratory specimen reference or Laboratory ID
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - ERES_CODE
+      - 
+      - `:ref:`ags4_ERES_CODE`
+      - 7440-42-8
+      - Chemical code
+    * - ERES_METH
+      - 
+      - X
+      - In house method no 231241
+      - Test method
+    * - ERES_MATX
+      - 
+      - `:ref:`ags4_ERES_MATX`
+      - LIQUID 
+      - Laboratory test matrix
+    * - ERES_RTYP
+      - 
+      - `:ref:`ags4_ERES_RTYP`
+      - INITIAL 
+      - Run type (Initial or Reanalysis)
+    * - ERES_TESN
+      - 
+      - X
+      - 2
+      - Test reference
+    * - ERES_NAME
+      - 
+      - X
+      - Boron
+      - Chemical name
+    * - ERES_TNAM
+      - 
+      - X
+      - MQ45
+      - Laboratory analytical test name
+    * - ERES_RVAL
+      - 
+      - U
+      - 0.25
+      - Result value
+    * - ERES_RUNI
+      - 
+      - PU
+      - mg/l 
+      - Result unit
+    * - ERES_RTXT
+      - 
+      - X
+      - <2.3
+      - Reported result
+    * - ERES_RTCD
+      - 
+      - `:ref:`ags4_ERES_RTCD`
+      - TRG 
+      - Result type
+    * - ERES_RRES
+      - 
+      - YN
+      - Y
+      - Reportable result
+    * - ERES_DETF
+      - 
+      - YN
+      - Y
+      - Detect flag
+    * - ERES_ORG
+      - 
+      - YN
+      - N
+      - Organic
+    * - ERES_IQLF
+      - 
+      - X
+      - <
+      - Interpreted qualifiers
+    * - ERES_LQLF
+      - 
+      - X
+      - <
+      - Laboratory qualifiers
+    * - ERES_RDLM
+      - 
+      - U
+      - 10
+      - Reporting detection limit
+    * - ERES_MDLM
+      - 
+      - U
+      - 1
+      - Method detection limit
+    * - ERES_QLM
+      - 
+      - U
+      - 10
+      - Quantification limit
+    * - ERES_DUNI
+      - 
+      - PU
+      - mg/l
+      - Unit of detection / quantification  limits
+    * - ERES_TICP
+      - %
+      - 0DP
+      - 93
+      - Tentatively Identified Compound (TIC) probability
+    * - ERES_TICT
+      - s
+      - 0DP
+      - 203
+      - Tentatively Identified Compound (TIC) retention time
+    * - ERES_RDAT
+      - yyyy-mm-dd
+      - DT
+      - 15/11/2006
+      - Sample receipt date at laboratory
+    * - ERES_SGRP
+      - 
+      - X
+      - ERS151106
+      - Sample delivery or batch code
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - ERES_DTIM
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 2006-11-17T12:10
+      - Analysis date and time date
+    * - ERES_TEST
+      - 
+      - X
+      - VOC
+      - Test Name as defined in LBST_TEST during electronic scheduling
+    * - ERES_TORD
+      - 
+      - X
+      - Total
+      - Total or dissolved
+    * - ERES_LOCN
+      - 
+      - `:ref:`ags4_ERES_LOCN`
+      - LAB 
+      - Analysis location
+    * - ERES_BAS
+      - 
+      - `:ref:`ags4_ERES_BAS`
+      - WET 
+      - Basis
+    * - ERES_DIL
+      - 
+      - 0DP
+      - 10
+      - Dilution factor
+    * - ERES_LMTH
+      - 
+      - X
+      - 10:1 Leachate method
+      - Leachate preparation method
+    * - ERES_LDTM
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 2006-11-16T10:00
+      - Leachate preparation date and time
+    * - ERES_IREF
+      - 
+      - X
+      - GCMS19
+      - Instrument Reference No or Identifier
+    * - ERES_SIZE
+      - mm
+      - 0DP
+      - 2
+      - Size of material removed prior to test; value given indicates lowest sized material removed
+    * - ERES_PERP
+      - %
+      - 1DP
+      - 10.1
+      - Percentage of material removed
+    * - ERES_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - ERES_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/Organisation
+    * - ERES_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS13
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 14
+-------------------------
+- ERES provides for the transfer of geoenvironmental chemical testing data. Linked to the SAMP group this results group is suitable for both results of geoenvironmental testing carried out in the field or in a chemical test laboratory.
+- Geotechnical chemical testing, relating to ground aggressivity, is to be transferred using the GCHM group.
+- The headings listed in ERES represent a range of attributes to describe chemical test results to cater for both simple and extended reporting requirements. It is important to note that there is no requirement to complete all headings in data files for every analysis carried out. Only the key headings and the headings that are relevant to the testing and test result specification need be completed or used. Where additional QC data is required then further user defined headings may be necessary to transfer additional information. It is imperative that data providers and data receivers agree the specification for ERES data at the outset of a project.
+- SPEC_REF should include the laboratory test specimen reference, or Laboratory ID; the unique reference the laboratory assigns to the test specimen (in AGS 3 this data was typically included in CNMT_LBID).
+- ERES_CODEs must be freely available in the public domain. All ERES_CODEs included in the file are to be listed in the ABBR group. New ERES_CODE values should be registered on the AGS website before use.
+- The ERES_CODE together with a matrix (ERES_MATX) should provide full definition of the chemical and phase of the material that has been tested. Note that ERES_CODE and ERES_MATX are REQUIRED fields.
+- ERES_RUNI is a REQUIRED field (Rule 10b) which enforces the inclusion of units in the data file for test results. Where a test result has no unit, the ERES_RUNI data shall be set to "-" to clarify this.
+- Units included in ERES_RUNI must be fully defined in the UNIT group (Rule 15). It is possible that units require conversion when the data is received and amalgamated into project databases to ensure that data are consistent across monitoring tranches and appropriate for the assessment.
+- It is suggested that in some cases it might be appropriate to make the ERES_IREF data a set of codes referring to full instrument details in the ABBR group. In this case the heading type would be changed to 'PA'.
+- The headings ERES_TICP and ERES_TICT allow for inclusion of tentatively identified compounds. Note that ERES_RTCD would be flagged as 'Tentative' if this were the case for a record.
+- The accreditation status and reference number are included under the ERES_CRED heading where appropriate.  Where a test has more than one accreditation status these should be concatenated into the ERES_CRED field using the  character by default or character specified in TRAN_RCON.
+- ERES_SIZE and ERES_PERP are additions to cover the reporting requirements for geotechnical testing (eg BS1377) for which the result only relates to the size of material tested.
+- ERES_RVAL should be left blank and detection limits defined if the test was below the detection limits.
+- ERES_TEST should be completed with the test name (LBST_TEST) if the test was scheduled using LBST group. This provides traceability between schedule and results where this is important.
+

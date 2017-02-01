@@ -1,0 +1,63 @@
+.. _ags4_BKFL:
+
+BKFL
+===========================================================================
+
+Exploratory Hole Backfill Details
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - BKFL_TOP
+      - m
+      - 2DP
+      - 1.4
+      - Depth to top of section
+    * - BKFL_BASE
+      - m
+      - 2DP
+      - 11.4
+      - Depth to base of section
+    * - BKFL_DESC
+      - 
+      - X
+      - Arisings
+      - Backfill description
+    * - BKFL_LEG
+      - 
+      - `:ref:`ags4_BKFL_LEG`
+      - 901
+      - Backfill legend abbreviation
+    * - BKFL_DATE
+      - yyyy-mm-dd
+      - DT
+      - 01/04/2004
+      - Date of completion of backfill
+    * - BKFL_REM
+      - 
+      - X
+      - 
+      - Backfill remarks including how it was placed
+    * - FILE_FSET
+      - 
+      - X
+      - FS20
+      - Associated file reference (eg drilling journals)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - None
+-------------------------
+

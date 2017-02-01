@@ -1,0 +1,131 @@
+.. _ags4_MONG:
+
+MONG
+===========================================================================
+
+Monitoring Installations and Instruments
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - MONG_ID
+      - 
+      - X
+      - P1
+      - Monitoring point reference
+    * - MONG_DIS
+      - m
+      - 2DP
+      - 2.3
+      - Initial distance of monitoring point from LOCA_ID
+    * - PIPE_REF
+      - 
+      - X
+      - Pipe1
+      - Pipe reference
+    * - MONG_DATE
+      - yyyy-mm-dd
+      - DT
+      - 01/01/2003
+      - Installation date
+    * - MONG_TYPE
+      - 
+      - `:ref:`ags4_MONG_TYPE`
+      - TS 
+      - Instrument type
+    * - MONG_DETL
+      - 
+      - X
+      - Total Station
+      - Details of instrument
+    * - MONG_TRZ
+      - m
+      - 2DP
+      - 5.5
+      - Distance to start of response zone from LOCA_ID datum
+    * - MONG_BRZ
+      - m
+      - 2DP
+      - 7.5
+      - Distance to end of response zone from LOCA_ID datum
+    * - MONG_BRGA
+      - deg
+      - 0DP
+      - 90
+      - Bearing of monitoring axis A (compass bearing)
+    * - MONG_BRGB
+      - deg
+      - 0DP
+      - 180
+      - Bearing of monitoring axis B (compass bearing)
+    * - MONG_BRGC
+      - deg
+      - 0DP
+      - 270
+      - Bearing of monitoring axis C (compass bearing)
+    * - MONG_INCA
+      - deg
+      - 0DP
+      - 
+      - Inclination of instrument axis A (measured positively down from horizontal)
+    * - MONG_INCB
+      - deg
+      - 0DP
+      - 
+      - Inclination of instrument axis B (measured positively down from horizontal)
+    * - MONG_INCC
+      - deg
+      - 0DP
+      - 
+      - Inclination of instrument axis C (measured positively down from horizontal)
+    * - MONG_RSCA
+      - 
+      - X
+      - Displacement to East +ve
+      - Reading sign convention in direction A
+    * - MONG_RSCB
+      - 
+      - X
+      - Displacement to South +ve
+      - Reading sign convention in direction B
+    * - MONG_RSCC
+      - 
+      - X
+      - Displacement up +ve
+      - Reading sign convention in direction C
+    * - MONG_REM
+      - 
+      - X
+      - Behind wall
+      - Remarks
+    * - MONG_CONT
+      - 
+      - X
+      - ACME Instruments Ltd
+      - Contractor who installed monitoring instrument
+    * - FILE_FSET
+      - 
+      - X
+      - FS27
+      - Associated file reference (eg equipment calibrations)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 3
+-------------------------
+- Each monitoring point should have a unique identification detailed in MONG_ID. Typically this reflects the actual reference or marking on the instrument.
+- MONG_DETL should be used to describe the instrument/sensor location or parameter in specific terms.
+- MONG_CONT used to include details of which organisation installed the monitoring device.
+

@@ -1,0 +1,148 @@
+.. _ags4_DOBS:
+
+DOBS
+===========================================================================
+
+Drilling/Advancement Observations & Parameters
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - DOBS_TOP
+      - m
+      - 2DP
+      - 6.2
+      - Depth to top of reported section
+    * - DOBS_BASE
+      - m
+      - 2DP
+      - 7.2
+      - Depth to base of reported section
+    * - DOBS_SET
+      - 
+      - X
+      - A
+      - Readings set reference
+    * - DOBS_DURN
+      - hh:mm:ss
+      - T
+      - 0:05:00
+      - Duration to advance reported section
+    * - DOBS_STIM
+      - yyyy-mm-ddThh:mm:ss
+      - DT
+      - 2010-12-02T14:05:15
+      - Date and time of start of reported section
+    * - DOBS_ETIM
+      - yyyy-mm-ddThh:mm:ss
+      - DT
+      - 2010-12-02T14:10:15
+      - Date and time at end of reported section
+    * - DOBS_DHRT
+      - Nm
+      - 1DP
+      - 250.5
+      - Drill head rotational torque
+    * - DOBS_DHRS
+      - rpm
+      - 0DP
+      - 76
+      - Drill head rotational speed
+    * - DOBS_PENR
+      - m/hr
+      - 1DP
+      - 2
+      - Penetration rate
+    * - DOBS_HAMM
+      - 
+      - YN
+      - N
+      - Hammering used during section
+    * - DOBS_THRP
+      - bar
+      - 1DP
+      - 30
+      - Pressure of downthrust system
+    * - DOBS_RESP
+      - bar
+      - 1DP
+      - 25
+      - Pressure of restraining (holdback) system
+    * - DOBS_TORP
+      - bar
+      - 1DP
+      - 20
+      - Torque pressure
+    * - DOBS_TORQ
+      - Nm
+      - 1DP
+      - 250
+      - Torque applied to top of drill rods
+    * - DOBS_THST
+      - kN
+      - 1DP
+      - 5
+      - Downward thrust on bit
+    * - DOBS_REST
+      - kN
+      - 1DP
+      - 5
+      - Restraining (holdback) force
+    * - DOBS_HAMP
+      - bar
+      - 1DP
+      - 80
+      - Supply pressure to downhole hammer
+    * - DOBS_SPEN
+      - MJ/m3
+      - 1DP
+      - 500
+      - Specific energy
+    * - DOBS_FMPO
+      - kPa
+      - 1DP
+      - 15.3
+      - Flushing medium pressure at the output of the pump over flush zone
+    * - DOBS_FMCR
+      - l/min
+      - 1DP
+      - 1.2
+      - Flushing medium circulation rate (input) over flush zone
+    * - DOBS_FMRR
+      - l/min
+      - 1DP
+      - 1.1
+      - Flushing medium recovery rate over flush zone
+    * - DOBS_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS36
+      - Associated file reference (eg drilling journals or log files)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 5
+-------------------------
+- DOBS is to be used to record information on hole advancement and drilling parameters, for example open hole rotary drilling information.
+- DOBS records are data relating to the drilling parameters over a depth range. Where instrumentation on drilling rigs provides point readings of these parameters, this data should either be collated to summarise parameters over appropriate depth ranges, or reported with the start and end of each depth range to represent a point reading.
+- DOBS_SET allows for multiple readings to be included in the group in circumstances for example where a hole depth section is re-drilled.
+- FLSH should be used to record other flushing related information.
+- It is suggested that DOBS can be used to transfer information recorded from instrumented drilling rigs. Additional fields maybe required to fully transfer the information.
+

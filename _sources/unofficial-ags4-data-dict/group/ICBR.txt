@@ -1,0 +1,117 @@
+.. _ags4_ICBR:
+
+ICBR
+===========================================================================
+
+In Situ California Bearing Ratio Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - ICBR_DPTH
+      - m
+      - 2DP
+      - 0.5
+      - Depth to top of CBR test
+    * - ICBR_TESN
+      - 
+      - X
+      - 2
+      - Test reference
+    * - ICBR_ICBR
+      - %
+      - 2SF
+      - 1.2
+      - CBR value
+    * - ICBR_MC
+      - %
+      - MC
+      - 25
+      - Moisture content relating to test
+    * - ICBR_DATE
+      - yyyy-mm-dd
+      - DT
+      - 20/03/2003
+      - Test date
+    * - ICBR_KENT
+      - 
+      - X
+      - 2t Landrover
+      - Details of kentledge (reaction load)
+    * - ICBR_SEAT
+      - N
+      - 0DP
+      - 10
+      - Seating force
+    * - ICBR_SURC
+      - kPa
+      - 0DP
+      - 15
+      - Surcharge pressure
+    * - ICBR_TYPE
+      - 
+      - `:ref:`ags4_ICBR_TYPE`
+      - Mexecone 
+      - Type of CBR
+    * - ICBR_REM
+      - 
+      - X
+      - Material >20mm below plunger, test terminated early, water ingress
+      - Remarks
+    * - ICBR_ENV
+      - 
+      - X
+      - Sunny and frosty
+      - Details of weather and environmental conditions during test
+    * - ICBR_METH
+      - 
+      - X
+      - Manufacturer's instructions
+      - Test method
+    * - ICBR_CONT
+      - 
+      - X
+      - ACME On-site Testing Ltd
+      - Name of testing organisation
+    * - ICBR_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - GEOL_STAT
+      - 
+      - X
+      - 1
+      - Stratum reference shown on trial pit or traverse sketch
+    * - FILE_FSET
+      - 
+      - X
+      - FS25
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 4
+-------------------------
+- ICBR_TYPE allows a description or abbreviation to be included to categorise the equipment and method of measurement.
+- ICBR_SEAT allows the plunger seating force to be included in the data as required.
+- ICBR_SURC allows the surcharge pressure to be recorded and the description for the ICBR_REM heading has been modified.
+- ICBR_CONT allows the name of a specialist sub-contracting organisation to be credited with the testing.
+

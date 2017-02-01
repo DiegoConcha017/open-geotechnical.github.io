@@ -1,0 +1,116 @@
+.. _ags4_CONS:
+
+CONS
+===========================================================================
+
+Consolidation Tests - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - CONS_INCN
+      - 
+      - X
+      - 3
+      - Oedometer stress increment
+    * - CONS_IVR
+      - 
+      - 3DP
+      - 0.8
+      - Voids ratio at start of increment
+    * - CONS_INCF
+      - kPa
+      - 0DP
+      - 400
+      - Stress at end of stress increment/decrement
+    * - CONS_INCE
+      - 
+      - 2DP
+      - 0.62
+      - Voids ratio at end of stress increment
+    * - CONS_INMV
+      - m2/MN
+      - 2SF
+      - 0.32
+      - Reported coefficient of volume compressibility over stress increment
+    * - CONS_INSC
+      - 
+      - 2SF
+      - 0.12
+      - Coefficient of secondary compression over stress increment
+    * - CONS_CVRT
+      - m2/yr
+      - 2SF
+      - 2.1
+      - Coefficient of consolidation over stress increment determined by the root time method
+    * - CONS_CVLG
+      - m2/yr
+      - 2SF
+      - 4.1
+      - Coefficient of consolidation over stress increment determined by the log time method
+    * - CONS_TEMP
+      - degC
+      - 1DP
+      - 22
+      - Average temperature over stress increment
+    * - CONS_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS9
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 3
+-------------------------
+- CONS_IVR description clarified to the voids ratio at the start of the increment rather than repeat the initial voids ratio on each record in the CONS group as listed in previous editions.
+- CONS_TEMP added. BS1377 requires lab temperature at which test was carried out, but since Cv is corrected to 20degC from the temperature over the stage, it has to be per stage (but may be same throughout).
+- BS allows reporting of either CONS_CVRT or CONS_CVLG or both, the laboratory will populate these headings as appropriate.
+

@@ -1,0 +1,131 @@
+.. _ags4_GCHM:
+
+GCHM
+===========================================================================
+
+Geotechnical Chemistry Testing
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - GCHM_CODE
+      - 
+      - `:ref:`ags4_GCHM_CODE`
+      - AS
+      - Determinand
+    * - GCHM_METH
+      - 
+      - X
+      - BS1377-3
+      - Test method
+    * - GCHM_TTYP
+      - 
+      - `:ref:`ags4_GCHM_TTYP`
+      - Solid_21 Water Extract
+      - Test type
+    * - GCHM_RESL
+      - 
+      - U
+      - 14.23
+      - Test result
+    * - GCHM_UNIT
+      - 
+      - PU
+      - mg/l
+      - Test result units
+    * - GCHM_NAME
+      - 
+      - X
+      - Water Soluble Sulfate
+      - Client/laboratory preferred name of determinand
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - 2:1 water/soil extract
+      - Details of specimen preparation including time between preparation and testing
+    * - GCHM_REM
+      - 
+      - X
+      - 
+      - Remarks on test
+    * - GCHM_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - GCHM_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS23
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 8
+-------------------------
+- GCHM is used to report chemical testing carried out for geotechnical design. It is to be used for testing in accordance with BS1377-3:1990 (Amendment 1), testing for use in the assessment described in BRE Special Digest 1 (2005) and/or buried steel testing described in the Design Manual for Roads and Bridges; BD42/00 (Volume 2, Section 1, Part 2) and BD12/01 (Volume 2, Section 2, Part 6). Chemical testing for contamination or water quality testing is reported in ERES. Laboratory resistivity test results should be reported using the LRES Group.
+- The GCHM_CODE abbreviations to report testing to BRE Special Digest 1 and BS 1377-3 would be:
+- The GCHM_CODE abbreviations to report testing of buried steel would be:
+- All GCHM_CODE abbreviations reported in this group are to be listed in the ABBR group.
+- The GCHM_TTYP abbreviations would be limited to SOLID_21WAT, SOLID_ACID, SOLID_TOT and WATER to report testing to BRE Special Digest 1 and BS 1377-3.
+- GCHM_UNIT is a REQUIRED field (Rule 10b) which enforces the inclusion of units for all test results. Where a test result has no unit, the GCHM_UNIT data shall be set to "-".
+- Units reported in GCHM_UNIT must be fully defined in the UNIT group (Rule 15). It is possible that units require conversion when the data is received and amalgamated into project databases to ensure that data are consistent across testing tranches and appropriate for the assessment.
+- For a chalk content test carried out to BS1377-3, it would be good practice to report both a Carbonate content (as CO2) and the chalk content (as %CaCO3).
+

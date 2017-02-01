@@ -1,0 +1,74 @@
+.. _ags4_SCDT:
+
+SCDT
+===========================================================================
+
+Static Cone Dissipation Tests - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SCPG_TESN
+      - 
+      - X
+      - 3
+      - Test reference or push number
+    * - SCDG_DPTH
+      - m
+      - 2DP
+      - 5.2
+      - Depth of dissipation test
+    * - SCDT_SECS
+      - s
+      - 0DP
+      - 50
+      - Seconds elapsed since start of test
+    * - SCDT_RES
+      - MPa
+      - 3DP
+      - 0.801
+      - Cone resistance
+    * - SCDT_PWP1
+      - MPa
+      - 4DP
+      - 
+      - Face porewater pressure (u1)
+    * - SCDT_PWP2
+      - MPa
+      - 4DP
+      - 0.0814
+      - Shoulder porewater pressure (u2)
+    * - SCDT_PWP3
+      - MPa
+      - 4DP
+      - 
+      - Top of sleeve porewater pressure (u3)
+    * - SCDT_REM
+      - 
+      - X
+      - 
+      - Comments
+    * - FILE_FSET
+      - 
+      - X
+      - FS19
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- SCDT is used to include the dissipation test readings converted from the measurement data using any required calibration factors.
+

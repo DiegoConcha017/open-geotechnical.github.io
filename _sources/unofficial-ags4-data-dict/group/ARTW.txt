@@ -1,0 +1,133 @@
+.. _ags4_ARTW:
+
+ARTW
+===========================================================================
+
+Aggregate Determination of the Resistance to Wear (micro-Deval)
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey angular limestone
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - ARTW_FRAC
+      - 
+      - X
+      - 10 to 14mm aggregate grading a)
+      - Size fraction on which sample obtained
+    * - ARTW_TYPE
+      - 
+      - `:ref:`ags4_ARTW_TYPE`
+      - Wet 
+      - Type of test
+    * - ARTW_MD1
+      - 
+      - 1DP
+      - 24.3
+      - Micro-Deval coefficient for test specimen one
+    * - ARTW_MD2
+      - 
+      - 1DP
+      - 24.3
+      - Micro-Deval coefficient for test specimen two
+    * - ARTW_MDE
+      - 
+      - 0DP
+      - 24
+      - Mean micro-Deval value (dry)
+    * - ARTW_MDS
+      - 
+      - 0DP
+      - 24
+      - Mean micro-Deval value (wet)
+    * - ARTW_DATE
+      - yyyy-mm-dd
+      - DT
+      - 10/02/2003
+      - Date control 2 polished stone value first run
+    * - ARTW_REM
+      - 
+      - X
+      -  
+      - Remarks
+    * - ARTW_METH
+      - 
+      - X
+      - BS 1097-1: 1996
+      - Test method
+    * - ARTW_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - ARTW_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS10
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - None
+-------------------------
+

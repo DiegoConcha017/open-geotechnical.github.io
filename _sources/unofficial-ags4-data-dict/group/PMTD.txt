@@ -1,0 +1,92 @@
+.. _ags4_PMTD:
+
+PMTD
+===========================================================================
+
+Pressuremeter Test Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - PMTG_DPTH
+      - m
+      - 2DP
+      - 2.7
+      - Depth of test
+    * - PMTG_TESN
+      - 
+      - X
+      - 1
+      - Test reference
+    * - PMTD_SEQ
+      - 
+      - 0DP
+      - 1
+      - Sequence number
+    * - PMTD_ARM1
+      - mm
+      - 3DP
+      - 1.003
+      - Axis 1 displacement
+    * - PMTD_ARM2
+      - mm
+      - 3DP
+      - 1.004
+      - Axis 2 displacement
+    * - PMTD_ARM3
+      - mm
+      - 3DP
+      - 1.005
+      - Axis 3 displacement
+    * - PMTD_TPC
+      - kPa
+      - 1DP
+      - 54.4
+      - Total pressure
+    * - PMTD_PPA
+      - kPa
+      - 1DP
+      - 2.9
+      - Pore pressure cell A
+    * - PMTD_PPB
+      - kPa
+      - 1DP
+      - 2.9
+      - Pore pressure cell B
+    * - PMTD_VOL
+      - cm3
+      - 1DP
+      - 2.6
+      - Volume change in test cell
+    * - PMTD_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS11
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 4
+-------------------------
+- Axis displacement is the change in diameter across the outside of the pressuremeter membrane (and Chinese lantern strips or other protective sheath if fitted) as measured on the inside of the membrane by a single arm (3 arm pressuremeter) or pair of diametrically opposite arms (6 arm pressuremeter) and adjusted for the thickness of the membrane (including effects of membrane compression and thinning with expansion). If additional arms are present on the equipment, then to transfer the additional displacement information additional headings should be added eg PMTD_ARM4 etc (refer Rule 19).
+- Pressuremeters not fitted with internal strain arms (eg, Menard type pressuremeters), where the volumetric expansion of the pressuremeter is measured by recording the volume of fluid entering the system, will have no data for PMTD_ARM1, 2 and 3. The volume change in the test cell entered in PMTD_VOL is the volumetric change measured at the surface corrected for line expansion, etc.
+- Previous requirements to record the pressure against each arm/axis of the equipment have been removed and replaced with the total pressure in the test cell PMTD_TPC. The total pressure is measured inside the pressuremeter with a pressure cell. The measured pressure is corrected for the inherent stiffness of the membrane ? the amount of pressure to inflate the membrane when the pressuremeter is out of the ground. This amount is assessed by a membrane calibration where the membrane is inflated in free air. The pressure correction is subtracted from the measured pressure to get the pressure exerted on the ground.
+- PMTD_TPC is the pressure imposed by the outside of the membrane; ie, that required to expand the pressuremeter, corrected for the inherent membrane stiffness. For modern type pressuremeters this is normally measured inside the pressuremeter by one or more electronic transducers. For instruments without internal pressure transducers, where the pressure is measured at the surface, PMTD_TPC will also include corrected for the elevation head due to the difference in height between the pressuremeter instrument in the borehole and the measuring equipment at the surface.
+

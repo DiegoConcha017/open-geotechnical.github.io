@@ -1,0 +1,60 @@
+.. _ags4_WSTG:
+
+WSTG
+===========================================================================
+
+Water Strike - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - WSTG_DPTH
+      - m
+      - 2DP
+      - 17.2
+      - Depth to water strike
+    * - WSTG_DTIM
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 1991-03-19T16:40
+      - Date and time of water strike
+    * - WSTG_SEAL
+      - m
+      - 2DP
+      - 19.1
+      - Depth at which water strike sealed by casing
+    * - WSTG_CAS
+      - m
+      - 2DP
+      - 15.7
+      - Casing depth at time of water strike
+    * - WSTG_REM
+      - 
+      - X
+      - Steady flow of water into hole
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS28
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- WSTG and WSTD are used to record information on the behaviour of water encountered during development of an exploratory hole.
+- Water levels recorded during sampling or testing in exploratory holes are recorded in the appropriate group together with the related data. Water readings in installations (eg piezometers) are recorded in Group MOND.
+

@@ -1,0 +1,65 @@
+.. _ags4_PROJ:
+
+PROJ
+===========================================================================
+
+Project Information
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - PROJ_ID
+      - 
+      - ID
+      - 121415
+      - Project identifier
+    * - PROJ_NAME
+      - 
+      - X
+      - ACME Gas Works Redevelopment
+      - Project title
+    * - PROJ_LOC
+      - 
+      - X
+      - High Street, Anytown
+      - Location of site
+    * - PROJ_CLNT
+      - 
+      - X
+      - ACME Enterprises
+      - Client name
+    * - PROJ_CONT
+      - 
+      - X
+      - ACME Drilling Ltd
+      - Contractors name
+    * - PROJ_ENG
+      - 
+      - X
+      - ACME Consulting
+      - Project Engineer
+    * - PROJ_MEMO
+      - 
+      - X
+      - 
+      - General project comments
+    * - FILE_FSET
+      - 
+      - X
+      - FS1
+      - Associated file reference (eg project specification, site location drawings)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- PROJ is required in all AGS4 files (Rule 13).
+- PROJ_ENG should contain the details of the consultant/designer for the project.
+

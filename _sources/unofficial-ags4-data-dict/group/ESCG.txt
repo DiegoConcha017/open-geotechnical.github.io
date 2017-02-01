@@ -1,0 +1,220 @@
+.. _ags4_ESCG:
+
+ESCG
+===========================================================================
+
+Effective Stress Consolidation Tests - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - ESCG_TYPE
+      - 
+      - `:ref:`ags4_ESCG_TYPE`
+      - CD 
+      - Test type
+    * - ESCG_CELL
+      - 
+      - X
+      - 250mm dia Hydraulic cell
+      - Type of equipment used
+    * - ESCG_COND
+      - 
+      - `:ref:`ags4_ESCG_COND`
+      - Undisturbed 
+      - Sample condition
+    * - ESCG_SDIA
+      - mm
+      - 2DP
+      - 100.15
+      - Test specimen diameter
+    * - ESCG_HIGT
+      - mm
+      - 2DP
+      - 100.25
+      - Test specimen height 
+    * - ESCG_MCI
+      - %
+      - MC
+      - 21
+      - Initial moisture content
+    * - ESCG_MCF
+      - %
+      - MC
+      - 18
+      - Final moisture content
+    * - ESCG_BDEN
+      - Mg/m3
+      - 2DP
+      - 2.12
+      - Initial bulk density
+    * - ESCG_BDEF
+      - Mg/m3
+      - 2DP
+      - 2.2
+      - Final bulk density
+    * - ESCG_DDEN
+      - Mg/m3
+      - 2DP
+      - 1.75
+      - Initial dry density
+    * - ESCG_PDEN
+      - Mg/m3
+      - XN
+      - #2.65
+      - Particle density with prefix # if value assumed
+    * - ESCG_IVR
+      - 
+      - 3DP
+      - 0.812
+      - Initial voids ratio
+    * - ESCG_SATR
+      - %
+      - 0DP
+      - 98
+      - Initial degree of saturation
+    * - ESCG_LOAD
+      - 
+      - X
+      - Equal, Free, triaxial
+      - Type of loading ( strain )
+    * - ESCG_DRAG
+      - 
+      - X
+      - To top, both ends, radial inwards, radial outwards
+      - Type of drainage
+    * - ESCG_PPM
+      - 
+      - X
+      - Centre base, offset
+      - Pore pressure measurement location
+    * - ESCG_SPRS
+      - kPa
+      - 2SF
+      - 100
+      - Swelling pressure, if measured
+    * - ESCG_SATM
+      - 
+      - X
+      - Back pressure, cell only, water permeation
+      - Method of saturation
+    * - ESCG_SINC
+      - kPa
+      - 0DP
+      - 50
+      - Saturation increments
+    * - ESCG_SDIF
+      - kPa
+      - 0DP
+      - 10
+      - Differential pressure during saturation
+    * - ESCG_CELF
+      - kPa
+      - 0DP
+      - 310
+      - Cell or diaphragm pressure at end of saturation
+    * - ESCG_BACF
+      - kPa
+      - 0DP
+      - 300
+      - Back pressure at end of saturation
+    * - ESCG_BVAL
+      - 
+      - 2DP
+      - 0.96
+      - B value at end of saturation
+    * - ESCG_SVOL
+      - ml
+      - 1DP
+      - 10
+      - Volume of water taken in during saturation
+    * - ESCG_REM
+      - 
+      - X
+      - Sample from base of U100 sample, axis vertical
+      - Remarks including commentary on effect of specimen disturbance on test result
+    * - ESCG_METH
+      - 
+      - X
+      - BS1377, part 6, cl 5
+      - Test method
+    * - ESCG_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - ESCG_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS9
+      - Associated file reference (eg equipment calibrations)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- ESCG and ESCT are primarily designed to take data from the consolidation tests detailed in BS1377 Part 6 including hydraulic cells such as the Rowe cell. Other types of testing can be included but headings should only be populated where the data is consistent with those of the BS tests and ambiguity of terminology should be avoided.
+- ESCG_IVR should be used to report the initial voids ratio at the start of testing. This will not necessarily be the same as the voids ratio at the start of first stage consolidation ESCT_VR0 due to saturation.
+

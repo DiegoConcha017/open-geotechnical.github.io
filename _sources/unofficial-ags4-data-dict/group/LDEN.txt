@@ -1,0 +1,129 @@
+.. _ags4_LDEN:
+
+LDEN
+===========================================================================
+
+Density Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U 
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - LDEN_TYPE
+      - 
+      - `:ref:`ags4_LDEN_TYPE`
+      - LINEAR
+      - Type of test performed
+    * - LDEN_COND
+      - 
+      - `:ref:`ags4_LDEN_COND`
+      - Undisturbed 
+      - Sample condition
+    * - LDEN_SMTY
+      - 
+      - `:ref:`ags4_LDEN_SMTY`
+      - BLOCK SAMPLE
+      - Type of sample
+    * - LDEN_MC
+      - %
+      - MC
+      - 57
+      - Moisture content
+    * - LDEN_BDEN
+      - Mg/m3
+      - 2DP
+      - 1.66
+      - Bulk density
+    * - LDEN_DDEN
+      - Mg/m3
+      - 2DP
+      - 1.06
+      - Dry density
+    * - LDEN_REM
+      - 
+      - X
+      -  
+      - Remarks
+    * - LDEN_METH
+      - 
+      - X
+      - BS1377: Part 2: 1990: Clause 7.2
+      - Test method
+    * - LDEN_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - LDEN_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS10
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- Measurements of density on rock materials should be reported in RDEN.
+

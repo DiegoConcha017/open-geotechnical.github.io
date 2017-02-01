@@ -1,0 +1,120 @@
+.. _ags4_SCPG:
+
+SCPG
+===========================================================================
+
+Static Cone Penetration Tests - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SCPG_TESN
+      - 
+      - X
+      - 3
+      - Test reference or push number
+    * - SCPG_TYPE
+      - 
+      - `:ref:`ags4_SCPG_TYPE`
+      - PC
+      - Cone test type
+    * - SCPG_REF
+      - 
+      - X
+      - S15.CFIP.A27
+      - Cone reference
+    * - SCPG_CSA
+      - cm2
+      - 0DP
+      - 15
+      - Surface area of cone tip
+    * - SCPG_RATE
+      - mm/s
+      - 0DP
+      - 20
+      - Nominal rate of penetration of the cone
+    * - SCPG_FILT
+      - 
+      - X
+      - HDPE
+      - Type of filter material used
+    * - SCPG_FRIC
+      - 
+      - YN
+      - Y
+      - Friction reducer used
+    * - SCPG_WAT
+      - m
+      - 2DP
+      - 3.5
+      - Groundwater level at time of test
+    * - SCPG_WATA
+      - 
+      - X
+      - Assumed from measurements in nearby boreholes
+      - Origin of water level in SCPG_WAT
+    * - SCPG_REM
+      - 
+      - X
+      - 
+      - Comments on testing and basis of any interpretated parameters included in SCPT and SCPP
+    * - SCPG_ENV
+      - 
+      - X
+      - Sunny
+      - Details of weather and environmental conditions during test
+    * - SCPG_CONT
+      - 
+      - X
+      - An Contractor Ltd
+      - Subcontractors name
+    * - SCPG_METH
+      - 
+      - X
+      - NEN 5140
+      - Standard followed for testing
+    * - SCPG_CRED
+      - 
+      - X
+      - 
+      - Accrediting body and reference number (when appropriate)
+    * - SCPG_CAR
+      - 
+      - 1DP
+      - 0.8
+      - Cone area ratio used to calculate qt
+    * - SCPG_SLAR
+      - 
+      - 1DP
+      - 1
+      - Sleeve area ratio used to calculate ft
+    * - FILE_FSET
+      - 
+      - X
+      - FS18
+      - Associated file reference (eg cone calibration records)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 7
+-------------------------
+- SCPG is used to record the general information about static cone penetration tests.
+- Pressuremeter tests using CPT equipment (eg cone or driven pressuremeter) should be recorded in the PMTG and associated groups.
+- SCPG_FILT and SCPG_FRIC are included as they are reporting requirements of BS1377.
+- SCPG_WATA is required to clarify origin of water level recorded in SCPG_WAT.
+- SCPG_REM is used to transfer comments on the test and any interpretated parameters. SCPG_REM may refer to the STND group where full information on standards and references could be provided.
+- CPT testing is frequently carried out by specialist sub-contractors. SCPG_CONT is included to record name of specialist sub-contractor.
+- SCPG_CAR and SCPG_SLAR are included to transfer information used to calculate qt and ft.
+

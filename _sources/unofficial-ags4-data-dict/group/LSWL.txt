@@ -1,0 +1,134 @@
+.. _ags4_LSWL:
+
+LSWL
+===========================================================================
+
+Swelling Index Testing
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U 
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - LSWL_SWPR
+      - kPa
+      - 0DP
+      - 50
+      - Swelling Pressure Index
+    * - LSWL_SWSI
+      - %
+      - 1DP
+      - 0.5
+      - Swelling Strain Index
+    * - LSWL_MCI
+      - %
+      - 1DP
+      - 5.6
+      - Initial water content of test specimen
+    * - LSWL_SDIA
+      - mm
+      - 1DP
+      - 63.2
+      - Specimen diameter
+    * - LSWL_THCK
+      - mm
+      - 1DP
+      - 50.1
+      - Specimen thickness
+    * - LSWL_BDEN
+      - kg/m3
+      - 0DP
+      - 2240
+      - Initial bulk density 
+    * - LSWL_DDEN
+      - kg/m3
+      - 0DP
+      - 1870
+      - Initial dry density 
+    * - LSWL_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - LSWL_METH
+      - 
+      - X
+      - ISRM : Suggested method
+      - Test method
+    * - LSWL_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - LSWL_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS10
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- The LSWL group should be used for swelling tests on both soil and rock materials.
+

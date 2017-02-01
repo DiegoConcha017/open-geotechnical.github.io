@@ -1,0 +1,818 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ERES &mdash; Open GeoTechnical</title>
+    
+    <link rel="stylesheet" href="../../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="Open GeoTechnical" href="../../index.html" />
+    <link rel="up" title="AGS4 Groups" href="../groups.html" />
+    <link rel="next" title="IFID" href="IFID.html" />
+    <link rel="prev" title="AGS4 Groups" href="../groups.html" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+<style>
+
+
+
+body {
+    background-color: black;
+}
+
+#XHEAD {
+    deadbackground-color: yellow !important;
+}
+.main_title{
+    margin: 10px;
+    font-size: 14pt;
+    vertical-align: top;
+    color: #999999;
+    font-family: Verdana;
+    background-image: "/_static/logo.png"
+}
+
+.main_title a {
+    color: #F29F00;
+}
+.main_title a:hover {
+    text-decoration: none;
+}
+.main_title small{
+    margin: 10px;
+    font-size: 8pt;
+    vertical-align: top;
+    color: #999999;
+    font-weight: normal;
+    font-family: Verdana;
+}
+
+.externals_nav {
+    float: right;
+    margin-right: 20px;
+}
+.externals_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+        sswidth: 50px;
+} 
+
+.externals_nav a {
+    text-decoration: none;
+    color: #999999;
+    padding: 5px;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+.externals_nav a:hover {
+    background-color: #333333;
+    color: white;
+}
+    
+        
+.module_nav {
+    float: right;
+    ssmargin-right: 150px;
+
+    deadbackground-color: red !important;
+}
+.module_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+    width: 50px;
+}
+.module_nav a {
+    text-decoration: none;
+    background-color: #222222;
+    color: #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #efefef;
+    font-family: Verdana;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.module_nav a:hover {
+    background-color: #333333;
+}
+.module_nav a.selected{
+    background-color: #999999;
+    color: black;
+}
+
+.related{
+    background-color: #222222 !important; 
+    margin-right: 10px;
+    
+}
+.related a {
+    color: #dddddd !important; 
+    text-shadow: none;
+        font-size: 10pt !important;
+}
+div.related ul {
+    padding-left: 300px;
+}
+.related ul li {
+    color: #FFFF00 !important;
+}
+
+.sphinxsidebarwrapper {
+    width: 300px;
+    background-color: #DDDDDD;
+}
+.sphinxsidebarwrapper h3  {
+    border-bottom: 1px solid white;
+}
+.sphinxsidebarwrapper h3 a {
+    font-family: Verdana;
+}
+div.bodywrapper {
+    margin-left: 300px;
+}
+.sphinxsidebar ul {
+    margin-left: 0;
+}
+.sphinxsidebar ul li{
+    sborder-top: 1px solid #dddddd !important;
+    ssbackground-color: white;
+    padding: 2px !important;
+}
+.sphinxsidebar ul li a{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #333333;
+    font-family: Verdana;
+}
+.sphinxsidebar ul ul{
+    width: 250px;
+}
+.sphinxsidebar ul ul li{
+    border-top: none !important;
+}
+.sphinxsidebar ul ul li a{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Verdana;
+}
+
+
+
+/**************************************************/
+/* Main */
+/**************************************************/
+div.body {
+    font-size: 10pt;
+}
+
+div.body h1{
+    border-radius: 10px !important;
+    padding: 5px 10px;
+    font-size: 20pt;
+    background-color: #444444 !important;
+    color: #dddddd;
+   font-family: Verdana;
+}
+
+
+
+div.body h2{
+
+    border-top: 2px solid #999999;
+    border-right: 2px solid #999999;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #bbbbbb !important;
+    font-size: 12pt;
+    font-family: monospace;
+
+    padding: 5px 10px;
+}
+div.body h3{
+    border-top: 2px solid #dddddd;
+    border-right: 2px solid #aaaaaa;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #dddddd !important;
+    font-size: 10pt;
+    font-family: monospace;
+    padding: 5px 10px;
+}
+
+div.body p {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 600px;
+}
+div.body ul, ol {
+    padding-left: 50px;
+    padding-right: 50px;
+     max-width: 600px;
+}
+div.body li p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+div.body ul, ul {
+     padding-left: 30px;
+    padding-right: 30px;
+}
+
+.admonition {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+.field-name {
+    width: 80px;
+    text-align: right;
+}
+
+pre {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 9pt;
+    padding: 4px;
+}
+
+table.docutils {
+    box-shadow: 9px 10px 34px -16px rgba(0,0,0,0.75);
+}
+table.docutils thead {
+    background-color: #dddddd;
+}
+table.docutils th {
+    padding: 5px;
+}
+table.docutils td {
+    padding: 2px;
+}
+
+table.field-list{
+    box-shadow: none;
+    background-color: #eeeeee;
+}
+
+table.field-list tr{
+    border-bottom: 1px solid #cccccc;
+}
+table.field-list th {
+    padding: 5px;
+    width: 100px;
+    border-right: 1px solid #cccccc;
+    font-size: 9pt;
+    deadbackground-color: red;
+    color: #888888;
+}
+table.field-list td {
+    padding: 5px;
+    border-left: 1px solid #cccccc;
+}
+
+dl.class p {
+    padding-left: 5px;
+}
+
+.ags-csv-rule {
+    background-color: #00CCCC;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+.ags-data-rule {
+    background-color:#FFFF00;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+
+.viewcode-link {
+    font-size: 8pt;
+}
+
+/**************************************************/
+/* API stuff */
+/**************************************************/
+/* a whole class container */
+dl.class {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #822775;
+}
+/* class Name */
+dl.class dt .descname{
+	color: #822775;
+	font-size: 13pt;
+	font-family: monospace;
+}
+
+a.reference code.py-class span.pre {
+    color: #822775 !important;
+    font-family: monospace;
+}
+
+
+/* class attribute */
+dl.attribute dt .descname {
+    color: #AD833E;
+    font-size: 11pt;
+    font-family: monospace;
+}
+
+
+/* class method  */
+dl.method dt .descname {
+    color: #1B68B8;
+	font-size: 11pt;
+	font-family: monospace;
+
+}
+
+/* a whole function container */
+dl.function {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #298815;
+}
+/* function */
+dl.function dt .descname {
+    color: #298815 !important;
+}
+
+a.reference code.py-func span.pre {
+    color: #298815 !important;
+    font-family: monospace;
+}
+
+/* glossary */
+dl.glossary dt {
+    background-color: #eeeeee;
+    font-family: monospace;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top-right-radius: 20px;
+    padding: 3px 5px;
+
+}
+dl.glossary dd {
+    border-right: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+</style>
+    
+    <div id="XHEAD">
+
+  
+  <h1 class="main_title"><a href="/"><img src="/_static/logo-small.png"> Open GeoTechnical</a> </h1>
+  </div>
+  
+
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="IFID.html" title="IFID"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../groups.html" title="AGS4 Groups"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ogt</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Unofficial AGS4 Data Dict</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../groups.html" accesskey="U">AGS4 Groups</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="eres">
+<span id="ags4-eres"></span><h1>ERES<a class="headerlink" href="#eres" title="Permalink to this headline">¶</a></h1>
+<p>Environmental Contaminant Testing</p>
+<p>Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="5%" />
+<col width="10%" />
+<col width="5%" />
+<col width="30%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">Heading</th>
+<th class="head">Unit</th>
+<th class="head">Type</th>
+<th class="head">Example</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">LOCA_ID</th>
+<td>&nbsp;</td>
+<td>ID</td>
+<td>327-16A</td>
+<td>Location Identifier</td>
+</tr>
+<tr class="row-odd"><th class="stub">SAMP_TOP</th>
+<td>m</td>
+<td>2DP</td>
+<td>24.55</td>
+<td>Depth to top of sample</td>
+</tr>
+<tr class="row-even"><th class="stub">SAMP_REF</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>24</td>
+<td>Sample reference</td>
+</tr>
+<tr class="row-odd"><th class="stub">SAMP_TYPE</th>
+<td>&nbsp;</td>
+<td><cite>:ref:`ags4_SAMP_TYPE</cite></td>
+<td>ES</td>
+<td>Sample type</td>
+</tr>
+<tr class="row-even"><th class="stub">SAMP_ID</th>
+<td>&nbsp;</td>
+<td>ID</td>
+<td>ABC121415010</td>
+<td>Sample unique global identifier</td>
+</tr>
+<tr class="row-odd"><th class="stub">SPEC_REF</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>CL/477627</td>
+<td>Laboratory specimen reference or Laboratory ID</td>
+</tr>
+<tr class="row-even"><th class="stub">SPEC_DPTH</th>
+<td>m</td>
+<td>2DP</td>
+<td>24.55</td>
+<td>Depth to top of test specimen</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_CODE</th>
+<td>&nbsp;</td>
+<td><cite>:ref:`ags4_ERES_CODE</cite></td>
+<td>7440-42-8</td>
+<td>Chemical code</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_METH</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>In house method no 231241</td>
+<td>Test method</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_MATX</th>
+<td>&nbsp;</td>
+<td><cite>:ref:`ags4_ERES_MATX</cite></td>
+<td>LIQUID</td>
+<td>Laboratory test matrix</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_RTYP</th>
+<td>&nbsp;</td>
+<td><cite>:ref:`ags4_ERES_RTYP</cite></td>
+<td>INITIAL</td>
+<td>Run type (Initial or Reanalysis)</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_TESN</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>2</td>
+<td>Test reference</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_NAME</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Boron</td>
+<td>Chemical name</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_TNAM</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>MQ45</td>
+<td>Laboratory analytical test name</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_RVAL</th>
+<td>&nbsp;</td>
+<td>U</td>
+<td>0.25</td>
+<td>Result value</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_RUNI</th>
+<td>&nbsp;</td>
+<td>PU</td>
+<td>mg/l</td>
+<td>Result unit</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_RTXT</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>&lt;2.3</td>
+<td>Reported result</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_RTCD</th>
+<td>&nbsp;</td>
+<td><cite>:ref:`ags4_ERES_RTCD</cite></td>
+<td>TRG</td>
+<td>Result type</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_RRES</th>
+<td>&nbsp;</td>
+<td>YN</td>
+<td>Y</td>
+<td>Reportable result</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_DETF</th>
+<td>&nbsp;</td>
+<td>YN</td>
+<td>Y</td>
+<td>Detect flag</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_ORG</th>
+<td>&nbsp;</td>
+<td>YN</td>
+<td>N</td>
+<td>Organic</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_IQLF</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>&lt;</td>
+<td>Interpreted qualifiers</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_LQLF</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>&lt;</td>
+<td>Laboratory qualifiers</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_RDLM</th>
+<td>&nbsp;</td>
+<td>U</td>
+<td>10</td>
+<td>Reporting detection limit</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_MDLM</th>
+<td>&nbsp;</td>
+<td>U</td>
+<td>1</td>
+<td>Method detection limit</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_QLM</th>
+<td>&nbsp;</td>
+<td>U</td>
+<td>10</td>
+<td>Quantification limit</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_DUNI</th>
+<td>&nbsp;</td>
+<td>PU</td>
+<td>mg/l</td>
+<td>Unit of detection / quantification  limits</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_TICP</th>
+<td>%</td>
+<td>0DP</td>
+<td>93</td>
+<td>Tentatively Identified Compound (TIC) probability</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_TICT</th>
+<td>s</td>
+<td>0DP</td>
+<td>203</td>
+<td>Tentatively Identified Compound (TIC) retention time</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_RDAT</th>
+<td>yyyy-mm-dd</td>
+<td>DT</td>
+<td>15/11/2006</td>
+<td>Sample receipt date at laboratory</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_SGRP</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>ERS151106</td>
+<td>Sample delivery or batch code</td>
+</tr>
+<tr class="row-odd"><th class="stub">SPEC_PREP</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Prepared according to client instructions</td>
+<td>Details of specimen preparation including time between preparation and testing</td>
+</tr>
+<tr class="row-even"><th class="stub">SPEC_DESC</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Grey slightly gravelly clay</td>
+<td>Specimen description</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_DTIM</th>
+<td>yyyy-mm-ddThh:mm</td>
+<td>DT</td>
+<td>2006-11-17T12:10</td>
+<td>Analysis date and time date</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_TEST</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>VOC</td>
+<td>Test Name as defined in LBST_TEST during electronic scheduling</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_TORD</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Total</td>
+<td>Total or dissolved</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_LOCN</th>
+<td>&nbsp;</td>
+<td><cite>:ref:`ags4_ERES_LOCN</cite></td>
+<td>LAB</td>
+<td>Analysis location</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_BAS</th>
+<td>&nbsp;</td>
+<td><cite>:ref:`ags4_ERES_BAS</cite></td>
+<td>WET</td>
+<td>Basis</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_DIL</th>
+<td>&nbsp;</td>
+<td>0DP</td>
+<td>10</td>
+<td>Dilution factor</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_LMTH</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>10:1 Leachate method</td>
+<td>Leachate preparation method</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_LDTM</th>
+<td>yyyy-mm-ddThh:mm</td>
+<td>DT</td>
+<td>2006-11-16T10:00</td>
+<td>Leachate preparation date and time</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_IREF</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>GCMS19</td>
+<td>Instrument Reference No or Identifier</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_SIZE</th>
+<td>mm</td>
+<td>0DP</td>
+<td>2</td>
+<td>Size of material removed prior to test; value given indicates lowest sized material removed</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_PERP</th>
+<td>%</td>
+<td>1DP</td>
+<td>10.1</td>
+<td>Percentage of material removed</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_REM</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>&nbsp;</td>
+<td>Remarks</td>
+</tr>
+<tr class="row-odd"><th class="stub">ERES_LAB</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>ACME Laboratories plc</td>
+<td>Name of testing laboratory/Organisation</td>
+</tr>
+<tr class="row-even"><th class="stub">ERES_CRED</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>UKAS 0000</td>
+<td>Accrediting body and reference number (when appropriate)</td>
+</tr>
+<tr class="row-odd"><th class="stub">TEST_STAT</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Checked</td>
+<td>Test status</td>
+</tr>
+<tr class="row-even"><th class="stub">FILE_FSET</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>FS13</td>
+<td>Associated file reference (eg test result sheets)</td>
+</tr>
+</tbody>
+</table>
+<p>sssssssssssssssssssssssssssssssssssssssssss
+Notes - 14
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+- ERES provides for the transfer of geoenvironmental chemical testing data. Linked to the SAMP group this results group is suitable for both results of geoenvironmental testing carried out in the field or in a chemical test laboratory.
+- Geotechnical chemical testing, relating to ground aggressivity, is to be transferred using the GCHM group.
+- The headings listed in ERES represent a range of attributes to describe chemical test results to cater for both simple and extended reporting requirements. It is important to note that there is no requirement to complete all headings in data files for every analysis carried out. Only the key headings and the headings that are relevant to the testing and test result specification need be completed or used. Where additional QC data is required then further user defined headings may be necessary to transfer additional information. It is imperative that data providers and data receivers agree the specification for ERES data at the outset of a project.
+- SPEC_REF should include the laboratory test specimen reference, or Laboratory ID; the unique reference the laboratory assigns to the test specimen (in AGS 3 this data was typically included in CNMT_LBID).
+- ERES_CODEs must be freely available in the public domain. All ERES_CODEs included in the file are to be listed in the ABBR group. New ERES_CODE values should be registered on the AGS website before use.
+- The ERES_CODE together with a matrix (ERES_MATX) should provide full definition of the chemical and phase of the material that has been tested. Note that ERES_CODE and ERES_MATX are REQUIRED fields.
+- ERES_RUNI is a REQUIRED field (Rule 10b) which enforces the inclusion of units in the data file for test results. Where a test result has no unit, the ERES_RUNI data shall be set to &#8220;-&#8221; to clarify this.
+- Units included in ERES_RUNI must be fully defined in the UNIT group (Rule 15). It is possible that units require conversion when the data is received and amalgamated into project databases to ensure that data are consistent across monitoring tranches and appropriate for the assessment.
+- It is suggested that in some cases it might be appropriate to make the ERES_IREF data a set of codes referring to full instrument details in the ABBR group. In this case the heading type would be changed to &#8216;PA&#8217;.
+- The headings ERES_TICP and ERES_TICT allow for inclusion of tentatively identified compounds. Note that ERES_RTCD would be flagged as &#8216;Tentative&#8217; if this were the case for a record.
+- The accreditation status and reference number are included under the ERES_CRED heading where appropriate.  Where a test has more than one accreditation status these should be concatenated into the ERES_CRED field using the  character by default or character specified in TRAN_RCON.
+- ERES_SIZE and ERES_PERP are additions to cover the reporting requirements for geotechnical testing (eg BS1377) for which the result only relates to the size of material tested.
+- ERES_RVAL should be left blank and detection limits defined if the test was below the detection limits.
+- ERES_TEST should be completed with the test name (LBST_TEST) if the test was scheduled using LBST group. This provides traceability between schedule and results where this is important.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../groups.html"
+                        title="previous chapter">AGS4 Groups</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="IFID.html"
+                        title="next chapter">IFID</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="IFID.html" title="IFID"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../groups.html" title="AGS4 Groups"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ogt</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Unofficial AGS4 Data Dict</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../groups.html" >AGS4 Groups</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+      Last updated on 2017-02-01.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+.. _ags4_SHBT:
+
+SHBT
+===========================================================================
+
+Shear Box Testing - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SHBT_TESN
+      - 
+      - X
+      - 1
+      - Shear box stage/specimen reference
+    * - SHBT_BDEN
+      - Mg/m3
+      - 2DP
+      - 1.96
+      - Initial bulk density
+    * - SHBT_DDEN
+      - Mg/m3
+      - 2DP
+      - 1.63
+      - Initial dry density
+    * - SHBT_NORM
+      - kPa
+      - 0DP
+      - 100
+      - Normal stress applied
+    * - SHBT_DISP
+      - mm/min
+      - 2SF
+      - 0.024
+      - Displacement rate for peak stress stage
+    * - SHBT_DISR
+      - mm/min
+      - 2SF
+      - 0.12
+      - Displacement rate for residual stress stage
+    * - SHBT_REVS
+      - 
+      - 0DP
+      - 3
+      - Number of traverses if residual test
+    * - SHBT_PEAK
+      - kPa
+      - 1DP
+      - 65.5
+      - Peak shear stress
+    * - SHBT_RES
+      - kPa
+      - 1DP
+      - 47.2
+      - Residual shear stress
+    * - SHBT_PDIS
+      - mm
+      - 2DP
+      - 2.35
+      - Horizontal displacement at peak shear stress
+    * - SHBT_RDIS
+      - mm
+      - 2DP
+      - 12.41
+      - Horizontal displacement at residual shear stress
+    * - SHBT_PDIN
+      - mm
+      - 2DP
+      - 1.24
+      - Vertical displacement at peak shear stress
+    * - SHBT_RDIN
+      - mm
+      - 2DP
+      - -4.23
+      - Vertical displacement at residual shear stress
+    * - SHBT_PDEN
+      - Mg/m3
+      - XN
+      - #2.65
+      - Particle density with prefix # if value assumed
+    * - SHBT_IVR
+      - 
+      - 3DP
+      - 0.526
+      - Initial voids ratio
+    * - SHBT_MCI
+      - %
+      - MC
+      - 20
+      - Initial moisture content
+    * - SHBT_MCF
+      - %
+      - MC
+      - 18
+      - Final moisture content
+    * - SHBT_DIA1
+      - mm
+      - 2DP
+      - 85.21
+      - Specimen diameter in direction of shear (rock joints)
+    * - SHBT_DIA2
+      - mm
+      - 2DP
+      - 89.34
+      - Specimen diameter perpendicular to shear (rock joints)
+    * - SHBT_HGT
+      - mm
+      - 2DP
+      - 80.02
+      - Specimen height
+    * - SHBT_CRIT
+      - 
+      - X
+      - Stress ratio
+      - Failure/residual strength criterion used
+    * - SHBT_REM
+      - 
+      - X
+      - Reached end of travel
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS18
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- SHBT_PDIN & SHBT_RDIN - consolidation (flow of water out of specimen) to be reported as positive and dilatancy or swelling (flow of water into specimen) to be reported as negative.
+

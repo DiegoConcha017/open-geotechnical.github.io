@@ -1,0 +1,69 @@
+.. _ags4_IPRT:
+
+IPRT
+===========================================================================
+
+In Situ Permeability Tests - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - IPRG_TOP
+      - m
+      - 2DP
+      - 12.2
+      - Depth to top of test zone
+    * - IPRG_TESN
+      - 
+      - X
+      - 2
+      - Test reference
+    * - IPRG_BASE
+      - m
+      - 2DP
+      - 12.95
+      - Depth to base of test zone
+    * - IPRG_STG
+      - 
+      - 0DP
+      - 1
+      - Stage number of multistage packer test
+    * - IPRT_TIME
+      - hh:mm:ss
+      - T
+      - 0:12:00
+      - Elapsed time
+    * - IPRT_DPTH
+      - m
+      - 2DP
+      - 2.45
+      - Depth to water at time IPRT_TIME
+    * - IPRT_REM
+      - 
+      - X
+      - 
+      - Test reading remark
+    * - FILE_FSET
+      - 
+      - X
+      - FS26
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- The IPRT group allows for transfer of the water level with time readings taken during the test where this is required in the test specification.
+

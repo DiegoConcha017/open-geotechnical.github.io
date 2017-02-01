@@ -1,0 +1,59 @@
+.. _ags4_HORN:
+
+HORN
+===========================================================================
+
+Exploratory Hole Orientation and Inclination
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - HORN_TOP
+      - m
+      - 2DP
+      - 0
+      - Depth to top of exploratory hole section
+    * - HORN_BASE
+      - m
+      - 2DP
+      - 10.15
+      - Depth to base of exploratory hole section
+    * - HORN_ORNT
+      - deg
+      - 0DP
+      - 210
+      - Orientation of exploratory hole section or traverse (degrees from north)
+    * - HORN_INCL
+      - deg
+      - 0DP
+      - 65
+      - Inclination of exploratory hole section or traverse (measured positively down from horizontal)
+    * - HORN_REM
+      - 
+      - X
+      - 
+      - Remarks relating to orientation and inclination of hole section
+    * - FILE_FSET
+      - 
+      - X
+      - FS22
+      - Associated file reference (eg contract data specification)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- HORN is used to record the details of exploratory hole orientation and inclination.
+

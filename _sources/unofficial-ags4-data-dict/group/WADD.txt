@@ -1,0 +1,59 @@
+.. _ags4_WADD:
+
+WADD
+===========================================================================
+
+Water Added Records
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - WADD_TOP
+      - m
+      - 2DP
+      - 10.5
+      - Depth to top of reported section
+    * - WADD_BASE
+      - m
+      - 2DP
+      - 20.5
+      - Depth to base of reported section
+    * - WADD_VOLM
+      - l
+      - 0DP
+      - 10
+      - Amount of water added
+    * - WADD_METH
+      - 
+      - X
+      - CP
+      - Boring/drilling method associated with addition of water (HDPH_TYPE abbreviation)
+    * - WADD_REM
+      - 
+      - X
+      - 
+      - Remarks related to addition of water requirements, method
+    * - FILE_FSET
+      - 
+      - X
+      - FS20
+      - Associated file reference (eg drilling journal)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- WADD is to be used to record details of water added to exploratory holes.
+

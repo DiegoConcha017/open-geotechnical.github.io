@@ -1,0 +1,110 @@
+AGS4 Quickstart
+=============================
+
+.. note::
+    
+    - This is a quick guide intended for **new developers** to the wonderdul land of the ags4 file format
+    - Its unofficial but intended to make one a master of the ags4 art
+    
+Whats is AGS4 ?
+----------------------------
+
+`AGS4` is a standard for data exchange in GeoTechnical Engineering, and compises of two part:
+
+- The **text file format** for sharing data between companies/projects 
+  - for machine 2 machine exchange 
+  
+- And a **data dictionary** used for the exchange of GeoTechnical data 
+  - for GeoTechnical engineer stuff
+
+Its design and dark roots are in spreasheets on olde msdos pre 16bit color screen from yonder years
+- so there's a bunch of bald/grey heads on AGS Comittee Team
+- and agreed was a way to share and serialise spreadsheet data, without sharing spreadsheet database et all itself
+- Think multiple spreadsheets tabs and a csv of each tab
+- And as well as then, agreed to use the same column names and its data types
+- Amazing feat, and its getting even more popular :-)
+
+
+What does it smell like ?
+------------------------------
+
+The simple example below shows two groups, although on a real file there would be many more
+
+- the `Project Info` (PROJ) group, with one row of data
+- the `Location / Test Points` (LOCA) group with three rows
+
+.. code::
+
+    "GROUP","PROJ"
+    "HEADING","PROJ_ID","PROJ_ID","PROJ_ID","PROJ_CLNT"
+    "UNIT","","","",""
+    "TYPE","ID","X","X","X"
+    "DATA","Prj-AG","Acme Gasworks","Greenwich, London","Acme Enterprises"
+
+    "GROUP","LOCA"
+    "HEADING","LOCA_ID","LOCA_TYPE","LOCA_NATE","LOCA_NATN","LOCA_GL","LOCA_FDEP"
+    "UNIT","","","m","m","m","m"
+    "TYPE","ID","PA","0DP","0DP","2DP","1DP"
+    "DATA","TP1","RO","539277","179635","-20.35","3.5"
+    "DATA","TP2","RO","539245","179456","-23.35","2.1"
+    "DATA","TP3","RO","539299","179474","-20.22","2.9"
+
+.. note:: 
+    
+    - Looks like :ref:`csv`, but unlike a **true csv**, its not equal column length down the rows which is why most builtin csv parsers can handle it.
+    - A developers tip is to read each line, and get native parser to parse each line
+    - Or read each group block into a string/file and then parse equal cols
+    
+
+What does it all mean ?
+-------------------------------
+
+The first column are the :term:`DATA DESCRIPTORS`, and basically describe what the row's data means:
+
+    - **GROUP** - indicates a new group (spreadsheet tab)
+    - **HEADING** - the column headings for this group (column in a tab)
+    - **UNIT** - the units for the columns, is there is one 
+    - **TYPE** - the column type, eg `X` for text or `2DP` for two decimal places (the column formatting)
+    - **DATA** - one or more data rows conforming to the **TYPE** (the lines of data after fixed header)
+    - The HEADING, UNIT and TYPE are coolectively called the HEADER and define the column ? (to check)
+    
+Mysterious codes ?
+-------------------------------------------
+
+The `codes` are defined, maintained and published by the AGS (here), and 
+called the **AGS4 Data Dictionary**. 
+
+The data dictionary comprises a few parts and are pretty fixed to mean some things. This is
+one of the strength og ags in data interchange (see validator soon):
+
+- The list of four digit **GROUP** codes
+    - eg `PROJ` for project details, `SAMP` for sample information
+    
+- The **HEADING** codes which always start with the group code
+    - eg `SAMP_REF`, `SAMP_ID`, `SAMP_TYPE`
+    
+- A list of registered **UNIT** eg 
+    - `km2` for `square kilometre`
+    - `lbf` for `pounds force`  
+
+- A **TYPE** which defined the format/type of data, eg
+    - `2DP` for 2 decimal points
+    - `X`
+    - `DT` for a date time type
+    - Important is `PA` for :ref:`abbrs` (abbreviations)
+    
+- **ABBR** (Abbreviations) for various **HEADINGS**
+    - The **TYPE** PA means pick abbreviation eg
+      - `B` for a Bulk Sample in SAMP_TYPE
+      - `PRELIM` for a Relim in LOCA_STAT
+      
+
+
+How do I use it ?
+-------------------------------------------
+
+TODO
+
+
+
+

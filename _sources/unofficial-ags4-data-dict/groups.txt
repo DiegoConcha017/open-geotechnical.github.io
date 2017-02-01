@@ -1,0 +1,198 @@
+AGS4 Groups
+=========================
+
+
+Field and Laboratory Environmental Testing
+------------------------------------------------------------------------------------------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    group/ERES
+
+Geoenvironmental in situ Testing
+------------------------------------------------------------------------------------------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    group/IFID
+    group/IPID
+
+Geological Descriptions and Information
+------------------------------------------------------------------------------------------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    group/DETL
+    group/DISC
+    group/FRAC
+    group/GEOL
+    group/WETH
+
+Geotechnical Laboratory Testing (Soils and Rocks)
+------------------------------------------------------------------------------------------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    group/CBRG
+    group/CBRT
+    group/CMPG
+    group/CMPT
+    group/CONG
+    group/CONS
+    group/ESCG
+    group/ESCT
+    group/FRST
+    group/GCHM
+    group/GRAG
+    group/GRAT
+    group/LDEN
+    group/LDYN
+    group/LLIN
+    group/LLPL
+    group/LNMC
+    group/LPDN
+    group/LPEN
+    group/LRES
+    group/LSLT
+    group/LSTG
+    group/LSTT
+    group/LSWL
+    group/LVAN
+    group/MCVG
+    group/MCVT
+    group/PTST
+    group/RCCV
+    group/RDEN
+    group/RELD
+    group/RPLT
+    group/RSCH
+    group/RSHR
+    group/RTEN
+    group/RUCS
+    group/RWCO
+    group/SHBG
+    group/SHBT
+    group/SUCT
+    group/TREG
+    group/TRET
+    group/TRIG
+    group/TRIT
+
+Geotechnical in situ Testing
+------------------------------------------------------------------------------------------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    group/DCPG
+    group/DCPT
+    group/DPRB
+    group/DPRG
+    group/ICBR
+    group/IDEN
+    group/IPEN
+    group/IPRG
+    group/IPRT
+    group/IRDX
+    group/IRES
+    group/ISAG
+    group/ISAT
+    group/ISPT
+    group/IVAN
+    group/PLTG
+    group/PLTT
+    group/PMTD
+    group/PMTG
+    group/PMTL
+    group/PUMG
+    group/PUMT
+    group/SCDG
+    group/SCDT
+    group/SCPG
+    group/SCPP
+    group/SCPT
+
+Locations and Exploratory Hole Construction Details
+------------------------------------------------------------------------------------------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    group/BKFL
+    group/CDIA
+    group/CHIS
+    group/CORE
+    group/DOBS
+    group/DREM
+    group/FLSH
+    group/HDIA
+    group/HDPH
+    group/HORN
+    group/LOCA
+    group/PTIM
+    group/TREM
+    group/WADD
+    group/WINS
+    group/WSTD
+    group/WSTG
+
+Materials Laboratory Testing (Aggregates)
+------------------------------------------------------------------------------------------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    group/AAVT
+    group/ACVT
+    group/AELO
+    group/AFLK
+    group/AIVT
+    group/ALOS
+    group/APSV
+    group/ARTW
+    group/ASDI
+    group/ASNS
+    group/AWAD
+    group/TNPC
+
+Monitoring Installations, Instruments and Readings
+------------------------------------------------------------------------------------------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    group/MOND
+    group/MONG
+    group/PIPE
+
+Project / Data Transmission Details
+------------------------------------------------------------------------------------------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    group/ABBR
+    group/DICT
+    group/FILE
+    group/PREM
+    group/PROJ
+    group/STND
+    group/TRAN
+    group/TYPE
+    group/UNIT
+
+Samples, Amalgamated Specimens and Laboratory Test Scheduling
+------------------------------------------------------------------------------------------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    group/CHOC
+    group/LBSG
+    group/LBST
+    group/SAMP
+

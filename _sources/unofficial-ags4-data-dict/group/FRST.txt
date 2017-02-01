@@ -1,0 +1,144 @@
+.. _ags4_FRST:
+
+FRST
+===========================================================================
+
+Frost Susceptibility Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - FRST_COND
+      - 
+      - `:ref:`ags4_FRST_COND`
+      - Recompaction
+      - Sample condition
+    * - FRST_DDEN
+      - Mg/m3
+      - 2DP
+      - 1.96
+      - Dry density of specimens after preparation
+    * - FRST_MC
+      - %
+      - MC
+      - 24
+      - Moisture content of specimens at preparation
+    * - FRST_HVE1
+      - mm
+      - 1DP
+      - 3
+      - Frost heave, first specimen 
+    * - FRST_HVE2
+      - mm
+      - 1DP
+      - 4.5
+      - Frost heave, second specimen
+    * - FRST_HVE3
+      - mm
+      - 1DP
+      - 3.5
+      - Frost heave, third specimen
+    * - FRST_HVE
+      - mm
+      - 1DP
+      - 3.6
+      - Mean heave of 3 specimens
+    * - FRST_STAB
+      - %
+      - 2SF
+      - 23
+      - Amount of stabiliser added
+    * - FRST_STYP
+      - 
+      - X
+      - Cement
+      - Type of stabiliser added
+    * - FRST_REM
+      - 
+      - X
+      - 
+      - Notes on frost susceptibility testing as per TRRL SR 829
+    * - FRST_METH
+      - 
+      - X
+      - BS EN 1997-2
+      - Test method
+    * - FRST_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - FRST_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS20
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- BS 812 requires the results of three specimens and the mean to be reported. However, all three specimens are prepared to exactly the same density and moisture content and hence both the standard and the data format only require one density and moisture content.
+

@@ -1,0 +1,63 @@
+.. _ags4_DCPT:
+
+DCPT
+===========================================================================
+
+Dynamic Cone Penetrometer Tests - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - DCPG_DATE
+      - yyyy-mm-dd
+      - DT
+      - 20/03/2003
+      - Test date
+    * - DCPG_TESN
+      - 
+      - X
+      - 1
+      - Test reference
+    * - DCPG_DPTH
+      - m
+      - 2DP
+      - 0.3
+      - Depth from surface to start of test
+    * - DCPT_CBLO
+      - 
+      - 0DP
+      - 1
+      - Cumulative blows
+    * - DCPT_PEN
+      - mm
+      - 0DP
+      - 9
+      - Penetration at DCPT_CBLO
+    * - DCPT_DEL
+      - hh:mm
+      - T
+      - 0:00
+      - Delay before increment started
+    * - DCPT_REM
+      - 
+      - X
+      - 
+      - Test reading remarks
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - None
+-------------------------
+

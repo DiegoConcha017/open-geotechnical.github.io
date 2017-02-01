@@ -1,0 +1,91 @@
+.. _ags4_GEOL:
+
+GEOL
+===========================================================================
+
+Field Geological Descriptions
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - GEOL_TOP
+      - m
+      - 2DP
+      - 16.21
+      - Depth to the top of stratum
+    * - GEOL_BASE
+      - m
+      - 2DP
+      - 17.25
+      - Depth to the base of description 
+    * - GEOL_DESC
+      - 
+      - X
+      - Stiff grey silty CLAY
+      - General description of stratum 
+    * - GEOL_LEG
+      - 
+      - `:ref:`ags4_GEOL_LEG`
+      - 102
+      - Legend code
+    * - GEOL_GEOL
+      - 
+      - `:ref:`ags4_GEOL_GEOL`
+      - LC
+      - Geology code
+    * - GEOL_GEO2
+      - 
+      - `:ref:`ags4_GEOL_GEO2`
+      - SAND 
+      - Second geology code
+    * - GEOL_STAT
+      - 
+      - X
+      - 1
+      - Stratum reference shown on trial pit or traverse sketch
+    * - GEOL_BGS
+      - 
+      - `:ref:`ags4_GEOL_BGS`
+      - CHAM
+      - BGS Lexicon code
+    * - GEOL_FORM
+      - 
+      - X
+      - Charmouth Mudstone Formation 
+      - Geological formation or stratum name
+    * - GEOL_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS4
+      - Associated file reference (eg logging field sheets, photographs of exposures)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 8
+-------------------------
+- GEOL is used to transfer the field descriptions of geological materials required by EN ISO 14688-1 and 14689-1, and as described in guidance including BS5930 (amended).
+- GEOL_GEOL and GEOL_GEO2 can contain codes that are defined by the organisation supervising the investigation and may be an organisation or project based classification of the strata. The codification is typically determined by the investigation supervisor, designer or consultant. The inclusion of the codification by a ground investigation contractor and provision in the AGS format files has to be specified in full in the investigation specification as codification is typically not a requirement of investigation standards.
+- A suggested use of the GEOL_GEOL and GEOL_GEO2 codes is as follows:
+- The stratum code GEOL_STAT may be used as the reference letter or number of each stratum on a trial pit log. Its sole purpose is to link the stratum shown on the face sketch of the trial pit to the stratum description given elsewhere on the log.  It is therefore not used on borehole logs and it is not used on simple trial pit logs which are presented in borehole log format, without a face sketch.  GEOL_STAT is usually just the numbers 1, 2, 3 etc or the letters A, B, C etc.
+- GEOL_STAT also appears in the SAMP Group and several of the in situ testing Groups so that it is possible to indicate which stratum on a trial pit face a sample was taken from, or an in situ test carried out in.
+- GEOL_BGS can be included if required to contain the abbreviations from the British Geological Survey (BGS) lexicon of strata that is associated with the stratum. There is a list of these abbreviations provided and maintained on the BGS website: www.bgs.ac.uk/lexicon/home.html.
+- BS5930 (amended) states that the geological formation may also be named. Typically this information is presented as part of the exploratory hole log at the end of stratum description. If this is required, this data must be specified and the data is not included in GEOL_DESC but transferred in an additional heading GEOL_FORM. There is a link between GEOL_FORM and GEOL_BGS, however, the use of GEOL_FORM will include for strata that do not have BGS Lexicon codes; for example, types of MADE GROUND such as embankment fill.
+- If more detailed information on material weathering grades is required then these details are to be included in the WETH group.
+

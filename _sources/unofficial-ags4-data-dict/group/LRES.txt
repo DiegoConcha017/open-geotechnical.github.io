@@ -1,0 +1,175 @@
+.. _ags4_LRES:
+
+LRES
+===========================================================================
+
+Laboratory Resistivity Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U 
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - LRES_BDEN
+      - Mg/m3
+      - 2DP
+      - 2.12
+      - Bulk density
+    * - LRES_DDEN
+      - Mg/m3
+      - 2DP
+      - 1.84
+      - Dry density
+    * - LRES_MC
+      - %
+      - MC
+      - 15
+      - Moisture content
+    * - LRES_COND
+      - 
+      - X
+      - Remoulded
+      - Sample condition including details of remoulding
+    * - LRES_LRES
+      - ohm m
+      - 0DP
+      - 45
+      - Temperature corrected (20 degC) resistivity
+    * - LRES_CDIA
+      - mm
+      - 0DP
+      - 450
+      - Diameter of container
+    * - LRES_CCSA
+      - mm2
+      - 0DP
+      - 25000
+      - Container cross-sectional area
+    * - LRES_CLEN
+      - mm
+      - 0DP
+      - 100
+      - Length of container
+    * - LRES_TEMP
+      - degC
+      - 0DP
+      - 22
+      - Temperature at which test performed
+    * - LRES_ELEC
+      - 
+      - X
+      - Steel discs
+      - Type of electrodes including material
+    * - LRES_PENT
+      - 
+      - X
+      - 15mm diameter probes 100mm penetrating 75mm into test specimen
+      - Dimensions of probes, diameter, spacing, penetration into the soil specimen and whether inserted into ends or side
+    * - LRES_CSHP
+      - 
+      - X
+      - Cylinder
+      - Shape of container
+    * - LRES_WAT
+      - ml
+      - 0DP
+      - 750
+      - Volume of water required to saturate the soil
+    * - LRES_WRES
+      - ohm m
+      - 3SF
+      - 0.69
+      - Water resitivity
+    * - LRES_PART
+      - 
+      - X
+      - None
+      - Approximate percentage of large particles removed prior to test
+    * - LRES_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - LRES_METH
+      - 
+      - X
+      - 
+      - Test method
+    * - LRES_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - LRES_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS10
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- The water conductivity LRES_WCND may be included from relevant testing. For tests with natural water content values may come from suitable water collected in boreholes or, where water is added, a combination of in situ values and  those of the added water.
+- The method used including the container shape (LRES_CSHP) and test geometry (LRES_PENT) should be included.
+

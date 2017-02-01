@@ -1,0 +1,126 @@
+.. _ags4_CBRT:
+
+CBRT
+===========================================================================
+
+California Bearing Ratio Tests - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - CBRT_TESN
+      - 
+      - X
+      - 1
+      - Test reference
+    * - CBRT_TOP
+      - %
+      - 2SF
+      - 6.4
+      - CBR at top
+    * - CBRT_BASE
+      - %
+      - 2SF
+      - 5.2
+      - CBR at bottom
+    * - CBRT_MCT
+      - %
+      - MC
+      - 15
+      - Moisture content at top after test
+    * - CBRT_MCBT
+      - %
+      - MC
+      - 14
+      - Moisture content at bottom after test
+    * - CBRT_IMC
+      - %
+      - MC
+      - 21
+      - Initial moisture content
+    * - CBRT_BDEN
+      - Mg/m3
+      - 2DP
+      - 1.84
+      - Initial bulk density
+    * - CBRT_DDEN
+      - Mg/m3
+      - 2DP
+      - 1.6
+      - Initial Dry density
+    * - CBRT_SURC
+      - kPa
+      - 0DP
+      - 10
+      - Surcharge pressure applied
+    * - CBRT_SKDT
+      - 
+      - X
+      - 4 days in tap water
+      - Details of soaking
+    * - CBRT_SWEL
+      - mm
+      - 1DP
+      - 3
+      - Amount of swell recorded during soaking (if applicable)
+    * - CBRT_REM
+      - 
+      - X
+      - 
+      - Test specific remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS16
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 3
+-------------------------
+- CBRT_SWEL should be used to report the amount of swelling recorded on the specimen in each test.
+- CBRT_IMC allows the initial moisture content of the CBR test sample to be recorded which may differ from the after test moisture content especially if the sample is pre-soaked.
+- CBRT_REM allows commentary for the addition of test specific remarks. For example, where CBR is tested at natural moisture content, natural moisture content % and natural moisture content -2% or to include details of whether curve correction was applied.
+

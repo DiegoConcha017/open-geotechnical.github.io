@@ -1,0 +1,100 @@
+.. _ags4_IVAN:
+
+IVAN
+===========================================================================
+
+In Situ Vane Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - IVAN_DPTH
+      - m
+      - 2DP
+      - 13.5
+      - Depth of vane test
+    * - IVAN_TESN
+      - 
+      - X
+      - 2
+      - Test reference
+    * - IVAN_TYPE
+      - 
+      - `:ref:`ags4_IVAN_TYPE`
+      - Borehole 
+      - Vane type
+    * - IVAN_IVAN
+      - kPa
+      - XN
+      - 60 or >80
+      - Vane test result
+    * - IVAN_IVAR
+      - kPa
+      - XN
+      - 45 or >80
+      - Vane test residual result
+    * - IVAN_DATE
+      - yyyy-mm-dd
+      - DT
+      - 28/02/2003
+      - Test date
+    * - IVAN_REM
+      - 
+      - X
+      - 
+      - Details of vane test, vane size
+    * - IVAN_ENV
+      - 
+      - X
+      - Dry and warm
+      - Details of weather and environmental conditions during test
+    * - IVAN_METH
+      - 
+      - X
+      - BS1377 Part 9
+      - Test method
+    * - IVAN_CONT
+      - 
+      - X
+      - ACME On-site Testing Ltd
+      - Name of testing organisation
+    * - IVAN_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - GEOL_STAT
+      - 
+      - X
+      - 1
+      - Stratum reference shown on trial pit or traverse sketch
+    * - FILE_FSET
+      - 
+      - X
+      - FS11
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- IVAN_ENV allows records of environmental conditions to be recorded. Where the test is down hole this field should be left empty as this has no bearing on the measurement made.
+- IVAN_IVAN and IVAN_IVAR data should generally be numeric.  A text form can only be used by addition of a prefixing operator to denote greater than or less than conditions ie >200 when readings are above the reporting limit of the testing equipment.
+

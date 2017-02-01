@@ -1,0 +1,149 @@
+.. _ags4_DPRG:
+
+DPRG
+===========================================================================
+
+Dynamic Probe Tests - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - DPRG_TESN
+      - 
+      - X
+      - 1
+      - Test reference
+    * - DPRG_DATE
+      - yyyy-mm-dd
+      - DT
+      - 20/03/2003
+      - Test date
+    * - DPRG_TYPE
+      - 
+      - `:ref:`ags4_DPRG_TYPE`
+      - DPL 
+      - Dynamic probe type
+    * - DPRG_METH
+      - 
+      - X
+      - BS EN ISO 22476-2
+      - Test method
+    * - DPRG_MASS
+      - kg
+      - 0DP
+      - 50
+      - Hammer mass
+    * - DPRG_DROP
+      - mm
+      - 0DP
+      - 500
+      - Standard drop
+    * - DPRG_CONE
+      - mm
+      - 0DP
+      - 43
+      - Cone base diameter
+    * - DPRG_ROD
+      - mm
+      - 0DP
+      - 35
+      - Rod diameter
+    * - DPRG_TANV
+      - 
+      - X
+      - 
+      - Type of anvil
+    * - DPRG_DAMP
+      - 
+      - X
+      - None
+      - Type of anvil damper
+    * - DPRG_TIP
+      - m
+      - 2DP
+      - 8
+      - Depth of cone if left in ground
+    * - DPRG_REM
+      - 
+      - X
+      - Hole backfilled on completion
+      - General remarks
+    * - DPRG_ANG
+      - deg
+      - 0DP
+      - 90
+      - Cone angle
+    * - DPRG_RMSS
+      - kg/m
+      - 1DP
+      - 9
+      - Rod mass
+    * - DPRG_PARF
+      - 
+      - X
+      - 
+      - Precautions against rod friction
+    * - DPRG_PDIU
+      - 
+      - X
+      - 
+      - Pre-drilling if used
+    * - DPRG_BCF
+      - 
+      - X
+      - 
+      - Blow count frequency
+    * - DPRG_GW
+      - m
+      - 2DP
+      - 1
+      - Groundwater level
+    * - DPRG_REET
+      - 
+      - X
+      - 
+      - Reasons for early end of test
+    * - DPRG_ENV
+      - 
+      - X
+      - Heavy rain
+      - Details of weather and environmental conditions during test
+    * - DPRG_CONT
+      - 
+      - X
+      - ACME On-site Testing Ltd
+      - Name of testing organisation
+    * - DPRG_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS25
+      - Associated file reference (eg equipment calibrations)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- The cone angle and rod mass (per unit length) have been included to provide additional test data for defining non-standard equipment such as the Mackintosh Probe.
+

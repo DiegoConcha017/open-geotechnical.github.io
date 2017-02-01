@@ -1,0 +1,746 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LOCA &mdash; Open GeoTechnical</title>
+    
+    <link rel="stylesheet" href="../../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="Open GeoTechnical" href="../../index.html" />
+    <link rel="up" title="AGS4 Groups" href="../groups.html" />
+    <link rel="next" title="PTIM" href="PTIM.html" />
+    <link rel="prev" title="HORN" href="HORN.html" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+<style>
+
+
+
+body {
+    background-color: black;
+}
+
+#XHEAD {
+    deadbackground-color: yellow !important;
+}
+.main_title{
+    margin: 10px;
+    font-size: 14pt;
+    vertical-align: top;
+    color: #999999;
+    font-family: Verdana;
+    background-image: "/_static/logo.png"
+}
+
+.main_title a {
+    color: #F29F00;
+}
+.main_title a:hover {
+    text-decoration: none;
+}
+.main_title small{
+    margin: 10px;
+    font-size: 8pt;
+    vertical-align: top;
+    color: #999999;
+    font-weight: normal;
+    font-family: Verdana;
+}
+
+.externals_nav {
+    float: right;
+    margin-right: 20px;
+}
+.externals_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+        sswidth: 50px;
+} 
+
+.externals_nav a {
+    text-decoration: none;
+    color: #999999;
+    padding: 5px;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+.externals_nav a:hover {
+    background-color: #333333;
+    color: white;
+}
+    
+        
+.module_nav {
+    float: right;
+    ssmargin-right: 150px;
+
+    deadbackground-color: red !important;
+}
+.module_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+    width: 50px;
+}
+.module_nav a {
+    text-decoration: none;
+    background-color: #222222;
+    color: #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #efefef;
+    font-family: Verdana;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.module_nav a:hover {
+    background-color: #333333;
+}
+.module_nav a.selected{
+    background-color: #999999;
+    color: black;
+}
+
+.related{
+    background-color: #222222 !important; 
+    margin-right: 10px;
+    
+}
+.related a {
+    color: #dddddd !important; 
+    text-shadow: none;
+        font-size: 10pt !important;
+}
+div.related ul {
+    padding-left: 300px;
+}
+.related ul li {
+    color: #FFFF00 !important;
+}
+
+.sphinxsidebarwrapper {
+    width: 300px;
+    background-color: #DDDDDD;
+}
+.sphinxsidebarwrapper h3  {
+    border-bottom: 1px solid white;
+}
+.sphinxsidebarwrapper h3 a {
+    font-family: Verdana;
+}
+div.bodywrapper {
+    margin-left: 300px;
+}
+.sphinxsidebar ul {
+    margin-left: 0;
+}
+.sphinxsidebar ul li{
+    sborder-top: 1px solid #dddddd !important;
+    ssbackground-color: white;
+    padding: 2px !important;
+}
+.sphinxsidebar ul li a{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #333333;
+    font-family: Verdana;
+}
+.sphinxsidebar ul ul{
+    width: 250px;
+}
+.sphinxsidebar ul ul li{
+    border-top: none !important;
+}
+.sphinxsidebar ul ul li a{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Verdana;
+}
+
+
+
+/**************************************************/
+/* Main */
+/**************************************************/
+div.body {
+    font-size: 10pt;
+}
+
+div.body h1{
+    border-radius: 10px !important;
+    padding: 5px 10px;
+    font-size: 20pt;
+    background-color: #444444 !important;
+    color: #dddddd;
+   font-family: Verdana;
+}
+
+
+
+div.body h2{
+
+    border-top: 2px solid #999999;
+    border-right: 2px solid #999999;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #bbbbbb !important;
+    font-size: 12pt;
+    font-family: monospace;
+
+    padding: 5px 10px;
+}
+div.body h3{
+    border-top: 2px solid #dddddd;
+    border-right: 2px solid #aaaaaa;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #dddddd !important;
+    font-size: 10pt;
+    font-family: monospace;
+    padding: 5px 10px;
+}
+
+div.body p {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 600px;
+}
+div.body ul, ol {
+    padding-left: 50px;
+    padding-right: 50px;
+     max-width: 600px;
+}
+div.body li p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+div.body ul, ul {
+     padding-left: 30px;
+    padding-right: 30px;
+}
+
+.admonition {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+.field-name {
+    width: 80px;
+    text-align: right;
+}
+
+pre {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 9pt;
+    padding: 4px;
+}
+
+table.docutils {
+    box-shadow: 9px 10px 34px -16px rgba(0,0,0,0.75);
+}
+table.docutils thead {
+    background-color: #dddddd;
+}
+table.docutils th {
+    padding: 5px;
+}
+table.docutils td {
+    padding: 2px;
+}
+
+table.field-list{
+    box-shadow: none;
+    background-color: #eeeeee;
+}
+
+table.field-list tr{
+    border-bottom: 1px solid #cccccc;
+}
+table.field-list th {
+    padding: 5px;
+    width: 100px;
+    border-right: 1px solid #cccccc;
+    font-size: 9pt;
+    deadbackground-color: red;
+    color: #888888;
+}
+table.field-list td {
+    padding: 5px;
+    border-left: 1px solid #cccccc;
+}
+
+dl.class p {
+    padding-left: 5px;
+}
+
+.ags-csv-rule {
+    background-color: #00CCCC;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+.ags-data-rule {
+    background-color:#FFFF00;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+
+.viewcode-link {
+    font-size: 8pt;
+}
+
+/**************************************************/
+/* API stuff */
+/**************************************************/
+/* a whole class container */
+dl.class {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #822775;
+}
+/* class Name */
+dl.class dt .descname{
+	color: #822775;
+	font-size: 13pt;
+	font-family: monospace;
+}
+
+a.reference code.py-class span.pre {
+    color: #822775 !important;
+    font-family: monospace;
+}
+
+
+/* class attribute */
+dl.attribute dt .descname {
+    color: #AD833E;
+    font-size: 11pt;
+    font-family: monospace;
+}
+
+
+/* class method  */
+dl.method dt .descname {
+    color: #1B68B8;
+	font-size: 11pt;
+	font-family: monospace;
+
+}
+
+/* a whole function container */
+dl.function {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #298815;
+}
+/* function */
+dl.function dt .descname {
+    color: #298815 !important;
+}
+
+a.reference code.py-func span.pre {
+    color: #298815 !important;
+    font-family: monospace;
+}
+
+/* glossary */
+dl.glossary dt {
+    background-color: #eeeeee;
+    font-family: monospace;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top-right-radius: 20px;
+    padding: 3px 5px;
+
+}
+dl.glossary dd {
+    border-right: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+</style>
+    
+    <div id="XHEAD">
+
+  
+  <h1 class="main_title"><a href="/"><img src="/_static/logo-small.png"> Open GeoTechnical</a> </h1>
+  </div>
+  
+
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="PTIM.html" title="PTIM"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="HORN.html" title="HORN"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ogt</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Unofficial AGS4 Data Dict</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../groups.html" accesskey="U">AGS4 Groups</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="loca">
+<span id="ags4-loca"></span><h1>LOCA<a class="headerlink" href="#loca" title="Permalink to this headline">¶</a></h1>
+<p>Location Details</p>
+<p>Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="5%" />
+<col width="10%" />
+<col width="5%" />
+<col width="30%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">Heading</th>
+<th class="head">Unit</th>
+<th class="head">Type</th>
+<th class="head">Example</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">LOCA_ID</th>
+<td>&nbsp;</td>
+<td>ID</td>
+<td>327-16A</td>
+<td>Location identifier</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_TYPE</th>
+<td>&nbsp;</td>
+<td><cite>:ref:`ags4_LOCA_TYPE</cite></td>
+<td>CP+RC</td>
+<td>Type of activity</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_STAT</th>
+<td>&nbsp;</td>
+<td><cite>:ref:`ags4_LOCA_STAT</cite></td>
+<td>PRELIM</td>
+<td>Status of information relating to this position</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_NATE</th>
+<td>m</td>
+<td>2DP</td>
+<td>523145</td>
+<td>National Grid Easting of location or start of traverse</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_NATN</th>
+<td>m</td>
+<td>2DP</td>
+<td>178456.12</td>
+<td>National Grid Northing of location or start of traverse</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_GREF</th>
+<td>&nbsp;</td>
+<td><cite>:ref:`ags4_LOCA_GREF</cite></td>
+<td>OSGB</td>
+<td>National grid referencing system used</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_GL</th>
+<td>m</td>
+<td>2DP</td>
+<td>16.23</td>
+<td>Ground level relative to datum of location or start of traverse</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_REM</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>&nbsp;</td>
+<td>General remarks</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_FDEP</th>
+<td>m</td>
+<td>2DP</td>
+<td>32.6</td>
+<td>Final depth</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_STAR</th>
+<td>yyyy-mm-dd</td>
+<td>DT</td>
+<td>18/03/1991</td>
+<td>Date of start of activity</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_PURP</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Groundwater observation well</td>
+<td>Purpose of activity at this location</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_TERM</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Abandoned on engineer&#8217;s instruction</td>
+<td>Reason for activity termination</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_ENDD</th>
+<td>yyyy-mm-dd</td>
+<td>DT</td>
+<td>22/03/1991</td>
+<td>End date of activity</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_LETT</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>TQ231784</td>
+<td>OSGB letter grid reference</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_LOCX</th>
+<td>m</td>
+<td>2DP</td>
+<td>565.23</td>
+<td>Local grid x co-ordinate or start of traverse</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_LOCY</th>
+<td>m</td>
+<td>2DP</td>
+<td>421.12</td>
+<td>Local grid y co-ordinate or start of traverse</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_LOCZ</th>
+<td>m</td>
+<td>2DP</td>
+<td>106.63</td>
+<td>Level or start of traverse to local datum</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_LREF</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>London grid 1</td>
+<td>Local grid referencing system used</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_DATM</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Anytown datum</td>
+<td>Local datum referencing system used</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_ETRV</th>
+<td>m</td>
+<td>2DP</td>
+<td>523195.12</td>
+<td>National Grid Easting of end of traverse</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_NTRV</th>
+<td>m</td>
+<td>2DP</td>
+<td>178486.12</td>
+<td>National Grid Northing of end of traverse</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_LTRV</th>
+<td>m</td>
+<td>2DP</td>
+<td>9.67</td>
+<td>Ground level relative to datum of end of traverse</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_XTRL</th>
+<td>m</td>
+<td>2DP</td>
+<td>523195.12</td>
+<td>Local grid easting of end of traverse</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_YTRL</th>
+<td>m</td>
+<td>2DP</td>
+<td>178486.12</td>
+<td>Local grid northing of end of traverse</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_ZTRL</th>
+<td>m</td>
+<td>2DP</td>
+<td>9.67</td>
+<td>Local elevation of end of traverse</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_LAT</th>
+<td>&nbsp;</td>
+<td>DMS</td>
+<td>28:52.</td>
+<td>Latitude of location or start of traverse</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_LON</th>
+<td>&nbsp;</td>
+<td>DMS</td>
+<td>10:34.</td>
+<td>Longitude of location or start of traverse</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_ELAT</th>
+<td>&nbsp;</td>
+<td>DMS</td>
+<td>28:53.</td>
+<td>Latitude of end of traverse</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_ELON</th>
+<td>&nbsp;</td>
+<td>DMS</td>
+<td>10:34.</td>
+<td>Longitude of end of traverse</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_LLZ</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>WSG84</td>
+<td>Projection Format</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_LOCM</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>dGPS</td>
+<td>Method of location</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_LOCA</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Sub-station 1</td>
+<td>Site location sub division (within project) code or description</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_CLST</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Phase 2a</td>
+<td>Investigation phase grouping code or description</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_ALID</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Tunnel Alignment P</td>
+<td>Alignment Identifier</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_OFFS</th>
+<td>&nbsp;</td>
+<td>2DP</td>
+<td>10.35</td>
+<td>Offset</td>
+</tr>
+<tr class="row-odd"><th class="stub">LOCA_CNGE</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>500+123.23</td>
+<td>Chainage</td>
+</tr>
+<tr class="row-even"><th class="stub">LOCA_TRAN</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>Coordinate transforms document ref 100-23-A, dated 16 April 2010</td>
+<td>Reference to or details of algorithm used to calculate local grid reference, local ground levels or chainage</td>
+</tr>
+<tr class="row-odd"><th class="stub">FILE_FSET</th>
+<td>&nbsp;</td>
+<td>X</td>
+<td>FS2</td>
+<td>Associated file reference (eg boring or pitting instructions, location photographs)</td>
+</tr>
+</tbody>
+</table>
+<p>sssssssssssssssssssssssssssssssssssssssssss
+Notes - 8
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+- LOCA is used to transfer the spatial location of all positions where data has been recorded. This includes the location of exploratory holes, sampling points or other locations where an observation / test has been made, or a sample / measurement taken.
+- The LOCA_TYPE code is used to categorise the type of activity that has occurred at the location.
+- The details of exploratory hole construction are contained in the HDPH group. If LOCA_TYPE codes are used that represent the type of exploratory hole construction then they must be correlated with the code or combinations of codes in HDPH_TYPE. Alternatively the code &#8216;EH&#8217; could be used to represent an Exploratory Hole the details of which are contained in HDPH.
+- If the AGS data file includes information on construction items, then LOCA would also include references to these locations.
+- LOCA_ID must be unique for the project and should be unique for the site to allow for consolidation of data. Consideration of this needs to be made at the outset of the project. Typically the consulting engineer or designer allows for this in specifying hole or location identifiers.
+- LOCA_FDEP will generally be null for location points other than exploratory holes, pits, piles or other below ground constructed elements.
+- Two headings, LOCA_LOCA and LOCA_CLST, provide a heading for tags of hole groupings. These groupings would typically be specified by the Investigation Supervisor/Designer rather than the GI Contractor. LOCA_LOCA is to be used to define the grouping of a hole by site location, whereas LOCA_CLST is typically used to indicate investigation phase. If codes are used to define these location or phase data, then the codes must be defined in the ABBR group.
+- LOCA_OFFS, LOCA_CNGE and LOCA_ALID allow location data to be presented by chainage and offset to an alignment as typically used for location on road and rail projects. The data included in these headings will probably be expressed in project related units. For example, offset can be defined as positive or negative (eg  or -12). Chainage on UK railway projects may well be expressed in miles and chains (eg 10 mi 1 ch)</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="HORN.html"
+                        title="previous chapter">HORN</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="PTIM.html"
+                        title="next chapter">PTIM</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="PTIM.html" title="PTIM"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="HORN.html" title="HORN"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ogt</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Unofficial AGS4 Data Dict</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../groups.html" >AGS4 Groups</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+      Last updated on 2017-02-01.
+    </div>
+  </body>
+</html>

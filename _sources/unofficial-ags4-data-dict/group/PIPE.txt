@@ -1,0 +1,71 @@
+.. _ags4_PIPE:
+
+PIPE
+===========================================================================
+
+Monitoring Installation Pipe Work
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - PIPE_REF
+      - 
+      - X
+      - Pipe1
+      - Pipe reference
+    * - PIPE_TOP
+      - m
+      - 2DP
+      - 0
+      - Top of construction zone
+    * - PIPE_BASE
+      - m
+      - 2DP
+      - 2.5
+      - Base of construction zone
+    * - PIPE_DIAM
+      - mm
+      - 0DP
+      - 75
+      - Diameter of pipe
+    * - PIPE_TYPE
+      - 
+      - `:ref:`ags4_PIPE_TYPE`
+      - Slotted 
+      - Type of pipe
+    * - PIPE_CONS
+      - 
+      - X
+      - 
+      - Details of pipe construction
+    * - PIPE_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS32
+      - Associated file reference (eg drilling journals)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 3
+-------------------------
+- PIPE is to be used to transfer pipe work lengths installed in an exploratory hole to provide instrumentation access.
+- A data row is included for each pipe length/type/diameter combination in a hole.
+- PIPE_TYPE would typically be an abbreviation and define the graphics used to represent the installation pipe work on reports or diagrams.
+

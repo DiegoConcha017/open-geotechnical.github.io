@@ -1,0 +1,130 @@
+.. _ags4_TRIT:
+
+TRIT
+===========================================================================
+
+Triaxial Tests - Total Stress - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.75
+      - Depth to top of test specimen
+    * - TRIT_TESN
+      - 
+      - X
+      - 1
+      - Triaxial test/stage reference
+    * - TRIT_SDIA
+      - mm
+      - 2DP
+      - 38.25
+      - Specimen diameter
+    * - TRIT_SLEN
+      - mm
+      - 2DP
+      - 76.45
+      - Specimen length
+    * - TRIT_IMC
+      - %
+      - MC
+      - 15
+      - Specimen initial moisture content
+    * - TRIT_FMC
+      - %
+      - MC
+      - 15
+      - Specimen final moisture content
+    * - TRIT_CELL
+      - kPa
+      - 0DP
+      - 100
+      - Total cell pressure
+    * - TRIT_DEVF
+      - kPa
+      - 0DP
+      - 360
+      - Corrected deviator stress at failure
+    * - TRIT_BDEN
+      - Mg/m3
+      - 2DP
+      - 2.12
+      - Initial bulk density
+    * - TRIT_DDEN
+      - Mg/m3
+      - 2DP
+      - 1.84
+      - Initial dry density
+    * - TRIT_STRN
+      - %
+      - 2SF
+      - 9.5
+      - Axial strain at failure
+    * - TRIT_CU
+      - kPa
+      - 2SF
+      - 180
+      - Undrained Shear Strength at failure
+    * - TRIT_MODE
+      - 
+      - X
+      - Brittle
+      - Mode of failure
+    * - TRIT_REM
+      - 
+      - X
+      - 
+      - Comments
+    * - FILE_FSET
+      - 
+      - X
+      - FS7
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- Individual stage undrained shear strength values should be included as TRIT_CU. Interpretation is usually beyond the remit of the geotechnical testing laboratory.
+- The information in this group is only used in conjunction with the detailed laboratory reports.
+

@@ -1,0 +1,89 @@
+.. _ags4_PLTT:
+
+PLTT
+===========================================================================
+
+Plate Loading Tests - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - PLTG_DPTH
+      - m
+      - 2DP
+      - 1.23
+      - Test depth
+    * - PLTG_TESN
+      - 
+      - X
+      - 1
+      - Test reference
+    * - PLTG_CYC
+      - 
+      - X
+      - 1
+      - Load cycle
+    * - PLTT_STG
+      - 
+      - X
+      - 1
+      - Load stage
+    * - PLTT_TIME
+      - min
+      - 1DP
+      - 0.5
+      - Stage elapsed time
+    * - PLTT_LOAD
+      - kN
+      - 1DP
+      - 10
+      - Applied load
+    * - PLTT_SET1
+      - mm
+      - 2DP
+      - 0.86
+      - Settlement Gauge 1
+    * - PLTT_SET2
+      - mm
+      - 2DP
+      - 0.74
+      - Settlement Gauge 2
+    * - PLTT_SET3
+      - mm
+      - 2DP
+      - 0.91
+      - Settlement Gauge 3
+    * - PLTT_SET4
+      - mm
+      - 2DP
+      - 0
+      - Settlement Gauge 4
+    * - PLTT_REM
+      - 
+      - X
+      - 
+      - Comments on reading
+    * - FILE_FSET
+      - 
+      - X
+      - FS11
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- PLTT is used to transfer the load settlement readings from a test/load cycle of a plate load test.
+

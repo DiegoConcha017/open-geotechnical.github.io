@@ -1,0 +1,80 @@
+.. _ags4_TRAN:
+
+TRAN
+===========================================================================
+
+Data File Transmission Information / Data Status
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - TRAN_ISNO
+      - 
+      - X
+      - 1
+      - Issue sequence reference
+    * - TRAN_DATE
+      - yyyy-mm-dd
+      - DT
+      - 01/04/2009
+      - Date of production of data file
+    * - TRAN_PROD
+      - 
+      - X
+      - ACME Drilling Ltd
+      - Data file producer
+    * - TRAN_STAT
+      - 
+      - X
+      - Draft
+      - Status of data within submission
+    * - TRAN_DESC
+      - 
+      - X
+      - Draft logs only
+      - Description of data transferred
+    * - TRAN_AGS
+      - 
+      - X
+      - 4
+      - AGS Edition Reference
+    * - TRAN_RECV
+      - 
+      - X
+      - ACME Consulting
+      - Data file recipient
+    * - TRAN_DLIM
+      - 
+      - X
+      - |
+      - Record Link data type Delimiter
+    * - TRAN_RCON
+      - 
+      - X
+      - +
+      - Concatenator
+    * - TRAN_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS1
+      - Associated file reference (eg data file QA check records)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- TRAN is required in all AGS4 files (Rule 14).
+- Delimiter and concatenator characters (TRAN_DLIM & TRAN_RCON) need to be defined if Record Link data or multiple concatenated abbreviations are included in the file. These characters cannot be used in IDs and abbreviations that are referred to in data key sets.
+

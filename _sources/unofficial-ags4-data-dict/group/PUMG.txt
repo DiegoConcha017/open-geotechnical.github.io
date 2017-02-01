@@ -1,0 +1,69 @@
+.. _ags4_PUMG:
+
+PUMG
+===========================================================================
+
+Pumping Tests - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - PUMG_TEST
+      - 
+      - X
+      - 1991-03-16#1
+      - Test reference
+    * - PUMG_CONT
+      - 
+      - X
+      - PUMP Ltd
+      - Contractor
+    * - PUMG_METH
+      - 
+      - X
+      - BS 6316
+      - Method of testing
+    * - PUMG_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - PUMG_ENV
+      - 
+      - X
+      - Heavy rain
+      - Details of weather and environmental conditions during test
+    * - PUMG_REM
+      - 
+      - X
+      - Double packer
+      - Remarks on test
+    * - FILE_FSET
+      - 
+      - X
+      - FS11
+      - Associated file reference (eg equipment calibrations)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- PUMG is to be used to record the general arrangements and details of pumping test.
+

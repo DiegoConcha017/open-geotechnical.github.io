@@ -1,0 +1,89 @@
+.. _ags4_CHOC:
+
+CHOC
+===========================================================================
+
+Chain of Custody Information
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - CHOC_REF
+      - 
+      - ID
+      - A1241/1
+      - Chain of custody reference
+    * - CHOC_FROM
+      - 
+      - X
+      - ACME Sampling Ltd
+      - Samples despatched from
+    * - CHOC_TO
+      - 
+      - X
+      - ACME Laboratories plc
+      - Samples despatched to
+    * - CHOC_DDIS
+      - yyyy-mm-dd
+      - DT
+      - 20/09/2009
+      - Date dispatched
+    * - CHOC_BTCH
+      - 
+      - X
+      - S234-1
+      - Batch reference
+    * - CHOC_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - CHOC_CONT
+      - 
+      - 0DP
+      - 1
+      - Number of sample containers
+    * - FILE_FSET
+      - 
+      - X
+      - FS99
+      - Associated file reference (chain of custody sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- The CHOC group is used to transfer chain of custody information relating to samples.
+

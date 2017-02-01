@@ -1,0 +1,95 @@
+.. _ags4_PMTL:
+
+PMTL
+===========================================================================
+
+Pressuremeter Test Results - Individual Loops
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - PMTG_DPTH
+      - m
+      - 2DP
+      - 2.7
+      - Depth of test
+    * - PMTG_TESN
+      - 
+      - X
+      - 1
+      - Test reference
+    * - PMTD_SEQ
+      - 
+      - 0DP
+      - 1
+      - Sequence number
+    * - PMTL_LNO
+      - 
+      - 0DP
+      - 1
+      - Unload/reload loop number
+    * - PMTL_GAA
+      - MPa
+      - 0DP
+      - 139
+      - Unload/reload shear modulus, average
+    * - PMTL_SINC
+      - %
+      - 2DP
+      - 3.48
+      - Mean strain
+    * - PMTL_PINC
+      - kPa
+      - 0DP
+      - 1586
+      - Mean pressure
+    * - PMTL_STRA
+      - %
+      - 3DP
+      - 0.105
+      - Strain range or amplitude
+    * - PMTL_PRSA
+      - kPa
+      - 0DP
+      - 284
+      - Pressure range or amplitude
+    * - PMTL_NLSA
+      - MPa
+      - 3DP
+      - 2.921
+      - Shear stress coefficient (from Bolton and Whittle, 1999)
+    * - PMTL_NLSB
+      - 
+      - 3DP
+      - 0.538
+      - Linearity exponent (from Bolton and Whittle, 1999)
+    * - PMTL_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS11
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- PMTL is used to transfer summary details of test loops. If detailed information is required on test loop data this would be provided as attached files and listed under FILE_FSET in the PMTG group.
+- Additional headings PMTL_NLSA and PMTL_NLSB have been added to include for data from Bolton and Whittle?s (1999) interpretation of unload-reload loops to derive non-linear stiffness parameters is becoming more routine. The interpretation gives two parameters, sometimes referred to as the linearity exponent and shear stress coefficient (Beta and alpha respective).
+

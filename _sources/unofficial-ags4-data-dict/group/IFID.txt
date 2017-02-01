@@ -1,0 +1,90 @@
+.. _ags4_IFID:
+
+IFID
+===========================================================================
+
+On Site Volatile Headspace Testing Using Flame Ionisation Detector
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - IFID_DPTH
+      - m
+      - 2DP
+      - 1
+      - Depth of headspace test sample 
+    * - IFID_TESN
+      - 
+      - X
+      - 2
+      - Test reference
+    * - IFID_DATE
+      - yyyy-mm-dd
+      - DT
+      - 20/02/2003
+      - Test date
+    * - IFID_RES
+      - ppmv
+      - 0DP
+      - 10
+      - Result of FID analysis
+    * - IFID_REM
+      - 
+      - X
+      - 
+      - Remarks on test
+    * - IFID_ENV
+      - 
+      - X
+      - Misty
+      - Details of weather and environmental conditions during test
+    * - IFID_METH
+      - 
+      - X
+      - Flame ionisation detector
+      - Details of FID used and method description
+    * - IFID_CONT
+      - 
+      - X
+      - ACME On-site Testing Ltd
+      - Name of testing organisation
+    * - IFID_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - GEOL_STAT
+      - 
+      - X
+      - 1
+      - Stratum reference shown on trial pit or traverse sketch
+    * - FILE_FSET
+      - 
+      - X
+      - FS23
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- IFID is used to record the results of on site volatile testing by means of headspace analysis using flame ionisation detectors.
+- IFID_CRED added to permit details of any test accreditation if appropriate to be included in data.
+

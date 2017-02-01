@@ -1,0 +1,109 @@
+.. _ags4_IDEN:
+
+IDEN
+===========================================================================
+
+In Situ Density Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - IDEN_DPTH
+      - m
+      - 2DP
+      - 1.25
+      - Depth of in situ density test
+    * - IDEN_TESN
+      - 
+      - X
+      - 2
+      - Test reference
+    * - IDEN_DATE
+      - yyyy-mm-dd
+      - DT
+      - 23/02/2003
+      - Test date
+    * - IDEN_TYPE
+      - 
+      - `:ref:`ags4_IDEN_TYPE`
+      - Core
+      - Type of density test performed
+    * - IDEN_IDEN
+      - Mg/m3
+      - 2DP
+      - 1.86
+      - In situ bulk density (after any calibration / corrections applied, ie reported value)
+    * - IDEN_MC
+      - %
+      - MC
+      - 18
+      - Moisture content relating to in situ test (after any calibration / corrections applied, ie reported value)
+    * - IDEN_STAB
+      - %
+      - 2SF
+      - 23
+      - Amount of stabiliser added
+    * - IDEN_STYP
+      - 
+      - X
+      - Cement
+      - Type of stabiliser added
+    * - IDEN_REM
+      - 
+      - X
+      - Uncorrected NDG values reported
+      - Remarks
+    * - IDEN_ENV
+      - 
+      - X
+      - Cloudy and wet
+      - Details of weather and environmental conditions during test
+    * - IDEN_METH
+      - 
+      - X
+      - BS1377 part 9
+      - Test method
+    * - IDEN_CONT
+      - 
+      - X
+      - ACME On-site Testing Ltd
+      - Name of testing organisation
+    * - IDEN_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - GEOL_STAT
+      - 
+      - X
+      - 1
+      - Stratum reference shown on trial pit or traverse sketch
+    * - FILE_FSET
+      - 
+      - X
+      - FS25
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- None.
+

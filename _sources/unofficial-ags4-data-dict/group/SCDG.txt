@@ -1,0 +1,94 @@
+.. _ags4_SCDG:
+
+SCDG
+===========================================================================
+
+Static Cone Dissipation Tests - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SCPG_TESN
+      - 
+      - X
+      - 3
+      - Test reference or push number
+    * - SCDG_DPTH
+      - m
+      - 2DP
+      - 5.2
+      - Depth of dissipation test
+    * - SCDG_PWPI
+      - MPa
+      - 3DP
+      - 0.4
+      - Measured or assumed initial pore water pressure
+    * - SCDG_PWPE
+      - MPa
+      - 3DP
+      - 0.035
+      - Measured or assumed equilibrium pore water pressure
+    * - SCDG_DDIS
+      - %
+      - 0DP
+      - 50
+      - Degree of dissipation for analysis
+    * - SCDG_T
+      - s
+      - 0DP
+      - 258
+      - Time to achieve degree of dissipation stated in SCDG_DDIS
+    * - SCDG_CV
+      - m2/yr
+      - 1DP
+      - 26
+      - Coefficient of consolidation (vertical)
+    * - SCDG_CVMT
+      - 
+      - X
+      - 
+      - Method(s) used to determine vertical coefficient of consolidation
+    * - SCDG_CH
+      - m2/yr
+      - 1DP
+      - 8.6
+      - Coefficient of consolidation (horizontal)
+    * - SCDG_CHMT
+      - 
+      - X
+      - 
+      - Method(s) used to determine horizontal coefficient of consolidation
+    * - SCDG_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS19
+      - Associated file reference (eg equipment calibrations)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- SCDG is to be used to record the general information relating to dissipation tests carried out during static cone penetrometer testing.
+

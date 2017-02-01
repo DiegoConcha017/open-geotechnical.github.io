@@ -1,0 +1,124 @@
+.. _ags4_RELD:
+
+RELD
+===========================================================================
+
+Relative Density Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U 
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Brown sandstone
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - RELD_DMAX
+      - Mg/m3
+      - 2DP
+      - 2.15
+      - Maximum dry density
+    * - RELD_375
+      - %
+      - 0DP
+      - 7
+      - Weight percent of sample retained on 37.5mm sieve
+    * - RELD_063
+      - %
+      - 0DP
+      - 10
+      - Weight percent of sample retained on 6.3mm sieve
+    * - RELD_020
+      - %
+      - 0DP
+      - 5
+      - Weight percent of sample retained on 2mm sieve
+    * - RELD_DMIN
+      - Mg/m3
+      - 2DP
+      - 1.65
+      - Minimum dry density
+    * - RELD_REM
+      - 
+      - X
+      - Material >37.5 replaced with smaller material
+      - Remarks on test
+    * - RELD_METH
+      - 
+      - X
+      - BS1377 part 4, cl 4.2 and 4.4 or 4.3 and 4.5 or in house method
+      - Test method
+    * - RELD_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - RELD_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS24
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- The maximum and minimum on sands has the possibility of being on two different sizes, <6.3mm ( max ) and <2mm ( min ). Since the minimum density is a discreet test the percentage retained 2mm should be the total and not that between 6.3 and 2mm - as may be derived in practice.
+

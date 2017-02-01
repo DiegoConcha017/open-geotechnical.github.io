@@ -1,0 +1,135 @@
+.. _ags4_RDEN:
+
+RDEN
+===========================================================================
+
+Rock Porosity and Density Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U 
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Brown sandstone
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - RDEN_MC
+      - %
+      - MC
+      - 2.1
+      - Water content of specimen
+    * - RDEN_SMC
+      - %
+      - MC
+      - 2.3
+      - Saturated water content
+    * - RDEN_BDEN
+      - kg/m3
+      - 0DP
+      - 2260
+      - Bulk density
+    * - RDEN_DDEN
+      - kg/m3
+      - 0DP
+      - 2210
+      - Dry density
+    * - RDEN_PORO
+      - %
+      - 1DP
+      - 17.3
+      - Porosity
+    * - RDEN_PDEN
+      - kg/m3
+      - 0DP
+      - 2750
+      - Apparent particle density
+    * - RDEN_TEMP
+      - degC
+      - 0DP
+      - 60
+      - Temperature sample dried at
+    * - RDEN_REM
+      - 
+      - X
+      - Average of three reported
+      - Remarks
+    * - RDEN_METH
+      - 
+      - X
+      - ISRM : Suggested method for determining porosity/density using saturation and calliper technique.
+      - Test method
+    * - RDEN_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - RDEN_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS10
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- Measurements of density on soil materials should be reported in LDEN.
+- RDEN_PDEN is denoted as the 'apparent particle density' reflecting fact that it is calculated rather than measured. This may not be the same as the particle density of the solid material.
+

@@ -1,0 +1,50 @@
+.. _ags4_HDIA:
+
+HDIA
+===========================================================================
+
+Hole Diameter by Depth
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - HDIA_DPTH
+      - m
+      - 2DP
+      - 16
+      - Depth of base of hole at the diameter recorded in HDIA_DIAM
+    * - HDIA_DIAM
+      - mm
+      - 0DP
+      - 200
+      - Hole diameter
+    * - HDIA_REM
+      - 
+      - X
+      - Cased to full depth
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS5
+      - Associated file reference (eg drilling journals)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- HDIA describes the profile of final exploratory hole. Casing information for the final hole construction should be recorded in the CDIA group.
+- HDIA_REM allows additional information on the hole construction to be included in the data file as necessary.
+

@@ -1,0 +1,142 @@
+.. _ags4_HDPH:
+
+HDPH
+===========================================================================
+
+Depth Related Exploratory Hole Information
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - HDPH_TOP
+      - m
+      - 2DP
+      - 1.4
+      - Depth to top of section
+    * - HDPH_BASE
+      - m
+      - 2DP
+      - 3.4
+      - Depth to base of section
+    * - HDPH_TYPE
+      - 
+      - `:ref:`ags4_HDPH_TYPE`
+      - TP 
+      - Type of depth related information
+    * - HDPH_STAR
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 2004-04-01T09:00
+      - Date and time of start of section
+    * - HDPH_ENDD
+      - yyyy-mm-ddThh:mm
+      - DT
+      - 2004-04-01T11:30
+      - Date and time of end of section
+    * - HDPH_CREW
+      - 
+      - X
+      - Bill Mallard
+      - Name of rig/drill crew
+    * - HDPH_EXC
+      - 
+      - X
+      - JCB 3CX
+      - Plant used
+    * - HDPH_SHOR
+      - 
+      - X
+      - None
+      - Shoring/support used
+    * - HDPH_STAB
+      - 
+      - X
+      - Stable during excavation
+      - Stability of trial pit /  trial trench or logged traverse length
+    * - HDPH_DIML
+      - m
+      - 2DP
+      - 27.56
+      - Trial pit / trial trench or logged traverse length
+    * - HDPH_DIMW
+      - m
+      - 2DP
+      - 1.35
+      - Trial pit / trial trench  or logged traverse width
+    * - HDPH_DBIT
+      - 
+      - X
+      - Stepped ABC
+      - Drill bit used
+    * - HDPH_BCON
+      - 
+      - X
+      - Good
+      - Bit condition
+    * - HDPH_BTYP
+      - 
+      - X
+      - Triple tube
+      - Barrel type
+    * - HDPH_BLEN
+      - m
+      - 2DP
+      - 3
+      - Barrel length
+    * - HDPH_LOG
+      - 
+      - X
+      - ANO
+      - Definitive person responsible for logging the section
+    * - HDPH_LOGD
+      - yyyy-mm-dd
+      - DT
+      - 01/04/2008
+      - Start date of hole section logging
+    * - HDPH_REM
+      - 
+      - X
+      - Breaker required
+      - Remarks
+    * - HDPH_ENV
+      - 
+      - X
+      - Dry, rain, standing water
+      - Details of weather and environmental conditions during hole section construction
+    * - HDPH_METH
+      - 
+      - X
+      - Odex
+      - Details of method of hole section construction
+    * - HDPH_CONT
+      - 
+      - X
+      - ACME Drilling Ltd
+      - Drilling contractor
+    * - FILE_FSET
+      - 
+      - X
+      - FS21
+      - Associated file reference (eg drilling journals, hole orientation data)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 4
+-------------------------
+- HDPH is used to record information regarding exploratory hole construction. The HDPH group subdivides the hole development by depth such that the differing methods used to advance a hole or pit (or holes developed using combined methods) are explicitly described As a minimum, one record will exist in HDPH for each record in the LOCA group if the AGS file is transferring hole construction details.
+- Records of orientation and inclination of the exploratory hole should be included in the HORN group.
+- Records in HDPH should be continuous and non-overlapping.
+- HDPH_LOG and HDPH_LOGD have been added to include the name of the person describing the strata in this section of the exploratory hole and date as required in ISO 14688-1 (Section 6) and EN ISO 14689-1 (Section 5). It is not deemed necessary to detail this information further for example in the GEOL group.
+

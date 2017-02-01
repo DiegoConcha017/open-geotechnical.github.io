@@ -1,0 +1,91 @@
+.. _ags4_DCPG:
+
+DCPG
+===========================================================================
+
+Dynamic Cone Penetrometer Tests - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - DCPG_DATE
+      - yyyy-mm-dd
+      - DT
+      - 20/03/2003
+      - Test date
+    * - DCPG_TESN
+      - 
+      - X
+      - 1
+      - Test reference
+    * - DCPG_DPTH
+      - m
+      - 2DP
+      - 0.3
+      - Depth from surface to start of test
+    * - DCPG_ZERO
+      - mm
+      - 0DP
+      - 223
+      - Zero reading
+    * - DCPG_LREM
+      - 
+      - X
+      - Asphalt surface layer removed by coring to allow testing of sub-base layers
+      - Details of surface and base layers removed prior to/during the test (if applicable)
+    * - DCPG_REM
+      - 
+      - X
+      - Test terminated at 0.53m penetration due to significant lean away from vertical
+      - Test remarks
+    * - DCPG_ENV
+      - 
+      - X
+      - Sunny and warm
+      - Details of weather and environmental conditions during test
+    * - DCPG_METH
+      - 
+      - X
+      - DMRB HD29/08 Section 7.27
+      - Test method
+    * - DCPG_CONT
+      - 
+      - X
+      - ACME On-site Testing Ltd
+      - Name of testing organisation
+    * - DCPG_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS26
+      - Associated file reference (eg field record sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 3
+-------------------------
+- DCPG and DCPT are used together to record dynamic cone penetrometer (DCP) tests.
+- DCPG_REM should be used to record test set up including surface type, surface condition, base type, thickness of base (if removed) mm (ref TRL Project PR/INT/277/04).
+- It is suggested that if CBR values derived from DCP tests are to be transferred in the AGS data then these should be included in the ICBR group.
+

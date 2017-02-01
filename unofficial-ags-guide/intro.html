@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>AGS4 Quickstart &mdash; Open GeoTechnical</title>
+    <title>AGS4 Developers Quickstart &mdash; Open GeoTechnical</title>
     
     <link rel="stylesheet" href="../_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -429,20 +429,21 @@ dl.glossary dd {
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="ags4-quickstart">
-<h1>AGS4 Quickstart<a class="headerlink" href="#ags4-quickstart" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="ags4-developers-quickstart">
+<h1>AGS4 Developers Quickstart<a class="headerlink" href="#ags4-developers-quickstart" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This is a quick guide intended to bring new developers whove never used ags up to speed.</p>
 </div>
 <div class="section" id="whats-is-ags4">
 <h2>Whats is AGS4 ?<a class="headerlink" href="#whats-is-ags4" title="Permalink to this headline">¶</a></h2>
-<p>AGS4 is a test file format used for the exchange of geotechnical engineering. Its design and roots are Spereasheets,
-and the way to share &#8220;some&#8221; spreadsheet data, without sharing spreadsheet itself.</p>
+<p><cite>AGS4</cite> is a <strong>text file format</strong> and a <strong>data dictionary</strong> used for the exchange of GeoTechnical data. Its design and roots are spereasheets,
+and a way to share and serialise spreadsheet data, without sharing spreadsheet itself.</p>
 </div>
-<div class="section" id="what-does-it-look-like">
-<h2>What does it look like ?<a class="headerlink" href="#what-does-it-look-like" title="Permalink to this headline">¶</a></h2>
-<p>Its &#8220;essentially&#8221; a set of concated <a class="reference internal" href="../references.html#csv"><span>CSV</span></a> files, with each <cite>group</cite> representing a spreadsheet tab and its columns/rows.</p>
+<div class="section" id="what-does-it-smell-like">
+<h2>What does it smell like ?<a class="headerlink" href="#what-does-it-smell-like" title="Permalink to this headline">¶</a></h2>
+<p>Its &#8220;essentially&#8221; a set of concated <a class="reference internal" href="../references.html#csv"><span>CSV</span></a> files, with each <cite>group</cite> representing a spreadsheet tab and
+its columns/rows.</p>
 <p>The simple example below shows two groups, although on a real file there would be many more</p>
 <ul class="simple">
 <li>the <cite>Project Info</cite> (PROJ) group, with one row of data</li>
@@ -463,23 +464,79 @@ and the way to share &#8220;some&#8221; spreadsheet data, without sharing spread
 <span class="s2">&quot;DATA&quot;</span><span class="p">,</span><span class="s2">&quot;TP3&quot;</span><span class="p">,</span><span class="s2">&quot;RO&quot;</span><span class="p">,</span><span class="s2">&quot;539299&quot;</span><span class="p">,</span><span class="s2">&quot;179474&quot;</span><span class="p">,</span><span class="s2">&quot;-20.22&quot;</span><span class="p">,</span><span class="s2">&quot;2.9&quot;</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Looks like <a class="reference internal" href="../references.html#csv"><span>CSV</span></a>, but unlike a <strong>true csv</strong>, its not equal column length down the rows which is why most csv parsers can handle it.</p>
+</div>
 </div>
 <div class="section" id="what-does-it-all-mean">
 <h2>What does it all mean ?<a class="headerlink" href="#what-does-it-all-mean" title="Permalink to this headline">¶</a></h2>
-<p>As we go down the left columns:</p>
+<p>The first column are the <a class="reference internal" href="glossary.html#term-data-descriptors"><span class="xref std std-term">DATA DESCRIPTORS</span></a>, and basically describe what the row&#8217;s data means:</p>
 <blockquote>
 <div><ul class="simple">
-<li><strong>GROUP</strong> - indicates a new group</li>
-<li><strong>HEADING</strong> - the column headings for this group</li>
-<li><strong>UNIT</strong> - the units for the columns, is there is one eg &#8216;m&#8217; or</li>
-<li><strong>TYPE</strong> - the column type, eg <cite>X</cite> for text or <cite>2DP</cite> for two decimal places</li>
-<li><strong>DATA</strong> - one or more data rows conforming to the <strong>TYPE</strong></li>
+<li><strong>GROUP</strong> - indicates a new group (spreadsheet tab)</li>
+<li><strong>HEADING</strong> - the column headings for this group (column in a tab)</li>
+<li><strong>UNIT</strong> - the units for the columns, is there is one</li>
+<li><strong>TYPE</strong> - the column type, eg <cite>X</cite> for text or <cite>2DP</cite> for two decimal places (the column formatting)</li>
+<li><strong>DATA</strong> - one or more data rows conforming to the <strong>TYPE</strong> (the lines of data after fixed header)</li>
+<li>The HEADING, UNIT and TYPE are coolectively called the HEADER and define the column ? (to check)</li>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="what-do-the-codes-comes-from">
-<h2>What do the codes comes from ?<a class="headerlink" href="#what-do-the-codes-comes-from" title="Permalink to this headline">¶</a></h2>
-<p>On addition to the file format itself, a larg part of ags is the data dict</p>
+<div class="section" id="mysterious-codes">
+<h2>Mysterious codes ?<a class="headerlink" href="#mysterious-codes" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>codes</cite> are defined, maintained and published by the AGS (here), and
+called the <strong>AGS4 Data Dictionary</strong>.</p>
+<p>The data dictionary comprises a few parts and are pretty fixed to mean some things. This is
+one of the strength og ags in data interchange (see validator soon):</p>
+<ul>
+<li><dl class="first docutils">
+<dt>The list of four digit <strong>GROUP</strong> codes</dt>
+<dd><ul class="first last simple">
+<li>eg <cite>PROJ</cite> for project details, <cite>SAMP</cite> for sample information</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>The <strong>HEADING</strong> codes which always start with the group code</dt>
+<dd><ul class="first last simple">
+<li>eg <cite>SAMP_REF</cite>, <cite>SAMP_ID</cite>, <cite>SAMP_TYPE</cite></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>A list of registered <strong>UNIT</strong> eg</dt>
+<dd><ul class="first last simple">
+<li><cite>km2</cite> for <cite>square kilometre</cite></li>
+<li><cite>lbf</cite> for <cite>pounds force</cite></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>A <strong>TYPE</strong> which defined the format/type of data, eg</dt>
+<dd><ul class="first last simple">
+<li><cite>2DP</cite> for 2 decimal points</li>
+<li><cite>X</cite></li>
+<li><cite>DT</cite> for a date time type</li>
+<li>Important is <cite>PA</cite> for <span class="xref std std-ref">abbrs</span> (abbreviations)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>ABBR</strong> (Abbreviations) for various <strong>HEADINGS</strong></dt>
+<dd><ul class="first last simple">
+<li>The <strong>TYPE</strong> PA means pick abbreviation eg
+- <cite>B</cite> for a Bulk Sample in SAMP_TYPE
+- <cite>PRELIM</cite> for a Relim in LOCA_STAT</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
 </div>
 </div>
 
@@ -491,11 +548,11 @@ and the way to share &#8220;some&#8221; spreadsheet data, without sharing spread
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">AGS4 Quickstart</a><ul>
+<li><a class="reference internal" href="#">AGS4 Developers Quickstart</a><ul>
 <li><a class="reference internal" href="#whats-is-ags4">Whats is AGS4 ?</a></li>
-<li><a class="reference internal" href="#what-does-it-look-like">What does it look like ?</a></li>
+<li><a class="reference internal" href="#what-does-it-smell-like">What does it smell like ?</a></li>
 <li><a class="reference internal" href="#what-does-it-all-mean">What does it all mean ?</a></li>
-<li><a class="reference internal" href="#what-do-the-codes-comes-from">What do the codes comes from ?</a></li>
+<li><a class="reference internal" href="#mysterious-codes">Mysterious codes ?</a></li>
 </ul>
 </li>
 </ul>
@@ -541,7 +598,7 @@ and the way to share &#8220;some&#8221; spreadsheet data, without sharing spread
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-      Last updated on 2017-01-30.
+      Last updated on 2017-01-31.
     </div>
   </body>
 </html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AGS4 - Notes on the Rules &mdash; Open GeoTechnical</title>
+    
+    <link rel="stylesheet" href="../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Open GeoTechnical" href="../index.html" />
+    <link rel="up" title="Unofficial AGS4 Guide" href="index.html" />
+    <link rel="next" title="AGS4 Data Dictionary" href="ags4_data_dict.html" />
+    <link rel="prev" title="AGS4 - Rules" href="ags4_rules.html" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+<style>
+
+
+
+body {
+    background-color: black;
+}
+
+#XHEAD {
+    deadbackground-color: yellow !important;
+}
+.main_title{
+    margin: 10px;
+    font-size: 14pt;
+    vertical-align: top;
+    color: #999999;
+    font-family: Verdana;
+    background-image: "/_static/logo.png"
+}
+
+.main_title a {
+    color: #F29F00;
+}
+.main_title a:hover {
+    text-decoration: none;
+}
+.main_title small{
+    margin: 10px;
+    font-size: 8pt;
+    vertical-align: top;
+    color: #999999;
+    font-weight: normal;
+    font-family: Verdana;
+}
+
+.externals_nav {
+    float: right;
+    margin-right: 20px;
+}
+.externals_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+        sswidth: 50px;
+} 
+
+.externals_nav a {
+    text-decoration: none;
+    color: #999999;
+    padding: 5px;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+.externals_nav a:hover {
+    background-color: #333333;
+    color: white;
+}
+    
+        
+.module_nav {
+    float: right;
+    ssmargin-right: 150px;
+
+    deadbackground-color: red !important;
+}
+.module_nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 2px;
+    width: 50px;
+}
+.module_nav a {
+    text-decoration: none;
+    background-color: #222222;
+    color: #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #efefef;
+    font-family: Verdana;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.module_nav a:hover {
+    background-color: #333333;
+}
+.module_nav a.selected{
+    background-color: #999999;
+    color: black;
+}
+
+.related{
+    background-color: #222222 !important; 
+    margin-right: 10px;
+    
+}
+.related a {
+    color: #dddddd !important; 
+    text-shadow: none;
+        font-size: 10pt !important;
+}
+div.related ul {
+    padding-left: 300px;
+}
+.related ul li {
+    color: #FFFF00 !important;
+}
+
+.sphinxsidebarwrapper {
+    width: 300px;
+    background-color: #DDDDDD;
+}
+.sphinxsidebarwrapper h3  {
+    border-bottom: 1px solid white;
+}
+.sphinxsidebarwrapper h3 a {
+    font-family: Verdana;
+}
+div.bodywrapper {
+    margin-left: 300px;
+}
+.sphinxsidebar ul {
+    margin-left: 0;
+}
+.sphinxsidebar ul li{
+    sborder-top: 1px solid #dddddd !important;
+    ssbackground-color: white;
+    padding: 2px !important;
+}
+.sphinxsidebar ul li a{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #333333;
+    font-family: Verdana;
+}
+.sphinxsidebar ul ul{
+    width: 250px;
+}
+.sphinxsidebar ul ul li{
+    border-top: none !important;
+}
+.sphinxsidebar ul ul li a{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Verdana;
+}
+
+
+
+/**************************************************/
+/* Main */
+/**************************************************/
+div.body {
+    font-size: 10pt;
+}
+
+div.body h1{
+    border-radius: 10px !important;
+    padding: 5px 10px;
+    font-size: 20pt;
+    background-color: #444444 !important;
+    color: #dddddd;
+   font-family: Verdana;
+}
+
+
+
+div.body h2{
+
+    border-top: 2px solid #999999;
+    border-right: 2px solid #999999;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #bbbbbb !important;
+    font-size: 12pt;
+    font-family: monospace;
+
+    padding: 5px 10px;
+}
+div.body h3{
+    border-top: 2px solid #dddddd;
+    border-right: 2px solid #aaaaaa;
+    border-top-right-radius: 10px !important;
+    deadborder-bottom-right-radius: 10px !important;
+    background-color: #dddddd !important;
+    font-size: 10pt;
+    font-family: monospace;
+    padding: 5px 10px;
+}
+
+div.body p {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 600px;
+}
+div.body ul, ol {
+    padding-left: 50px;
+    padding-right: 50px;
+     max-width: 600px;
+}
+div.body li p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+div.body ul, ul {
+     padding-left: 30px;
+    padding-right: 30px;
+}
+
+.admonition {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+.field-name {
+    width: 80px;
+    text-align: right;
+}
+
+pre {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 9pt;
+    padding: 4px;
+}
+
+table.docutils {
+    box-shadow: 9px 10px 34px -16px rgba(0,0,0,0.75);
+}
+table.docutils thead {
+    background-color: #dddddd;
+}
+table.docutils th {
+    padding: 5px;
+}
+table.docutils td {
+    padding: 2px;
+}
+
+table.field-list{
+    box-shadow: none;
+    background-color: #eeeeee;
+}
+
+table.field-list tr{
+    border-bottom: 1px solid #cccccc;
+}
+table.field-list th {
+    padding: 5px;
+    width: 100px;
+    border-right: 1px solid #cccccc;
+    font-size: 9pt;
+    deadbackground-color: red;
+    color: #888888;
+}
+table.field-list td {
+    padding: 5px;
+    border-left: 1px solid #cccccc;
+}
+
+dl.class p {
+    padding-left: 5px;
+}
+
+.ags-csv-rule {
+    background-color: #00CCCC;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+.ags-data-rule {
+    background-color:#FFFF00;
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border-radius: 5px;
+    font-size: 8pt;
+    border: 1px solid black;
+}
+
+.viewcode-link {
+    font-size: 8pt;
+}
+
+/**************************************************/
+/* API stuff */
+/**************************************************/
+/* a whole class container */
+dl.class {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #822775;
+}
+/* class Name */
+dl.class dt .descname{
+	color: #822775;
+	font-size: 13pt;
+	font-family: monospace;
+}
+
+a.reference code.py-class span.pre {
+    color: #822775 !important;
+    font-family: monospace;
+}
+
+
+/* class attribute */
+dl.attribute dt .descname {
+    color: #AD833E;
+    font-size: 11pt;
+    font-family: monospace;
+}
+
+
+/* class method  */
+dl.method dt .descname {
+    color: #1B68B8;
+	font-size: 11pt;
+	font-family: monospace;
+
+}
+
+/* a whole function container */
+dl.function {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 5px 0 #298815;
+}
+/* function */
+dl.function dt .descname {
+    color: #298815 !important;
+}
+
+a.reference code.py-func span.pre {
+    color: #298815 !important;
+    font-family: monospace;
+}
+
+/* glossary */
+dl.glossary dt {
+    background-color: #eeeeee;
+    font-family: monospace;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top-right-radius: 20px;
+    padding: 3px 5px;
+
+}
+dl.glossary dd {
+    border-right: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+</style>
+    
+    <div id="XHEAD">
+
+  
+  <h1 class="main_title"><a href="/"><img src="/_static/logo-small.png"> Open GeoTechnical</a> </h1>
+  </div>
+  
+
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ags4_data_dict.html" title="AGS4 Data Dictionary"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ags4_rules.html" title="AGS4 - Rules"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ogt</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Unofficial AGS4 Guide</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ags4-notes-on-the-rules">
+<h1>AGS4 - Notes on the Rules<a class="headerlink" href="#ags4-notes-on-the-rules" title="Permalink to this headline">¶</a></h1>
+<p>A fundamental consideration in developing the Rules has been that potential users of the AGS Format
+should be able to use standard software tools to produce the data files.</p>
+<p>The spreadsheet is the most basic tool for the task and the revised Rules presented in AGS4 simplify
+the process of creating data from spreadsheet software. Likewise, data files produced according to the
+Rules can be read directly by spreadsheet software.</p>
+<p>Although the Rules make it possible for users to manipulate data files using spreadsheets alone, it is to
+be expected that more specific software will be used to automate the reading and writing of data files.
+These software systems may range from simple data entry and edit programs through to complete
+database systems with AGS Format data import and export capability.</p>
+<p>Another fundamental point is that the resulting data file has been designed to be easy to read with
+minimal computer software. The data files do not replace the printed reports to which they relate,
+however, the layout does allow data items to be readily identified should the need arise.</p>
+<p>The following notes explain some points of detail in the Rules.</p>
+<div class="section" id="note-i-ascii-csv-files">
+<span id="ags4-rule-note-1"></span><h2>Note i - ASCII &#8216;CSV&#8217; Files<a class="headerlink" href="#note-i-ascii-csv-files" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="ags4_rules.html#ags4-rules"><span>AGS4 - Rules</span></a> define <a class="reference internal" href="../references.html#ascii"><span>ASCII</span></a> data files of a type commonly referred to as Comma Separated Value (<a class="reference internal" href="../references.html#csv"><span>CSV</span></a>).
+The data items are separated by commas and surrounded by quotes (&#8221;).</p>
+<p>It should be noted that not all software is able to read and write <a class="reference internal" href="../references.html#csv"><span>CSV</span></a> files to the requirements of the
+AGS Format.</p>
+</div>
+<div class="section" id="note-ii-headings-key-and-required-fields">
+<span id="ags4-rule-note-2"></span><h2>Note ii - HEADINGs, KEY and REQUIRED Fields<a class="headerlink" href="#note-ii-headings-key-and-required-fields" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s should be seen as the equivalent of a field name within a database. However, the
+term <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> is used within the rules to highlight that this document defines a data transfer format
+and not a database schema.</p>
+<p><a class="reference internal" href="glossary.html#term-key-field"><span class="xref std std-term">KEY FIELD</span></a> s are important for maintaining data integrity. Without this, the receiving software may not
+be able to create the inter-relationships within the data in a meaningful way. For the purpose of
+creating data files, this means that data entered into the combination of <a class="reference internal" href="glossary.html#term-key-field"><span class="xref std std-term">KEY FIELD</span></a> s must be unique
+in each <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a> and that the corresponding entries are made in the <a class="reference internal" href="glossary.html#term-parent-group"><span class="xref std std-term">PARENT GROUP</span></a> where required
+by <a class="reference internal" href="ags4_rules.html#ags4-rule-10c"><span>Rule 10c - PARENT GROUP</span></a>.</p>
+<p><a class="reference internal" href="glossary.html#term-required"><span class="xref std std-term">REQUIRED</span></a> Fields (<a class="reference internal" href="ags4_rules.html#ags4-rule-10b"><span>Rule 10b - REQUIRED</span></a>) are critical to interpreting the data file. Without data in these fields the
+user or receiving software may not be able to access the data or process the information within.
+Note that there is no requirement to include all <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s in a <a class="reference internal" href="glossary.html#term-group"><span class="xref std std-term">GROUP</span></a>. The general approach
+should be to only include the <a class="reference internal" href="glossary.html#term-heading"><span class="xref std std-term">HEADING</span></a> s for which data is required or provided (<a class="reference internal" href="ags4_rules.html#ags4-rule-10"><span>Rule 10 - Validation</span></a>). This is
+subject to meeting the requirement to include all <a class="reference internal" href="glossary.html#term-key"><span class="xref std std-term">KEY</span></a> and
+<a class="reference internal" href="glossary.html#term-required"><span class="xref std std-term">REQUIRED</span></a> fields (<a class="reference internal" href="ags4_rules.html#ags4-rule-10a"><span>Rule 10a - KEY</span></a> and <a class="reference internal" href="ags4_rules.html#ags4-rule-10b"><span>Rule 10b - REQUIRED</span></a>).</p>
+</div>
+<div class="section" id="note-iii-units-and-data-types">
+<span id="ags4-rule-note-3"></span><h2>Note iii - Units and Data Types<a class="headerlink" href="#note-iii-units-and-data-types" title="Permalink to this headline">¶</a></h2>
+<p>Suggested units of measurement and data types for each of the HEADINGs are given in the Data
+Dictionary (Section 8). These represent the typical units of measurement that are used in the UK.
+They will either be the appropriate SI units or the unit defined by the particular Eurocode or British
+Standard relating to the measurement data under that specific HEADING.</p>
+<p>It is recognised that situations will occur where neither the SI unit nor the suggested unit of
+measurement are appropriate. In these cases, the unit of measurement and/or data TYPE for the
+results presented may be changed from the one shown in this document and the results presented
+according to the revised data UNIT / data TYPE.</p>
+<p>All entries in the UNIT row must be defined in the UNIT GROUP (<a class="reference internal" href="ags4_rules.html#ags4-rule-15"><span>Rule 15 - UNIT GROUP</span></a>). All entries in the TYPE row
+must be fully defined in the TYPE GROUP (<a class="reference internal" href="ags4_rules.html#ags4-rule-17"><span>Rule 17 - TYPE</span></a>).</p>
+</div>
+<div class="section" id="note-iv-sample-referencing">
+<span id="ags4-rule-note-4"></span><h2>Note iv - Sample Referencing<a class="headerlink" href="#note-iv-sample-referencing" title="Permalink to this headline">¶</a></h2>
+<p>The SAMP Group has 5 KEY FIELDs which comprise 4 descriptive FIELDs (LOCA_ID, SAMP_TOP,
+SAMP_TYPE, SAMP_REF) and a single non descriptive ID (SAMP_ID).</p>
+<p>If descriptive information regarding the sample is not to be disclosed to the data receiver (for example
+a laboratory), then the single SAMP_ID field is used and the remaining 4 KEY FIELDs are transmitted
+as null values. If no such requirement exists then the 4 descriptive fields can be used and the
+SAMP_ID can either be transmitted or contain a null value.</p>
+<p>This approach is extended to all GROUPs that are descended from SAMP in the Group Hierarchy
+(Section 7.3). Laboratory test results may, therefore, be reported using the single or descriptive Key
+Field options to reference the parent sample depending on what reference system was given to the
+laboratory.</p>
+<p>Samples that have a null LOCA_ID in the SAMP Group are required to have a null parent entry in the
+LOCA group when submitted to comply with <a class="reference internal" href="ags4_rules.html#ags4-rule-10c"><span>Rule 10c - PARENT GROUP</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Note: where these options for sample data exchange are deployed, there may be requirements for
+additional data acceptance protocols for both data receivers and data producers to ensure that data
+containing only partial <a class="reference internal" href="glossary.html#term-key-field"><span class="xref std std-term">KEY FIELD</span></a> information can be successfully recombined if data is to be round-
+tripped.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">AGS4 - Notes on the Rules</a><ul>
+<li><a class="reference internal" href="#note-i-ascii-csv-files">Note i - ASCII &#8216;CSV&#8217; Files</a></li>
+<li><a class="reference internal" href="#note-ii-headings-key-and-required-fields">Note ii - HEADINGs, KEY and REQUIRED Fields</a></li>
+<li><a class="reference internal" href="#note-iii-units-and-data-types">Note iii - Units and Data Types</a></li>
+<li><a class="reference internal" href="#note-iv-sample-referencing">Note iv - Sample Referencing</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ags4_rules.html"
+                        title="previous chapter">AGS4 - Rules</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ags4_data_dict.html"
+                        title="next chapter">AGS4 Data Dictionary</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ags4_data_dict.html" title="AGS4 Data Dictionary"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ags4_rules.html" title="AGS4 - Rules"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ogt</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Unofficial AGS4 Guide</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+      Last updated on 2017-02-01.
+    </div>
+  </body>
+</html>

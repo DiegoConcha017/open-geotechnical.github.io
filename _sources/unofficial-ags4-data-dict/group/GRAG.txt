@@ -1,0 +1,135 @@
+.. _ags4_GRAG:
+
+GRAG
+===========================================================================
+
+Particle Size Distribution Analysis - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - GRAG_UC
+      - 
+      - 1SF
+      - 10
+      - Uniformity coefficient D60/D10
+    * - GRAG_VCRE
+      - %
+      - 1DP
+      - 0
+      - Percentage of material tested greater than 63mm (cobbles)
+    * - GRAG_GRAV
+      - %
+      - 1DP
+      - 30.1
+      - Percentage of material tested in range 63mm to 2mm (gravel)
+    * - GRAG_SAND
+      - %
+      - 1DP
+      - 40.4
+      - Percentage of material tested in range 2mm to 63um (sand)
+    * - GRAG_SILT
+      - %
+      - 1DP
+      - 14.5
+      - Percentage of material tested in range 63um to 2um (silt)
+    * - GRAG_CLAY
+      - %
+      - 1DP
+      - 15
+      - Percentage of material tested less than 2um (clay)
+    * - GRAG_FINE
+      - %
+      - 1DP
+      - 29.5
+      - Percentage less than 63um
+    * - GRAG_REM
+      - 
+      - X
+      - 
+      - Remarks including commentary on effect of specimen disturbance on test result
+    * - GRAG_METH
+      - 
+      - X
+      - BS1377
+      - Test method
+    * - GRAG_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - GRAG_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - F21
+      - Associated file reference (eg equipment calibrations)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- GRAG is to be used to transfer the general information on particle size distribution testing including laboratory name and test accreditation details to be transferred within the AGS Format file. The GRAD group in AGS 2 and 3 was not capable of efficiently transferring this data.
+- The data in GRAG_CRED indicates the accreditation status of the testing as a whole. Therefore if part of the test method used, for example the pipette rather than the sieve, is not accredited, the GRAG_CRED should be appropriately qualified or left empty.
+

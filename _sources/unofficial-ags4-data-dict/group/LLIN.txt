@@ -1,0 +1,114 @@
+.. _ags4_LLIN:
+
+LLIN
+===========================================================================
+
+Linear Shrinkage Tests
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U 
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Grey slightly gravelly clay
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Specimen prepared by cone and quartering
+      - Details of specimen preparation including time between preparation and testing
+    * - LLIN_LS
+      - %
+      - 0DP
+      - 11
+      - Linear shrinkage
+    * - LLIN_425
+      - %
+      - 0DP
+      - 12
+      - Percentage passing 425? sieve
+    * - LLIN_PREP
+      - 
+      - X
+      - Wet sieve
+      - Method of preparation
+    * - LLIN_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - LLIN_METH
+      - 
+      - X
+      - BS1377: Part 2: 1990: Clause 6.5
+      - Test method
+    * - LLIN_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - LLIN_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS10
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- The LLIN group is included to transfer linear shrinkage tests. Shrinkage limit is to be transferred using the LSLT group.
+

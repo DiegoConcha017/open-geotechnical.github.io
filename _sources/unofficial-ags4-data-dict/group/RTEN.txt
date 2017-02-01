@@ -1,0 +1,143 @@
+.. _ags4_RTEN:
+
+RTEN
+===========================================================================
+
+Tensile Strength Testing
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SAMP_TOP
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of sample
+    * - SAMP_REF
+      - 
+      - X
+      - 24
+      - Sample reference
+    * - SAMP_TYPE
+      - 
+      - `:ref:`ags4_SAMP_TYPE`
+      - U
+      - Sample type
+    * - SAMP_ID
+      - 
+      - ID
+      - ABC121415010
+      - Sample unique global identifier
+    * - SPEC_REF
+      - 
+      - X
+      - 1a
+      - Specimen reference
+    * - SPEC_DPTH
+      - m
+      - 2DP
+      - 24.55
+      - Depth to top of test specimen
+    * - SPEC_DESC
+      - 
+      - X
+      - Brown sandstone
+      - Specimen description
+    * - SPEC_PREP
+      - 
+      - X
+      - Prepared according to client instructions
+      - Details of specimen preparation including time between preparation and testing
+    * - RTEN_SDIA
+      - mm
+      - 1DP
+      - 54.1
+      - Specimen diameter
+    * - RTEN_LEN
+      - mm
+      - 1DP
+      - 27.2
+      - Specimen thickness
+    * - RTEN_MC
+      - %
+      - 1DP
+      - 3.7
+      - Water content of test specimen
+    * - RTEN_COND
+      - 
+      - X
+      - Natural, saturated, dried at 105 degC
+      - Condition of specimen as tested
+    * - RTEN_DURN
+      - mm:ss
+      - T
+      - 0:25
+      - Test duration
+    * - RTEN_STRA
+      - N/s
+      - 0DP
+      - 200
+      - Stress rate
+    * - RTEN_TENS
+      - MPa
+      - 3SF
+      - 50.1
+      - Tensile strength
+    * - RTEN_MODE
+      - 
+      - X
+      - Shear
+      - Mode of failure
+    * - RTEN_MACH
+      - 
+      - X
+      - Denison 7225
+      - Testing machine
+    * - RTEN_REM
+      - 
+      - X
+      -  
+      - Remarks
+    * - RTEN_METH
+      - 
+      - X
+      - ISRM : Suggested method for determination of indirect tensile strength by the Brazil test
+      - Test method
+    * - RTEN_LAB
+      - 
+      - X
+      - ACME Laboratories plc
+      - Name of testing laboratory/organisation
+    * - RTEN_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS10
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - None
+-------------------------
+

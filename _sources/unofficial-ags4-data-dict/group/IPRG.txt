@@ -1,0 +1,134 @@
+.. _ags4_IPRG:
+
+IPRG
+===========================================================================
+
+In Situ Permeability Tests - General
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - IPRG_TOP
+      - m
+      - 2DP
+      - 12.2
+      - Depth to top of test zone
+    * - IPRG_TESN
+      - 
+      - X
+      - 2
+      - Test reference
+    * - IPRG_BASE
+      - m
+      - 2DP
+      - 12.95
+      - Depth to base of test zone
+    * - IPRG_STG
+      - 
+      - 0DP
+      - 1
+      - Stage number of multistage packer test
+    * - IPRG_TYPE
+      - 
+      - `:ref:`ags4_IPRG_TYPE`
+      - Constant Head
+      - Type of test
+    * - IPRG_PRWL
+      - m
+      - 2DP
+      - 10.6
+      - Depth to water in borehole or piezometer immediately prior to test
+    * - IPRG_SWAL
+      - m
+      - 2DP
+      - 5.4
+      - Depth to water at start of test
+    * - IPRG_TDIA
+      - m
+      - 2DP
+      - 0.15
+      - Diameter of test zone
+    * - IPRG_SDIA
+      - m
+      - 3DP
+      - 0.019
+      - Diameter of standpipe or casing 
+    * - IPRG_IPRM
+      - m/s
+      - 1SCI
+      - 5.10E-09
+      - Permeability
+    * - IPRG_FLOW
+      - l/s
+      - 1DP
+      - 2.3
+      - Average flow during packer test stage
+    * - IPRG_AWL
+      - m
+      - 2DP
+      - 10
+      - Depth to assumed standing water level
+    * - IPRG_HEAD
+      - m
+      - 2DP
+      - 20.5
+      - Applied total head of water during test stage at centre of packer test zone
+    * - IPRG_DATE
+      - yyyy-mm-dd
+      - DT
+      - 23/01/2008
+      - Test date
+    * - IPRG_REM
+      - 
+      - X
+      - 
+      - Test remarks
+    * - IPRG_ENV
+      - 
+      - X
+      - Sunny and warm
+      - Details of weather and environmental conditions during test
+    * - IPRG_METH
+      - 
+      - X
+      - BS5930
+      - Test method
+    * - IPRG_CONT
+      - 
+      - X
+      - ACME On-site Testing Ltd
+      - Name of testing organisation
+    * - IPRG_CRED
+      - 
+      - X
+      - UKAS 0000
+      - Accrediting body and reference number (when appropriate)
+    * - TEST_STAT
+      - 
+      - X
+      - Checked
+      - Test status
+    * - FILE_FSET
+      - 
+      - X
+      - FS26
+      - Associated file reference (eg equipment calibrations)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 1
+-------------------------
+- None.
+

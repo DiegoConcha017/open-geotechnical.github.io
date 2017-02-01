@@ -1,20 +1,41 @@
 
 
-Welcome to Open GeoTechnical
+Open GeoTechnical
 =============================================
 
+Open source software for goetechnical engineering and data exchange
 
 
-
-
-Contents:
+AGS Projects
+---------------------------
 
 .. toctree::
     :maxdepth: 1
 
+    ags-projects/overview
+    unofficial-ags4-guide/index
+    unofficial-ags4-data-dict/index
+    ags-projects/software
     
-    ags-projects/index
-    references
+    
+Linked GeoTechnical Projects
+----------------------------------
+
+.. note:: Attemping to create a curated list to open source GeoTechnical projects
+
+- **geotecha** - A software suite for geotechnical engineering
+    - Project at https://github.com/rtrwalker/geotecha
+    - Docs at http://pythonhosted.org//geotecha/
+
+- **PyGeo** - geotechnical utilities
+    - Project athttps://github.com/CalvinNeo/PyGeo
+    
+- **Syncline** - A tool aimed at geotechnical engineers to streamline the process of collecting, reviewing and approving site investigation information.
+    - Project at https://github.com/scottcaldwell/Syncline
+
+- **GSRT** - Geotechnical Site Response Toolkit
+    - Project at https://github.com/blueray45/GSRT
+
 
 Indices and tables
 ==================

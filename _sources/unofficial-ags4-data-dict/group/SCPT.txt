@@ -1,0 +1,208 @@
+.. _ags4_SCPT:
+
+SCPT
+===========================================================================
+
+Static Cone Penetration Tests - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - SCPG_TESN
+      - 
+      - X
+      - 3
+      - Test reference or push number
+    * - SCPT_DPTH
+      - m
+      - 2DP
+      - 7.12
+      - Depth of result
+    * - SCPT_RES
+      - MPa
+      - 3DP
+      - 18.065
+      - Cone resistance (qc)
+    * - SCPT_FRES
+      - MPa
+      - 4DP
+      - 0.0968
+      - Local unit side friction resistance (fs)
+    * - SCPT_PWP1
+      - MPa
+      - 4DP
+      - 
+      - Face porewater pressure (u1)
+    * - SCPT_PWP2
+      - MPa
+      - 4DP
+      - 0.0118
+      - Shoulder porewater pressure (u2)
+    * - SCPT_PWP3
+      - MPa
+      - 4DP
+      - 
+      - Top of sleeve porewater pressure (u3)
+    * - SCPT_CON
+      - ?S/cm
+      - 4DP
+      - 
+      - Conductivity
+    * - SCPT_TEMP
+      - degC
+      - 4DP
+      - 8.4
+      - Temperature
+    * - SCPT_PH
+      - 
+      - 4DP
+      - 6.9
+      - pH reading
+    * - SCPT_SLP1
+      - deg
+      - 4DP
+      - 1.7136
+      - Slope indicator no. 1
+    * - SCPT_SLP2
+      - deg
+      - 4DP
+      - 
+      - Slope indicator no. 2
+    * - SCPT_REDX
+      - mV
+      - 4DP
+      - 
+      - Redox potential reading
+    * - SCPT_MAGT
+      - 
+      - 4DP
+      - 
+      - Magnetic flux - Total (calculated)
+    * - SCPT_MAGX
+      - 
+      - 4DP
+      - 
+      - Magnetic flux - X
+    * - SCPT_MAGY
+      - 
+      - 4DP
+      - 
+      - Magnetic flux - Y
+    * - SCPT_MAGZ
+      - 
+      - 4DP
+      - 
+      - Magnetic flux - Z
+    * - SCPT_SMP
+      - %
+      - 4DP
+      - 
+      - Soil moisture
+    * - SCPT_NGAM
+      - counts/s
+      - 4DP
+      - 
+      - Natural gamma radiation
+    * - SCPT_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - SCPT_FRR
+      - %
+      - 2DP
+      - 0.54
+      - Friction ratio (Rf)
+    * - SCPT_QT
+      - MPa
+      - 4DP
+      - 18.0668
+      - Corrected cone resistance (qt) piezocone only
+    * - SCPT_FT
+      - MPa
+      - 4DP
+      - 0.1235
+      - Corrected sleeve resistance (ft) piezocone only
+    * - SCPT_QE
+      - MPa
+      - 4DP
+      - 18.0532
+      - Effective cone resistance (qe) piezocone only
+    * - SCPT_BDEN
+      - Mg/m3
+      - 2DP
+      - 2.21
+      - Bulk density of material (measured or assumed)
+    * - SCPT_CPO
+      - kPa
+      - 2DP
+      - 210.46
+      - Total vertical stress (based on SCPT_BDEN)
+    * - SCPT_CPOD
+      - kPa
+      - 2DP
+      - 107.56
+      - Effective vertical stress (calculated from SCPT_CPO and SCPT_ISPP or SCPG_WAT)
+    * - SCPT_QNET
+      - MPa
+      - 4DP
+      - 17.8563
+      - Net cone resistance (qn)
+    * - SCPT_FRRC
+      - %
+      - 2DP
+      - 2.76
+      - Corrected friction ratio (Rf') piezocone only
+    * - SCPT_EXPP
+      - MPa
+      - 4DP
+      - -0.0911
+      - Excess pore pressure (u-uo) piezocone only
+    * - SCPT_BQ
+      - 
+      - 4DP
+      - -0.0051
+      - Pore pressure ratio (Bq) piezocone only
+    * - SCPT_ISPP
+      - MPa
+      - 4DP
+      - 0.2
+      - In situ pore pressure (uo) (measured or assumed where not simple hydrostatic based on SCPG_WAT)
+    * - SCPT_NQT
+      - 
+      - 4DP
+      - 166.0125
+      - Normalised cone resistance (Qt)
+    * - SCPT_NFR
+      - %
+      - 4DP
+      - 0.5423
+      - Normalised friction ratio (Fr)
+    * - FILE_FSET
+      - 
+      - X
+      - FS18
+      - Associated file reference (eg raw field data)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 5
+-------------------------
+- SCPT is used to include the readings from the cone converted from the measurement data using any required calibration factors and other mathematical formulae employed by the measurement contractor in accordance with the specification.
+- Readings included in group will depend on the test carried out. For example, the ground parameters measured and included in this group will depend on test type / cone.
+- The fluorescence intensity, photo-multiplier tube readings, PID, FID and conductivity data require graphic interpretation. These have been removed.
+- SCPT_BDEN and SCPT_ISPP allow for complex assumptions on density and piezometric profiles. Explanation of these assumptions is required within SCPG_REM.
+- The requirements for transfer of data in SCPT should be fully specified at the outset of testing in the investigation specification.
+

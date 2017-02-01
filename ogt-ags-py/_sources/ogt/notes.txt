@@ -100,3 +100,23 @@ With json and yaml, data can be serialised in two "structrues" set by **edit_mod
         }
 
 
+.. _circular_import:
+
+Circular Imports
+------------------
+
+Thus far circular imports have been a real problem in this project. The reason is
+then they are infact interdependant
+- and if any `py dev` expert can solve that then please do
+- Many things tried but failsafe is full path
+
+So all import are full path **within the lib** eg
+
+.. code-block:: python
+
+    # good
+    import ogt.ogt_doc
+    doc = ogt.ogt_doc.OGTDocument()
+
+    #vs
+    import ogt.ogt_doc

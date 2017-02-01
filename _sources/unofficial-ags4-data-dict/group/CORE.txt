@@ -1,0 +1,76 @@
+.. _ags4_CORE:
+
+CORE
+===========================================================================
+
+Coring Information
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - CORE_TOP
+      - m
+      - 2DP
+      - 2.54
+      - Depth to top of core run
+    * - CORE_BASE
+      - m
+      - 2DP
+      - 3.54
+      - Depth to base of core run
+    * - CORE_PREC
+      - %
+      - 0DP
+      - 32
+      - Percentage of core recovered in core run (TCR)
+    * - CORE_SREC
+      - %
+      - 0DP
+      - 23
+      - Percentage of solid core recovered in core run (SCR)
+    * - CORE_RQD
+      - %
+      - 0DP
+      - 20
+      - Rock Quality Designation for core run (RQD)
+    * - CORE_DIAM
+      - mm
+      - 0DP
+      - 75
+      - Core diameter
+    * - CORE_DURN
+      - hh:mm
+      - T
+      - 0:05
+      - Time taken to drill core run
+    * - CORE_REM
+      - 
+      - X
+      - Rods dropped 200mm at 3.10m
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS5
+      - Associated file reference (eg photographs of rock cores)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 3
+-------------------------
+- CORE is used to transfer details of rotary coring in rock and soil materials.
+- The data transferred for coring in rock will be more extensive than for soil coring; specifically the SCR and RQD are not determined for soil cores.
+- CORE_DURN permits the inclusion of the time duration for the core run to be drilled if this is a specified additional measured parameter.
+

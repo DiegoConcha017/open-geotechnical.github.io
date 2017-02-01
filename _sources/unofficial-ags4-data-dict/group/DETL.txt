@@ -1,0 +1,55 @@
+.. _ags4_DETL:
+
+DETL
+===========================================================================
+
+Stratum Detail Descriptions
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - DETL_TOP
+      - m
+      - 2DP
+      - 3.46
+      - Depth to top of detail description
+    * - DETL_BASE
+      - m
+      - 2DP
+      - 3.76
+      - Depth to base of detail description
+    * - DETL_DESC
+      - 
+      - X
+      - Claystone
+      - Detail description 
+    * - DETL_REM
+      - 
+      - X
+      - 
+      - Remarks
+    * - FILE_FSET
+      - 
+      - X
+      - FS4
+      - Associated file reference (eg logging field sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 2
+-------------------------
+- DETL is used to include geological details to the geological description of a stratum typically included in the margins of a borehole log.
+- A geological description in DETL_DESC should be considered as a supplement to the main stratum description given in GEOL_DESC of the GEOL Group. Detailed descriptions should be given a single depth (which is repeated in both the DETL_TOP and DETL_BASE headings), only if it has no significant thickness, or if it marks the top of a gradational change in the nature of the stratum.  For example, "27.65m Marl parting" or "35.65m Becoming very sandy". If the change in the stratum is not gradational it is generally preferable to give depth ranges. For example, "6.50 to 8.70m Sandy", is generally preferable to "Sandy below 6.50m". The depth or depth range of the detailed feature may be repeated within the description. Since the detailed descriptions are a supplement to the main description, detailed description depth ranges should not cross main stratum boundaries.
+

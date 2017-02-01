@@ -1,0 +1,67 @@
+.. _ags4_LBSG:
+
+LBSG
+===========================================================================
+
+Testing Schedule
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LBSG_REF
+      - 
+      - X
+      - 2
+      - Schedule reference
+    * - LBSG_DATE
+      - yyyy-mm-dd
+      - DT
+      - 31/01/2009
+      - Date of issue
+    * - LBSG_FROM
+      - 
+      - X
+      - ACME Consulting
+      - Schedule prepared by
+    * - LBSG_TO
+      - 
+      - X
+      - ACME Laboratories plc
+      - Schedule issued to 
+    * - LBSG_DUE
+      - yyyy-mm-dd
+      - DT
+      - 01/04/2009
+      - Date schedule to be completed and reported
+    * - LBSG_REM
+      - 
+      - X
+      - 
+      - Comments on schedule
+    * - LBSG_STAT
+      - 
+      - X
+      - Complete 
+      - Status of schedule
+    * - FILE_FSET
+      - 
+      - X
+      - FS1
+      - Associated file reference (eg schedule sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - 4
+-------------------------
+- The LBSG group is used to describe the testing schedules generated on a project.
+- This group, together with LBST (test details), would typically be used in data files that are transferred as part of the investigation and testing process. These groups would not necessarily be included in a data file that represented final reporting data.
+- A data row in this group represents the issue of a schedule to a laboratory to testing organisation.
+- Any general requirements for the test schedule, for example, dates for completion, contact details, should be included in this group. Details of the test required are provided in the LBST group against the samples.
+

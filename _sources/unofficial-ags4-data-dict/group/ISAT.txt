@@ -1,0 +1,53 @@
+.. _ags4_ISAT:
+
+ISAT
+===========================================================================
+
+Soakaway Tests - Data
+
+Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+
+.. list-table:: 
+    :widths: 5,10,5,30,50
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Heading
+      - Unit
+      - Type
+      - Example
+      - Description
+    * - LOCA_ID
+      - 
+      - ID
+      - 327-16A
+      - Location identifier
+    * - ISAG_TESN
+      - 
+      - X
+      - 1
+      - Test reference
+    * - ISAT_TIME
+      - hh:mm:ss
+      - T
+      - 5:00
+      - Elapsed time
+    * - ISAT_DPTH
+      - m
+      - 2DP
+      - 0.18
+      - Depth to water
+    * - ISAT_REM
+      - 
+      - X
+      - 
+      - Remark relating to test reading
+    * - FILE_FSET
+      - 
+      - X
+      - FS11
+      - Associated file reference (eg test result sheets)
+sssssssssssssssssssssssssssssssssssssssssss
+Notes - None
+-------------------------
+
