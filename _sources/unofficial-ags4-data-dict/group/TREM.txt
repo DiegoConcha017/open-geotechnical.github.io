@@ -1,11 +1,10 @@
-.. _ags4_TREM:
+.. _ags4_group_TREM:
 
-TREM
+TREM: Location Specific Time Related Remarks
 ===========================================================================
 
-Location Specific Time Related Remarks
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -52,9 +51,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS28
       - Associated file reference (eg site journal records)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- TREM_COMP allows comments to be related to specific activities or components of work occurring at the location given by LOCA_ID. This heading can be used to tag similar construction activities occurring at multiple locations or identify specific construction elements.
-- TREM_DURN allows the length of time associated with a particular event to be included if this is appropriate.
+- **TREM_COMP** allows comments to be related to specific activities or components of work occurring at the location given by LOCA_ID. This heading can be used to tag similar construction activities occurring at multiple locations or identify specific construction elements.
+- **TREM_DURN** allows the length of time associated with a particular event to be included if this is appropriate.
 

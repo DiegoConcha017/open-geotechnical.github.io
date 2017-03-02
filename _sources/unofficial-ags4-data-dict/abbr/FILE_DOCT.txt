@@ -3,3 +3,29 @@
 FILE_DOCT
 ===========================================================================
 
+    * - Code
+      - Description
+    * - CAL
+      - Calibration data
+    * - CR
+      - Construction record
+    * - DRAW
+      - Drawing
+    * - GEN
+      - General
+    * - MS
+      - Method statement
+    * - PH
+      - Photograph
+    * - RAW
+      - Raw data
+    * - REP
+      - Report
+    * - TECH
+      - Technical paper
+    * - VI
+      - Video clip
+
+
+.. seealso:: Group: :ref:`ags4_group_FILE`
+

@@ -1,11 +1,10 @@
-.. _ags4_MOND:
+.. _ags4_group_MOND:
 
-MOND
+MOND: Monitoring Readings
 ===========================================================================
 
-Monitoring Readings
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -39,7 +38,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Date and time of reading
     * - MOND_TYPE
       - 
-      - `:ref:`ags4_MOND_TYPE`
+      - PA
       - WDEP
       - Reading type
     * - MOND_REF
@@ -102,16 +101,16 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS28
       - Associated file reference (eg monitoring field sheets, instrument logging file)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 9
 -------------------------
-- MOND is used to transfer measurements or readings from instruments or geoenvironmental monitoring equipment. Geoenvironmental sampling (and laboratory testing (should be included in the SAMP/ERES groups).
+- **MOND** is used to transfer measurements or readings from instruments or geoenvironmental monitoring equipment. Geoenvironmental sampling (and laboratory testing (should be included in the SAMP/ERES groups).
 - This group covers the scope of data included in AGS3 within groups MONR and ICCT.
-- MOND_TYPE defines the reading but not the instrument type nor units (which are defined by MONG_TYPE and MOND_UNIT respectively). Examples of MOND_TYPE abbreviations include:
-- MOND_UNIT is a REQUIRED field (Rule 10b) which enforces the inclusion of units for all monitoring point readings in the data file. Where a reading has no unit, the MOND_UNIT data shall be set to "-" to clearly state this fact.
-- Units included in MOND_UNIT must be fully defined in the UNIT group (Rule 15). It is possible that units require conversion when the data is received and amalgamated into project databases to ensure that data are consistent across monitoring tranches and appropriate for the assessment.
+- **MOND_TYPE** defines the reading but not the instrument type nor units (which are defined by :ref:`MONG <ags4_group_MONG>` and **MOND_UNIT** respectively). Examples of **MOND_TYPE** abbreviations include:
+- **MOND_UNIT** is a REQUIRED field (:ref:`Rule 10b <ags4_rule_10b>`) which enforces the inclusion of units for all monitoring point readings in the data file. Where a reading has no unit, the **MOND_UNIT** data shall be set to "-" to clearly state this fact.
+- Units included in **MOND_UNIT** must be fully defined in the :ref:`UNIT <ags4_group_UNIT>` group (:ref:`Rule 15 <ags4_rule_15>`). It is possible that units require conversion when the data is received and amalgamated into project databases to ensure that data are consistent across monitoring tranches and appropriate for the assessment.
 - Where an instrument records more than one parameter with each reading, for example the three components for a survey total station, or the temperature and pressure then each reading has separate entry.
 - Allowance has been made for recording peak and steady gas concentrations which are a requirement of the SISG specification and CIRIA C665 report.
-- If an incident affects a particular instrument or a particular data reading in a single instrument then it is best reported as a remark in MOND_REM on the date and time at which it occurred or was noted, and associated with the particular reading that is affected eg 'Installation vandalised. Cover damaged'.
-- If there is an event on the site that is of a more general nature that may affect the results on a number of instruments then this can be reported in PREM or TREM as a time related remark.
+- If an incident affects a particular instrument or a particular data reading in a single instrument then it is best reported as a remark in **MOND_REM** on the date and time at which it occurred or was noted, and associated with the particular reading that is affected eg 'Installation vandalised. Cover damaged'.
+- If there is an event on the site that is of a more general nature that may affect the results on a number of instruments then this can be reported in :ref:`PREM <ags4_group_PREM>` or :ref:`TREM <ags4_group_TREM>` as a time related remark.
 

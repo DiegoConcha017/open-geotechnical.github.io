@@ -1,11 +1,10 @@
-.. _ags4_TYPE:
+.. _ags4_group_TYPE:
 
-TYPE
+TYPE: Definition of Data Types
 ===========================================================================
 
-Definition of Data Types
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -32,9 +31,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS1
       - Associated file reference
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- TYPE is required in all AGS4 files (Rule 17).
+- **TYPE** is required in all AGS4 files (:ref:`Rule 17 <ags4_rule_17>`).
 - The AGS Data Transfer Format website (www.ags.org.uk) lists the standard data type definitions.
 

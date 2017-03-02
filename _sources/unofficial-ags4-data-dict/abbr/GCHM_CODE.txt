@@ -3,3 +3,45 @@
 GCHM_CODE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - ACO2
+      - Aggressive carbon dioxide (as mg/l)
+    * - AS
+      - Acid-soluble sulphate (as % SO4)
+    * - CACO3
+      - Chalk content (as %CaCO3)
+    * - CL
+      - Chloride (as mg/l)
+    * - CO2
+      - Carbonate content (as %CO2)
+    * - LOI
+      - Loss on ignition (as %)
+    * - NH4
+      - Ammonium ion (as mg/l)
+    * - NO3
+      - Nitrate (as mg/l)
+    * - OGM
+      - Organic matter content (as %)
+    * - PH
+      - Acidity/alkalinity (pH to nearest 0.1)
+    * - REDOX
+      - Redox potential (in mV)
+    * - TDS
+      - Total dissolved solids (in mg/l to 2SF)
+    * - TS
+      - Total sulphur (as %S)
+    * - WMG
+      - Water/soil extract Magnesium (as m/g)
+    * - WS
+      - Water-soluble sulphate (as mg/l SO4)
+    * - AS_SO3
+      - Acid-soluble sulphate (as % SO3)
+    * - WS_SO3
+      - Water-soluble sulphate (as g/l SO3)
+    * - SO3
+      - Sulphate as SO3
+
+
+.. seealso:: Group: :ref:`ags4_group_GCHM`
+

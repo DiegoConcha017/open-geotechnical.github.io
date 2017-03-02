@@ -6,4 +6,3 @@ Unofficial AGS4 Data Dict
     :maxdepth: 2
 
     groups.rst
-    

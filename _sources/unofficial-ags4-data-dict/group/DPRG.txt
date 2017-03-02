@@ -1,11 +1,10 @@
-.. _ags4_DPRG:
+.. _ags4_group_DPRG:
 
-DPRG
+DPRG: Dynamic Probe Tests - General
 ===========================================================================
 
-Dynamic Probe Tests - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Test date
     * - DPRG_TYPE
       - 
-      - `:ref:`ags4_DPRG_TYPE`
+      - PA
       - DPL 
       - Dynamic probe type
     * - DPRG_METH
@@ -142,7 +141,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS25
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
 - The cone angle and rod mass (per unit length) have been included to provide additional test data for defining non-standard equipment such as the Mackintosh Probe.

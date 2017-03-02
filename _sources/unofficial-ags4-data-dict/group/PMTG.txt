@@ -1,11 +1,10 @@
-.. _ags4_PMTG:
+.. _ags4_group_PMTG:
 
-PMTG
+PMTG: Pressuremeter Test Results - General
 ===========================================================================
 
-Pressuremeter Test Results - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -59,7 +58,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Instrument reference / serial number 
     * - PMTG_TYPE
       - 
-      - `:ref:`ags4_PMTG_TYPE`
+      - PA
       - SBP 
       - Pressuremeter type
     * - PMTG_DIAM
@@ -132,9 +131,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS11
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- PMTG (together with PMTD and PMTL) are used to record pressuremeter tests using standard pressuremeters, including Menard type pressuremeters, self-boring pressuremeters, pre-bored pressuremeters (dilatometers) and full-displacement pressuremeters (eg cone pressuremeters). It is not the intention of these data groups to provide detailed test data. If this is required the information can be transferred as attached files listed under a FILE_FSET grouping.
+- **PMTG** (together with :ref:`PMTD <ags4_group_PMTD>` and PMTL) are used to record pressuremeter tests using standard pressuremeters, including Menard type pressuremeters, self-boring pressuremeters, pre-bored pressuremeters (dilatometers) and full-displacement pressuremeters (eg cone pressuremeters). It is not the intention of these data groups to provide detailed test data. If this is required the information can be transferred as attached files listed under a :ref:`FILE <ags4_group_FILE>` grouping.
 - Interpretation of parameters is conventionally carried out on average displacements measured on the three instrument axes (generally by 3 or 6 arms). If one or more arms/axes are excluded this should be noted in PMTG_REM.
 

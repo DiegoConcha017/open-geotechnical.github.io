@@ -3,3 +3,15 @@
 LPDN_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - GAS JAR
+      - Gas jar method
+    * - LARGE PYK
+      - Large pyknometer
+    * - SMALL PYK
+      - Small pyknometer
+
+
+.. seealso:: Group: :ref:`ags4_group_LPDN`
+

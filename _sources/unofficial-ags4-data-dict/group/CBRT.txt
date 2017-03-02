@@ -1,11 +1,10 @@
-.. _ags4_CBRT:
+.. _ags4_group_CBRT:
 
-CBRT
+CBRT: California Bearing Ratio Tests - Data
 ===========================================================================
 
-California Bearing Ratio Tests - Data
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -117,10 +116,10 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS16
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 3
 -------------------------
-- CBRT_SWEL should be used to report the amount of swelling recorded on the specimen in each test.
-- CBRT_IMC allows the initial moisture content of the CBR test sample to be recorded which may differ from the after test moisture content especially if the sample is pre-soaked.
-- CBRT_REM allows commentary for the addition of test specific remarks. For example, where CBR is tested at natural moisture content, natural moisture content % and natural moisture content -2% or to include details of whether curve correction was applied.
+- **CBRT_SWEL** should be used to report the amount of swelling recorded on the specimen in each test.
+- **CBRT_IMC** allows the initial moisture content of the CBR test sample to be recorded which may differ from the after test moisture content especially if the sample is pre-soaked.
+- **CBRT_REM** allows commentary for the addition of test specific remarks. For example, where CBR is tested at natural moisture content, natural moisture content % and natural moisture content -2% or to include details of whether curve correction was applied.
 

@@ -1,11 +1,10 @@
-.. _ags4_GCHM:
+.. _ags4_group_GCHM:
 
-GCHM
+GCHM: Geotechnical Chemistry Testing
 ===========================================================================
 
-Geotechnical Chemistry Testing
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -54,7 +53,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Depth to top of test specimen
     * - GCHM_CODE
       - 
-      - `:ref:`ags4_GCHM_CODE`
+      - PA
       - AS
       - Determinand
     * - GCHM_METH
@@ -64,7 +63,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Test method
     * - GCHM_TTYP
       - 
-      - `:ref:`ags4_GCHM_TTYP`
+      - PA
       - Solid_21 Water Extract
       - Test type
     * - GCHM_RESL
@@ -117,15 +116,15 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS23
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 8
 -------------------------
-- GCHM is used to report chemical testing carried out for geotechnical design. It is to be used for testing in accordance with BS1377-3:1990 (Amendment 1), testing for use in the assessment described in BRE Special Digest 1 (2005) and/or buried steel testing described in the Design Manual for Roads and Bridges; BD42/00 (Volume 2, Section 1, Part 2) and BD12/01 (Volume 2, Section 2, Part 6). Chemical testing for contamination or water quality testing is reported in ERES. Laboratory resistivity test results should be reported using the LRES Group.
-- The GCHM_CODE abbreviations to report testing to BRE Special Digest 1 and BS 1377-3 would be:
-- The GCHM_CODE abbreviations to report testing of buried steel would be:
-- All GCHM_CODE abbreviations reported in this group are to be listed in the ABBR group.
-- The GCHM_TTYP abbreviations would be limited to SOLID_21WAT, SOLID_ACID, SOLID_TOT and WATER to report testing to BRE Special Digest 1 and BS 1377-3.
-- GCHM_UNIT is a REQUIRED field (Rule 10b) which enforces the inclusion of units for all test results. Where a test result has no unit, the GCHM_UNIT data shall be set to "-".
-- Units reported in GCHM_UNIT must be fully defined in the UNIT group (Rule 15). It is possible that units require conversion when the data is received and amalgamated into project databases to ensure that data are consistent across testing tranches and appropriate for the assessment.
+- **GCHM** is used to report chemical testing carried out for geotechnical design. It is to be used for testing in accordance with BS1377-3:1990 (Amendment 1), testing for use in the assessment described in BRE Special Digest 1 (2005) and/or buried steel testing described in the Design Manual for Roads and Bridges; BD42/00 (Volume 2, Section 1, Part 2) and BD12/01 (Volume 2, Section 2, Part 6). Chemical testing for contamination or water quality testing is reported in ERES. Laboratory resistivity test results should be reported using the :ref:`LRES <ags4_group_LRES>` Group.
+- The **GCHM_CODE** abbreviations to report testing to BRE Special Digest 1 and BS 1377-3 would be:
+- The **GCHM_CODE** abbreviations to report testing of buried steel would be:
+- All **GCHM_CODE** abbreviations reported in this group are to be listed in the :ref:`ABBR <ags4_group_ABBR>` group.
+- The **GCHM_TTYP** abbreviations would be limited to SOLID_21WAT, SOLID_ACID, SOLID_TOT and WATER to report testing to BRE Special Digest 1 and BS 1377-3.
+- **GCHM_UNIT** is a REQUIRED field (:ref:`Rule 10b <ags4_rule_10b>`) which enforces the inclusion of units for all test results. Where a test result has no unit, the **GCHM_UNIT** data shall be set to "-".
+- Units reported in **GCHM_UNIT** must be fully defined in the :ref:`UNIT <ags4_group_UNIT>` group (:ref:`Rule 15 <ags4_rule_15>`). It is possible that units require conversion when the data is received and amalgamated into project databases to ensure that data are consistent across testing tranches and appropriate for the assessment.
 - For a chalk content test carried out to BS1377-3, it would be good practice to report both a Carbonate content (as CO2) and the chalk content (as %CaCO3).
 

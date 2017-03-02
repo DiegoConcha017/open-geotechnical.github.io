@@ -3,3 +3,15 @@
 CONG_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - HYDRAULIC CELL
+      - Hydraulic cell
+    * - EXPANDABILITY
+      - Expandability
+    * - OEDOMETER
+      - Oedometer
+
+
+.. seealso:: Group: :ref:`ags4_group_CONG`
+

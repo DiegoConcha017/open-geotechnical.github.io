@@ -1,11 +1,10 @@
-.. _ags4_LVAN:
+.. _ags4_group_LVAN:
 
-LVAN
+LVAN: Laboratory Vane Tests
 ===========================================================================
 
-Laboratory Vane Tests
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U 
       - Sample type
     * - SAMP_ID
@@ -117,8 +116,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS10
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- LVAN_VNPK and LVAN_VNRM should generally be numeric data.  A text form can only be used by addition of a prefixing operator to denote greater than or less than conditions ie >200 when readings are above the reporting limit of the testing equipment.
+- **LVAN_VNPK** and **LVAN_VNRM** should generally be numeric data.  A text form can only be used by addition of a prefixing operator to denote greater than or less than conditions ie >200 when readings are above the reporting limit of the testing equipment.
 

@@ -1,11 +1,10 @@
-.. _ags4_SAMP:
+.. _ags4_group_SAMP:
 
-SAMP
+SAMP: Sample Information
 ===========================================================================
 
-Sample Information
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -187,18 +186,18 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS67
       - Associated file reference (eg sampling field sheets, sample description records)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 11
 -------------------------
-- The SAMP group is used to record all samples; eg those taken during field sampling or monitoring or sub-samples created in the laboratory.
-- SAMP_ID has been added to the sample key set. Unique sample identifiers can be used to enhance the process of reintegration of testing results from subcontract laboratories and/or used to contain barcode or pre-made label references.  The addition of the SAMP_ID heading into the SAMP group provides greater flexibility for accommodating different process methodologies. A full explanation of example uses of SAMP_ID are given in on the AGS website.
-- SAMP_ID does not have to be used and can be NULL (Rule 12).  The remaining descriptive key/label headings can be used on their own.
-- SAMP_LINK has been added to permit the source of samples to be fully detailed. The SAMP_LINK field is a Record Link (RL) format as defined in Rule 11 and accompanying Note v.
+- The **SAMP** group is used to record all samples; eg those taken during field sampling or monitoring or sub-samples created in the laboratory.
+- **SAMP_ID** has been added to the sample key set. Unique sample identifiers can be used to enhance the process of reintegration of testing results from subcontract laboratories and/or used to contain barcode or pre-made label references.  The addition of the **SAMP_ID** heading into the **SAMP** group provides greater flexibility for accommodating different process methodologies. A full explanation of example uses of **SAMP_ID** are given in on the AGS website.
+- **SAMP_ID** does not have to be used and can be NULL (:ref:`Rule 12 <ags4_rule_12>`).  The remaining descriptive key/label headings can be used on their own.
+- **SAMP_LINK** has been added to permit the source of samples to be fully detailed. The **SAMP_LINK** field is a Record Link (RL) format as defined in :ref:`Rule 11 <ags4_rule_11>` and accompanying Note v.
 - In selecting abbreviations for use in SAMP_TYPE, allowance should be made for use of additional codification or suffixes to standard abbreviations to reflect the sample types and collection methods applying to measurement / payment purposes.
-- SAMP_PREP allow details of the sample preparation to be included. This would typically be used to detail the precautions taken with samples for further chemical or environmental testing.
-- SAMP_LOG and SAMP_DESD allow inclusion of the name of the person describing the sample and date this was carried out as required in ISO 14688-1, Section 6 and EN ISO 14689-1, Section 5.
-- SAMP_COND has been included to provide for any comments on condition, representativeness and reliability of the sample which are requirements of EN ISO 14688-1 (Section 6) and BS 5930 respectively.  This heading together with the sample recovery SAMP_RECV provide useful data to those specifying laboratory scheduling. Data included if not 100%.
+- **SAMP_PREP** allow details of the sample preparation to be included. This would typically be used to detail the precautions taken with samples for further chemical or environmental testing.
+- **SAMP_LOG** and **SAMP_DESD** allow inclusion of the name of the person describing the sample and date this was carried out as required in ISO 14688-1, Section 6 and EN ISO 14689-1, Section 5.
+- **SAMP_COND** has been included to provide for any comments on condition, representativeness and reliability of the sample which are requirements of EN ISO 14688-1 (Section 6) and BS 5930 respectively.  This heading together with the sample recovery **SAMP_RECV** provide useful data to those specifying laboratory scheduling. Data included if not 100%.
 - The requirement of EN ISO 14688-1 (Section 6) and EN ISO 14689-1 (Section 5) to record the details of origin, collection and handling of samples are included in the associated groups.
-- SAMP_ETIM and SAMP_DURN allow for data that describes the duration of sampling event if that is required. This can be important in environmental sampling applications.
-- SAMP_CAPT provides for description of sample composition in the case of an amalgamated sample.
+- **SAMP_ETIM** and **SAMP_DURN** allow for data that describes the duration of sampling event if that is required. This can be important in environmental sampling applications.
+- **SAMP_CAPT** provides for description of sample composition in the case of an amalgamated sample.
 

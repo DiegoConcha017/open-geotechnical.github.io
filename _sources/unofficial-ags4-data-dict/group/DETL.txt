@@ -1,11 +1,10 @@
-.. _ags4_DETL:
+.. _ags4_group_DETL:
 
-DETL
+DETL: Stratum Detail Descriptions
 ===========================================================================
 
-Stratum Detail Descriptions
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -47,9 +46,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS4
       - Associated file reference (eg logging field sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- DETL is used to include geological details to the geological description of a stratum typically included in the margins of a borehole log.
-- A geological description in DETL_DESC should be considered as a supplement to the main stratum description given in GEOL_DESC of the GEOL Group. Detailed descriptions should be given a single depth (which is repeated in both the DETL_TOP and DETL_BASE headings), only if it has no significant thickness, or if it marks the top of a gradational change in the nature of the stratum.  For example, "27.65m Marl parting" or "35.65m Becoming very sandy". If the change in the stratum is not gradational it is generally preferable to give depth ranges. For example, "6.50 to 8.70m Sandy", is generally preferable to "Sandy below 6.50m". The depth or depth range of the detailed feature may be repeated within the description. Since the detailed descriptions are a supplement to the main description, detailed description depth ranges should not cross main stratum boundaries.
+- **DETL** is used to include geological details to the geological description of a stratum typically included in the margins of a borehole log.
+- A geological description in **DETL_DESC** should be considered as a supplement to the main stratum description given in :ref:`GEOL <ags4_group_GEOL>` of the :ref:`GEOL <ags4_group_GEOL>` Group. Detailed descriptions should be given a single depth (which is repeated in both the **DETL_TOP** and **DETL_BASE** headings), only if it has no significant thickness, or if it marks the top of a gradational change in the nature of the stratum.  For example, "27.65m Marl parting" or "35.65m Becoming very sandy". If the change in the stratum is not gradational it is generally preferable to give depth ranges. For example, "6.50 to 8.70m Sandy", is generally preferable to "Sandy below 6.50m". The depth or depth range of the detailed feature may be repeated within the description. Since the detailed descriptions are a supplement to the main description, detailed description depth ranges should not cross main stratum boundaries.
 

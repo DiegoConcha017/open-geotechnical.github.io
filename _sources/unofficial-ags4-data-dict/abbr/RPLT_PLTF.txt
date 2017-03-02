@@ -3,3 +3,21 @@
 RPLT_PLTF
 ===========================================================================
 
+    * - Code
+      - Description
+    * - A
+      - Axial
+    * - B
+      - Block
+    * - D
+      - Diametral
+    * - I
+      - Irregular lump
+    * - L
+      - Parallel to planes of weakness
+    * - P
+      - Perpendicular to planes of weakness
+
+
+.. seealso:: Group: :ref:`ags4_group_RPLT`
+

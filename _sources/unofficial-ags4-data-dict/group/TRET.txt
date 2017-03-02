@@ -1,11 +1,10 @@
-.. _ags4_TRET:
+.. _ags4_group_TRET:
 
-TRET
+TRET: Triaxial Tests - Effective Stress - Data
 ===========================================================================
 
-Triaxial Tests - Effective Stress - Data
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -152,9 +151,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS7
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
 - The information in this group is only used in conjunction with the detailed laboratory reports.
-- TRET_STV - consolidation (flow of water out of specimen) to be reported as positive and dilatancy or swelling (flow of water into specimen) to be reported as negative.
+- **TRET_STV** - consolidation (flow of water out of specimen) to be reported as positive and dilatancy or swelling (flow of water into specimen) to be reported as negative.
 

@@ -1,11 +1,10 @@
-.. _ags4_FLSH:
+.. _ags4_group_FLSH:
 
-FLSH
+FLSH: Drilling Flush Details
 ===========================================================================
 
-Drilling Flush Details
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Depth to bottom of flush zone
     * - FLSH_TYPE
       - 
-      - `:ref:`ags4_FLSH_TYPE`
+      - PA
       - Water
       - Type of flush
     * - FLSH_RETN
@@ -62,7 +61,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS5
       - Associated file reference (eg drilling journal, mud logging or test records)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - None
 -------------------------
 

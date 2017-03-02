@@ -3,3 +3,47 @@
 SAMP_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - AMAL
+      - Amalgamated sample
+    * - B
+      - Bulk disturbed sample
+    * - BLK
+      - Block sample
+    * - C
+      - Core sample
+    * - CBR
+      - CBR mould sample
+    * - D
+      - Small disturbed sample
+    * - ES
+      - Soil sample for environmental testing
+    * - EW
+      - Water sample for environmental testing
+    * - G
+      - Gas sample
+    * - LB
+      - Large bulk disturbed sample (for earthworks testing)
+    * - M
+      - Mazier type sample
+    * - P
+      - Piston sample
+    * - SPTLS
+      - Standard penetration test liner sample
+    * - TW
+      - Thin walled push in sample
+    * - U
+      - Undisturbed sample - open drive
+    * - UT
+      - Thin wall open drive tube sampler
+    * - W
+      - Water sample
+    * - CONCB
+      - Concrete Cube
+    * - CONCC
+      - Concrete Core
+
+
+.. seealso:: Group: :ref:`ags4_group_SAMP`
+

@@ -1,11 +1,10 @@
-.. _ags4_PROJ:
+.. _ags4_group_PROJ:
 
-PROJ
+PROJ: Project Information
 ===========================================================================
 
-Project Information
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -57,9 +56,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS1
       - Associated file reference (eg project specification, site location drawings)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- PROJ is required in all AGS4 files (Rule 13).
-- PROJ_ENG should contain the details of the consultant/designer for the project.
+- **PROJ** is required in all AGS4 files (:ref:`Rule 13 <ags4_rule_13>`).
+- **PROJ_ENG** should contain the details of the consultant/designer for the project.
 

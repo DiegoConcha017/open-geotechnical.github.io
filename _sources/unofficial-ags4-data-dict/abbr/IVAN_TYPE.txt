@@ -3,3 +3,13 @@
 IVAN_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - BOREHOLE
+      - Borehole vane
+    * - FIELD
+      - Hand-held field vane
+
+
+.. seealso:: Group: :ref:`ags4_group_IVAN`
+

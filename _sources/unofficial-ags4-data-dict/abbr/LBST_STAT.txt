@@ -3,3 +3,17 @@
 LBST_STAT
 ===========================================================================
 
+    * - Code
+      - Description
+    * - IN PROGRESS
+      - In progress
+    * - AWAITING START
+      - Await start
+    * - RESTRICTED
+      - Restricted
+    * - COMPLETED
+      - Completed
+
+
+.. seealso:: Group: :ref:`ags4_group_LBST`
+

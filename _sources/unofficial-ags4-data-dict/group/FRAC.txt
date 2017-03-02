@@ -1,11 +1,10 @@
-.. _ags4_FRAC:
+.. _ags4_group_FRAC:
 
-FRAC
+FRAC: Fracture Spacing
 ===========================================================================
 
-Fracture Spacing
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -67,9 +66,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS4
       - Associated file reference (eg logging field sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- FRAC is used to include fracture set details derived from rock core. Fracture information collected from scanline surveys of rock exposures or similar should be recorded in the DISC group.
+- **FRAC** is used to include fracture set details derived from rock core. Fracture information collected from scanline surveys of rock exposures or similar should be recorded in the :ref:`DISC <ags4_group_DISC>` group.
 - It is not typical to define fracture set spacing?s as both min/avg/max fracture spacing and Fracture Index. The requirement for one or other should be specified.
 

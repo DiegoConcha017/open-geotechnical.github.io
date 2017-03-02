@@ -1,11 +1,10 @@
-.. _ags4_DREM:
+.. _ags4_group_DREM:
 
-DREM
+DREM: Depth Related Remarks
 ===========================================================================
 
-Depth Related Remarks
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -42,9 +41,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS5
       - Associated file reference (eg drilling journals)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- DREM may be used for all remarks and notes that are related to a specific depth in the borehole or trial pit, that are not geological. Typically this includes drillers comments usually found on the boring or drilling journal.
-- DREM is used for reporting incidents during drilling (such as "Fishing for broken U100"), drilling records that don't readily fit in any other groups (such as "Pushing boulder ahead of casing"), observations that are not strictly geological (such as "Strong petrol smell").
+- **DREM** may be used for all remarks and notes that are related to a specific depth in the borehole or trial pit, that are not geological. Typically this includes drillers comments usually found on the boring or drilling journal.
+- **DREM** is used for reporting incidents during drilling (such as "Fishing for broken U100"), drilling records that don't readily fit in any other groups (such as "Pushing boulder ahead of casing"), observations that are not strictly geological (such as "Strong petrol smell").
 

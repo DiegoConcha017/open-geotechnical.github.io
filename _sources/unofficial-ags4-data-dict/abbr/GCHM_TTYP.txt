@@ -3,3 +3,17 @@
 GCHM_TTYP
 ===========================================================================
 
+    * - Code
+      - Description
+    * - SOLID_21 WATER EXTRACT
+      - Solid (2:1 Soil/Water extract)
+    * - SOLID_ACID EXTRACT
+      - Solid (Acid extract)
+    * - SOLID_TOTAL
+      - Solid (Total)
+    * - WATER
+      - Water
+
+
+.. seealso:: Group: :ref:`ags4_group_GCHM`
+

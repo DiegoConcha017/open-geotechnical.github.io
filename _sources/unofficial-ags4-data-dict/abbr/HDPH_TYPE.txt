@@ -3,3 +3,73 @@
 HDPH_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - ABS
+      - Automatic Ballast Sampler
+    * - CH
+      - Slope surface protection stripping
+    * - CP
+      - Cable percussion (shell and auger)
+    * - DCP
+      - Dynamic cone penetrometer
+    * - DP
+      - Dynamic probe sampling
+    * - EXP
+      - Logged exposure
+    * - GCOP
+      - GCO probe
+    * - HA
+      - Hand Auger
+    * - ICBR
+      - In situ CBR test
+    * - IDEN
+      - In situ density test
+    * - INST
+      - Instrument
+    * - IP
+      - Inspection pit
+    * - IRDX
+      - In situ redox test
+    * - IRES
+      - In situ resistivity
+    * - IVAN
+      - In situ vane test
+    * - ISPT
+      - Standard penetration test
+    * - OP
+      - Observation pit/trench
+    * - PM
+      - Pressuremeter test hole
+    * - RC
+      - Rotary cored
+    * - RCG
+      - Rotary drilling in common ground
+    * - RO
+      - Rotary open hole
+    * - SCP
+      - Static cone penetrometer
+    * - SH
+      - Shaft
+    * - SNC
+      - Sonic core drilling
+    * - TP
+      - Trial pit/trench
+    * - TRAV
+      - Linear logging traverse or scanline survey
+    * - VC
+      - Vibrocore
+    * - W
+      - Wash boring
+    * - WLS
+      - Dynamic (windowless) sampler
+    * - WS
+      - Window Sampler
+    * - VE
+      - Vacuum Excavation
+    * - CC
+      - Concrete core
+
+
+.. seealso:: Group: :ref:`ags4_group_HDPH`
+

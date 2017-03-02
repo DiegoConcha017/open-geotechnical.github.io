@@ -1,15 +1,16 @@
-AGS4 Quickstart
-=============================
+AGS4 Developers Quickstart 
+====================================================================================================================
 
 .. note::
     
     - This is a quick guide intended for **new developers** to the wonderdul land of the ags4 file format
     - Its unofficial but intended to make one a master of the ags4 art
+    - Its also work in progress and uncomplete 
     
 Whats is AGS4 ?
 ----------------------------
 
-`AGS4` is a standard for data exchange in GeoTechnical Engineering, and compises of two part:
+AGS4 is a standard for data exchange in GeoTechnical Engineering, and compises of two part:
 
 - The **text file format** for sharing data between companies/projects 
   - for machine 2 machine exchange 
@@ -17,21 +18,23 @@ Whats is AGS4 ?
 - And a **data dictionary** used for the exchange of GeoTechnical data 
   - for GeoTechnical engineer stuff
 
-Its design and dark roots are in spreasheets on olde msdos pre 16bit color screen from yonder years
-- so there's a bunch of bald/grey heads on AGS Comittee Team
+Its design and dark mdsos screens and roots are in spreasheet from yonder years (Quattro/lotus123.anyone)
+- and there's a bunch of bald/grey heads on AGS Comittee Team by now have solved problem.. almost
 - and agreed was a way to share and serialise spreadsheet data, without sharing spreadsheet database et all itself
 - Think multiple spreadsheets tabs and a csv of each tab
 - And as well as then, agreed to use the same column names and its data types
 - Amazing feat, and its getting even more popular :-)
 
+Remember in the olde days, an export and each file, and then upload them via ftp, and then send email to client with hyperlink. ?
+dodgy howadays, but we move on to data....
 
 What does it smell like ?
 ------------------------------
 
-The simple example below shows two groups, although on a real file there would be many more
+The simple example below shows two **groups** (pretend their spreadsheet tabs), although a real file there would be many more
 
-- the `Project Info` (PROJ) group, with one row of data
-- the `Location / Test Points` (LOCA) group with three rows
+- the `Project Info` (:ref:`PROJ <ags_group_PROJ>`) group, with one row of data
+- the `Location / Test Points` (:ref:`LOCA <ags_group_LOCA>`) group with three rows
 
 .. code::
 
@@ -51,7 +54,7 @@ The simple example below shows two groups, although on a real file there would b
 
 .. note:: 
     
-    - Looks like :ref:`csv`, but unlike a **true csv**, its not equal column length down the rows which is why most builtin csv parsers can handle it.
+    - Looks like :ref:`csv`, but unlike a **true csv**, its not equal column length's down the rows which is why most builtin csv parsers can handle it.
     - A developers tip is to read each line, and get native parser to parse each line
     - Or read each group block into a string/file and then parse equal cols
     

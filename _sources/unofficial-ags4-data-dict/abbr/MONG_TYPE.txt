@@ -3,3 +3,81 @@
 MONG_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - ANEM
+      - Anenometer
+    * - DM
+      - Discontinuity monitoring
+    * - EPCE
+      - Embedment pressure cell
+    * - EPCH
+      - Embedment pressure cell
+    * - EPCP
+      - Embedment pressure cell
+    * - EPIE
+      - Electronic Piezometer
+    * - ESET
+      - Electronic settlement cell/gauges
+    * - ETM
+      - Magnetic Extensometer
+    * - ETR
+      - Rod Extensometer
+    * - ETT
+      - Tape Extensometer
+    * - GMP
+      - Gas monitoring point
+    * - GWMP
+      - Groundwater monitoring point
+    * - HPIE
+      - Hydraulic piezometer
+    * - HSET
+      - Hydraulic settlement cell/gauges
+    * - ICE
+      - Inclinometer
+    * - ICM
+      - Inclinometer - Manual
+    * - IPCE
+      - Interface pressure cell
+    * - IPCH
+      - Interface pressure cell
+    * - IPCP
+      - Interface pressure cell
+    * - LC
+      - Load cell
+    * - MSET
+      - Levelling point or plate
+    * - PPCE
+      - Push in pressure cell
+    * - PPCH
+      - Push in pressure cell
+    * - PPCP
+      - Push in pressure cell
+    * - PPIE
+      - Pneumatic Piezometer
+    * - PSET
+      - Pneumatic settlement cell/gauges
+    * - RAIN
+      - Rain Gauge
+    * - RIVER
+      - River Gauging Station
+    * - SG
+      - Strain gauge
+    * - SLIP
+      - Slip indicator
+    * - SP
+      - Standpipe
+    * - SPIE
+      - Standpipe piezometer
+    * - TMB
+      - Tiltmeter
+    * - TMU
+      - Tiltmeter - Uniaxial
+    * - TP
+      - Temperature measuring point
+    * - TS
+      - Total station point
+
+
+.. seealso:: Group: :ref:`ags4_group_MONG`
+

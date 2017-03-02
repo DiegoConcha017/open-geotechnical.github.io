@@ -1,11 +1,10 @@
-.. _ags4_SCDT:
+.. _ags4_group_SCDT:
 
-SCDT
+SCDT: Static Cone Dissipation Tests - Data
 ===========================================================================
 
-Static Cone Dissipation Tests - Data
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -67,8 +66,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS19
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- SCDT is used to include the dissipation test readings converted from the measurement data using any required calibration factors.
+- **SCDT** is used to include the dissipation test readings converted from the measurement data using any required calibration factors.
 

@@ -1,11 +1,10 @@
-.. _ags4_SCPT:
+.. _ags4_group_SCPT:
 
-SCPT
+SCPT: Static Cone Penetration Tests - Data
 ===========================================================================
 
-Static Cone Penetration Tests - Data
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -197,12 +196,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS18
       - Associated file reference (eg raw field data)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 5
 -------------------------
-- SCPT is used to include the readings from the cone converted from the measurement data using any required calibration factors and other mathematical formulae employed by the measurement contractor in accordance with the specification.
+- **SCPT** is used to include the readings from the cone converted from the measurement data using any required calibration factors and other mathematical formulae employed by the measurement contractor in accordance with the specification.
 - Readings included in group will depend on the test carried out. For example, the ground parameters measured and included in this group will depend on test type / cone.
 - The fluorescence intensity, photo-multiplier tube readings, PID, FID and conductivity data require graphic interpretation. These have been removed.
-- SCPT_BDEN and SCPT_ISPP allow for complex assumptions on density and piezometric profiles. Explanation of these assumptions is required within SCPG_REM.
-- The requirements for transfer of data in SCPT should be fully specified at the outset of testing in the investigation specification.
+- **SCPT_BDEN** and **SCPT_ISPP** allow for complex assumptions on density and piezometric profiles. Explanation of these assumptions is required within SCPG_REM.
+- The requirements for transfer of data in **SCPT** should be fully specified at the outset of testing in the investigation specification.
 

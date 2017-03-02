@@ -1,11 +1,10 @@
-.. _ags4_GRAG:
+.. _ags4_group_GRAG:
 
-GRAG
+GRAG: Particle Size Distribution Analysis - General
 ===========================================================================
 
-Particle Size Distribution Analysis - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -127,9 +126,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - F21
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- GRAG is to be used to transfer the general information on particle size distribution testing including laboratory name and test accreditation details to be transferred within the AGS Format file. The GRAD group in AGS 2 and 3 was not capable of efficiently transferring this data.
-- The data in GRAG_CRED indicates the accreditation status of the testing as a whole. Therefore if part of the test method used, for example the pipette rather than the sieve, is not accredited, the GRAG_CRED should be appropriately qualified or left empty.
+- **GRAG** is to be used to transfer the general information on particle size distribution testing including laboratory name and test accreditation details to be transferred within the AGS Format file. The GRAD group in AGS 2 and 3 was not capable of efficiently transferring this data.
+- The data in **GRAG_CRED** indicates the accreditation status of the testing as a whole. Therefore if part of the test method used, for example the pipette rather than the sieve, is not accredited, the **GRAG_CRED** should be appropriately qualified or left empty.
 

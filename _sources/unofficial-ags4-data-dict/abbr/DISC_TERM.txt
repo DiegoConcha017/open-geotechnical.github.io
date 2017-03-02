@@ -3,3 +3,15 @@
 DISC_TERM
 ===========================================================================
 
+    * - Code
+      - Description
+    * - D
+      - Terminates against another discontinuity
+    * - R
+      - Terminates within rock
+    * - X
+      - Extends beyond exposure
+
+
+.. seealso:: Group: :ref:`ags4_group_DISC`
+

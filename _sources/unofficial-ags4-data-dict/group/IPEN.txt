@@ -1,11 +1,10 @@
-.. _ags4_IPEN:
+.. _ags4_group_IPEN:
 
-IPEN
+IPEN: In Situ Hand Penetrometer Tests
 ===========================================================================
 
-In Situ Hand Penetrometer Tests
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -82,7 +81,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS11
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - None
 -------------------------
 

@@ -3,3 +3,13 @@
 ISPT_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - C
+      - Cone
+    * - S
+      - Split spoon
+
+
+.. seealso:: Group: :ref:`ags4_group_ISPT`
+

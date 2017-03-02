@@ -3,3 +3,13 @@
 FRST_COND
 ===========================================================================
 
+    * - Code
+      - Description
+    * - RECOMPACTION
+      - Recompacted
+    * - UNDISTURBED
+      - Undisturbed
+
+
+.. seealso:: Group: :ref:`ags4_group_FRST`
+

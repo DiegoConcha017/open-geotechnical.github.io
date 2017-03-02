@@ -1,11 +1,10 @@
-.. _ags4_LDEN:
+.. _ags4_group_LDEN:
 
-LDEN
+LDEN: Density Tests
 ===========================================================================
 
-Density Tests
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U 
       - Sample type
     * - SAMP_ID
@@ -64,17 +63,17 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Details of specimen preparation including time between preparation and testing
     * - LDEN_TYPE
       - 
-      - `:ref:`ags4_LDEN_TYPE`
+      - PA
       - LINEAR
       - Type of test performed
     * - LDEN_COND
       - 
-      - `:ref:`ags4_LDEN_COND`
+      - PA
       - Undisturbed 
       - Sample condition
     * - LDEN_SMTY
       - 
-      - `:ref:`ags4_LDEN_SMTY`
+      - PA
       - BLOCK SAMPLE
       - Type of sample
     * - LDEN_MC
@@ -122,7 +121,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS10
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
 - Measurements of density on rock materials should be reported in RDEN.

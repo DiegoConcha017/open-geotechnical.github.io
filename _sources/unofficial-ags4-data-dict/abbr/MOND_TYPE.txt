@@ -3,3 +3,145 @@
 MOND_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - ANGA
+      - Rotation/Tilt in direction A
+    * - ANGB
+      - Rotation/Tilt in direction B
+    * - ANGC
+      - Rotation in direction C
+    * - BAR
+      - Barometric pressure at time of monitoring
+    * - BRG
+      - Bearing
+    * - CURR
+      - Current
+    * - DSPA
+      - Displacement in direction A
+    * - DSPB
+      - Displacement in direction B
+    * - DSPC
+      - Displacement in direction C
+    * - DSTA
+      - Distance A from LOCA_ID (slip indicator top rod)
+    * - DSTB
+      - Distance B from LOCA_ID (slip indicator top rod)
+    * - DSTL
+      - Distance
+    * - EAST
+      - Absolute position (Easting)
+    * - ERAT
+      - Volume extraction rate
+    * - FLOW
+      - Flow
+    * - FORC
+      - Force
+    * - GAUG
+      - Gauge length
+    * - GCD
+      - Carbon dioxide concentration
+    * - GCDP
+      - Peak carbon dioxide concentration
+    * - GCDS
+      - Steady carbon dioxide concentration
+    * - GCM
+      - Carbon monoxide concentration
+    * - GCMP
+      - Peak carbon monoxide concentration
+    * - GCMS
+      - Steady carbon monoxide concentration
+    * - GFLO
+      - Gas flow rate
+    * - GM
+      - Measured methane as percentage of LEL
+    * - GMP
+      - Peak methane as percentage of LEL
+    * - GMS
+      - Steady methane as percentage of LEL
+    * - GOX
+      - Oxygen concentration
+    * - GOXP
+      - Steady oxygen concentration
+    * - GOXS
+      - Peak oxygen concentration
+    * - GPRS
+      - Differential Pressure
+    * - HYS
+      - Hydrogen sulphide concentration
+    * - HYSP
+      - Peak hydrogen sulphide concentration
+    * - HYSS
+      - Steady hydrogen sulphide concentration
+    * - LEV
+      - Absolute position (Level)
+    * - NRTH
+      - Absolute position (Northing)
+    * - PRES
+      - Pressuremeter test hole
+    * - RAIN
+      - Rainfall
+    * - RFLOW
+      - River flowrate measurement
+    * - RLEVEL
+      - River level measurement
+    * - ROTS
+      - Rotational speed
+    * - STAT
+      - Status
+    * - STRA
+      - Strain in direction A
+    * - STRB
+      - Strain in direction C
+    * - STRC
+      - Strain in direction A
+    * - TEMP
+      - Atmospheric temperature
+    * - TGM
+      - Total methane concentration
+    * - TGMP
+      - Peak total methane concentration
+    * - TGMS
+      - Steady total methane concentration
+    * - TORQ
+      - Torque
+    * - TRST
+      - Thrust
+    * - UPT
+      - Up/run time
+    * - VEL
+      - Velocity
+    * - VOL
+      - Volume
+    * - VOLT
+      - Voltage
+    * - WDEP
+      - Depth to water from LOCA_ID datum
+    * - WHD
+      - Head of water above tip
+    * - LNAPL
+      - Light Nonaqueous Phase Liquid
+    * - DNAPL
+      - Dense Nonaqueous Phase Liquid
+    * - GNIT
+      - Nitrogen concentration
+    * - GNITP
+      - Peak nitrogen concentration
+    * - GNITS
+      - Steady nitrogen concentration
+    * - HYC
+      - Hydrogen cyanide concentration
+    * - HYCP
+      - Peak hydrogen cyanide concentration
+    * - HYCS
+      - Steady hydrogen cyanide concentration
+    * - GFLOP
+      - Peak gas flow rate
+    * - GFLOS
+      - Steady gas flow rate
+    * - DOWNTEMP
+      - Downhole temperature
+
+
+.. seealso:: Group: :ref:`ags4_group_MOND`
+

@@ -3,3 +3,17 @@
 SHBG_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - LARGE RSHEAR
+      - Large Ring shear
+    * - LARGE SBOX
+      - Large Shearbox
+    * - SMALL RSHEAR
+      - Small Ring shear
+    * - SMALL SBOX
+      - Small Shearbox
+
+
+.. seealso:: Group: :ref:`ags4_group_SHBG`
+

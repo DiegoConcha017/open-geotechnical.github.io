@@ -1,11 +1,10 @@
-.. _ags4_PLTG:
+.. _ags4_group_PLTG:
 
-PLTG
+PLTG: Plate Loading Tests - General
 ===========================================================================
 
-Plate Loading Tests - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -137,10 +136,10 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS11
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 3
 -------------------------
-- PLTG is to be used to transfer plate load tests. One data row in this group represents a test and loading cycle.
+- **PLTG** is to be used to transfer plate load tests. One data row in this group represents a test and loading cycle.
 - The Factors a0, a1 and a2 are determined in testing carried out to the DIN standard and would not be appropriate for testing to other standards.
-- PLTG_EV2 is normally only completed when PLTG_CYC = 2.
+- **PLTG_EV2** is normally only completed when **PLTG_CYC** = 2.
 

@@ -3,3 +3,17 @@
 GRAT_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - DS
+      - Dry sieve
+    * - HY
+      - Hydrometer
+    * - PP
+      - Pipette
+    * - WS
+      - Wet sieve
+
+
+.. seealso:: Group: :ref:`ags4_group_GRAT`
+

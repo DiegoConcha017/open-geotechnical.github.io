@@ -1,11 +1,10 @@
-.. _ags4_SCPG:
+.. _ags4_group_SCPG:
 
-SCPG
+SCPG: Static Cone Penetration Tests - General
 ===========================================================================
 
-Static Cone Penetration Tests - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -29,7 +28,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Test reference or push number
     * - SCPG_TYPE
       - 
-      - `:ref:`ags4_SCPG_TYPE`
+      - PA
       - PC
       - Cone test type
     * - SCPG_REF
@@ -107,14 +106,14 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS18
       - Associated file reference (eg cone calibration records)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 7
 -------------------------
-- SCPG is used to record the general information about static cone penetration tests.
-- Pressuremeter tests using CPT equipment (eg cone or driven pressuremeter) should be recorded in the PMTG and associated groups.
-- SCPG_FILT and SCPG_FRIC are included as they are reporting requirements of BS1377.
-- SCPG_WATA is required to clarify origin of water level recorded in SCPG_WAT.
-- SCPG_REM is used to transfer comments on the test and any interpretated parameters. SCPG_REM may refer to the STND group where full information on standards and references could be provided.
-- CPT testing is frequently carried out by specialist sub-contractors. SCPG_CONT is included to record name of specialist sub-contractor.
-- SCPG_CAR and SCPG_SLAR are included to transfer information used to calculate qt and ft.
+- **SCPG** is used to record the general information about static cone penetration tests.
+- Pressuremeter tests using CPT equipment (eg cone or driven pressuremeter) should be recorded in the :ref:`PMTG <ags4_group_PMTG>` and associated groups.
+- **SCPG_FILT** and **SCPG_FRIC** are included as they are reporting requirements of BS1377.
+- **SCPG_WATA** is required to clarify origin of water level recorded in SCPG_WAT.
+- **SCPG_REM** is used to transfer comments on the test and any interpretated parameters. **SCPG_REM** may refer to the :ref:`STND <ags4_group_STND>` group where full information on standards and references could be provided.
+- CPT testing is frequently carried out by specialist sub-contractors. **SCPG_CONT** is included to record name of specialist sub-contractor.
+- **SCPG_CAR** and **SCPG_SLAR** are included to transfer information used to calculate qt and ft.
 

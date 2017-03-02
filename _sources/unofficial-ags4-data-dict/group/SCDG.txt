@@ -1,11 +1,10 @@
-.. _ags4_SCDG:
+.. _ags4_group_SCDG:
 
-SCDG
+SCDG: Static Cone Dissipation Tests - General
 ===========================================================================
 
-Static Cone Dissipation Tests - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -87,8 +86,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS19
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- SCDG is to be used to record the general information relating to dissipation tests carried out during static cone penetrometer testing.
+- **SCDG** is to be used to record the general information relating to dissipation tests carried out during static cone penetrometer testing.
 

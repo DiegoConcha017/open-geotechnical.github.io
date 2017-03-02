@@ -3,3 +3,47 @@
 ERES_MATX
 ===========================================================================
 
+    * - Code
+      - Description
+    * - LIQUID
+      - Liquid
+    * - GAS
+      - Gas
+    * - SOLID
+      - Solid
+    * - PRODUCT
+      - Product
+    * - CEN_2_1_2STAGE_MGL
+      - CEN 2-1 (2 Stage) Leachate (mg/l)
+    * - CEN_8_1_2STAGE_MGL
+      - CEN 8-1 (2 Stage) Leachate (mg/l)
+    * - CEN_2_1_2STAGE_MGKG
+      - CEN 2-1 (2 Stage) Leachate (mg/kg)
+    * - CEN_10_1_2STAGE_MGKG
+      - CEN 10-1 (2 Stage) Leachate (mg/kg)
+    * - CEN_2_1_1STAGE_MGL
+      - CEN 2-1 (1 Stage) Leachate (mg/l)
+    * - CEN_2_1_1STAGE_MGKG
+      - CEN 2-1 (1 Stage) Leachate (mg/kg)
+    * - CEN_10_1_1STAGE_MGL
+      - CEN 10-1 (1 Stage) Leachate (mg/l)
+    * - CEN_10_1_1STAGE_MGKG
+      - CEN 10-1 (1 Stage) Leachate (mg/kg)
+    * - NRA
+      - NRA Leachate
+    * - TCLP
+      - TCLP Leachate
+    * - SPLP
+      - SPLP Leachate
+    * - AUS_RW
+      - Australian (Reagent Water) Leachate
+    * - AUS_ACE_PH5
+      - Australian (Acetate pH 5.0) Leachate
+    * - AUS_ACE_PH5_29
+      - Australian (Acetate pH 5.0/2.9) Leachate
+    * - AUS_TET_PH92
+      - Australian (Tetraborate pH 9.2) Leachate
+
+
+.. seealso:: Group: :ref:`ags4_group_ERES`
+

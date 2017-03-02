@@ -3,3 +3,19 @@
 PMTG_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - HPD
+      - High pressure dilatometer
+    * - MPM
+      - Menard type pressuremeter
+    * - PIP
+      - Push-in pressuremeter
+    * - SBP
+      - Self boring pressuremeter
+    * - WRSBP
+      - Weak rock self boring pressuremeter
+
+
+.. seealso:: Group: :ref:`ags4_group_PMTG`
+

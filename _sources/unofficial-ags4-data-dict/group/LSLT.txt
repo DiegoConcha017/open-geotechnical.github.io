@@ -1,11 +1,10 @@
-.. _ags4_LSLT:
+.. _ags4_group_LSLT:
 
-LSLT
+LSLT: Shrinkage Limit Tests
 ===========================================================================
 
-Shrinkage Limit Tests
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U 
       - Sample type
     * - SAMP_ID
@@ -117,9 +116,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS10
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- Group LSLT is to be used to report shrinkage limit tests on soils.
-- The LLIN group is to be used to report linear shrinkage tests.
+- Group **LSLT** is to be used to report shrinkage limit tests on soils.
+- The :ref:`LLIN <ags4_group_LLIN>` group is to be used to report linear shrinkage tests.
 

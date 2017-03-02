@@ -3,3 +3,31 @@
 TREG_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - CADC
+      - Anisotropically consolidated drained compression with pwp measurement
+    * - CADE
+      - Anisotropically consolidated drained extension with pwp measurement
+    * - CAUC
+      - Anisotropically consolidated undrained compression with pwp measurement
+    * - CAUE
+      - Anisotropically consolidated undrained extension with pwp measurement
+    * - CD
+      - Consolidated drained (single stage)
+    * - CDM
+      - Consolidated drained (multi-stage)
+    * - CIDC
+      - Isotropically consolidated drained compression with pwp measurement
+    * - CIDE
+      - Isotropically consolidated drained extension with pwp measurement
+    * - CU
+      - Consolidated undrained with pwp measurement (single stage)
+    * - CUM
+      - Consolidated undrained with pwp measurement (multi-stage)
+    * - UUP
+      - Unconsolidated undrained with pwp measurement
+
+
+.. seealso:: Group: :ref:`ags4_group_TREG`
+

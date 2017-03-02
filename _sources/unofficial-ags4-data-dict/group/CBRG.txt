@@ -1,11 +1,10 @@
-.. _ags4_CBRG:
+.. _ags4_group_CBRG:
 
-CBRG
+CBRG: California Bearing Ratio Tests - General
 ===========================================================================
 
-California Bearing Ratio Tests - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -64,7 +63,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Details of specimen preparation including time between preparation and testing
     * - CBRG_COND
       - 
-      - `:ref:`ags4_CBRG_COND`
+      - PA
       - Undisturbed 
       - Sample condition
     * - CBRG_NMC
@@ -117,9 +116,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS16
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- Initial moisture content required for each stage of testing, heading added to CBRT group and removed from CBRG.
+- Initial moisture content required for each stage of testing, heading added to :ref:`CBRT <ags4_group_CBRT>` group and removed from CBRG.
 - New headings added to permit details of test method, laboratory and test accreditation to be included in data.
 

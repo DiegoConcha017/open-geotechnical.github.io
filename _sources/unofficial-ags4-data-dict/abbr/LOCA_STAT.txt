@@ -3,3 +3,17 @@
 LOCA_STAT
 ===========================================================================
 
+    * - Code
+      - Description
+    * - DRAFT
+      - Draft data
+    * - FINAL
+      - Final data
+    * - HISTORIC
+      - Historical data converted from paper records
+    * - PRELIM
+      - Preliminary data
+
+
+.. seealso:: Group: :ref:`ags4_group_LOCA`
+

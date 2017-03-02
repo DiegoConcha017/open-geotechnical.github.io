@@ -1,11 +1,10 @@
-.. _ags4_IPRG:
+.. _ags4_group_IPRG:
 
-IPRG
+IPRG: In Situ Permeability Tests - General
 ===========================================================================
 
-In Situ Permeability Tests - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -44,7 +43,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Stage number of multistage packer test
     * - IPRG_TYPE
       - 
-      - `:ref:`ags4_IPRG_TYPE`
+      - PA
       - Constant Head
       - Type of test
     * - IPRG_PRWL
@@ -127,7 +126,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS26
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
 - None.

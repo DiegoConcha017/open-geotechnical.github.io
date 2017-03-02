@@ -3,3 +3,19 @@
 DPRG_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - DPH
+      - Heavy dynamic probe (50kg hammer mass/500mm drop)
+    * - DPSH-A
+      - Superheavy dynamic probe (63.5kg hammer mass/500mm drop)
+    * - DPSH-B
+      - Superheavy (63.5kg hammer mass/750mm drop)
+    * - DPL
+      - Light dynamic probe (10kg hammer mass/500mm drop)
+    * - DPM
+      - Medium dynamic probe (30kg hammer mass/500mm drop)
+
+
+.. seealso:: Group: :ref:`ags4_group_DPRG`
+

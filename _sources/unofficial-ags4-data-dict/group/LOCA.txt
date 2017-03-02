@@ -1,11 +1,10 @@
-.. _ags4_LOCA:
+.. _ags4_group_LOCA:
 
-LOCA
+LOCA: Location Details
 ===========================================================================
 
-Location Details
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -24,12 +23,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Location identifier
     * - LOCA_TYPE
       - 
-      - `:ref:`ags4_LOCA_TYPE`
+      - PA
       - CP+RC
       - Type of activity
     * - LOCA_STAT
       - 
-      - `:ref:`ags4_LOCA_STAT`
+      - PA
       - PRELIM
       - Status of information relating to this position
     * - LOCA_NATE
@@ -44,7 +43,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - National Grid Northing of location or start of traverse
     * - LOCA_GREF
       - 
-      - `:ref:`ags4_LOCA_GREF`
+      - PA
       - OSGB 
       - National grid referencing system used
     * - LOCA_GL
@@ -207,15 +206,15 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS2
       - Associated file reference (eg boring or pitting instructions, location photographs)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 8
 -------------------------
-- LOCA is used to transfer the spatial location of all positions where data has been recorded. This includes the location of exploratory holes, sampling points or other locations where an observation / test has been made, or a sample / measurement taken.
-- The LOCA_TYPE code is used to categorise the type of activity that has occurred at the location.
-- The details of exploratory hole construction are contained in the HDPH group. If LOCA_TYPE codes are used that represent the type of exploratory hole construction then they must be correlated with the code or combinations of codes in HDPH_TYPE. Alternatively the code 'EH' could be used to represent an Exploratory Hole the details of which are contained in HDPH.
-- If the AGS data file includes information on construction items, then LOCA would also include references to these locations.
-- LOCA_ID must be unique for the project and should be unique for the site to allow for consolidation of data. Consideration of this needs to be made at the outset of the project. Typically the consulting engineer or designer allows for this in specifying hole or location identifiers.
-- LOCA_FDEP will generally be null for location points other than exploratory holes, pits, piles or other below ground constructed elements.
-- Two headings, LOCA_LOCA and LOCA_CLST, provide a heading for tags of hole groupings. These groupings would typically be specified by the Investigation Supervisor/Designer rather than the GI Contractor. LOCA_LOCA is to be used to define the grouping of a hole by site location, whereas LOCA_CLST is typically used to indicate investigation phase. If codes are used to define these location or phase data, then the codes must be defined in the ABBR group.
-- LOCA_OFFS, LOCA_CNGE and LOCA_ALID allow location data to be presented by chainage and offset to an alignment as typically used for location on road and rail projects. The data included in these headings will probably be expressed in project related units. For example, offset can be defined as positive or negative (eg  or -12). Chainage on UK railway projects may well be expressed in miles and chains (eg 10 mi 1 ch)
+- **LOCA** is used to transfer the spatial location of all positions where data has been recorded. This includes the location of exploratory holes, sampling points or other locations where an observation / test has been made, or a sample / measurement taken.
+- The **LOCA_TYPE** code is used to categorise the type of activity that has occurred at the location.
+- The details of exploratory hole construction are contained in the :ref:`HDPH <ags4_group_HDPH>` group. If **LOCA_TYPE** codes are used that represent the type of exploratory hole construction then they must be correlated with the code or combinations of codes in HDPH_TYPE. Alternatively the code 'EH' could be used to represent an Exploratory Hole the details of which are contained in HDPH.
+- If the AGS data file includes information on construction items, then **LOCA** would also include references to these locations.
+- **LOCA_ID** must be unique for the project and should be unique for the site to allow for consolidation of data. Consideration of this needs to be made at the outset of the project. Typically the consulting engineer or designer allows for this in specifying hole or location identifiers.
+- **LOCA_FDEP** will generally be null for location points other than exploratory holes, pits, piles or other below ground constructed elements.
+- Two headings, **LOCA_LOCA** and LOCA_CLST, provide a heading for tags of hole groupings. These groupings would typically be specified by the Investigation Supervisor/Designer rather than the GI Contractor. **LOCA_LOCA** is to be used to define the grouping of a hole by site location, whereas **LOCA_CLST** is typically used to indicate investigation phase. If codes are used to define these location or phase data, then the codes must be defined in the :ref:`ABBR <ags4_group_ABBR>` group.
+- LOCA_OFFS, **LOCA_CNGE** and **LOCA_ALID** allow location data to be presented by chainage and offset to an alignment as typically used for location on road and rail projects. The data included in these headings will probably be expressed in project related units. For example, offset can be defined as positive or negative (eg  or -12). Chainage on UK railway projects may well be expressed in miles and chains (eg 10 mi 1 ch)
 

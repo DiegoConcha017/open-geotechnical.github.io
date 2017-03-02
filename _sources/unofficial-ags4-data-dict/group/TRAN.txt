@@ -1,11 +1,10 @@
-.. _ags4_TRAN:
+.. _ags4_group_TRAN:
 
-TRAN
+TRAN: Data File Transmission Information / Data Status
 ===========================================================================
 
-Data File Transmission Information / Data Status
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -72,9 +71,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS1
       - Associated file reference (eg data file QA check records)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- TRAN is required in all AGS4 files (Rule 14).
+- **TRAN** is required in all AGS4 files (:ref:`Rule 14 <ags4_rule_14>`).
 - Delimiter and concatenator characters (TRAN_DLIM & TRAN_RCON) need to be defined if Record Link data or multiple concatenated abbreviations are included in the file. These characters cannot be used in IDs and abbreviations that are referred to in data key sets.
 

@@ -3,3 +3,31 @@
 BKFL_LEG
 ===========================================================================
 
+    * - Code
+      - Description
+    * - 901
+      - Sand backfill
+    * - 902
+      - Gravel backfill
+    * - 903
+      - Bentonite
+    * - 904
+      - Grout
+    * - 905
+      - Arisings
+    * - 906
+      - Concrete
+    * - 907
+      - Asphalt
+    * - 908
+      - Ballast
+    * - 909
+      - Upstanding cover
+    * - 910
+      - Flush cover
+    * - 912
+      - Paving slab
+
+
+.. seealso:: Group: :ref:`ags4_group_BKFL`
+

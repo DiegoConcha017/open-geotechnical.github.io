@@ -1,11 +1,10 @@
-.. _ags4_IDEN:
+.. _ags4_group_IDEN:
 
-IDEN
+IDEN: In Situ Density Tests
 ===========================================================================
 
-In Situ Density Tests
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -39,7 +38,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Test date
     * - IDEN_TYPE
       - 
-      - `:ref:`ags4_IDEN_TYPE`
+      - PA
       - Core
       - Type of density test performed
     * - IDEN_IDEN
@@ -102,7 +101,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS25
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
 - None.

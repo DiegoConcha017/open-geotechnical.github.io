@@ -10,11 +10,12 @@
     
     <link rel="stylesheet" href="../_static/pyramid.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/ogt_base.1.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +27,7 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="top" title="Open GeoTechnical" href="../index.html" />
     <link rel="up" title="Unofficial AGS4 Data Dict" href="index.html" />
-    <link rel="next" title="ERES" href="group/ERES.html" />
+    <link rel="next" title="ERES: Environmental Contaminant Testing" href="group/ERES.html" />
     <link rel="prev" title="Unofficial AGS4 Data Dict" href="index.html" />
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
@@ -36,373 +37,10 @@
 
   </head>
   <body role="document">
-<style>
 
-
-
-body {
-    background-color: black;
-}
-
-#XHEAD {
-    deadbackground-color: yellow !important;
-}
-.main_title{
-    margin: 10px;
-    font-size: 14pt;
-    vertical-align: top;
-    color: #999999;
-    font-family: Verdana;
-    background-image: "/_static/logo.png"
-}
-
-.main_title a {
-    color: #F29F00;
-}
-.main_title a:hover {
-    text-decoration: none;
-}
-.main_title small{
-    margin: 10px;
-    font-size: 8pt;
-    vertical-align: top;
-    color: #999999;
-    font-weight: normal;
-    font-family: Verdana;
-}
-
-.externals_nav {
-    float: right;
-    margin-right: 20px;
-}
-.externals_nav li {
-    display: inline;
-    list-style-type: none;
-    margin: 2px;
-        sswidth: 50px;
-} 
-
-.externals_nav a {
-    text-decoration: none;
-    color: #999999;
-    padding: 5px;
-    font-family: Verdana;
-    font-size: 10pt;
-}
-.externals_nav a:hover {
-    background-color: #333333;
-    color: white;
-}
-    
-        
-.module_nav {
-    float: right;
-    ssmargin-right: 150px;
-
-    deadbackground-color: red !important;
-}
-.module_nav li {
-    display: inline;
-    list-style-type: none;
-    margin: 2px;
-    width: 50px;
-}
-.module_nav a {
-    text-decoration: none;
-    background-color: #222222;
-    color: #eeeeee;
-    border-radius: 5px;
-    padding: 5px;
-    border: 1px solid #efefef;
-    font-family: Verdana;
-    font-size: 10pt;
-    font-weight: bold;
-}
-.module_nav a:hover {
-    background-color: #333333;
-}
-.module_nav a.selected{
-    background-color: #999999;
-    color: black;
-}
-
-.related{
-    background-color: #222222 !important; 
-    margin-right: 10px;
-    
-}
-.related a {
-    color: #dddddd !important; 
-    text-shadow: none;
-        font-size: 10pt !important;
-}
-div.related ul {
-    padding-left: 300px;
-}
-.related ul li {
-    color: #FFFF00 !important;
-}
-
-.sphinxsidebarwrapper {
-    width: 300px;
-    background-color: #DDDDDD;
-}
-.sphinxsidebarwrapper h3  {
-    border-bottom: 1px solid white;
-}
-.sphinxsidebarwrapper h3 a {
-    font-family: Verdana;
-}
-div.bodywrapper {
-    margin-left: 300px;
-}
-.sphinxsidebar ul {
-    margin-left: 0;
-}
-.sphinxsidebar ul li{
-    sborder-top: 1px solid #dddddd !important;
-    ssbackground-color: white;
-    padding: 2px !important;
-}
-.sphinxsidebar ul li a{
-    font-weight: bold;
-    font-size: 9pt;
-    color: #333333;
-    font-family: Verdana;
-}
-.sphinxsidebar ul ul{
-    width: 250px;
-}
-.sphinxsidebar ul ul li{
-    border-top: none !important;
-}
-.sphinxsidebar ul ul li a{
-    font-weight: normal;
-    font-size: 9pt;
-    font-family: Verdana;
-}
-
-
-
-/**************************************************/
-/* Main */
-/**************************************************/
-div.body {
-    font-size: 10pt;
-}
-
-div.body h1{
-    border-radius: 10px !important;
-    padding: 5px 10px;
-    font-size: 20pt;
-    background-color: #444444 !important;
-    color: #dddddd;
-   font-family: Verdana;
-}
-
-
-
-div.body h2{
-
-    border-top: 2px solid #999999;
-    border-right: 2px solid #999999;
-    border-top-right-radius: 10px !important;
-    deadborder-bottom-right-radius: 10px !important;
-    background-color: #bbbbbb !important;
-    font-size: 12pt;
-    font-family: monospace;
-
-    padding: 5px 10px;
-}
-div.body h3{
-    border-top: 2px solid #dddddd;
-    border-right: 2px solid #aaaaaa;
-    border-top-right-radius: 10px !important;
-    deadborder-bottom-right-radius: 10px !important;
-    background-color: #dddddd !important;
-    font-size: 10pt;
-    font-family: monospace;
-    padding: 5px 10px;
-}
-
-div.body p {
-    padding-left: 30px;
-    padding-right: 30px;
-    max-width: 600px;
-}
-div.body ul, ol {
-    padding-left: 50px;
-    padding-right: 50px;
-     max-width: 600px;
-}
-div.body li p {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-div.body ul, ul {
-     padding-left: 30px;
-    padding-right: 30px;
-}
-
-.admonition {
-    margin-left: 60px;
-    margin-right: 60px;
-}
-
-
-.field-name {
-    width: 80px;
-    text-align: right;
-}
-
-pre {
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    background-color: #eeeeee;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 9pt;
-    padding: 4px;
-}
-
-table.docutils {
-    box-shadow: 9px 10px 34px -16px rgba(0,0,0,0.75);
-}
-table.docutils thead {
-    background-color: #dddddd;
-}
-table.docutils th {
-    padding: 5px;
-}
-table.docutils td {
-    padding: 2px;
-}
-
-table.field-list{
-    box-shadow: none;
-    background-color: #eeeeee;
-}
-
-table.field-list tr{
-    border-bottom: 1px solid #cccccc;
-}
-table.field-list th {
-    padding: 5px;
-    width: 100px;
-    border-right: 1px solid #cccccc;
-    font-size: 9pt;
-    deadbackground-color: red;
-    color: #888888;
-}
-table.field-list td {
-    padding: 5px;
-    border-left: 1px solid #cccccc;
-}
-
-dl.class p {
-    padding-left: 5px;
-}
-
-.ags-csv-rule {
-    background-color: #00CCCC;
-    color: black;
-    padding: 3px 6px 3px 6px;
-    border-radius: 5px;
-    font-size: 8pt;
-    border: 1px solid black;
-}
-.ags-data-rule {
-    background-color:#FFFF00;
-    color: black;
-    padding: 3px 6px 3px 6px;
-    border-radius: 5px;
-    font-size: 8pt;
-    border: 1px solid black;
-}
-
-.viewcode-link {
-    font-size: 8pt;
-}
-
-/**************************************************/
-/* API stuff */
-/**************************************************/
-/* a whole class container */
-dl.class {
-    border: 1px solid #dddddd;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #efefef;
-    box-shadow: 2px 2px 5px 0 #822775;
-}
-/* class Name */
-dl.class dt .descname{
-	color: #822775;
-	font-size: 13pt;
-	font-family: monospace;
-}
-
-a.reference code.py-class span.pre {
-    color: #822775 !important;
-    font-family: monospace;
-}
-
-
-/* class attribute */
-dl.attribute dt .descname {
-    color: #AD833E;
-    font-size: 11pt;
-    font-family: monospace;
-}
-
-
-/* class method  */
-dl.method dt .descname {
-    color: #1B68B8;
-	font-size: 11pt;
-	font-family: monospace;
-
-}
-
-/* a whole function container */
-dl.function {
-    border: 1px solid #dddddd;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #efefef;
-    box-shadow: 2px 2px 5px 0 #298815;
-}
-/* function */
-dl.function dt .descname {
-    color: #298815 !important;
-}
-
-a.reference code.py-func span.pre {
-    color: #298815 !important;
-    font-family: monospace;
-}
-
-/* glossary */
-dl.glossary dt {
-    background-color: #eeeeee;
-    font-family: monospace;
-    border-top: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
-    border-top-right-radius: 20px;
-    padding: 3px 5px;
-
-}
-dl.glossary dd {
-    border-right: 1px solid #dddddd;
-    margin-bottom: 10px;
-}
-</style>
-    
-    <div id="XHEAD">
-
-  
-  <h1 class="main_title"><a href="/"><img src="/_static/logo-small.png"> Open GeoTechnical</a> </h1>
-  </div>
+<div id="XHEAD">  
+    <h1 class="main_title"><a href="/"><img src="/_static/logo-small.png"> Open GeoTechnical</a> </h1>
+</div>
   
 
 
@@ -413,13 +51,14 @@ dl.glossary dd {
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="group/ERES.html" title="ERES"
+          <a href="group/ERES.html" title="ERES: Environmental Contaminant Testing"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Unofficial AGS4 Data Dict"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">ogt</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Unofficial AGS4 Data Dict</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../ags-projects/index.html" >AGS Projects</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Unofficial AGS4 Data Dict</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -434,7 +73,7 @@ dl.glossary dd {
 <h2>Field and Laboratory Environmental Testing<a class="headerlink" href="#field-and-laboratory-environmental-testing" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="group/ERES.html">ERES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ERES.html">ERES: Environmental Contaminant Testing</a></li>
 </ul>
 </div>
 </div>
@@ -442,8 +81,8 @@ dl.glossary dd {
 <h2>Geoenvironmental in situ Testing<a class="headerlink" href="#geoenvironmental-in-situ-testing" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="group/IFID.html">IFID</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/IPID.html">IPID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/IFID.html">IFID: On Site Volatile Headspace Testing Using Flame Ionisation Detector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/IPID.html">IPID: On Site Volatile Headspace Testing by Photo Ionisation Detector</a></li>
 </ul>
 </div>
 </div>
@@ -451,11 +90,11 @@ dl.glossary dd {
 <h2>Geological Descriptions and Information<a class="headerlink" href="#geological-descriptions-and-information" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="group/DETL.html">DETL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/DISC.html">DISC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/FRAC.html">FRAC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/GEOL.html">GEOL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/WETH.html">WETH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/DETL.html">DETL: Stratum Detail Descriptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/DISC.html">DISC: Discontinuity Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/FRAC.html">FRAC: Fracture Spacing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/GEOL.html">GEOL: Field Geological Descriptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/WETH.html">WETH: Weathering</a></li>
 </ul>
 </div>
 </div>
@@ -463,50 +102,50 @@ dl.glossary dd {
 <h2>Geotechnical Laboratory Testing (Soils and Rocks)<a class="headerlink" href="#geotechnical-laboratory-testing-soils-and-rocks" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="group/CBRG.html">CBRG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/CBRT.html">CBRT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/CMPG.html">CMPG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/CMPT.html">CMPT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/CONG.html">CONG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/CONS.html">CONS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/ESCG.html">ESCG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/ESCT.html">ESCT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/FRST.html">FRST</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/GCHM.html">GCHM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/GRAG.html">GRAG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/GRAT.html">GRAT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LDEN.html">LDEN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LDYN.html">LDYN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LLIN.html">LLIN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LLPL.html">LLPL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LNMC.html">LNMC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LPDN.html">LPDN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LPEN.html">LPEN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LRES.html">LRES</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LSLT.html">LSLT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LSTG.html">LSTG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LSTT.html">LSTT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LSWL.html">LSWL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LVAN.html">LVAN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/MCVG.html">MCVG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/MCVT.html">MCVT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PTST.html">PTST</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/RCCV.html">RCCV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/RDEN.html">RDEN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/RELD.html">RELD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/RPLT.html">RPLT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/RSCH.html">RSCH</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/RSHR.html">RSHR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/RTEN.html">RTEN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/RUCS.html">RUCS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/RWCO.html">RWCO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/SHBG.html">SHBG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/SHBT.html">SHBT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/SUCT.html">SUCT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/TREG.html">TREG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/TRET.html">TRET</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/TRIG.html">TRIG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/TRIT.html">TRIT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/CBRG.html">CBRG: California Bearing Ratio Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/CBRT.html">CBRT: California Bearing Ratio Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/CMPG.html">CMPG: Compaction Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/CMPT.html">CMPT: Compaction Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/CONG.html">CONG: Consolidation Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/CONS.html">CONS: Consolidation Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ESCG.html">ESCG: Effective Stress Consolidation Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ESCT.html">ESCT: Effective Stress Consolidation Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/FRST.html">FRST: Frost Susceptibility Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/GCHM.html">GCHM: Geotechnical Chemistry Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/GRAG.html">GRAG: Particle Size Distribution Analysis - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/GRAT.html">GRAT: Particle Size Distribution Analysis - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LDEN.html">LDEN: Density Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LDYN.html">LDYN: Dynamic Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LLIN.html">LLIN: Linear Shrinkage Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LLPL.html">LLPL: Liquid and Plastic Limit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LNMC.html">LNMC: Moisture Content Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LPDN.html">LPDN: Particle Density Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LPEN.html">LPEN: Laboratory Hand Penetrometer Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LRES.html">LRES: Laboratory Resistivity Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LSLT.html">LSLT: Shrinkage Limit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LSTG.html">LSTG: Initial Consumption of Lime Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LSTT.html">LSTT: Initial Consumption of Lime Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LSWL.html">LSWL: Swelling Index Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LVAN.html">LVAN: Laboratory Vane Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/MCVG.html">MCVG: MCV Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/MCVT.html">MCVT: MCV Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PTST.html">PTST: Laboratory Permeability Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/RCCV.html">RCCV: Chalk Crushing Value Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/RDEN.html">RDEN: Rock Porosity and Density Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/RELD.html">RELD: Relative Density Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/RPLT.html">RPLT: Point Load Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/RSCH.html">RSCH: Schmidt Rebound Hardness Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/RSHR.html">RSHR: Shore Scleroscope Hardness Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/RTEN.html">RTEN: Tensile Strength Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/RUCS.html">RUCS: Rock Uniaxial Compressive Strength and Deformability Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/RWCO.html">RWCO: Water Content of Rock Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/SHBG.html">SHBG: Shear Box Testing - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/SHBT.html">SHBT: Shear Box Testing - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/SUCT.html">SUCT: Suction Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/TREG.html">TREG: Triaxial Tests - Effective Stress - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/TRET.html">TRET: Triaxial Tests - Effective Stress - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/TRIG.html">TRIG: Triaxial Tests - Total Stress - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/TRIT.html">TRIT: Triaxial Tests - Total Stress - Data</a></li>
 </ul>
 </div>
 </div>
@@ -514,33 +153,33 @@ dl.glossary dd {
 <h2>Geotechnical in situ Testing<a class="headerlink" href="#geotechnical-in-situ-testing" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="group/DCPG.html">DCPG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/DCPT.html">DCPT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/DPRB.html">DPRB</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/DPRG.html">DPRG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/ICBR.html">ICBR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/IDEN.html">IDEN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/IPEN.html">IPEN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/IPRG.html">IPRG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/IPRT.html">IPRT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/IRDX.html">IRDX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/IRES.html">IRES</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/ISAG.html">ISAG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/ISAT.html">ISAT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/ISPT.html">ISPT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/IVAN.html">IVAN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PLTG.html">PLTG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PLTT.html">PLTT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PMTD.html">PMTD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PMTG.html">PMTG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PMTL.html">PMTL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PUMG.html">PUMG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PUMT.html">PUMT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/SCDG.html">SCDG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/SCDT.html">SCDT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/SCPG.html">SCPG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/SCPP.html">SCPP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/SCPT.html">SCPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/DCPG.html">DCPG: Dynamic Cone Penetrometer Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/DCPT.html">DCPT: Dynamic Cone Penetrometer Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/DPRB.html">DPRB: Dynamic Probe Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/DPRG.html">DPRG: Dynamic Probe Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ICBR.html">ICBR: In Situ California Bearing Ratio Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/IDEN.html">IDEN: In Situ Density Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/IPEN.html">IPEN: In Situ Hand Penetrometer Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/IPRG.html">IPRG: In Situ Permeability Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/IPRT.html">IPRT: In Situ Permeability Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/IRDX.html">IRDX: In Situ Redox Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/IRES.html">IRES: In Situ Resistivity Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ISAG.html">ISAG: Soakaway Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ISAT.html">ISAT: Soakaway Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ISPT.html">ISPT: Standard Penetration Test Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/IVAN.html">IVAN: In Situ Vane Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PLTG.html">PLTG: Plate Loading Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PLTT.html">PLTT: Plate Loading Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PMTD.html">PMTD: Pressuremeter Test Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PMTG.html">PMTG: Pressuremeter Test Results - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PMTL.html">PMTL: Pressuremeter Test Results - Individual Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PUMG.html">PUMG: Pumping Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PUMT.html">PUMT: Pumping Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/SCDG.html">SCDG: Static Cone Dissipation Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/SCDT.html">SCDT: Static Cone Dissipation Tests - Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/SCPG.html">SCPG: Static Cone Penetration Tests - General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/SCPP.html">SCPP: Static Cone Penetration Tests - Derived Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/SCPT.html">SCPT: Static Cone Penetration Tests - Data</a></li>
 </ul>
 </div>
 </div>
@@ -548,23 +187,23 @@ dl.glossary dd {
 <h2>Locations and Exploratory Hole Construction Details<a class="headerlink" href="#locations-and-exploratory-hole-construction-details" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="group/BKFL.html">BKFL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/CDIA.html">CDIA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/CHIS.html">CHIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/CORE.html">CORE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/DOBS.html">DOBS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/DREM.html">DREM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/FLSH.html">FLSH</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/HDIA.html">HDIA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/HDPH.html">HDPH</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/HORN.html">HORN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LOCA.html">LOCA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PTIM.html">PTIM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/TREM.html">TREM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/WADD.html">WADD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/WINS.html">WINS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/WSTD.html">WSTD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/WSTG.html">WSTG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/BKFL.html">BKFL: Exploratory Hole Backfill Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/CDIA.html">CDIA: Casing Diameter by Depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/CHIS.html">CHIS: Chiselling Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/CORE.html">CORE: Coring Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/DOBS.html">DOBS: Drilling/Advancement Observations &amp; Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/DREM.html">DREM: Depth Related Remarks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/FLSH.html">FLSH: Drilling Flush Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/HDIA.html">HDIA: Hole Diameter by Depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/HDPH.html">HDPH: Depth Related Exploratory Hole Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/HORN.html">HORN: Exploratory Hole Orientation and Inclination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LOCA.html">LOCA: Location Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PTIM.html">PTIM: Boring/Drilling Progress by Time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/TREM.html">TREM: Location Specific Time Related Remarks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/WADD.html">WADD: Water Added Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/WINS.html">WINS: Window or Windowless Sampling Run Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/WSTD.html">WSTD: Water Strike - Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/WSTG.html">WSTG: Water Strike - General</a></li>
 </ul>
 </div>
 </div>
@@ -572,18 +211,18 @@ dl.glossary dd {
 <h2>Materials Laboratory Testing (Aggregates)<a class="headerlink" href="#materials-laboratory-testing-aggregates" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="group/AAVT.html">AAVT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/ACVT.html">ACVT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/AELO.html">AELO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/AFLK.html">AFLK</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/AIVT.html">AIVT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/ALOS.html">ALOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/APSV.html">APSV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/ARTW.html">ARTW</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/ASDI.html">ASDI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/ASNS.html">ASNS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/AWAD.html">AWAD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/TNPC.html">TNPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/AAVT.html">AAVT: Aggregate Abrasion Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ACVT.html">ACVT: Aggregate Crushing Value Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/AELO.html">AELO: Aggregate Elongation Index Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/AFLK.html">AFLK: Aggregate Flakiness Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/AIVT.html">AIVT: Aggregate Impact Value Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ALOS.html">ALOS: Los Angeles Abrasion Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/APSV.html">APSV: Aggregate Polished Stone Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ARTW.html">ARTW: Aggregate Determination of the Resistance to Wear (micro-Deval)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ASDI.html">ASDI: Slake Durability Index Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ASNS.html">ASNS: Aggregate Soundness Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/AWAD.html">AWAD: Aggregate Water Absorption Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/TNPC.html">TNPC: Ten Per Cent Fines</a></li>
 </ul>
 </div>
 </div>
@@ -591,9 +230,9 @@ dl.glossary dd {
 <h2>Monitoring Installations, Instruments and Readings<a class="headerlink" href="#monitoring-installations-instruments-and-readings" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="group/MOND.html">MOND</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/MONG.html">MONG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PIPE.html">PIPE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/MOND.html">MOND: Monitoring Readings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/MONG.html">MONG: Monitoring Installations and Instruments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PIPE.html">PIPE: Monitoring Installation Pipe Work</a></li>
 </ul>
 </div>
 </div>
@@ -601,15 +240,15 @@ dl.glossary dd {
 <h2>Project / Data Transmission Details<a class="headerlink" href="#project-data-transmission-details" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="group/ABBR.html">ABBR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/DICT.html">DICT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/FILE.html">FILE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PREM.html">PREM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/PROJ.html">PROJ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/STND.html">STND</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/TRAN.html">TRAN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/TYPE.html">TYPE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/UNIT.html">UNIT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/ABBR.html">ABBR: Abbreviation Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/DICT.html">DICT: User Defined Groups and Headings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/FILE.html">FILE: Associated Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PREM.html">PREM: Project Specific Time Related Remarks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/PROJ.html">PROJ: Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/STND.html">STND: Standards / Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/TRAN.html">TRAN: Data File Transmission Information / Data Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/TYPE.html">TYPE: Definition of Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/UNIT.html">UNIT: Definition of Units</a></li>
 </ul>
 </div>
 </div>
@@ -617,10 +256,10 @@ dl.glossary dd {
 <h2>Samples, Amalgamated Specimens and Laboratory Test Scheduling<a class="headerlink" href="#samples-amalgamated-specimens-and-laboratory-test-scheduling" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="group/CHOC.html">CHOC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LBSG.html">LBSG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/LBST.html">LBST</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group/SAMP.html">SAMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/CHOC.html">CHOC: Chain of Custody Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LBSG.html">LBSG: Testing Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/LBST.html">LBST: Testing Schedule Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group/SAMP.html">SAMP: Sample Information</a></li>
 </ul>
 </div>
 </div>
@@ -632,42 +271,177 @@ dl.glossary dd {
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">AGS4 Groups</a><ul>
-<li><a class="reference internal" href="#field-and-laboratory-environmental-testing">Field and Laboratory Environmental Testing</a></li>
-<li><a class="reference internal" href="#geoenvironmental-in-situ-testing">Geoenvironmental in situ Testing</a></li>
-<li><a class="reference internal" href="#geological-descriptions-and-information">Geological Descriptions and Information</a></li>
-<li><a class="reference internal" href="#geotechnical-laboratory-testing-soils-and-rocks">Geotechnical Laboratory Testing (Soils and Rocks)</a></li>
-<li><a class="reference internal" href="#geotechnical-in-situ-testing">Geotechnical in situ Testing</a></li>
-<li><a class="reference internal" href="#locations-and-exploratory-hole-construction-details">Locations and Exploratory Hole Construction Details</a></li>
-<li><a class="reference internal" href="#materials-laboratory-testing-aggregates">Materials Laboratory Testing (Aggregates)</a></li>
-<li><a class="reference internal" href="#monitoring-installations-instruments-and-readings">Monitoring Installations, Instruments and Readings</a></li>
-<li><a class="reference internal" href="#project-data-transmission-details">Project / Data Transmission Details</a></li>
-<li><a class="reference internal" href="#samples-amalgamated-specimens-and-laboratory-test-scheduling">Samples, Amalgamated Specimens and Laboratory Test Scheduling</a></li>
+<h3><a href="../index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../ags-projects/index.html">AGS Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ags-projects/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unofficial-ags4-guide/index.html">Unofficial AGS4 Guide</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Unofficial AGS4 Data Dict</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">AGS4 Groups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#field-and-laboratory-environmental-testing">Field and Laboratory Environmental Testing</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="group/ERES.html">ERES: Environmental Contaminant Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#geoenvironmental-in-situ-testing">Geoenvironmental in situ Testing</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="group/IFID.html">IFID: On Site Volatile Headspace Testing Using Flame Ionisation Detector</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/IPID.html">IPID: On Site Volatile Headspace Testing by Photo Ionisation Detector</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#geological-descriptions-and-information">Geological Descriptions and Information</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="group/DETL.html">DETL: Stratum Detail Descriptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/DISC.html">DISC: Discontinuity Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/FRAC.html">FRAC: Fracture Spacing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/GEOL.html">GEOL: Field Geological Descriptions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/WETH.html">WETH: Weathering</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#geotechnical-laboratory-testing-soils-and-rocks">Geotechnical Laboratory Testing (Soils and Rocks)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="group/CBRG.html">CBRG: California Bearing Ratio Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/CBRT.html">CBRT: California Bearing Ratio Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/CMPG.html">CMPG: Compaction Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/CMPT.html">CMPT: Compaction Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/CONG.html">CONG: Consolidation Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/CONS.html">CONS: Consolidation Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/ESCG.html">ESCG: Effective Stress Consolidation Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/ESCT.html">ESCT: Effective Stress Consolidation Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/FRST.html">FRST: Frost Susceptibility Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/GCHM.html">GCHM: Geotechnical Chemistry Testing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/GRAG.html">GRAG: Particle Size Distribution Analysis - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/GRAT.html">GRAT: Particle Size Distribution Analysis - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LDEN.html">LDEN: Density Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LDYN.html">LDYN: Dynamic Testing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LLIN.html">LLIN: Linear Shrinkage Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LLPL.html">LLPL: Liquid and Plastic Limit Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LNMC.html">LNMC: Moisture Content Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LPDN.html">LPDN: Particle Density Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LPEN.html">LPEN: Laboratory Hand Penetrometer Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LRES.html">LRES: Laboratory Resistivity Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LSLT.html">LSLT: Shrinkage Limit Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LSTG.html">LSTG: Initial Consumption of Lime Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LSTT.html">LSTT: Initial Consumption of Lime Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LSWL.html">LSWL: Swelling Index Testing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LVAN.html">LVAN: Laboratory Vane Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/MCVG.html">MCVG: MCV Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/MCVT.html">MCVT: MCV Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PTST.html">PTST: Laboratory Permeability Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/RCCV.html">RCCV: Chalk Crushing Value Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/RDEN.html">RDEN: Rock Porosity and Density Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/RELD.html">RELD: Relative Density Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/RPLT.html">RPLT: Point Load Testing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/RSCH.html">RSCH: Schmidt Rebound Hardness Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/RSHR.html">RSHR: Shore Scleroscope Hardness Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/RTEN.html">RTEN: Tensile Strength Testing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/RUCS.html">RUCS: Rock Uniaxial Compressive Strength and Deformability Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/RWCO.html">RWCO: Water Content of Rock Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/SHBG.html">SHBG: Shear Box Testing - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/SHBT.html">SHBT: Shear Box Testing - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/SUCT.html">SUCT: Suction Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/TREG.html">TREG: Triaxial Tests - Effective Stress - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/TRET.html">TRET: Triaxial Tests - Effective Stress - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/TRIG.html">TRIG: Triaxial Tests - Total Stress - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/TRIT.html">TRIT: Triaxial Tests - Total Stress - Data</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#geotechnical-in-situ-testing">Geotechnical in situ Testing</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="group/DCPG.html">DCPG: Dynamic Cone Penetrometer Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/DCPT.html">DCPT: Dynamic Cone Penetrometer Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/DPRB.html">DPRB: Dynamic Probe Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/DPRG.html">DPRG: Dynamic Probe Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/ICBR.html">ICBR: In Situ California Bearing Ratio Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/IDEN.html">IDEN: In Situ Density Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/IPEN.html">IPEN: In Situ Hand Penetrometer Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/IPRG.html">IPRG: In Situ Permeability Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/IPRT.html">IPRT: In Situ Permeability Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/IRDX.html">IRDX: In Situ Redox Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/IRES.html">IRES: In Situ Resistivity Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/ISAG.html">ISAG: Soakaway Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/ISAT.html">ISAT: Soakaway Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/ISPT.html">ISPT: Standard Penetration Test Results</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/IVAN.html">IVAN: In Situ Vane Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PLTG.html">PLTG: Plate Loading Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PLTT.html">PLTT: Plate Loading Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PMTD.html">PMTD: Pressuremeter Test Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PMTG.html">PMTG: Pressuremeter Test Results - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PMTL.html">PMTL: Pressuremeter Test Results - Individual Loops</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PUMG.html">PUMG: Pumping Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PUMT.html">PUMT: Pumping Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/SCDG.html">SCDG: Static Cone Dissipation Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/SCDT.html">SCDT: Static Cone Dissipation Tests - Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/SCPG.html">SCPG: Static Cone Penetration Tests - General</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/SCPP.html">SCPP: Static Cone Penetration Tests - Derived Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/SCPT.html">SCPT: Static Cone Penetration Tests - Data</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#locations-and-exploratory-hole-construction-details">Locations and Exploratory Hole Construction Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="group/BKFL.html">BKFL: Exploratory Hole Backfill Details</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/CDIA.html">CDIA: Casing Diameter by Depth</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/CHIS.html">CHIS: Chiselling Details</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/CORE.html">CORE: Coring Information</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/DOBS.html">DOBS: Drilling/Advancement Observations &amp; Parameters</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/DREM.html">DREM: Depth Related Remarks</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/FLSH.html">FLSH: Drilling Flush Details</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/HDIA.html">HDIA: Hole Diameter by Depth</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/HDPH.html">HDPH: Depth Related Exploratory Hole Information</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/HORN.html">HORN: Exploratory Hole Orientation and Inclination</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LOCA.html">LOCA: Location Details</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PTIM.html">PTIM: Boring/Drilling Progress by Time</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/TREM.html">TREM: Location Specific Time Related Remarks</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/WADD.html">WADD: Water Added Records</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/WINS.html">WINS: Window or Windowless Sampling Run Details</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/WSTD.html">WSTD: Water Strike - Details</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/WSTG.html">WSTG: Water Strike - General</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#materials-laboratory-testing-aggregates">Materials Laboratory Testing (Aggregates)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="group/AAVT.html">AAVT: Aggregate Abrasion Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/ACVT.html">ACVT: Aggregate Crushing Value Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/AELO.html">AELO: Aggregate Elongation Index Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/AFLK.html">AFLK: Aggregate Flakiness Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/AIVT.html">AIVT: Aggregate Impact Value Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/ALOS.html">ALOS: Los Angeles Abrasion Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/APSV.html">APSV: Aggregate Polished Stone Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/ARTW.html">ARTW: Aggregate Determination of the Resistance to Wear (micro-Deval)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/ASDI.html">ASDI: Slake Durability Index Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/ASNS.html">ASNS: Aggregate Soundness Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/AWAD.html">AWAD: Aggregate Water Absorption Tests</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/TNPC.html">TNPC: Ten Per Cent Fines</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#monitoring-installations-instruments-and-readings">Monitoring Installations, Instruments and Readings</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="group/MOND.html">MOND: Monitoring Readings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/MONG.html">MONG: Monitoring Installations and Instruments</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PIPE.html">PIPE: Monitoring Installation Pipe Work</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#project-data-transmission-details">Project / Data Transmission Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="group/ABBR.html">ABBR: Abbreviation Definitions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/DICT.html">DICT: User Defined Groups and Headings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/FILE.html">FILE: Associated Files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PREM.html">PREM: Project Specific Time Related Remarks</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/PROJ.html">PROJ: Project Information</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/STND.html">STND: Standards / Specifications</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/TRAN.html">TRAN: Data File Transmission Information / Data Status</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/TYPE.html">TYPE: Definition of Data Types</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/UNIT.html">UNIT: Definition of Units</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#samples-amalgamated-specimens-and-laboratory-test-scheduling">Samples, Amalgamated Specimens and Laboratory Test Scheduling</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="group/CHOC.html">CHOC: Chain of Custody Information</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LBSG.html">LBSG: Testing Schedule</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/LBST.html">LBST: Testing Schedule Details</a></li>
+<li class="toctree-l5"><a class="reference internal" href="group/SAMP.html">SAMP: Sample Information</a></li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ags-projects/software.html">Software</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../other_projects.html">Other GeoTechnical Projects</a></li>
+</ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Unofficial AGS4 Data Dict</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="group/ERES.html"
-                        title="next chapter">ERES</a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -679,17 +453,18 @@ dl.glossary dd {
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="group/ERES.html" title="ERES"
+          <a href="group/ERES.html" title="ERES: Environmental Contaminant Testing"
              >next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Unofficial AGS4 Data Dict"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">ogt</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Unofficial AGS4 Data Dict</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../ags-projects/index.html" >AGS Projects</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Unofficial AGS4 Data Dict</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-      Last updated on 2017-02-01.
+      Last updated on 2017-02-03.
     </div>
   </body>
 </html>

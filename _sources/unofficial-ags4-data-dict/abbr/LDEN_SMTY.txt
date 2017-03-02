@@ -3,3 +3,13 @@
 LDEN_SMTY
 ===========================================================================
 
+    * - Code
+      - Description
+    * - BLOCK SAMPLE
+      - Block sample
+    * - CYLINDER
+      - Cylinder
+
+
+.. seealso:: Group: :ref:`ags4_group_LDEN`
+

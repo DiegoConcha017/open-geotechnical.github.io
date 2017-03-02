@@ -1,11 +1,10 @@
-.. _ags4_DISC:
+.. _ags4_group_DISC:
 
-DISC
+DISC: Discontinuity Data
 ===========================================================================
 
-Discontinuity Data
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -44,7 +43,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Discontinuity reference
     * - DISC_TYPE
       - 
-      - `:ref:`ags4_DISC_TYPE`
+      - PA
       - Joint
       - Type of discontinuity
     * - DISC_DIP
@@ -104,7 +103,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Infilling material
     * - DISC_TERM
       - 
-      - `:ref:`ags4_DISC_TERM`
+      - PA
       - XR 
       - Discontinuity termination (lower, upper)
     * - DISC_PERS
@@ -142,27 +141,27 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS24
       - Associated file reference (eg logging field sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 20
 -------------------------
-- DISC is used to record detailed discontinuity logging typically carried out in rock exposures and rock core.
-- Discontinuity spacing data is recorded in the FRAC group.
+- **DISC** is used to record detailed discontinuity logging typically carried out in rock exposures and rock core.
+- Discontinuity spacing data is recorded in the :ref:`FRAC <ags4_group_FRAC>` group.
 - Changes have been made to bring the Group in line with BS EN ISO 14689-1. References to ISRM have been removed as BS EN ISO 14689-1 is compatible with previous standards. Terminology has been amended to reflect current requirements.
-- The recording of the nature of individual discontinuities.  All discontinuity descriptions are given in the DISC Group.  The FRAC Group is not used.  The spacing between individual discontinuities may be assessed from their depths.
-- The recording of the typical nature of sets of discontinuities. The typical description for a discontinuity set is given in the DISC Group and the typical spacing is given in the FRAC Group. Individual discontinuities are not described.
-- The recording of the nature of individual discontinuities, with each discontinuity assigned to a discontinuity set. The individual discontinuity descriptions are given in the DISC Group and the typical spacing of a discontinuity set is given in the FRAC Group.
-- The nature of the individual discontinuities is recorded in the DISC Group.
-- For scanline logging, the location of each discontinuity is given in DISC_TOP as a distance from the start of the traverse along a scanline. The DISC_BASE should be completed to allow for checks against the discontinuity dip.
-- For borehole cores, the location of each discontinuity is given as a depth in either DISC_TOP for horizontal to sub horizontal discontinuities or DISC_TOP and DISC_BASE for vertical to inclined discontinuities.
-- Each discontinuity is numbered sequentially in DISC_NUMB from the top of the borehole, or from the start of the traverse.
-- If each discontinuity has been assigned to a discontinuity set, then the set reference number should be given in FRAC_SET (see c below). The use of FRAC_SET is optional when individual discontinuities are logged.
+- The recording of the nature of individual discontinuities.  All discontinuity descriptions are given in the **DISC** Group.  The :ref:`FRAC <ags4_group_FRAC>` Group is not used.  The spacing between individual discontinuities may be assessed from their depths.
+- The recording of the typical nature of sets of discontinuities. The typical description for a discontinuity set is given in the **DISC** Group and the typical spacing is given in the :ref:`FRAC <ags4_group_FRAC>` Group. Individual discontinuities are not described.
+- The recording of the nature of individual discontinuities, with each discontinuity assigned to a discontinuity set. The individual discontinuity descriptions are given in the **DISC** Group and the typical spacing of a discontinuity set is given in the :ref:`FRAC <ags4_group_FRAC>` Group.
+- The nature of the individual discontinuities is recorded in the **DISC** Group.
+- For scanline logging, the location of each discontinuity is given in **DISC_TOP** as a distance from the start of the traverse along a scanline. The **DISC_BASE** should be completed to allow for checks against the discontinuity dip.
+- For borehole cores, the location of each discontinuity is given as a depth in either **DISC_TOP** for horizontal to sub horizontal discontinuities or **DISC_TOP** and **DISC_BASE** for vertical to inclined discontinuities.
+- Each discontinuity is numbered sequentially in **DISC_NUMB** from the top of the borehole, or from the start of the traverse.
+- If each discontinuity has been assigned to a discontinuity set, then the set reference number should be given in :ref:`FRAC <ags4_group_FRAC>` (see c below). The use of :ref:`FRAC <ags4_group_FRAC>` is optional when individual discontinuities are logged.
 - The orientation and nature of each discontinuity is reported using the remaining fields in DISC.
-- For borehole logs the surface nature of the discontinuity is described using a combination of DISC_RGH, DISC_PLAN, DISC_JRC, DISC_APP, DISC_STR and DISC_WETH. It is generally not reliable to measure the aperture of a discontinuity in borehole core as the effect of drilling disturbance is unknown. However, the thickness of any discontinuity infill should be given in DISC_APT, and the nature of the infill given in DISC_INFM. Discontinuity dip can be given in DISC_DIP for vertical boreholes, and inclined boreholes with orientated core. Discontinuity dip direction can only be given in DISC_DIR if the core is orientated. In an inclined borehole with unorientated core only relative discontinuity dip can be given with respect to the normal to the core axis.
+- For borehole logs the surface nature of the discontinuity is described using a combination of DISC_RGH, DISC_PLAN, DISC_JRC, DISC_APP, **DISC_STR** and DISC_WETH. It is generally not reliable to measure the aperture of a discontinuity in borehole core as the effect of drilling disturbance is unknown. However, the thickness of any discontinuity infill should be given in DISC_APT, and the nature of the infill given in DISC_INFM. Discontinuity dip can be given in **DISC_DIP** for vertical boreholes, and inclined boreholes with orientated core. Discontinuity dip direction can only be given in **DISC_DIR** if the core is orientated. In an inclined borehole with unorientated core only relative discontinuity dip can be given with respect to the normal to the core axis.
 - For scanline logs all the above details of discontinuity orientation and nature can be given, together with the large scale waviness, true discontinuity aperture, discontinuity termination (using the abbreviations defined on the AGS website), and water seepage observations.
-- The format of the DISC Group is applicable to most descriptive schemes, other than ISRM (1978). Alternative schemes may be used on agreement between the Provider and Receiver.
-- The discontinuity sets or zones are recorded in a combination of the DISC and FRAC Groups. The DISC Group is used to record either the typical orientation and nature of each set or zone of discontinuities, or the individual discontinuities. The FRAC Group is used to record the spacing of the discontinuities in each set or zone.
-- The start and end of each set or zone of discontinuities of similar nature is given in DISC_TOP and DISC_BASE, either as depth in a borehole, or as distance from the start of the traverse along a scanline.  The start and end of each set or zone of discontinuities with a similar spacing is given in FRAC_FROM and FRAC_TO. Normally the "nature" and "spacing" zones will coincide, and, therefore, DISC_TOP and DISC_BASE will be the same as FRAC_FROM and FRAC_TO.
-- DISC_NUMB is left blank when logging discontinuity sets or zones.
-- Each discontinuity set or zone must be given a unique set reference number in FRAC_SET. For example, joint sets may be numbered J1, J2, J3 etc, bedding discontinuities as B1, B2 etc. The use of FRAC_SET provides the link between the DISC and FRAC Groups.
+- The format of the **DISC** Group is applicable to most descriptive schemes, other than ISRM (1978). Alternative schemes may be used on agreement between the Provider and Receiver.
+- The discontinuity sets or zones are recorded in a combination of the **DISC** and :ref:`FRAC <ags4_group_FRAC>` Groups. The **DISC** Group is used to record either the typical orientation and nature of each set or zone of discontinuities, or the individual discontinuities. The :ref:`FRAC <ags4_group_FRAC>` Group is used to record the spacing of the discontinuities in each set or zone.
+- The start and end of each set or zone of discontinuities of similar nature is given in **DISC_TOP** and DISC_BASE, either as depth in a borehole, or as distance from the start of the traverse along a scanline.  The start and end of each set or zone of discontinuities with a similar spacing is given in :ref:`FRAC <ags4_group_FRAC>` and FRAC_TO. Normally the "nature" and "spacing" zones will coincide, and, therefore, **DISC_TOP** and **DISC_BASE** will be the same as :ref:`FRAC <ags4_group_FRAC>` and FRAC_TO.
+- **DISC_NUMB** is left blank when logging discontinuity sets or zones.
+- Each discontinuity set or zone must be given a unique set reference number in FRAC_SET. For example, joint sets may be numbered J1, J2, J3 etc, bedding discontinuities as B1, B2 etc. The use of :ref:`FRAC <ags4_group_FRAC>` provides the link between the **DISC** and :ref:`FRAC <ags4_group_FRAC>` Groups.
 - The typical orientation and nature of each discontinuity set or zone is reported using the remaining fields in DISC.
 

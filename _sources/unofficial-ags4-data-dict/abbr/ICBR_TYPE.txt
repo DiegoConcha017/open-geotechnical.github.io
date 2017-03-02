@@ -3,3 +3,15 @@
 ICBR_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - DCP
+      - Dynamic cone penetrometer
+    * - IN SITU CBR
+      - In situ CBR apparatus
+    * - MEXECONE
+      - Mexecone
+
+
+.. seealso:: Group: :ref:`ags4_group_ICBR`
+

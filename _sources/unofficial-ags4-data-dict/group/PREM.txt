@@ -1,11 +1,10 @@
-.. _ags4_PREM:
+.. _ags4_group_PREM:
 
-PREM
+PREM: Project Specific Time Related Remarks
 ===========================================================================
 
-Project Specific Time Related Remarks
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -47,10 +46,10 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS28
       - Associated file reference (eg site journal records)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 3
 -------------------------
-- PREM may be used to report a site diary of key events eg 'Heavy rain for 2 days, site flooded'.
-- TREM should be used to record general remarks that are related to a site location.
-- PREM_ETIM and PREM_DURN could be different depending on the nature of the activity or commentary. Where there are differences in elapsed time and duration these would be explained or expanded on in PREM_REM.
+- **PREM** may be used to report a site diary of key events eg 'Heavy rain for 2 days, site flooded'.
+- :ref:`TREM <ags4_group_TREM>` should be used to record general remarks that are related to a site location.
+- **PREM_ETIM** and **PREM_DURN** could be different depending on the nature of the activity or commentary. Where there are differences in elapsed time and duration these would be explained or expanded on in PREM_REM.
 

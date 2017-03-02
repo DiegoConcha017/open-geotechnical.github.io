@@ -1,11 +1,10 @@
-.. _ags4_CONG:
+.. _ags4_group_CONG:
 
-CONG
+CONG: Consolidation Tests - General
 ===========================================================================
 
-Consolidation Tests - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -64,12 +63,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Details of specimen preparation including time between preparation and testing
     * - CONG_TYPE
       - 
-      - `:ref:`ags4_CONG_TYPE`
+      - PA
       - Oedometer / Hydraulic Cell / Expandability
       - Type of consolidation test
     * - CONG_COND
       - 
-      - `:ref:`ags4_CONG_COND`
+      - PA
       - Undisturbed / Remoulded
       - Sample condition
     * - CONG_SDIA
@@ -157,8 +156,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS9
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- CONG_IVR should be used to report the initial voids ratio at the start of testing.
+- **CONG_IVR** should be used to report the initial voids ratio at the start of testing.
 

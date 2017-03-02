@@ -1,11 +1,10 @@
-.. _ags4_DICT:
+.. _ags4_group_DICT:
 
-DICT
+DICT: User Defined Groups and Headings
 ===========================================================================
 
-User Defined Groups and Headings
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -19,7 +18,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Description
     * - DICT_TYPE
       - 
-      - `:ref:`ags4_DICT_TYPE`
+      - PA
       - HEADING
       - Flag to indicate definition is a GROUP or HEADING (ie can be either of GROUP or HEADING)
     * - DICT_GRP
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Heading name (Note: This data is REQUIRED where DICT_TYPE="HEADING")
     * - DICT_STAT
       - 
-      - `:ref:`ags4_DICT_STAT`
+      - PA
       - OTHER
       - Heading status KEY, REQUIRED or OTHER (Note: This data is REQUIRED where DICT_TYPE="HEADING")
     * - DICT_DTYP
@@ -72,12 +71,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS1
       - Associated file reference
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 5
 -------------------------
-- DICT is required in all AGS4 files where user defined groups and/or headings are specified (Rule 18).
-- DICT_STAT defines the status of the heading. This shall contain the data 'KEY', 'REQUIRED', 'KEY???' or 'OTHER', where OTHER denotes the field is neither key nor required (Rule 10).
-- DICT_PGRP allows for inclusion of the parent group name when the DICT_TYPE is "GROUP". This permits data integrity checking where data files include user defined groups.
-- If the DICT_TYPE is HEADING, then there should be data present under DICT_GRP, DICT_HDNG, DICT_STAT, DICT_UNIT, DICT_DTYP and DICT_DESC. Where the heading has no unit then the DICT_UNIT field should be set to "-" to clearly indicate this.
-- If the DICT_TYPE is GROUP the DICT_GRP, DICT_DESC shall contain data and the DICT_HDNG, DICT_STAT, DICT_DTYP and DICT_UNIT headings shall contain NULL values.
+- **DICT** is required in all AGS4 files where user defined groups and/or headings are specified (:ref:`Rule 18 <ags4_rule_18>`).
+- **DICT_STAT** defines the status of the heading. This shall contain the data 'KEY', 'REQUIRED', 'KEY???' or 'OTHER', where OTHER denotes the field is neither key nor required (:ref:`Rule 10 <ags4_rule_10>`).
+- **DICT_PGRP** allows for inclusion of the parent group name when the **DICT_TYPE** is "GROUP". This permits data integrity checking where data files include user defined groups.
+- If the **DICT_TYPE** is HEADING, then there should be data present under DICT_GRP, DICT_HDNG, DICT_STAT, DICT_UNIT, **DICT_DTYP** and DICT_DESC. Where the heading has no unit then the **DICT_UNIT** field should be set to "-" to clearly indicate this.
+- If the **DICT_TYPE** is GROUP the DICT_GRP, **DICT_DESC** shall contain data and the DICT_HDNG, DICT_STAT, **DICT_DTYP** and **DICT_UNIT** headings shall contain NULL values.
 

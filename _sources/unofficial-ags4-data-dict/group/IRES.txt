@@ -1,11 +1,10 @@
-.. _ags4_IRES:
+.. _ags4_group_IRES:
 
-IRES
+IRES: In Situ Resistivity Tests
 ===========================================================================
 
-In Situ Resistivity Tests
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -39,7 +38,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Base depth to which in-situ resistivity test relates
     * - IRES_TYPE
       - 
-      - `:ref:`ags4_IRES_TYPE`
+      - PA
       - SCHL
       - Type of resistivity test
     * - IRES_DATE
@@ -102,7 +101,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS26
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
 - None.

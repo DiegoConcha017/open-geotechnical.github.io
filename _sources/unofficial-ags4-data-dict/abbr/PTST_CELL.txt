@@ -3,3 +3,17 @@
 PTST_CELL
 ===========================================================================
 
+    * - Code
+      - Description
+    * - CHP
+      - Constant head permeameter
+    * - FHP
+      - Falling head permeameter
+    * - HYDRAULIC CELL
+      - Hydraulic cell
+    * - TRIAXIAL CELL
+      - Triaxial cell
+
+
+.. seealso:: Group: :ref:`ags4_group_PTST`
+

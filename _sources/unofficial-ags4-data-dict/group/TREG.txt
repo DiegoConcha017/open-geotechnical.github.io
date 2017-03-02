@@ -1,11 +1,10 @@
-.. _ags4_TREG:
+.. _ags4_group_TREG:
 
-TREG
+TREG: Triaxial Tests - Effective Stress - General
 ===========================================================================
 
-Triaxial Tests - Effective Stress - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -64,12 +63,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Details of specimen preparation including time between preparation and testing
     * - TREG_TYPE
       - 
-      - `:ref:`ags4_TREG_TYPE`
+      - PA
       - CU 
       - Test type
     * - TREG_COND
       - 
-      - `:ref:`ags4_TREG_COND`
+      - PA
       - Undisturbed 
       - Sample condition
     * - TREG_COH
@@ -117,8 +116,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS7
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- TREG and TRET have been to be used for the reporting of effective stress testing.
+- **TREG** and :ref:`TRET <ags4_group_TRET>` have been to be used for the reporting of effective stress testing.
 

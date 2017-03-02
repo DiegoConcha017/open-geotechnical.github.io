@@ -1,11 +1,10 @@
-.. _ags4_HDIA:
+.. _ags4_group_HDIA:
 
-HDIA
+HDIA: Hole Diameter by Depth
 ===========================================================================
 
-Hole Diameter by Depth
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -42,9 +41,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS5
       - Associated file reference (eg drilling journals)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- HDIA describes the profile of final exploratory hole. Casing information for the final hole construction should be recorded in the CDIA group.
-- HDIA_REM allows additional information on the hole construction to be included in the data file as necessary.
+- **HDIA** describes the profile of final exploratory hole. Casing information for the final hole construction should be recorded in the :ref:`CDIA <ags4_group_CDIA>` group.
+- **HDIA_REM** allows additional information on the hole construction to be included in the data file as necessary.
 

@@ -1,11 +1,10 @@
-.. _ags4_WETH:
+.. _ags4_group_WETH:
 
-WETH
+WETH: Weathering
 ===========================================================================
 
-Weathering
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,12 +33,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Depth to base of weathering subdivision
     * - WETH_SCH
       - 
-      - `:ref:`ags4_WETH_SCH`
+      - PA
       - BS 5930:1999  AMEND 1
       - Weathering scheme
     * - WETH_SYS
       - 
-      - `:ref:`ags4_WETH_SYS`
+      - PA
       - MASS CLASS
       - Material or mass weathering system
     * - WETH_WETH
@@ -57,10 +56,10 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS4
       - Associated file reference (eg logging sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 4
 -------------------------
-- WETH_SCH  and WETH_SYS are used to identify the weathering scheme utilised and whether it is the material or mass that is described.
+- **WETH_SCH**  and **WETH_SYS** are used to identify the weathering scheme utilised and whether it is the material or mass that is described.
 - BS 5930 : 1999 (Pre Amendment 1) offers the five 'Approaches' to identifying and classifying the state of weathering in cores and rock faces which are as given in EGGS WP Rock Weathering (1995).  Despite the EN system, this is the preferred scheme although if strict adherence to EN ISO is required Approaches 2 and 3 are not available.
 - BS EN 14689-1:2003 or BS5930 : 1999 (Amendment 1) provides a scale of weathering stages of rock mass which then relates a description to Grades = 0 to 5.  However, the EN states that ?more specific local classifications may be available and can be used where they are useful and unambiguous?.  This has been interpreted to meaning Approaches 4 and 5 (Classes A - E) of BS 5930 : 1999 (pre Amendment 1).  Approaches 2 and 3 are no longer available for use.  BS 5930 Amendment 1 also states that other descriptions of the weathering state can be used.   Geoguide 3 is an alternative.
 - This means that as well as special descriptions specific to rock types (eg in the UK: Chalk, Mercia Mudstone) other systems can be used. This then allows the use of:

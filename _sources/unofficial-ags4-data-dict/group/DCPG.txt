@@ -1,11 +1,10 @@
-.. _ags4_DCPG:
+.. _ags4_group_DCPG:
 
-DCPG
+DCPG: Dynamic Cone Penetrometer Tests - General
 ===========================================================================
 
-Dynamic Cone Penetrometer Tests - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -82,10 +81,10 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS26
       - Associated file reference (eg field record sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 3
 -------------------------
-- DCPG and DCPT are used together to record dynamic cone penetrometer (DCP) tests.
-- DCPG_REM should be used to record test set up including surface type, surface condition, base type, thickness of base (if removed) mm (ref TRL Project PR/INT/277/04).
-- It is suggested that if CBR values derived from DCP tests are to be transferred in the AGS data then these should be included in the ICBR group.
+- **DCPG** and :ref:`DCPT <ags4_group_DCPT>` are used together to record dynamic cone penetrometer (DCP) tests.
+- **DCPG_REM** should be used to record test set up including surface type, surface condition, base type, thickness of base (if removed) mm (ref TRL Project PR/INT/277/04).
+- It is suggested that if CBR values derived from DCP tests are to be transferred in the AGS data then these should be included in the :ref:`ICBR <ags4_group_ICBR>` group.
 

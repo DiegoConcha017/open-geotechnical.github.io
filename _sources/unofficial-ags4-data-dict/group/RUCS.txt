@@ -1,11 +1,10 @@
-.. _ags4_RUCS:
+.. _ags4_group_RUCS:
 
-RUCS
+RUCS: Rock Uniaxial Compressive Strength and Deformability Tests
 ===========================================================================
 
-Rock Uniaxial Compressive Strength and Deformability Tests
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -119,7 +118,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Stress level at which modulus has been measured
     * - RUCS_ETYP
       - 
-      - `:ref:`ags4_RUCS_ETYP`
+      - PA
       - Secant or Tangent
       - Method of determination of Young's modulus
     * - RUCS_MACH
@@ -157,7 +156,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS10
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
 - Note that units and accuracy for UCS are not prescribed in ISRM and the conventional MPa to 3SF is adopted here. ISRM defines GPa to 3SF for Young?s modulus and as such this is also adopted. ISRM suggests 3 significant figures for Poisson?s ratio but conventionally this is reported to 2 decimal places and this has been adopted.

@@ -1,11 +1,10 @@
-.. _ags4_CORE:
+.. _ags4_group_CORE:
 
-CORE
+CORE: Coring Information
 ===========================================================================
 
-Coring Information
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -67,10 +66,10 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS5
       - Associated file reference (eg photographs of rock cores)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 3
 -------------------------
-- CORE is used to transfer details of rotary coring in rock and soil materials.
+- **CORE** is used to transfer details of rotary coring in rock and soil materials.
 - The data transferred for coring in rock will be more extensive than for soil coring; specifically the SCR and RQD are not determined for soil cores.
-- CORE_DURN permits the inclusion of the time duration for the core run to be drilled if this is a specified additional measured parameter.
+- **CORE_DURN** permits the inclusion of the time duration for the core run to be drilled if this is a specified additional measured parameter.
 

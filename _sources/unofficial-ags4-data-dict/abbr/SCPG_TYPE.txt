@@ -3,3 +3,21 @@
 SCPG_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - CC
+      - Conductivity cone
+    * - EC
+      - Electric cone
+    * - FFD
+      - Fuel fluorescence cone
+    * - MC
+      - Mechanical cone
+    * - PC
+      - Piezo cone
+    * - TC
+      - Temperature cone
+
+
+.. seealso:: Group: :ref:`ags4_group_SCPG`
+

@@ -1,11 +1,10 @@
-.. _ags4_SHBG:
+.. _ags4_group_SHBG:
 
-SHBG
+SHBG: Shear Box Testing - General
 ===========================================================================
 
-Shear Box Testing - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -64,12 +63,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Details of specimen preparation including time between preparation and testing
     * - SHBG_TYPE
       - 
-      - `:ref:`ags4_SHBG_TYPE`
+      - PA
       - Small SBOX
       - Test type
     * - SHBG_COND
       - 
-      - `:ref:`ags4_SHBG_COND`
+      - PA
       - Undisturbed 
       - Sample condition
     * - SHBG_CONS
@@ -132,8 +131,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS18
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- Group SHBG and SHBT contain the processed results from soil or rock joint shear box tests. Raw data, such as the stresses and displacements at all points of the test are not included.
+- Group **SHBG** and :ref:`SHBT <ags4_group_SHBT>` contain the processed results from soil or rock joint shear box tests. Raw data, such as the stresses and displacements at all points of the test are not included.
 

@@ -1,11 +1,10 @@
-.. _ags4_ERES:
+.. _ags4_group_ERES:
 
-ERES
+ERES: Environmental Contaminant Testing
 ===========================================================================
 
-Environmental Contaminant Testing
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - ES
       - Sample type
     * - SAMP_ID
@@ -54,7 +53,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Depth to top of test specimen
     * - ERES_CODE
       - 
-      - `:ref:`ags4_ERES_CODE`
+      - PA
       - 7440-42-8
       - Chemical code
     * - ERES_METH
@@ -64,12 +63,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Test method
     * - ERES_MATX
       - 
-      - `:ref:`ags4_ERES_MATX`
+      - PA
       - LIQUID 
       - Laboratory test matrix
     * - ERES_RTYP
       - 
-      - `:ref:`ags4_ERES_RTYP`
+      - PA
       - INITIAL 
       - Run type (Initial or Reanalysis)
     * - ERES_TESN
@@ -104,7 +103,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Reported result
     * - ERES_RTCD
       - 
-      - `:ref:`ags4_ERES_RTCD`
+      - PA
       - TRG 
       - Result type
     * - ERES_RRES
@@ -199,12 +198,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Total or dissolved
     * - ERES_LOCN
       - 
-      - `:ref:`ags4_ERES_LOCN`
+      - PA
       - LAB 
       - Analysis location
     * - ERES_BAS
       - 
-      - `:ref:`ags4_ERES_BAS`
+      - PA
       - WET 
       - Basis
     * - ERES_DIL
@@ -262,21 +261,21 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS13
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 14
 -------------------------
-- ERES provides for the transfer of geoenvironmental chemical testing data. Linked to the SAMP group this results group is suitable for both results of geoenvironmental testing carried out in the field or in a chemical test laboratory.
-- Geotechnical chemical testing, relating to ground aggressivity, is to be transferred using the GCHM group.
-- The headings listed in ERES represent a range of attributes to describe chemical test results to cater for both simple and extended reporting requirements. It is important to note that there is no requirement to complete all headings in data files for every analysis carried out. Only the key headings and the headings that are relevant to the testing and test result specification need be completed or used. Where additional QC data is required then further user defined headings may be necessary to transfer additional information. It is imperative that data providers and data receivers agree the specification for ERES data at the outset of a project.
-- SPEC_REF should include the laboratory test specimen reference, or Laboratory ID; the unique reference the laboratory assigns to the test specimen (in AGS 3 this data was typically included in CNMT_LBID).
-- ERES_CODEs must be freely available in the public domain. All ERES_CODEs included in the file are to be listed in the ABBR group. New ERES_CODE values should be registered on the AGS website before use.
-- The ERES_CODE together with a matrix (ERES_MATX) should provide full definition of the chemical and phase of the material that has been tested. Note that ERES_CODE and ERES_MATX are REQUIRED fields.
-- ERES_RUNI is a REQUIRED field (Rule 10b) which enforces the inclusion of units in the data file for test results. Where a test result has no unit, the ERES_RUNI data shall be set to "-" to clarify this.
-- Units included in ERES_RUNI must be fully defined in the UNIT group (Rule 15). It is possible that units require conversion when the data is received and amalgamated into project databases to ensure that data are consistent across monitoring tranches and appropriate for the assessment.
-- It is suggested that in some cases it might be appropriate to make the ERES_IREF data a set of codes referring to full instrument details in the ABBR group. In this case the heading type would be changed to 'PA'.
-- The headings ERES_TICP and ERES_TICT allow for inclusion of tentatively identified compounds. Note that ERES_RTCD would be flagged as 'Tentative' if this were the case for a record.
-- The accreditation status and reference number are included under the ERES_CRED heading where appropriate.  Where a test has more than one accreditation status these should be concatenated into the ERES_CRED field using the  character by default or character specified in TRAN_RCON.
-- ERES_SIZE and ERES_PERP are additions to cover the reporting requirements for geotechnical testing (eg BS1377) for which the result only relates to the size of material tested.
-- ERES_RVAL should be left blank and detection limits defined if the test was below the detection limits.
-- ERES_TEST should be completed with the test name (LBST_TEST) if the test was scheduled using LBST group. This provides traceability between schedule and results where this is important.
+- **ERES** provides for the transfer of geoenvironmental chemical testing data. Linked to the :ref:`SAMP <ags4_group_SAMP>` group this results group is suitable for both results of geoenvironmental testing carried out in the field or in a chemical test laboratory.
+- Geotechnical chemical testing, relating to ground aggressivity, is to be transferred using the :ref:`GCHM <ags4_group_GCHM>` group.
+- The headings listed in **ERES** represent a range of attributes to describe chemical test results to cater for both simple and extended reporting requirements. It is important to note that there is no requirement to complete all headings in data files for every analysis carried out. Only the key headings and the headings that are relevant to the testing and test result specification need be completed or used. Where additional QC data is required then further user defined headings may be necessary to transfer additional information. It is imperative that data providers and data receivers agree the specification for **ERES** data at the outset of a project.
+- :ref:`SPEC <ags4_group_SPEC>` should include the laboratory test specimen reference, or Laboratory ID; the unique reference the laboratory assigns to the test specimen (in AGS 3 this data was typically included in CNMT_LBID).
+- ERES_CODEs must be freely available in the public domain. All ERES_CODEs included in the file are to be listed in the :ref:`ABBR <ags4_group_ABBR>` group. New **ERES_CODE** values should be registered on the AGS website before use.
+- The **ERES_CODE** together with a matrix (ERES_MATX) should provide full definition of the chemical and phase of the material that has been tested. Note that **ERES_CODE** and **ERES_MATX** are REQUIRED fields.
+- **ERES_RUNI** is a REQUIRED field (:ref:`Rule 10b <ags4_rule_10b>`) which enforces the inclusion of units in the data file for test results. Where a test result has no unit, the **ERES_RUNI** data shall be set to "-" to clarify this.
+- Units included in **ERES_RUNI** must be fully defined in the :ref:`UNIT <ags4_group_UNIT>` group (:ref:`Rule 15 <ags4_rule_15>`). It is possible that units require conversion when the data is received and amalgamated into project databases to ensure that data are consistent across monitoring tranches and appropriate for the assessment.
+- It is suggested that in some cases it might be appropriate to make the **ERES_IREF** data a set of codes referring to full instrument details in the :ref:`ABBR <ags4_group_ABBR>` group. In this case the heading type would be changed to 'PA'.
+- The headings **ERES_TICP** and **ERES_TICT** allow for inclusion of tentatively identified compounds. Note that **ERES_RTCD** would be flagged as 'Tentative' if this were the case for a record.
+- The accreditation status and reference number are included under the **ERES_CRED** heading where appropriate.  Where a test has more than one accreditation status these should be concatenated into the **ERES_CRED** field using the  character by default or character specified in TRAN_RCON.
+- **ERES_SIZE** and **ERES_PERP** are additions to cover the reporting requirements for geotechnical testing (eg BS1377) for which the result only relates to the size of material tested.
+- **ERES_RVAL** should be left blank and detection limits defined if the test was below the detection limits.
+- **ERES_TEST** should be completed with the test name (LBST_TEST) if the test was scheduled using :ref:`LBST <ags4_group_LBST>` group. This provides traceability between schedule and results where this is important.
 

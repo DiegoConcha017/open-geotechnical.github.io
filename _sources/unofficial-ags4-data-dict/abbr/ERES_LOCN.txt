@@ -3,3 +3,15 @@
 ERES_LOCN
 ===========================================================================
 
+    * - Code
+      - Description
+    * - LAB
+      - Analysis location - laboratory
+    * - SITE
+      - Analysis location - site
+    * - FIELDLAB
+      - Analysis location - field laboratory
+
+
+.. seealso:: Group: :ref:`ags4_group_ERES`
+

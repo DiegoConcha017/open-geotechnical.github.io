@@ -3,3 +3,19 @@
 ERES_RTCD
 ===========================================================================
 
+    * - Code
+      - Description
+    * - TRG
+      - Target
+    * - TIC
+      - Tentatively identified compound
+    * - SUR
+      - Surrogate
+    * - IC
+      - Spiked compound
+    * - IS
+      - Internal Standards
+
+
+.. seealso:: Group: :ref:`ags4_group_ERES`
+

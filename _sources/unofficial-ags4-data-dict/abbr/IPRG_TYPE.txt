@@ -3,3 +3,13 @@
 IPRG_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - Constant Head
+      - Constant Head
+    * - Falling Head
+      - Falling Head
+
+
+.. seealso:: Group: :ref:`ags4_group_IPRG`
+

@@ -1,11 +1,10 @@
-.. _ags4_WSTG:
+.. _ags4_group_WSTG:
 
-WSTG
+WSTG: Water Strike - General
 ===========================================================================
 
-Water Strike - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -52,9 +51,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS28
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- WSTG and WSTD are used to record information on the behaviour of water encountered during development of an exploratory hole.
+- **WSTG** and :ref:`WSTD <ags4_group_WSTD>` are used to record information on the behaviour of water encountered during development of an exploratory hole.
 - Water levels recorded during sampling or testing in exploratory holes are recorded in the appropriate group together with the related data. Water readings in installations (eg piezometers) are recorded in Group MOND.
 

@@ -1,11 +1,10 @@
-.. _ags4_ABBR:
+.. _ags4_group_ABBR:
 
-ABBR
+ABBR: Abbreviation Definitions
 ===========================================================================
 
-Abbreviation Definitions
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -47,12 +46,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS1
       - Associated file reference (eg contract data specification)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 5
 -------------------------
-- ABBR is required in all AGS4 data files and describes all abbreviations used in headings defined by the PA data type (Rule 16).
-- The ABBR and CODE groups in AGS3 have been consolidated into a single listing.
+- **ABBR** is required in all AGS4 data files and describes all abbreviations used in headings defined by the PA data type (:ref:`Rule 16 <ags4_rule_16>`).
+- The **ABBR** and CODE groups in AGS3 have been consolidated into a single listing.
 - The AGS Format website (www.ags.org.uk) lists the standard abbreviations.
 - Additional abbreviations, used in any heading in the file, must be defined in this group.
-- ABBR_LIST details the list from which the ABBR_CODE originates. For standard AGS headings this value would be ?AGS4? to refer to the AGS website.
+- **ABBR_LIST** details the list from which the **ABBR_CODE** originates. For standard AGS headings this value would be ?AGS4? to refer to the AGS website.
 

@@ -1,11 +1,10 @@
-.. _ags4_ISPT:
+.. _ags4_group_ISPT:
 
-ISPT
+ISPT: Standard Penetration Test Results
 ===========================================================================
 
-Standard Penetration Test Results
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -64,7 +63,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Depth to water at time of test
     * - ISPT_TYPE
       - 
-      - `:ref:`ags4_ISPT_TYPE`
+      - PA
       - S 
       - Type of SPT test
     * - ISPT_HAM
@@ -177,9 +176,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS11
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- If the test was extended to 100 blows (as described in ISO 22476-3), then data variable under ISPT_ROCK should be 'Y'. To avoid ambiguity, in cases where the test was not extended the ISPT_ROCK data should be 'N' (see Section 8.2).
-- Where appropriate or requested, SPT equipment calibration certificates could be referred to in the FILE_FSET field.
+- If the test was extended to 100 blows (as described in ISO 22476-3), then data variable under **ISPT_ROCK** should be 'Y'. To avoid ambiguity, in cases where the test was not extended the **ISPT_ROCK** data should be 'N' (see Section 8.2).
+- Where appropriate or requested, SPT equipment calibration certificates could be referred to in the :ref:`FILE <ags4_group_FILE>` field.
 

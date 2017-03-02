@@ -1,11 +1,10 @@
-.. _ags4_PMTL:
+.. _ags4_group_PMTL:
 
-PMTL
+PMTL: Pressuremeter Test Results - Individual Loops
 ===========================================================================
 
-Pressuremeter Test Results - Individual Loops
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -87,9 +86,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS11
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- PMTL is used to transfer summary details of test loops. If detailed information is required on test loop data this would be provided as attached files and listed under FILE_FSET in the PMTG group.
-- Additional headings PMTL_NLSA and PMTL_NLSB have been added to include for data from Bolton and Whittle?s (1999) interpretation of unload-reload loops to derive non-linear stiffness parameters is becoming more routine. The interpretation gives two parameters, sometimes referred to as the linearity exponent and shear stress coefficient (Beta and alpha respective).
+- **PMTL** is used to transfer summary details of test loops. If detailed information is required on test loop data this would be provided as attached files and listed under :ref:`FILE <ags4_group_FILE>` in the :ref:`PMTG <ags4_group_PMTG>` group.
+- Additional headings **PMTL_NLSA** and **PMTL_NLSB** have been added to include for data from Bolton and Whittle?s (1999) interpretation of unload-reload loops to derive non-linear stiffness parameters is becoming more routine. The interpretation gives two parameters, sometimes referred to as the linearity exponent and shear stress coefficient (Beta and alpha respective).
 

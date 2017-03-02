@@ -1,11 +1,10 @@
-.. _ags4_STND:
+.. _ags4_group_STND:
 
-STND
+STND: Standards / Specifications
 ===========================================================================
 
-Standards / Specifications
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -42,9 +41,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS1
       - Associated file reference (eg contract specific specifications)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- STND may be used to state a list of standards, specifications and other reference documents that define the methods to which data has been collected and reported. For example, EN ISO 14688 - 1 (Section 6) and EN ISO 14689 - 1 (Section 5) describes that it should be clearly stated that the descriptions are based on visual and manual identification.
+- **STND** may be used to state a list of standards, specifications and other reference documents that define the methods to which data has been collected and reported. For example, EN ISO 14688 - 1 (Section 6) and EN ISO 14689 - 1 (Section 5) describes that it should be clearly stated that the descriptions are based on visual and manual identification.
 - Information on the scope of the data collected to each standard is included in STND_SCPE.
 

@@ -1,11 +1,10 @@
-.. _ags4_ESCG:
+.. _ags4_group_ESCG:
 
-ESCG
+ESCG: Effective Stress Consolidation Tests - General
 ===========================================================================
 
-Effective Stress Consolidation Tests - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -64,7 +63,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Details of specimen preparation including time between preparation and testing
     * - ESCG_TYPE
       - 
-      - `:ref:`ags4_ESCG_TYPE`
+      - PA
       - CD 
       - Test type
     * - ESCG_CELL
@@ -74,7 +73,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Type of equipment used
     * - ESCG_COND
       - 
-      - `:ref:`ags4_ESCG_COND`
+      - PA
       - Undisturbed 
       - Sample condition
     * - ESCG_SDIA
@@ -212,9 +211,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS9
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- ESCG and ESCT are primarily designed to take data from the consolidation tests detailed in BS1377 Part 6 including hydraulic cells such as the Rowe cell. Other types of testing can be included but headings should only be populated where the data is consistent with those of the BS tests and ambiguity of terminology should be avoided.
-- ESCG_IVR should be used to report the initial voids ratio at the start of testing. This will not necessarily be the same as the voids ratio at the start of first stage consolidation ESCT_VR0 due to saturation.
+- **ESCG** and :ref:`ESCT <ags4_group_ESCT>` are primarily designed to take data from the consolidation tests detailed in BS1377 Part 6 including hydraulic cells such as the Rowe cell. Other types of testing can be included but headings should only be populated where the data is consistent with those of the BS tests and ambiguity of terminology should be avoided.
+- **ESCG_IVR** should be used to report the initial voids ratio at the start of testing. This will not necessarily be the same as the voids ratio at the start of first stage consolidation :ref:`ESCT <ags4_group_ESCT>` due to saturation.
 

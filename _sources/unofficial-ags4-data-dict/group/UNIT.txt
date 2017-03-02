@@ -1,11 +1,10 @@
-.. _ags4_UNIT:
+.. _ags4_group_UNIT:
 
-UNIT
+UNIT: Definition of Units
 ===========================================================================
 
-Definition of Units
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -37,9 +36,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS1
       - Associated file reference
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- UNIT is required in all AGS4 files (Rule 15) and defines all units used for data headings and within data records (eg GCHM, MOND and ERES).
+- **UNIT** is required in all AGS4 files (:ref:`Rule 15 <ags4_rule_15>`) and defines all units used for data headings and within data records (eg GCHM, :ref:`MOND <ags4_group_MOND>` and ERES).
 - The AGS Data Transfer Format website (www.ags.org.uk) lists the standard unit definitions.
 

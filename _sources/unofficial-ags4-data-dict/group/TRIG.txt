@@ -1,11 +1,10 @@
-.. _ags4_TRIG:
+.. _ags4_group_TRIG:
 
-TRIG
+TRIG: Triaxial Tests - Total Stress - General
 ===========================================================================
 
-Triaxial Tests - Total Stress - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -64,12 +63,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Details of specimen preparation including time between preparation and testing
     * - TRIG_TYPE
       - 
-      - `:ref:`ags4_TRIG_TYPE`
+      - PA
       - UU 
       - Test type
     * - TRIG_COND
       - 
-      - `:ref:`ags4_TRIG_COND`
+      - PA
       - Undisturbed 
       - Sample condition
     * - TRIG_REM
@@ -102,9 +101,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS7
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- The data reported from total and effective stress testing is different therefore TREG and TRET has been added for the reporting of effective stress testing.
-- Standard testing methods normally report the Cu value against each test specimen and defer from providing an assessed Cu value for a set of specimens from a sample. This data is therefore included in the TRIT group.
+- The data reported from total and effective stress testing is different therefore :ref:`TREG <ags4_group_TREG>` and :ref:`TRET <ags4_group_TRET>` has been added for the reporting of effective stress testing.
+- Standard testing methods normally report the Cu value against each test specimen and defer from providing an assessed Cu value for a set of specimens from a sample. This data is therefore included in the :ref:`TRIT <ags4_group_TRIT>` group.
 

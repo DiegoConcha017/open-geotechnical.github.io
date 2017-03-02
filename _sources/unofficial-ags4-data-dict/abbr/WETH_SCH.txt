@@ -3,3 +3,27 @@
 WETH_SCH
 ===========================================================================
 
+    * - Code
+      - Description
+    * - MUNDFORD
+      - Mundford chalk weathering scale
+    * - CIRIA MERCIA
+      - CIRIA C570 Simplified scheme for Mercia  Mudstone
+    * - CIRIA CHALK
+      - CIRIA chalk weathering system
+    * - CHANDLER MERCIA
+      - Chandler Mercia Mudstone Weathering Grades
+    * - CHANDLER APTED LC
+      - Chandler and Apted London Clay
+    * - GEO3
+      - Geoguide 3
+    * - ISRM
+      - ISRM
+    * - BS 5930:1999 PRE AMEND 1
+      - BS 5930:1999 Pre Amendment 1
+    * - BS 5930:1999 AMEND 1
+      - BS 5930:1999 Amendment 1
+
+
+.. seealso:: Group: :ref:`ags4_group_WETH`
+

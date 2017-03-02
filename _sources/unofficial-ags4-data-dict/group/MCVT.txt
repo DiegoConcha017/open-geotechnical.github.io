@@ -1,11 +1,10 @@
-.. _ags4_MCVT:
+.. _ags4_group_MCVT:
 
-MCVT
+MCVT: MCV Tests - Data
 ===========================================================================
 
-MCV Tests - Data
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U 
       - Sample type
     * - SAMP_ID
@@ -97,9 +96,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS15
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- MCVT_BDEN is included to allow reporting of bulk density of the specimen after test. However, the requirement and procedure for this is not covered by BS1377.
-- MCVT_DIFF and MCVT_RAPD are proposed to allow adequate and unambiguous reporting of a rapid assessment test.
+- **MCVT_BDEN** is included to allow reporting of bulk density of the specimen after test. However, the requirement and procedure for this is not covered by BS1377.
+- **MCVT_DIFF** and **MCVT_RAPD** are proposed to allow adequate and unambiguous reporting of a rapid assessment test.
 

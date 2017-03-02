@@ -1,11 +1,10 @@
-.. _ags4_CONS:
+.. _ags4_group_CONS:
 
-CONS
+CONS: Consolidation Tests - Data
 ===========================================================================
 
-Consolidation Tests - Data
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -107,10 +106,10 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS9
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 3
 -------------------------
-- CONS_IVR description clarified to the voids ratio at the start of the increment rather than repeat the initial voids ratio on each record in the CONS group as listed in previous editions.
-- CONS_TEMP added. BS1377 requires lab temperature at which test was carried out, but since Cv is corrected to 20degC from the temperature over the stage, it has to be per stage (but may be same throughout).
-- BS allows reporting of either CONS_CVRT or CONS_CVLG or both, the laboratory will populate these headings as appropriate.
+- **CONS_IVR** description clarified to the voids ratio at the start of the increment rather than repeat the initial voids ratio on each record in the **CONS** group as listed in previous editions.
+- **CONS_TEMP** added. BS1377 requires lab temperature at which test was carried out, but since Cv is corrected to 20degC from the temperature over the stage, it has to be per stage (but may be same throughout).
+- BS allows reporting of either **CONS_CVRT** or **CONS_CVLG** or both, the laboratory will populate these headings as appropriate.
 

@@ -3,3 +3,13 @@
 PIPE_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - PLAIN
+      - Plain
+    * - SLOTTED
+      - Slotted
+
+
+.. seealso:: Group: :ref:`ags4_group_PIPE`
+

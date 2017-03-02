@@ -1,11 +1,10 @@
-.. _ags4_RELD:
+.. _ags4_group_RELD:
 
-RELD
+RELD: Relative Density Tests
 ===========================================================================
 
-Relative Density Tests
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U 
       - Sample type
     * - SAMP_ID
@@ -117,7 +116,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS24
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
 - The maximum and minimum on sands has the possibility of being on two different sizes, <6.3mm ( max ) and <2mm ( min ). Since the minimum density is a discreet test the percentage retained 2mm should be the total and not that between 6.3 and 2mm - as may be derived in practice.

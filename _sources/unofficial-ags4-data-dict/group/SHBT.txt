@@ -1,11 +1,10 @@
-.. _ags4_SHBT:
+.. _ags4_group_SHBT:
 
-SHBT
+SHBT: Shear Box Testing - Data
 ===========================================================================
 
-Shear Box Testing - Data
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -167,8 +166,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS18
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- SHBT_PDIN & SHBT_RDIN - consolidation (flow of water out of specimen) to be reported as positive and dilatancy or swelling (flow of water into specimen) to be reported as negative.
+- **SHBT_PDIN** & **SHBT_RDIN** - consolidation (flow of water out of specimen) to be reported as positive and dilatancy or swelling (flow of water into specimen) to be reported as negative.
 

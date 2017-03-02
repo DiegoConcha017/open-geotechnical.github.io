@@ -1,11 +1,10 @@
-.. _ags4_IVAN:
+.. _ags4_group_IVAN:
 
-IVAN
+IVAN: In Situ Vane Tests
 ===========================================================================
 
-In Situ Vane Tests
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Test reference
     * - IVAN_TYPE
       - 
-      - `:ref:`ags4_IVAN_TYPE`
+      - PA
       - Borehole 
       - Vane type
     * - IVAN_IVAN
@@ -92,9 +91,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS11
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- IVAN_ENV allows records of environmental conditions to be recorded. Where the test is down hole this field should be left empty as this has no bearing on the measurement made.
-- IVAN_IVAN and IVAN_IVAR data should generally be numeric.  A text form can only be used by addition of a prefixing operator to denote greater than or less than conditions ie >200 when readings are above the reporting limit of the testing equipment.
+- **IVAN_ENV** allows records of environmental conditions to be recorded. Where the test is down hole this field should be left empty as this has no bearing on the measurement made.
+- **IVAN_IVAN** and **IVAN_IVAR** data should generally be numeric.  A text form can only be used by addition of a prefixing operator to denote greater than or less than conditions ie >200 when readings are above the reporting limit of the testing equipment.
 

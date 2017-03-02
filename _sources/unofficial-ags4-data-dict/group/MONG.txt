@@ -1,11 +1,10 @@
-.. _ags4_MONG:
+.. _ags4_group_MONG:
 
-MONG
+MONG: Monitoring Installations and Instruments
 ===========================================================================
 
-Monitoring Installations and Instruments
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -44,7 +43,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Installation date
     * - MONG_TYPE
       - 
-      - `:ref:`ags4_MONG_TYPE`
+      - PA
       - TS 
       - Instrument type
     * - MONG_DETL
@@ -122,10 +121,10 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS27
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 3
 -------------------------
 - Each monitoring point should have a unique identification detailed in MONG_ID. Typically this reflects the actual reference or marking on the instrument.
-- MONG_DETL should be used to describe the instrument/sensor location or parameter in specific terms.
-- MONG_CONT used to include details of which organisation installed the monitoring device.
+- **MONG_DETL** should be used to describe the instrument/sensor location or parameter in specific terms.
+- **MONG_CONT** used to include details of which organisation installed the monitoring device.
 

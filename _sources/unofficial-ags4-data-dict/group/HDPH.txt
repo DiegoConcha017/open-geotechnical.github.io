@@ -1,11 +1,10 @@
-.. _ags4_HDPH:
+.. _ags4_group_HDPH:
 
-HDPH
+HDPH: Depth Related Exploratory Hole Information
 ===========================================================================
 
-Depth Related Exploratory Hole Information
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Depth to base of section
     * - HDPH_TYPE
       - 
-      - `:ref:`ags4_HDPH_TYPE`
+      - PA
       - TP 
       - Type of depth related information
     * - HDPH_STAR
@@ -132,11 +131,11 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS21
       - Associated file reference (eg drilling journals, hole orientation data)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 4
 -------------------------
-- HDPH is used to record information regarding exploratory hole construction. The HDPH group subdivides the hole development by depth such that the differing methods used to advance a hole or pit (or holes developed using combined methods) are explicitly described As a minimum, one record will exist in HDPH for each record in the LOCA group if the AGS file is transferring hole construction details.
-- Records of orientation and inclination of the exploratory hole should be included in the HORN group.
-- Records in HDPH should be continuous and non-overlapping.
-- HDPH_LOG and HDPH_LOGD have been added to include the name of the person describing the strata in this section of the exploratory hole and date as required in ISO 14688-1 (Section 6) and EN ISO 14689-1 (Section 5). It is not deemed necessary to detail this information further for example in the GEOL group.
+- **HDPH** is used to record information regarding exploratory hole construction. The **HDPH** group subdivides the hole development by depth such that the differing methods used to advance a hole or pit (or holes developed using combined methods) are explicitly described As a minimum, one record will exist in **HDPH** for each record in the :ref:`LOCA <ags4_group_LOCA>` group if the AGS file is transferring hole construction details.
+- Records of orientation and inclination of the exploratory hole should be included in the :ref:`HORN <ags4_group_HORN>` group.
+- Records in **HDPH** should be continuous and non-overlapping.
+- **HDPH_LOG** and **HDPH_LOGD** have been added to include the name of the person describing the strata in this section of the exploratory hole and date as required in ISO 14688-1 (Section 6) and EN ISO 14689-1 (Section 5). It is not deemed necessary to detail this information further for example in the :ref:`GEOL <ags4_group_GEOL>` group.
 

@@ -3,3 +3,17 @@
 ESCG_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - CD
+      - Consolidated Drained
+    * - CDM
+      - Consolidated Drained Multistage
+    * - CU
+      - Consolidated Undrained
+    * - CUM
+      - Consolidated Undrained Multistage
+
+
+.. seealso:: Group: :ref:`ags4_group_ESCG`
+

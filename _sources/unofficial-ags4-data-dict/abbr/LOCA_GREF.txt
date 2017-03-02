@@ -3,3 +3,17 @@
 LOCA_GREF
 ===========================================================================
 
+    * - Code
+      - Description
+    * - ITM
+      - Ordnance Survey Ireland Irish Transverse Mercator
+    * - LOCAL
+      - Local Grid
+    * - OSGB
+      - Ordnance Survey Great Britain National Grid
+    * - OSI
+      - Ordnance Survey Ireland Irish Grid
+
+
+.. seealso:: Group: :ref:`ags4_group_LOCA`
+

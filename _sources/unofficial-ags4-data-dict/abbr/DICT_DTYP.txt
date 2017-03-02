@@ -3,3 +3,63 @@
 DICT_DTYP
 ===========================================================================
 
+    * - Code
+      - Description
+    * - DMS
+      - Degrees:Minutes:Seconds
+    * - DT
+      - Date time in international format
+    * - ID
+      - Unique Identifier
+    * - MC
+      - British Standard BS1377 : Part 2 reported moisture content
+    * - 0DP
+      - Value; required number of decimal places, 0
+    * - 1DP
+      - Value; required number of decimal places, 1
+    * - 2DP
+      - Value; required number of decimal places, 2
+    * - 3DP
+      - Value; required number of decimal places, 3
+    * - 4DP
+      - Value; required number of decimal places, 4
+    * - 0SCI
+      - Scientific Notation; required number of decimal places, 0
+    * - 1SCI
+      - Scientific Notation; required number of decimal places, 1
+    * - 2SCI
+      - Scientific Notation; required number of decimal places, 2
+    * - 3SCI
+      - Scientific Notation; required number of decimal places, 3
+    * - 4SCI
+      - Scientific Notation; required number of decimal places, 4
+    * - 1SF
+      - Value; required number of significant figures, 1
+    * - 2SF
+      - Value; required number of significant figures, 2
+    * - 3SF
+      - Value; required number of significant figures, 3
+    * - 4SF
+      - Value; required number of significant figures, 4
+    * - PA
+      - Text listed in ABBR Group
+    * - PT
+      - Text listed in TYPE Group
+    * - PU
+      - Text listed in UNIT Group
+    * - RL
+      - Record link
+    * - T
+      - Elapsed time
+    * - U
+      - Value with variable format
+    * - X
+      - Text
+    * - XN
+      - Text / numeric
+    * - YN
+      - Y or N
+
+
+.. seealso:: Group: :ref:`ags4_group_DICT`
+

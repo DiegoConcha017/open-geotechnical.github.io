@@ -1,11 +1,10 @@
-.. _ags4_CDIA:
+.. _ags4_group_CDIA:
 
-CDIA
+CDIA: Casing Diameter by Depth
 ===========================================================================
 
-Casing Diameter by Depth
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -42,8 +41,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS20
       - Associated file reference (eg casing cement records)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- CDIA is used to transfer details of casing in the completed hole.
+- **CDIA** is used to transfer details of casing in the completed hole.
 

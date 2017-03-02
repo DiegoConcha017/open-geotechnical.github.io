@@ -1,11 +1,10 @@
-.. _ags4_LDYN:
+.. _ags4_group_LDYN:
 
-LDYN
+LDYN: Dynamic Testing
 ===========================================================================
 
-Dynamic Testing
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U 
       - Sample type
     * - SAMP_ID
@@ -112,9 +111,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS10
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- LDYN is to be used to report dynamic testing on soil and rock materials.
+- **LDYN** is to be used to report dynamic testing on soil and rock materials.
 - The measurements of bulk density, dry density, moisture content, porosity and saturation that described the test specimen condition related to these tests should be recorded in RDEN.
 

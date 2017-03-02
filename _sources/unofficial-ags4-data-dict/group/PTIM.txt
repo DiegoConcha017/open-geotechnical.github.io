@@ -1,11 +1,10 @@
-.. _ags4_PTIM:
+.. _ags4_group_PTIM:
 
-PTIM
+PTIM: Boring/Drilling Progress by Time
 ===========================================================================
 
-Boring/Drilling Progress by Time
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -52,8 +51,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS21
       - Associated file reference (eg drilling journals)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- PTIM is used to record information on the development of the exploratory hole. Readings of depth of hole, casing and water level are required at the start and end of shift, as a minimum by BS 5930:1999.
+- **PTIM** is used to record information on the development of the exploratory hole. Readings of depth of hole, casing and water level are required at the start and end of shift, as a minimum by BS 5930:1999.
 

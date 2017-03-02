@@ -3,3 +3,13 @@
 DICT_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - HEADING
+      - Flag to indicate definition is a HEADING
+    * - GROUP
+      - Flag to indicate definition is a GROUP
+
+
+.. seealso:: Group: :ref:`ags4_group_DICT`
+

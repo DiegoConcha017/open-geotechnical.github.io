@@ -3,3 +3,13 @@
 ARTW_TYPE
 ===========================================================================
 
+    * - Code
+      - Description
+    * - DRY
+      - Dry test
+    * - WET
+      - Wet test
+
+
+.. seealso:: Group: :ref:`ags4_group_ARTW`
+

@@ -3,3 +3,13 @@
 CBRG_COND
 ===========================================================================
 
+    * - Code
+      - Description
+    * - UNDISTURBED
+      - Undisturbed
+    * - REMOULDED
+      - Remoulded
+
+
+.. seealso:: Group: :ref:`ags4_group_CBRG`
+

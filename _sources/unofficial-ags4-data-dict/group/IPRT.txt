@@ -1,11 +1,10 @@
-.. _ags4_IPRT:
+.. _ags4_group_IPRT:
 
-IPRT
+IPRT: In Situ Permeability Tests - Data
 ===========================================================================
 
-In Situ Permeability Tests - Data
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -62,8 +61,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS26
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- The IPRT group allows for transfer of the water level with time readings taken during the test where this is required in the test specification.
+- The **IPRT** group allows for transfer of the water level with time readings taken during the test where this is required in the test specification.
 

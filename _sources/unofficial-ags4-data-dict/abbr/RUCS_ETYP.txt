@@ -3,3 +3,13 @@
 RUCS_ETYP
 ===========================================================================
 
+    * - Code
+      - Description
+    * - SECANT
+      - Secant modulus
+    * - TANGENT
+      - Tangent modulus
+
+
+.. seealso:: Group: :ref:`ags4_group_RUCS`
+

@@ -3,3 +3,13 @@
 LDEN_COND
 ===========================================================================
 
+    * - Code
+      - Description
+    * - RECOMPACTED
+      - Recompacted
+    * - UNDISTURBED
+      - Undisturbed
+
+
+.. seealso:: Group: :ref:`ags4_group_LDEN`
+

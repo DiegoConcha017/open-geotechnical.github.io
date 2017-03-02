@@ -1,11 +1,10 @@
-.. _ags4_PTST:
+.. _ags4_group_PTST:
 
-PTST
+PTST: Laboratory Permeability Tests
 ===========================================================================
 
-Laboratory Permeability Tests
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U 
       - Sample type
     * - SAMP_ID
@@ -69,7 +68,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Details of specimen preparation including time between preparation and testing
     * - PTST_COND
       - 
-      - `:ref:`ags4_PTST_COND`
+      - PA
       - Undisturbed 
       - Sample condition
     * - PTST_SZUN
@@ -159,12 +158,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Particle density with prefix # if value assumed
     * - PTST_TYPE
       - 
-      - `:ref:`ags4_PTST_TYPE`
+      - PA
       - Falling head
       - Type of permeability measurement
     * - PTST_CELL
       - 
-      - `:ref:`ags4_PTST_CELL`
+      - PA
       - Triaxial cell 
       - Type of permeameter
     * - PTST_REM
@@ -197,9 +196,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS28
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- The suggested units for PTST_PDEN have been amended to Mg/m3.
+- The suggested units for **PTST_PDEN** have been amended to Mg/m3.
 - New headings added to permit details of test method, laboratory and test accreditation to be included in data.
 

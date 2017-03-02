@@ -1,11 +1,10 @@
-.. _ags4_ARTW:
+.. _ags4_group_ARTW:
 
-ARTW
+ARTW: Aggregate Determination of the Resistance to Wear (micro-Deval)
 ===========================================================================
 
-Aggregate Determination of the Resistance to Wear (micro-Deval)
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -69,7 +68,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Size fraction on which sample obtained
     * - ARTW_TYPE
       - 
-      - `:ref:`ags4_ARTW_TYPE`
+      - PA
       - Wet 
       - Type of test
     * - ARTW_MD1
@@ -127,7 +126,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS10
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - None
 -------------------------
 

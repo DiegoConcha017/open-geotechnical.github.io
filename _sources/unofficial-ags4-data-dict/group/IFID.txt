@@ -1,11 +1,10 @@
-.. _ags4_IFID:
+.. _ags4_group_IFID:
 
-IFID
+IFID: On Site Volatile Headspace Testing Using Flame Ionisation Detector
 ===========================================================================
 
-On Site Volatile Headspace Testing Using Flame Ionisation Detector
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -82,9 +81,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS23
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- IFID is used to record the results of on site volatile testing by means of headspace analysis using flame ionisation detectors.
-- IFID_CRED added to permit details of any test accreditation if appropriate to be included in data.
+- **IFID** is used to record the results of on site volatile testing by means of headspace analysis using flame ionisation detectors.
+- **IFID_CRED** added to permit details of any test accreditation if appropriate to be included in data.
 

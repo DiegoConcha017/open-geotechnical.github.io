@@ -1,11 +1,10 @@
-.. _ags4_LNMC:
+.. _ags4_group_LNMC:
 
-LNMC
+LNMC: Moisture Content Tests
 ===========================================================================
 
-Moisture Content Tests
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U 
       - Sample type
     * - SAMP_ID
@@ -122,7 +121,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS10
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
 - This group should be retained for moisture content tests (usually synonymous with ?as received?) carried out as individual or separate tests. Where a moisture content is measured as part of another test (eg a triaxial test), the moisture content should be transferred in that group under the appropriate heading.

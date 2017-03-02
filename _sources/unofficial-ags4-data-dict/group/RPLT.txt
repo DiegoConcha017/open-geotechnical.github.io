@@ -1,11 +1,10 @@
-.. _ags4_RPLT:
+.. _ags4_group_RPLT:
 
-RPLT
+RPLT: Point Load Testing
 ===========================================================================
 
-Point Load Testing
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U 
       - Sample type
     * - SAMP_ID
@@ -74,7 +73,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Size corrected point load index (Is 50)
     * - RPLT_PLTF
       - 
-      - `:ref:`ags4_RPLT_PLTF`
+      - PA
       - A+L 
       - Point load test type
     * - RPLT_MC
@@ -112,8 +111,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS10
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- A list has been defined for RPLT_PLTF to include the test abbreviations derived from the ISRM Suggested Method (ISRM, 2007). Typically a test will include combined abbreviations to represent the sample type/orientation and the direction of the test with respect to bedding. For example a piece of core tested across the diameter and along the bedding direction will be coded as A. Reference: ISRM : 2007 : The Complete ISRM Suggested Methods for  Rock Characterisation , Testing and Monitoring : 1974-2006.
+- A list has been defined for **RPLT_PLTF** to include the test abbreviations derived from the ISRM Suggested Method (ISRM, 2007). Typically a test will include combined abbreviations to represent the sample type/orientation and the direction of the test with respect to bedding. For example a piece of core tested across the diameter and along the bedding direction will be coded as A. Reference: ISRM : 2007 : The Complete ISRM Suggested Methods for  Rock Characterisation , Testing and Monitoring : 1974-2006.
 

@@ -1,11 +1,10 @@
-.. _ags4_PUMT:
+.. _ags4_group_PUMT:
 
-PUMT
+PUMT: Pumping Tests - Data
 ===========================================================================
 
-Pumping Tests - Data
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -52,9 +51,9 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS29
       - Associated file reference (eg test result sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 2
 -------------------------
-- The general information about the pumping test should be recorded in the PUMG group.
-- Records for observation holes and piezometers during the tests can be recorded in MONG and MOND.
+- The general information about the pumping test should be recorded in the :ref:`PUMG <ags4_group_PUMG>` group.
+- Records for observation holes and piezometers during the tests can be recorded in :ref:`MONG <ags4_group_MONG>` and MOND.
 

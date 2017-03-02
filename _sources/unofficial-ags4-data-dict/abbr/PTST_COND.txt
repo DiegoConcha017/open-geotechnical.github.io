@@ -3,3 +3,13 @@
 PTST_COND
 ===========================================================================
 
+    * - Code
+      - Description
+    * - REMOULDED
+      - Remoulded
+    * - UNDISTURBED
+      - Undisturbed
+
+
+.. seealso:: Group: :ref:`ags4_group_PTST`
+

@@ -1,11 +1,10 @@
-.. _ags4_WINS:
+.. _ags4_group_WINS:
 
-WINS
+WINS: Window or Windowless Sampling Run Details
 ===========================================================================
 
-Window or Windowless Sampling Run Details
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -62,8 +61,8 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS28
       - Associated file reference (eg field records)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 1
 -------------------------
-- WINS is used to record the details of window sampling runs.
+- **WINS** is used to record the details of window sampling runs.
 

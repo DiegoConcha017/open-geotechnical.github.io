@@ -3,3 +3,17 @@
 WETH_SYS
 ===========================================================================
 
+    * - Code
+      - Description
+    * - MAT GRADE
+      - Material Weathering Grade
+    * - MASS GRADE
+      - Rock Mass Weathering Grade
+    * - MASS CLASS
+      - Rock Mass Weathering Classification
+    * - MASS ZONE
+      - Rock Mass Weathering Zone
+
+
+.. seealso:: Group: :ref:`ags4_group_WETH`
+

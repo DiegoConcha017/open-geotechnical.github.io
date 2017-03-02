@@ -1,11 +1,10 @@
-.. _ags4_LBSG:
+.. _ags4_group_LBSG:
 
-LBSG
+LBSG: Testing Schedule
 ===========================================================================
 
-Testing Schedule
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -57,11 +56,11 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS1
       - Associated file reference (eg schedule sheets)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 4
 -------------------------
-- The LBSG group is used to describe the testing schedules generated on a project.
-- This group, together with LBST (test details), would typically be used in data files that are transferred as part of the investigation and testing process. These groups would not necessarily be included in a data file that represented final reporting data.
+- The **LBSG** group is used to describe the testing schedules generated on a project.
+- This group, together with :ref:`LBST <ags4_group_LBST>` (test details), would typically be used in data files that are transferred as part of the investigation and testing process. These groups would not necessarily be included in a data file that represented final reporting data.
 - A data row in this group represents the issue of a schedule to a laboratory to testing organisation.
-- Any general requirements for the test schedule, for example, dates for completion, contact details, should be included in this group. Details of the test required are provided in the LBST group against the samples.
+- Any general requirements for the test schedule, for example, dates for completion, contact details, should be included in this group. Details of the test required are provided in the :ref:`LBST <ags4_group_LBST>` group against the samples.
 

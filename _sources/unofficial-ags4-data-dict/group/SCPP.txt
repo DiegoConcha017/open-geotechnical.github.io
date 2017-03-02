@@ -1,11 +1,10 @@
-.. _ags4_SCPP:
+.. _ags4_group_SCPP:
 
-SCPP
+SCPP: Static Cone Penetration Tests - Derived Parameters
 ===========================================================================
 
-Static Cone Penetration Tests - Derived Parameters
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -82,12 +81,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS18
       - Associated file reference
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 5
 -------------------------
-- The SCPP group is to be used to transfer derived soil parameters determined from CPT test data. The requirement for this information as part of ground investigation reporting must be full specified at the outset of the investigation. The specification may need to detail the interpretative method(s) to be used.
-- The interpretation is given a reference in SCPP_REF that defines who and possibly how the interpretation has been carried out.
-- Details of the standards and methods used to carry out calculations need to be included in SCPG_REM. SCPG_REM may in turn refer to the STND group where full information on standards and references may be provided.
+- The **SCPP** group is to be used to transfer derived soil parameters determined from CPT test data. The requirement for this information as part of ground investigation reporting must be full specified at the outset of the investigation. The specification may need to detail the interpretative method(s) to be used.
+- The interpretation is given a reference in **SCPP_REF** that defines who and possibly how the interpretation has been carried out.
+- Details of the standards and methods used to carry out calculations need to be included in SCPG_REM. :ref:`SCPG <ags4_group_SCPG>` may in turn refer to the :ref:`STND <ags4_group_STND>` group where full information on standards and references may be provided.
 - Where soil type interpretation leading to borehole style stratum descriptions is carried out the information should be entered in GEOL.
-- The coefficient of consolidation is calculated from dissipation testing data which is included in SCDG and SCDT.
+- The coefficient of consolidation is calculated from dissipation testing data which is included in :ref:`SCDG <ags4_group_SCDG>` and SCDT.
 

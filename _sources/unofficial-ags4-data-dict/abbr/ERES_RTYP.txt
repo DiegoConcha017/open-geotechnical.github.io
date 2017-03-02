@@ -3,3 +3,15 @@
 ERES_RTYP
 ===========================================================================
 
+    * - Code
+      - Description
+    * - INITIAL
+      - Initial
+    * - REANALYSIS
+      - Reanalysis
+    * - REANALYSIS2
+      - 2nd reanalysis
+
+
+.. seealso:: Group: :ref:`ags4_group_ERES`
+

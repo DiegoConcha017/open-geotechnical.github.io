@@ -1,11 +1,10 @@
-.. _ags4_CMPG:
+.. _ags4_group_CMPG:
 
-CMPG
+CMPG: Compaction Tests - General
 ===========================================================================
 
-Compaction Tests - General
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -34,7 +33,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Sample reference
     * - SAMP_TYPE
       - 
-      - `:ref:`ags4_SAMP_TYPE`
+      - PA
       - U
       - Sample type
     * - SAMP_ID
@@ -69,12 +68,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - Specimen description
     * - CMPG_TYPE
       - 
-      - `:ref:`ags4_CMPG_TYPE`
+      - PA
       - 2.5kg / 4.5kg / Vibro 
       - Compaction test type
     * - CMPG_MOLD
       - 
-      - `:ref:`ags4_CMPG_MOLD`
+      - PA
       - 1 litre / CBR 
       - Compaction mould type
     * - CMPG_375
@@ -142,7 +141,7 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS23
       - Associated file reference (eg equipment calibrations)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - None
 -------------------------
 

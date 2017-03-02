@@ -1,11 +1,10 @@
-.. _ags4_DOBS:
+.. _ags4_group_DOBS:
 
-DOBS
+DOBS: Drilling/Advancement Observations & Parameters
 ===========================================================================
 
-Drilling/Advancement Observations & Parameters
 
-Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
+- **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
 
 .. list-table:: 
     :widths: 5,10,5,30,50
@@ -137,12 +136,12 @@ Class: Samples, Amalgamated Specimens and Laboratory Test Scheduling
       - X
       - FS36
       - Associated file reference (eg drilling journals or log files)
-sssssssssssssssssssssssssssssssssssssssssss
+
 Notes - 5
 -------------------------
-- DOBS is to be used to record information on hole advancement and drilling parameters, for example open hole rotary drilling information.
-- DOBS records are data relating to the drilling parameters over a depth range. Where instrumentation on drilling rigs provides point readings of these parameters, this data should either be collated to summarise parameters over appropriate depth ranges, or reported with the start and end of each depth range to represent a point reading.
-- DOBS_SET allows for multiple readings to be included in the group in circumstances for example where a hole depth section is re-drilled.
-- FLSH should be used to record other flushing related information.
-- It is suggested that DOBS can be used to transfer information recorded from instrumented drilling rigs. Additional fields maybe required to fully transfer the information.
+- **DOBS** is to be used to record information on hole advancement and drilling parameters, for example open hole rotary drilling information.
+- **DOBS** records are data relating to the drilling parameters over a depth range. Where instrumentation on drilling rigs provides point readings of these parameters, this data should either be collated to summarise parameters over appropriate depth ranges, or reported with the start and end of each depth range to represent a point reading.
+- **DOBS_SET** allows for multiple readings to be included in the group in circumstances for example where a hole depth section is re-drilled.
+- :ref:`FLSH <ags4_group_FLSH>` should be used to record other flushing related information.
+- It is suggested that **DOBS** can be used to transfer information recorded from instrumented drilling rigs. Additional fields maybe required to fully transfer the information.
 
