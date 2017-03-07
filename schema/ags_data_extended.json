@@ -1,0 +1,127 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://open-geotechnical.github.io/schemas/ags_extended.json",
+    "title": "AGS extended data",
+    "description": "Work in progress on ags extended format",
+    "type": "object",
+    "properties": {
+        "document": {
+            "type": "object",
+            "description": "The container for the ags document",
+            "properties": {
+                "file_name": {
+                    "type": "string",
+                    "desccription": "File name of source"
+                },
+                
+                "groups": { 
+                    "type": "object",
+                    "description": "The key is the four digit groups code",
+                    "properties": {
+                        "group_code": {
+                            "type": "string",
+                            "description": "The four characer GROUP code"
+                        },
+                        
+                        "data_dict": {
+                            "type": "object",
+                            "description": "The GROUP data dict",
+                            "properties": {
+                                "group_code": {
+                                    "type": "string",
+                                    "description": "The four characer group code"
+                                },
+                                "group_description": {
+                                    "type": "string",
+                                    "description": "The group description"
+                                }
+                            }
+                        },
+                        "headings_sort": {
+                            "type": "array",
+                            "description": "A list of HEADING code's in the required sort order"
+                        },
+                        "headings": {
+                            "description": "Headings for the group",
+                            "type": "array", "items": [
+                                {"type": "object",
+                                    "properties": {
+                                        "head_code": {
+                                            "type": "string",
+                                            "description": "The HEADING code"
+                                        },
+                                        "data_type": {
+                                            "type": "string",
+                                            "description": "The AGS data type"
+                                        },
+                                        "unit": {
+                                            "type": "string",
+                                            "description": "The unit of measure if any"
+                                        },
+                                        "data_dict": {
+                                            "type": "object",
+                                            "properties": {
+                                                "head_code": {
+                                                    "type": "string",
+                                                    "description": "The HEADING code"
+                                                },
+                                                "head_description": {
+                                                    "type": "string",
+                                                    "description": "The heading description"
+                                                },
+                                                "data_type": {
+                                                    "type": "string",
+                                                    "description": "Suggested data type"
+                                                },
+                                                "unit": {
+                                                    "type": "string",
+                                                    "description": "Suggested unit"
+                                                },
+                                                "example": {
+                                                    "type": "string",
+                                                    "description": "Example entry"
+                                                },
+                                                "sort_order": {
+                                                    "type": "number",
+                                                    "description": "The entry order for this heading"
+                                                },
+                                                "abbrs": {
+                                                    "type": "array", 
+                                                    "description": "Abbreviations for 'PA' data_type",
+                                                    
+                                                    "items": [
+                                                        {"type": "object",
+                                                            "properties": {
+                                                                "code": {
+                                                                    "type": "string",
+                                                                    "description": "Abbreviation code"
+                                                                },
+                                                                "description": {
+                                                                    "type": "string",
+                                                                    "description": "Abbreviation description"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "additionalProperties": false
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "data": {
+                            "type": "array",
+                            "description": "Array of data",
+                            "properties": {
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            }
+        }
+    }
+}
