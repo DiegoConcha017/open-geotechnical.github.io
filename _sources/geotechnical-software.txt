@@ -1,0 +1,50 @@
+GeoTechnical Software
+====================================
+
+.. note:: 
+
+    Attemping to create a curated list to open source GeoTechnical projects. If 
+    there's a project absent, please raise and `issue <https://github.com/open-geotechnical/open-geotechnical.github.io/issues>`_
+
+geotecha
+------------------
+
+A software suite for geotechnical engineering
+    - Python
+    - Project at https://github.com/rtrwalker/geotecha
+    - Docs at http://pythonhosted.org//geotecha/
+
+
+geotechlib
+-------------------------
+
+Python code for geotechnical classes and scripts
+    - Python
+    - Project at https://github.com/colinzhoucn/geotechlib
+
+
+GSRT
+----------------------
+
+Geotechnical Site Response Toolkit
+    - Python
+    - Project at https://github.com/blueray45/GSRT
+
+PyGeo
+----------------------
+
+Geotechnical utilities
+    - Python
+    - Project at https://github.com/CalvinNeo/PyGeo
+
+    
+    
+Syncline    
+----------------------
+
+A tool aimed at geotechnical engineers to streamline the process of collecting, reviewing and approving site investigation information.
+    - Ruby on Rails
+    - Project at https://github.com/scottcaldwell/Syncline
+
+    
+    

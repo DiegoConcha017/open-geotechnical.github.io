@@ -5,46 +5,13 @@ Open GeoTechnical
 
 The idea is to this `project` focus on geotechnical enginnering and data interpolation
 
-- create a bunch of code within this
 
-Open Source Software and Stuff for GeoTechnical Enigneering and Data Exchange,
-and everyone nibbling sandwiched as part of the food chain
-
-Your experience and opinion is valued, 
-please realise that whatever level u think your at ;-)
-
-.. note:: 
-
-    Mission statement is crazy creating a website and code for 
-    
-    - geotechnical egnineer + a hacker whie gets scripting + a www
-    - Wanna blog 
-    - new developers and vice versa
-
-    
-    And a mad idea toward a cool environment where
-    
-    - GeoTehnical engineer is happy
-    - with developer beside and system
-    - Each domain and protocol inbetween done and dusted
-    - Almost, cos we utlitamtely need GPS..
-        - and then convince manager its a good idea to goto 
-        - california for some bearing retio of beaches and valleys
-        - and the imperiral measurements (Mr Donald) report into SI
-    
-    If you have a mad idea, or a project manager then please raise an issue
-    
-    
 
 .. warning:: 
 
-    Mission kinda statement is that this is work in progress on creating a website and code for 
+    This is work in progress on creating a website and code for 
     GeoTechnical engineers along with new developers and vice versa
 
-
-
-    Mission kinda statement is that this is work in progress on creating a website and code for 
-    GeoTechnical engineers along with new developers and vice versa
     
 .. toctree::
     :maxdepth: 2

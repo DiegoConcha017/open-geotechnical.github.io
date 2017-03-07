@@ -1,0 +1,18 @@
+Hackers Guide
+=========================
+
+This info is for database and interface and stuff only..
+
+Main Rule
+=================
+
+Each data type is banged out as a string in ags4 format..
+
+Measure
+===============
+The units of measure as dictated inthe units table..
+eg
+m, K, kms, etc
+notably absent is utc
+
+
