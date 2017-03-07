@@ -1,7 +1,7 @@
 .. _ags4_group_TYPE:
 
 TYPE: Definition of Data Types
-===========================================================================
+=====================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

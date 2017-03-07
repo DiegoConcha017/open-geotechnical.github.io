@@ -1,7 +1,7 @@
 .. _ags4_group_IPRG:
 
 IPRG: In Situ Permeability Tests - General
-===========================================================================
+=================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

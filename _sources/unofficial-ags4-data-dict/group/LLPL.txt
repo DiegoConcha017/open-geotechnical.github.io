@@ -1,7 +1,7 @@
 .. _ags4_group_LLPL:
 
 LLPL: Liquid and Plastic Limit Tests
-===========================================================================
+===========================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

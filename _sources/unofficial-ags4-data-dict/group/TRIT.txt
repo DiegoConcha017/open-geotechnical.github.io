@@ -1,7 +1,7 @@
 .. _ags4_group_TRIT:
 
 TRIT: Triaxial Tests - Total Stress - Data
-===========================================================================
+=================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

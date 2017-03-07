@@ -1,7 +1,7 @@
 .. _ags4_group_AIVT:
 
 AIVT: Aggregate Impact Value Tests
-===========================================================================
+=========================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

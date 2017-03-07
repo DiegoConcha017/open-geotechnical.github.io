@@ -1,7 +1,7 @@
 .. _ags4_group_SCPG:
 
 SCPG: Static Cone Penetration Tests - General
-===========================================================================
+====================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

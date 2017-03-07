@@ -1,7 +1,7 @@
 .. _ags4_group_SAMP:
 
 SAMP: Sample Information
-===========================================================================
+===============================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

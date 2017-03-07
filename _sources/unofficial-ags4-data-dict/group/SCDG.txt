@@ -1,7 +1,7 @@
 .. _ags4_group_SCDG:
 
 SCDG: Static Cone Dissipation Tests - General
-===========================================================================
+====================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

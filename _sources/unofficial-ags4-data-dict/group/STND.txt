@@ -1,7 +1,7 @@
 .. _ags4_group_STND:
 
 STND: Standards / Specifications
-===========================================================================
+=======================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

@@ -1,7 +1,7 @@
 .. _ags4_group_GRAG:
 
 GRAG: Particle Size Distribution Analysis - General
-===========================================================================
+==========================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

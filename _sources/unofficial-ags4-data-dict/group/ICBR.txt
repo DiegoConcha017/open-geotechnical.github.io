@@ -1,7 +1,7 @@
 .. _ags4_group_ICBR:
 
 ICBR: In Situ California Bearing Ratio Tests
-===========================================================================
+===================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

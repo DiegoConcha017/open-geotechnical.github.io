@@ -1,7 +1,7 @@
 .. _ags4_group_PMTG:
 
 PMTG: Pressuremeter Test Results - General
-===========================================================================
+=================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

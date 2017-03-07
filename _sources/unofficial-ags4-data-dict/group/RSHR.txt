@@ -1,7 +1,7 @@
 .. _ags4_group_RSHR:
 
 RSHR: Shore Scleroscope Hardness Tests
-===========================================================================
+=============================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

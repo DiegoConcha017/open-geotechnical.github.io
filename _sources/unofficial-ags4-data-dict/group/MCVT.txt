@@ -1,7 +1,7 @@
 .. _ags4_group_MCVT:
 
 MCVT: MCV Tests - Data
-===========================================================================
+=============================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

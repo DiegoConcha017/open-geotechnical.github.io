@@ -1,7 +1,7 @@
 .. _ags4_group_RWCO:
 
 RWCO: Water Content of Rock Tests
-===========================================================================
+========================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

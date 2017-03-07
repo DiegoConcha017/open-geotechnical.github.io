@@ -1,7 +1,7 @@
 .. _ags4_group_RSCH:
 
 RSCH: Schmidt Rebound Hardness Tests
-===========================================================================
+===========================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

@@ -1,7 +1,7 @@
 .. _ags4_group_RPLT:
 
 RPLT: Point Load Testing
-===========================================================================
+===============================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

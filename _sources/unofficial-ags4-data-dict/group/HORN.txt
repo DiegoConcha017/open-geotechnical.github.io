@@ -1,7 +1,7 @@
 .. _ags4_group_HORN:
 
 HORN: Exploratory Hole Orientation and Inclination
-===========================================================================
+=========================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

@@ -1,7 +1,7 @@
 .. _ags4_group_ESCG:
 
 ESCG: Effective Stress Consolidation Tests - General
-===========================================================================
+===========================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

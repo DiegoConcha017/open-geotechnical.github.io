@@ -1,7 +1,7 @@
 .. _ags4_group_AWAD:
 
 AWAD: Aggregate Water Absorption Tests
-===========================================================================
+=============================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

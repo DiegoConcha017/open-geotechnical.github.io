@@ -1,7 +1,7 @@
 .. _ags4_group_LDYN:
 
 LDYN: Dynamic Testing
-===========================================================================
+============================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

@@ -1,7 +1,7 @@
 .. _ags4_group_GRAT:
 
 GRAT: Particle Size Distribution Analysis - Data
-===========================================================================
+=======================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

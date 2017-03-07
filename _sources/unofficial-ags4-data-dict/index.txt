@@ -3,6 +3,6 @@ Unofficial AGS4 Data Dict
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     groups.rst

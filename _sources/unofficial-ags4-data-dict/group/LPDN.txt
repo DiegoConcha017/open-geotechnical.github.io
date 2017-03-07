@@ -1,7 +1,7 @@
 .. _ags4_group_LPDN:
 
 LPDN: Particle Density Tests
-===========================================================================
+===================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

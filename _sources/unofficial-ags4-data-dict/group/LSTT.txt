@@ -1,7 +1,7 @@
 .. _ags4_group_LSTT:
 
 LSTT: Initial Consumption of Lime Tests - Data
-===========================================================================
+=====================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

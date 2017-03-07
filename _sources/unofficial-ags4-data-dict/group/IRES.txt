@@ -1,7 +1,7 @@
 .. _ags4_group_IRES:
 
 IRES: In Situ Resistivity Tests
-===========================================================================
+======================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

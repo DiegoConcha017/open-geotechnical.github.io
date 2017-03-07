@@ -1,7 +1,7 @@
 .. _ags4_group_AELO:
 
 AELO: Aggregate Elongation Index Tests
-===========================================================================
+=============================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

@@ -1,7 +1,7 @@
 .. _ags4_group_PREM:
 
 PREM: Project Specific Time Related Remarks
-===========================================================================
+==================================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling

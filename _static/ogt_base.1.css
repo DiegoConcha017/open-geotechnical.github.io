@@ -107,7 +107,7 @@ div.related ul {
 /* contains left bar */
 
 .sphinxsidebarwrapper {
-    width: 300px;
+    width: 320px;
     background-color: #DDDDDD;
 }
 /* the table of contents */
@@ -121,7 +121,7 @@ div.related ul {
     font-size: 8pt;
 }
 div.bodywrapper {
-    margin-left: 300px;
+    margin-left: 320px;
 }
 .sphinxsidebar ul {
     margin-left: 0;
@@ -138,12 +138,12 @@ div.bodywrapper {
     font-family: Verdana;
 }
 .sphinxsidebar ul ul{
-    width: 250px;
+    width: 240px;
 }
 .sphinxsidebar ul ul li{
     border-top: none !important;
     /* background-color: pink !important; */
-    max-width: 230px;
+    max-width: 210px;
 }
 .sphinxsidebar ul ul li a{
     font-weight: normal;

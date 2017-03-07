@@ -1,7 +1,7 @@
 .. _ags4_group_WSTD:
 
 WSTD: Water Strike - Details
-===========================================================================
+===================================
 
 
 - **Class:** Samples, Amalgamated Specimens and Laboratory Test Scheduling
